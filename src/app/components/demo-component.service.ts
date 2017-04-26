@@ -158,6 +158,12 @@ export class StacheDemoComponentService {
       icon: 'code',
       summary: 'Provides a formatted block of code with syntax highlighting.'
     },
+    {
+      name: 'Code',
+      route: '/components/code',
+      icon: 'code',
+      summary: 'Provides a formatted in line snippet of code.'
+    },
   //   {
   //     name: 'Breadcrumbs',
   //     route: '/components/breadcrumbs',
