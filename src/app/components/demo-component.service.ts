@@ -155,7 +155,7 @@ export class StacheDemoComponentService {
     {
       name: 'Code Block',
       route: '/components/code-block',
-      icon: 'table',
+      icon: 'code',
       summary: 'Provides a formatted block of code with syntax highlighting.'
     },
   //   {
