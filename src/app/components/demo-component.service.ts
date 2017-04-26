@@ -90,7 +90,7 @@ export class StacheDemoComponentService {
       name: 'Page Summary',
       route: '/components/page-summary',
       icon: 'file-text',
-      summary: 'lorem and things'
+      summary: 'Provides a formatted section at the top of the page for summary content.'
     },
     {
       name: 'Page Anchor',
