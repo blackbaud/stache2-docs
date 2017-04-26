@@ -86,26 +86,12 @@ export class StacheDemoComponentService {
   //       ];
   //     }
   //   },
-  //   {
-  //     name: 'Page Summary',
-  //     route: '/components/page-summary',
-  //     icon: 'file-text',
-  //     summary: 'lorem and things',
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'page-summary-demo.component.html',
-  //           fileContents: require('!!raw-loader!./page-summary/page-summary-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'page-summary-demo.component.ts',
-  //           fileContents: require('!!raw-loader!./page-summary/page-summary-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
+    {
+      name: 'Page Summary',
+      route: '/components/page-summary',
+      icon: 'file-text',
+      summary: 'lorem and things'
+    },
     {
       name: 'Page Anchor',
       route: '/components/page-anchor',
