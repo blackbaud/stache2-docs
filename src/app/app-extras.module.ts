@@ -4,6 +4,8 @@ import { StacheModule } from '@blackbaud/stache';
 
 import { StacheDemoComponentService } from './components/demo-component.service';
 
+require('style-loader!./app.scss');
+
 // Specify entry components, module-level providers, etc. here.
 @NgModule({
   imports: [
