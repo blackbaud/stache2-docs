@@ -5,26 +5,12 @@ import { StacheDemoComponent } from './demo-component';
 @Injectable()
 export class StacheDemoComponentService {
   private components: StacheDemoComponent[] = [
-  //   {
-  //     name: 'Stache Wrapper',
-  //     route: '/components/wrapper',
-  //     icon: 'gift',
-  //     summary: '',
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'wrapper-demo.component.html',
-  //           fileContents: require('!!raw-loader!./wrapper/wrapper-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'wrapper-demo.component.ts',
-  //           fileContents: require('!!raw-loader!./wrapper/wrapper-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
+    {
+      name: 'Stache Wrapper',
+      route: '/components/wrapper',
+      icon: 'gift',
+      summary: 'Provides a container for all Stache components.'
+    },
   //   {
   //     name: 'Layout',
   //     route: '/components/layout',
