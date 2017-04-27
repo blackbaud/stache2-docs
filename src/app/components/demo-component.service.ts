@@ -163,7 +163,7 @@ export class StacheDemoComponentService {
       route: '/components/code',
       icon: 'code',
       summary: 'Provides a formatted in line snippet of code.'
-    },
+    }
   //   {
   //     name: 'Breadcrumbs',
   //     route: '/components/breadcrumbs',

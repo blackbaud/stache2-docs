@@ -10,10 +10,19 @@ import { StacheNavLink } from '../../modules/nav/nav-link';
 })
 export class StacheDemoComponentsComponent implements OnInit {
   public components: StacheDemoComponent[];
+  public routes: StacheNavLink[] = [];
 
   public constructor(private componentService: StacheDemoComponentService) { }
 
   public ngOnInit(): void {
     this.components = this.componentService.getAllSorted();
+    this.components.forEach(component => {
+      this.routes.push({
+        path: [component.route],
+        name: component.name,
+        icon: component.icon,
+        summary: component.summary
+      });
+    });
   }
 }
