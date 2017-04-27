@@ -163,6 +163,12 @@ export class StacheDemoComponentService {
       route: '/components/code',
       icon: 'code',
       summary: 'Provides a formatted in line snippet of code.'
+    },
+    {
+      name: 'Hero',
+      route: '/components/hero',
+      icon: 'photo',
+      summary: 'Provides a Hero with a background image, title, and subheading information to your Stache page.'
     }
   //   {
   //     name: 'Breadcrumbs',
