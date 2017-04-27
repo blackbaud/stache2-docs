@@ -1,0 +1,205 @@
+<app-nav></app-nav>
+<stache
+  pageTitle="Basics"
+  showTableOfContents="true"
+>
+  <stache-page-summary>
+    As you are getting to know Stache, use the documentation below to understand how it's organized and how to create documentation using Stache. For information about specific components, refer to our <a routerLink="/components">Components</a>.
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Stache Wrapper
+  </stache-page-anchor>
+  <p>
+    The Stache Wrapper is the primary tag in a Stache project, and contains all the other Stache tags and content. Most of your page level configuration is done through the Stache Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any Stache page.
+  </p>
+  <p>
+    Stache takes a prescriptive approach to configuration. Most of the properties on the Stache tag have defaults, so you will rarely have to set them yourself. The main exception is the page title.
+  </p>
+  <stache-code-block>
+    <stache pageTitle="My Sample Page">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+  <stache-page-anchor>
+    Layouts
+  </stache-page-anchor>
+  <p>
+    Stache layouts allow consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
+  </p>
+
+  <h3>Sidebar</h3>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      layout="sidebar"
+    >
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+  <p>
+    The sidebar layout is the default Stache layout, and adds a side navigation on the left side of your content. This is useful for quickly navigating between sibling and child content within your site. Stache populates the routes in the sidebar for you automatically based on the directory structure of your project. A Stache project with the following structure:
+  </p>
+
+  <ul>
+    <li><i class="fa fa-folder"></i> learn
+      <ul>
+        <li><i class="fa fa-folder"></i> basics</li>
+      </ul>
+    </li>
+    <li><i class="fa fa-folder"></i> components</li>
+    <li><i class="fa fa-folder"></i> contribute</li>
+  </ul>
+
+  <p>
+    would have a sidebar like this:
+  </p>
+  <stache-row>
+    <stache-column screenSmall="2">
+      <stache-sidebar [routes]="[
+        {
+          path: '/learn',
+          name: 'Learn',
+          children: [
+            {
+              path: '/basics',
+              name: 'Basics'
+            }
+          ]
+        },
+        {
+          path: '/components',
+          name: 'Components'
+        },
+        {
+          path: '/contribute',
+          name: 'Contribute'
+        }
+      ]">
+      </stache-sidebar>
+    </stache-column>
+  </stache-row>
+
+  <p>
+    The currently active page in the sidebar navigation show any children underneath. All other child pages are hidden until the route becomes active.
+  </p>
+
+  <h3>Container</h3>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      layout="container"
+    >
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+  <p>
+    The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">Stache Grid</a>.
+  </p>
+
+  <h3>Blank</h3>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      layout="blank"
+    >
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+  <p>
+    The blank layout provides no formatting for the content inside. This allows you to do whatever you wish inside of the container but still make use of the utility of the <stache-code>stache</stache-code> tag.
+  </p>
+
+  <stache-page-anchor>
+    Navigation
+  </stache-page-anchor>
+
+  <p>
+    Stache provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
+  </p>
+
+  <h3>Back To Top</h3>
+  <p>
+    For long form content, having to scroll manually to the top of the page is annoying. The back to top button provides a quick way to navigate back to the top of a page. Back to top is enabled by default. You can disable it on the <stache-code>stache</stache-code> tag.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      showBackToTop="false"
+    >
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+  <h3>Breadcrumbs</h3>
+  <p>
+    Breadcrumbs provide you a direct path from your current location to the home page. This pattern gives users an easy way to see exactly where they are in the context of the site. Breadcrumbs are enabled by default. You can disable them on the <stache-code>stache</stache-code> tag when you don't want them to display, such as on the home page.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      showBreadcrumbs="false"
+    >
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+  <h3>Page Anchor</h3>
+  <p>Page anchors provide inter-page navigation and allow you to link to specific sections of a page. These serve a dual purpose as page section headers. Page anchors are used to generate the links for the table of contents.</p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+    >
+      <stache-page-anchor>
+        Section One
+      </stache-page-anchor>
+      // Some content
+
+      <stache-page-anchor>
+        Section Two
+      </stache-page-anchor>
+      // More content
+
+    </stache>
+  </stache-code-block>
+
+  <h3>Table of Contents</h3>
+  <p>
+    The table of contents allows you to navigate quickly within a page using page anchors. It also serves as an overview of the page contents. This component, combined with the back to top and page anchors, creates a quick and effortless way to navigate long form content.
+  </p>
+  <sky-alert alertType="info">
+    <b>Note: </b> This is the only navigation component not enabled by default.
+  </sky-alert>
+
+  <p>
+    To use the table of contents on your page, enable it on the <stache-code>stache</stache-code> tag.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      showTableOfContents="true"
+    >
+      <stache-page-anchor>
+        Section One
+      </stache-page-anchor>
+      // Some content
+
+      <stache-page-anchor>
+        Section Two
+      </stache-page-anchor>
+      // More content
+
+    </stache>
+  </stache-code-block>
+</stache>

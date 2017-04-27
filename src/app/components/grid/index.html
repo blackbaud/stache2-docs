@@ -4,8 +4,14 @@
   layout="sidebar"
   showBreadcrumbs="true">
   <stache-page-summary>
-    The Grid component provides a 12 column layout grid for organizing content for all device sizes.
-    <h3>Grid properties</h3>
+    The Grid components provide a 12 column layout grid for organizing content for all device sizes. The grid consists of <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> tags. Every column must be contained in a row.
+    <h3>Stache Row properties</h3>
+    <ul>
+      <li>
+        <stache-code>reverseColumnOrder</stache-code> — <i>(Optional.)</i> Reverses the display order for the columns when set to <stache-code>true</stache-code>.
+      </li>
+    </ul>
+    <h3>Stache Column properties</h3>
     <ul>
       <li>
         <stache-code>screenSmall</stache-code> — The number of columns (1-12) for a small screen (768px).
@@ -15,9 +21,6 @@
       </li>
       <li>
         <stache-code>screenLarge</stache-code> — The number of columns (1-12) for a large screen (1200px).
-      </li>
-      <li>
-        <stache-code>reverseColumnOrder</stache-code> — <i>(Optional.)</i> Reverses the display order for the columns when set to <stache-code>true</stache-code>.
       </li>
     </ul>
   </stache-page-summary>
