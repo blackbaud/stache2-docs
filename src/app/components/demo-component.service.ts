@@ -73,31 +73,61 @@ export class StacheDemoComponentService {
       name: 'Nav',
       route: '/contribute/components/nav',
       icon: 'compass',
-      summary: ``
+      summary: `Handles navigation consistently throughout a Stache application.`
     },
     {
       name: 'Table of Contents',
       route: '/contribute/components/table-of-contents',
       icon: 'list-ol',
-      summary: 'list of page items'
+      summary: 'Generates the inter page navigation using stache page anchors.'
     },
     {
       name: 'Sidebar',
       route: '/contribute/components/sidebar',
       icon: 'columns',
-      summary: ''
+      summary: 'Generates the side navigation for the sidebar layout.'
     },
     {
-      name: 'Layout',
-      route: '/contribute/components/layout',
-      icon: 'map-o',
-      summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
+      name: 'Container',
+      route: '/contribute/components/container',
+      icon: 'cube',
+      summary: 'Wraps content in a stache container for formatting.'
     },
+    // {
+    //   name: 'Layout',
+    //   route: '/contribute/components/layout',
+    //   icon: 'map-o',
+    //   summary: 'Component interface between the stache wrapper and layouts.'
+    // },
+    // {
+    //   name: 'Layout: Blank',
+    //   route: '/contribute/components/layout-blank',
+    //   icon: 'map-o',
+    //   summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
+    // },
+    // {
+    //   name: 'Layout: Container',
+    //   route: '/contribute/components/layout-container',
+    //   icon: 'map-o',
+    //   summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
+    // },
+    // {
+    //   name: 'Layout: Sidebar',
+    //   route: '/contribute/components/layout-sidebar',
+    //   icon: 'map-o',
+    //   summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
+    // },
     {
       name: 'Page Header',
       route: '/contribute/components/page-header',
       icon: 'header',
-      summary: `This is the Page Header component.`
+      summary: `Provides a header for each Stache page.`
+    },
+    {
+      name: 'Page Title',
+      route: '/contribute/components/page-header',
+      icon: 'header',
+      summary: `Provides a title for each Stache page.`
     }
   ];
 
