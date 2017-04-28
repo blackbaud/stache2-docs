@@ -1,9 +1,52 @@
 <app-nav></app-nav>
 <stache
   pageTitle="Getting Started"
+  showTableOfContents="true"
  >
   <stache-page-anchor>
       Prerequisites
   </stache-page-anchor>
-  <p>Stache components require SKY UX to use. To learn more, refer to the <a href="https://developer.blackbaud.com/skyux2/learn">SKY UX documentation</a>.</p>
+  <p>
+    Stache components require SKY UX to use. To learn more, refer to the <a href="https://developer.blackbaud.com/skyux2/learn">SKY UX documentation</a>.
+  </p>
+
+  <stache-page-anchor>
+    Start a Stache Project
+  </stache-page-anchor>
+  <p>
+    Starting a Stache project is quick and easy. To get started, run <stache-code>skyux new --template stache</stache-code>. This will generate a new SKY UX project with the Stache template. Once the project generates, run <stache-code>npm install</stache-code> to install the necessary dependencies.
+  </p>
+
+  <stache-page-anchor>
+    Add Stache to an Existing SKY UX Project
+  </stache-page-anchor>
+  <p>
+    If you want to add Stache to an established project:
+  </p>
+  <ol>
+    <li>
+      Run <stache-code>npm install --save @blackbaud/stache</stache-code> from your project directory.
+    </li>
+    <li>
+      Add the <stache-code>StacheModule</stache-code> to your app's <stache-code>app-extras.module.ts</stache-code>:
+    </li>
+  </ol>
+  <stache-code-block>
+    import { NgModule } from '@angular/core';
+
+    import { StacheModule } from '@blackbaud/stache';
+
+    // Specify entry components, module-level providers, etc. here.
+    @NgModule({
+      imports: [
+        StacheModule
+      ],
+      exports: [
+        StacheModule
+      ],
+      entryComponents: []
+    })
+    export class AppExtrasModule { }
+  </stache-code-block>
+
 </stache>
