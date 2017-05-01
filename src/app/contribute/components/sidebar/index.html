@@ -1,0 +1,96 @@
+<app-nav></app-nav>
+<stache
+  pageTitle="Sidebar">
+  <stache-page-summary>
+    The Sidebar component generates the navigation for the sidebar layout.
+    <h3>Sidebar properties</h3>
+    <ul>
+      <li>
+        <stache-code>routes</stache-code> — The routes that populate the sidebar navigation. This property takes an array of <stache-code>stache-nav-link</stache-code> objects.
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+  <div class="stache-demo-page-result">
+    <stache-row>
+      <stache-column screenSmall="2">
+        <stache-sidebar [routes]="[
+          {
+            path: '/learn',
+            name: 'Learn',
+            children: [
+              {
+                path: '/basics',
+                name: 'Basics'
+              }
+            ]
+          },
+          {
+            path: '/components',
+            name: 'Components'
+          },
+          {
+            path: '/contribute',
+            name: 'Contribute'
+          }
+        ]">
+        </stache-sidebar>
+      </stache-column>
+    </stache-row>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sidebar-demo-component.html">
+        <stache-code-block languageType="markup">
+          <stache-row>
+            <stache-column screenSmall="2">
+              <stache-sidebar [routes]="routes">
+              </stache-sidebar>
+            </stache-column>
+          </stache-row>
+        </stache-code-block>
+      </sky-tab>
+      <sky-tab tabHeading="sidebar-demo-component.ts">
+        <stache-code-block languageType="typescript">
+          import { Component} from '@angular/core';
+
+          @Component({
+            selector: 'sidebar-demo-component',
+            templateUrl: './sidebar-demo-component.html'
+          })
+          export class SidebarDemoComponent {
+            public routes = [
+              {
+                path: '/learn',
+                name: 'Learn',
+                children: [
+                  {
+                    path: '/basics',
+                    name: 'Basics'
+                  }
+                ]
+              },
+              {
+                path: '/components',
+                name: 'Components'
+              },
+              {
+                path: '/contribute',
+                name: 'Contribute'
+              }
+            ];
+          }
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
+
+

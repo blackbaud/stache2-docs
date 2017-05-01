@@ -1,0 +1,59 @@
+<app-nav></app-nav>
+<stache
+  pageTitle="Table of Contents">
+  <stache-page-summary>
+    The Table of Contents component generates inter page navigation based on every <stache-code>stache-page-anchor</stache-code> component on a page in order of appearance.
+    <h3>Breadcrumbs properties</h3>
+    <ul>
+      <li>
+        <stache-code>routes</stache-code> — The routes to populate table of contents. This property takes an array of <stache-code>stache-nav-link</stache-code> objects.
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+  <div class="stache-demo-page-result">
+    <stache-table-of-contents [routes]="[
+        { name: 'Home', path: '/' },
+        { name: 'Contribute', path: '/contribute' },
+        { name: 'Components', path: '/contribute/components' },
+        { name: 'Table Of Contents', path: '/contribute/components/table-of-contents' }
+      ]"
+    >
+    </stache-table-of-contents>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="table-of-contents-demo-component.html">
+        <stache-code-block languageType="markup">
+          <stache-table-of-contents [routes]="routes">
+          </stache-table-of-contents>
+        </stache-code-block>
+      </sky-tab>
+      <sky-tab tabHeading="table-of-contents-demo-component.ts">
+        <stache-code-block languageType="typescript">
+          import { Component} from '@angular/core';
+
+          @Component({
+            selector: 'table-of-contents-demo-component',
+            templateUrl: './table-of-contents-demo-component.html'
+          })
+          export class TableOfContentsDemoComponent {
+            public routes = [
+              { name: 'Home', path: '/' },
+              { name: 'Contribute', path: '/contribute' },
+              { name: 'Components', path: '/contribute/components' },
+              { name: 'Table Of Contents', path: '/contribute/components/table-of-contents' }
+            ];
+          }
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
