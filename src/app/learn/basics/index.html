@@ -1,8 +1,7 @@
 <app-nav></app-nav>
 <stache
   pageTitle="Basics"
-  showTableOfContents="true"
->
+  showTableOfContents="true">
   <stache-page-summary>
     As you are getting to know Stache, use the documentation below to understand how it's organized and how to create documentation using Stache. For information about specific components, refer to our <a routerLink="/components">Components</a>.
   </stache-page-summary>
@@ -34,8 +33,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
-      layout="sidebar"
-    >
+      layout="sidebar">
       // Your content here.
     </stache>
   </stache-code-block>
@@ -92,8 +90,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
-      layout="container"
-    >
+      layout="container">
       // Your content here.
     </stache>
   </stache-code-block>
@@ -107,8 +104,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
-      layout="blank"
-    >
+      layout="blank">
       // Your content here.
     </stache>
   </stache-code-block>
@@ -133,8 +129,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
-      showBackToTop="false"
-    >
+      showBackToTop="false">
       // Your content here.
     </stache>
   </stache-code-block>
@@ -147,8 +142,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
-      showBreadcrumbs="false"
-    >
+      showBreadcrumbs="false">
       // Your content here.
     </stache>
   </stache-code-block>
@@ -158,8 +152,7 @@
 
   <stache-code-block>
     <stache
-      pageTitle="My Sample Page"
-    >
+      pageTitle="My Sample Page">
       <stache-page-anchor>
         Section One
       </stache-page-anchor>
@@ -188,8 +181,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
-      showTableOfContents="true"
-    >
+      showTableOfContents="true">
       <stache-page-anchor>
         Section One
       </stache-page-anchor>
@@ -202,4 +194,22 @@
 
     </stache>
   </stache-code-block>
+
+  <stache-page-anchor>
+    Images
+  </stache-page-anchor>
+  <p>
+    To use local images in your Stache project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your Stache pages like so:
+  </p>
+  <stache-code-block>
+    <img src="~/assets&#x200B;/image.png" />
+  </stache-code-block>
+  <stache-row>
+    <stache-column screenSmall="4">
+      <img class="demo-image" src="~/assets/hero-sample-1.jpg" />
+    </stache-column>
+  </stache-row>
+  <p>
+    Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
+  </p>
 </stache>

@@ -11,67 +11,6 @@ export class StacheDemoComponentService {
       icon: 'gift',
       summary: 'Provides a container for all Stache components.'
     },
-  //   {
-  //     name: 'Layout',
-  //     route: '/components/layout',
-  //     icon: 'map-o',
-  //     summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.',
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'layout-demo.component.html',
-  //           fileContents: require('!!raw-loader!./layout/layout-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'layout-demo.component.ts',
-  //           fileContents: require('!!raw-loader!./layout/layout-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
-  //   {
-  //     name: 'Layout: Sidebar',
-  //     route: '/components/layout-sidebar',
-  //     icon: 'columns',
-  //     summary: 'Side bar navigation layout pattern for creating quick documentation.',
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'layout-sidebar-demo.component.html',
-  //           fileContents:
-  //             require('!!raw-loader!./layout-sidebar/layout-sidebar-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'layout-sidebar-demo.component.ts',
-  //           fileContents: require('!!raw-loader!./layout-sidebar/layout-sidebar-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
-  //   {
-  //     name: 'Page Header',
-  //     route: '/components/page-header',
-  //     icon: 'header',
-  //     summary: `This is the Page Header component.`,
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'page-header-demo.component.html',
-  //           fileContents: require('!!raw-loader!./page-header/page-header-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'page-header-demo.component.ts',
-  //           fileContents: require('!!raw-loader!./page-header/page-header-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
     {
       name: 'Page Summary',
       route: '/components/page-summary',
@@ -84,48 +23,6 @@ export class StacheDemoComponentService {
       icon: 'link',
       summary: 'Provides a section anchor for inter page navigation.'
     },
-  //   {
-  //     name: 'Table of Contents',
-  //     route: '/components/table-of-contents',
-  //     icon: 'list-ol',
-  //     summary: 'list of page items',
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'table-of-contents-demo.component.html',
-  //           fileContents:
-  //             require('!!raw-loader!./table-of-contents/table-of-contents-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'table-of-contents-demo.component.ts',
-  //           fileContents:
-  //             require('!!raw-loader!./table-of-contents/table-of-contents-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
-  //   {
-  //     name: 'Sidebar',
-  //     route: '/components/sidebar',
-  //     icon: 'columns',
-  //     summary: '',
-  //     getCodeFiles: () => {
-  //       return [
-  //         {
-  //           name: 'sidebar-demo.component.html',
-  //           fileContents: require('!!raw-loader!./sidebar/sidebar-demo.component.html'),
-  //           language: 'markup'
-  //         },
-  //         {
-  //           name: 'sidebar-demo.component.ts',
-  //           fileContents: require('!!raw-loader!./sidebar/sidebar-demo.component.ts'),
-  //           language: 'typescript'
-  //         }
-  //       ];
-  //     }
-  //   },
     {
       name: 'Action Buttons',
       route: '/components/action-buttons',
@@ -156,17 +53,72 @@ export class StacheDemoComponentService {
       icon: 'photo',
       summary: 'Provides a Hero with a background image, title, and subheading information to your Stache page.'
     }
-  //   {
-  //     name: 'Breadcrumbs',
-  //     route: '/components/breadcrumbs',
-  //     icon: 'exchange',
-  //     summary: `The breadcrumbs component displays a menu at the top of the page to
-  //       help users keep track of their location within the app.`
-  //   }
   ];
 
-  public getAll(): StacheDemoComponent[] {
-    return this.components;
+  private developmentComponents: StacheDemoComponent[] = [
+    {
+      name: 'Breadcrumbs',
+      route: '/contribute/components/breadcrumbs',
+      icon: 'exchange',
+      summary: `Displays a menu at the top of the page to
+        help users keep track of their location within the app.`
+    },
+    {
+      name: 'Back To Top',
+      route: '/contribute/components/back-to-top',
+      icon: 'chevron-up',
+      summary: `Provides a quick way to return to the top of a page.`
+    },
+    {
+      name: 'Nav',
+      route: '/contribute/components/nav',
+      icon: 'compass',
+      summary: `Handles navigation consistently throughout a Stache application.`
+    },
+    {
+      name: 'Table of Contents',
+      route: '/contribute/components/table-of-contents',
+      icon: 'list-ol',
+      summary: 'Generates the inter page navigation using stache page anchors.'
+    },
+    {
+      name: 'Sidebar',
+      route: '/contribute/components/sidebar',
+      icon: 'columns',
+      summary: 'Generates the side navigation for the sidebar layout.'
+    },
+    {
+      name: 'Container',
+      route: '/contribute/components/container',
+      icon: 'cube',
+      summary: 'Wraps content in a stache container for formatting.'
+    },
+    {
+      name: 'Page Header',
+      route: '/contribute/components/page-header',
+      icon: 'header',
+      summary: `Provides a header for each Stache page.`
+    },
+    {
+      name: 'Page Title',
+      route: '/contribute/components/page-header',
+      icon: 'header',
+      summary: `Provides a title for each Stache page.`
+    }
+  ];
+
+  public getAllDevelopmentSorted(): StacheDemoComponent[] {
+    return this.developmentComponents.sort((a, b) => {
+      let nameA = a.name.toLowerCase();
+      let nameB = b.name.toLowerCase();
+      if (nameA < nameB) {
+          return -1;
+      }
+      if (nameA > nameB) {
+          return 1;
+      }
+      return 0;
+    });
   }
 
   public getAllSorted(): StacheDemoComponent[] {
