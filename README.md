@@ -1,1 +1,1 @@
-# SKY UX Builder Template for Stache sites
+# Documentation for the SKY UX Stache Component Library
