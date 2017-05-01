@@ -9,14 +9,13 @@ import { StacheNavLink } from '../../../modules/nav/nav-link';
   templateUrl: './contribute-components.component.html'
 })
 export class StacheContributeComponentsComponent implements OnInit {
-  public components: StacheDemoComponent[];
   public routes: StacheNavLink[] = [];
 
   public constructor(private componentService: StacheDemoComponentService) { }
 
   public ngOnInit(): void {
-    this.components = this.componentService.getAllDevelopmentSorted();
-    this.components.forEach(component => {
+    let components = this.componentService.getAllDevelopmentSorted();
+    components.forEach(component => {
       this.routes.push({
         path: [component.route],
         name: component.name,

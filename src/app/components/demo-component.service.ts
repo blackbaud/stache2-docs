@@ -93,30 +93,6 @@ export class StacheDemoComponentService {
       icon: 'cube',
       summary: 'Wraps content in a stache container for formatting.'
     },
-    // {
-    //   name: 'Layout',
-    //   route: '/contribute/components/layout',
-    //   icon: 'map-o',
-    //   summary: 'Component interface between the stache wrapper and layouts.'
-    // },
-    // {
-    //   name: 'Layout: Blank',
-    //   route: '/contribute/components/layout-blank',
-    //   icon: 'map-o',
-    //   summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
-    // },
-    // {
-    //   name: 'Layout: Container',
-    //   route: '/contribute/components/layout-container',
-    //   icon: 'map-o',
-    //   summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
-    // },
-    // {
-    //   name: 'Layout: Sidebar',
-    //   route: '/contribute/components/layout-sidebar',
-    //   icon: 'map-o',
-    //   summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
-    // },
     {
       name: 'Page Header',
       route: '/contribute/components/page-header',
