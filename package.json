@@ -2,7 +2,6 @@
   "name": "blackbaud-skyux-spa-stache2-docs",
   "version": "0.0.1",
   "description": "Single-page-application for skyux-spa-stache2-docs",
-  "main": "index.js",
   "engines": {
     "node": ">=6.3.1"
   },
@@ -14,13 +13,13 @@
   "author": "Blackbaud",
   "license": "ISC",
   "dependencies": {
-    "@blackbaud/skyux": "2.0.0-beta.18",
+    "@blackbaud/skyux": "2.0.0-beta.22",
     "@blackbaud/stache": "blackbaud/stache2",
-    "@blackbaud/skyux-builder-plugin-stache-code-block": "blackbaud/skyux-builder-plugin-stache-code-block"
+    "@blackbaud/skyux-builder-plugin-stache-code-block": "1.0.0"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder": "1.0.0-beta.21",
-    "codelyzer": "2.0.0-beta.1"
+    "@blackbaud/skyux-builder": "1.0.0-beta.22",
+    "codelyzer": "1.0.0-beta.4"
   },
   "repository": {
     "type": "git",
