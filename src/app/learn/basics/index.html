@@ -25,7 +25,7 @@
     Layouts
   </stache-page-anchor>
   <p>
-    Stache layouts allow consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
+    Stache layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
   </p>
 
   <h3>Sidebar</h3>
@@ -212,4 +212,42 @@
   <p>
     Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
   </p>
+
+  <stache-page-anchor>
+    Include
+  </stache-page-anchor>
+  <p>
+    Include enables you to single source your content and reuse it throughout your documentation. This is useful if you have small chunks of content that you find yourself repeating in several places. You can use an include, update it in one place, and it'll change everywhere it's used.
+  </p>
+  <p>
+    Content you wish to include should be placed in the <stache-code>src/stache/includes/</stache-code> directory. For example:
+  </p>
+  <ul>
+    <li><i class="fa fa-folder"></i> src
+      <ul>
+        <li><i class="fa fa-folder"></i> stache</li>
+        <ul>
+          <li><i class="fa fa-folder"></i> includes</li>
+          <ul>
+            <li><i class="fa fa-file"></i> example.html</li>
+          </ul>
+        </ul>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    We can then refer to that file anywhere in our app with the <a routerLink="/components/include">include</a> tag:
+  </p>
+
+  <stache-code-block languageType="markup">
+    &lt;stache-include fileName="example.html"&gt;
+
+    &lt;/stache-include&gt;
+  </stache-code-block>
+
+  <sky-alert alertType="info">
+    <b>Note: </b> Includes are for static content. For dynamic content, create a custom component instead.
+  </sky-alert>
+
 </stache>
