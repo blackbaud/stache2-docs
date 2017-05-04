@@ -220,14 +220,17 @@
     Include allows you to single source your content and reuse it throughout your documentation. This is useful if you have small chunks of content that you find yourself repeating in several places. You can use an include, update it in one place, and it'll change everywhere it's used.
   </p>
   <p>
-    Content you wish to include should be placed in an <stache-code>includes</stache-code> directory in your app's <stache-code>src</stache-code> directory. For example:
+    Content you wish to include should be placed in the an <stache-code>includes</stache-code> directory in your app's <stache-code>src/stache</stache-code> directory. For example:
   </p>
   <ul>
     <li><i class="fa fa-folder"></i> src
       <ul>
-        <li><i class="fa fa-folder"></i> includes</li>
+        <li><i class="fa fa-folder"></i> stache</li>
         <ul>
-          <li><i class="fa fa-file"></i> example.html</li>
+          <li<i class="fa fa-folder"></i> includes</li>
+          <ul>
+            <li><i class="fa fa-file"></i> example.html</li>
+          </ul>
         </ul>
       </ul>
     </li>
