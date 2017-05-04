@@ -52,6 +52,24 @@ export class StacheDemoComponentService {
       route: '/components/hero',
       icon: 'photo',
       summary: 'Provides a Hero with a background image, title, and subheading information to your Stache page.'
+    },
+    {
+      name: 'Image',
+      route: '/components/image',
+      icon: 'photo',
+      summary: 'Provides a responsive image container.'
+    },
+    {
+      name: 'Video',
+      route: '/components/video',
+      icon: 'video-camera',
+      summary: 'Provides a responsive container for video embeds.'
+    },
+    {
+      name: 'Include',
+      route: '/components/include',
+      icon: 'photo',
+      summary: 'Provides a mechanism for single sourcing static content.'
     }
   ];
 
