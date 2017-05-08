@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { StacheModule } from '@blackbaud/stache';
-import { stacheConfigProvider } from './shared/stache-config';
+import { stacheConfigProvider } from './lib/stache-config';
 
 import { StacheDemoComponentService } from './components/demo-component.service';
 
