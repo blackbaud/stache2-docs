@@ -20,6 +20,7 @@ require('style-loader!./app.scss');
       useExisting: SkyAppConfig
     },
     StacheDemoComponentService
-  ]
+  ],
+  entryComponents: []
 })
 export class AppExtrasModule { }
