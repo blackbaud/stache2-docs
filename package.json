@@ -14,13 +14,13 @@
   "author": "Blackbaud",
   "license": "ISC",
   "dependencies": {
-    "@blackbaud/skyux": "2.0.0-beta.18",
+    "@blackbaud/skyux": "2.0.0-beta.23",
     "@blackbaud/stache": "blackbaud/stache2",
-    "@blackbaud/skyux-builder-plugin-stache-code-block": "blackbaud/skyux-builder-plugin-stache-code-block"
+    "@blackbaud/skyux-builder-plugin-stache-code-block": "1.0.0"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder": "1.0.0-beta.21",
-    "codelyzer": "2.0.0-beta.1"
+    "@blackbaud/skyux-builder": "1.0.0-beta.22",
+    "codelyzer": "1.0.0-beta.3"
   },
   "repository": {
     "type": "git",
