@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@blackbaud/skyux": "2.0.0-beta.22",
-    "@blackbaud/stache": "blackbaud/stache2",
+    "@blackbaud/stache": "blackbaud/stache2#feature-npm",
     "@blackbaud/skyux-builder-plugin-stache-code-block": "1.0.0"
   },
   "devDependencies": {
