@@ -27,29 +27,45 @@
   </p>
   <ol>
     <li>
-      Run <stache-code>npm install --save @blackbaud/stache</stache-code> from your project directory.
+      Run the following command in your project directory:
+      <stache-code-block>
+        npm install --save @blackbaud/stache
+        npm install --save @blackbaud/skyux-builder-plugin-stache-code-block
+        npm install --save @blackbaud/skyux-builder-plugin-stache-includes
+      </stache-code-block>
     </li>
     <li>
-      Add the <stache-code>StacheModule</stache-code> to your app's <stache-code>app-extras.module.ts</stache-code>. Import the module and add it to the imports and exports to use the Stache components throughout your project.
+      Add the <stache-code>StacheModule</stache-code> to your app's <strong>app-extras.module.ts</strong>. Import the module and add it to the imports and exports to use the Stache components throughout your project.
+    </li>
+    <li>
+      Import the `SkyAppConfig` and `StacheConfigService` into <strong>app-extras.module.ts</strong> and add them to the `resolves` array.
+
+      <stache-code-block
+        languageType="typescript">
+        import { NgModule } from '@angular/core';
+
+        import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
+        import { StacheModule, StacheConfigService } from '@blackbaud/stache';
+
+        // Specify entry components, module-level providers, etc. here.
+        @NgModule({
+          imports: [
+            StacheModule
+          ],
+          exports: [
+            StacheModule
+          ],
+          providers: [
+            {
+              provide: StacheConfigService,
+              useExisting: SkyAppConfig
+            }
+          ],
+          entryComponents: []
+        })
+        export class AppExtrasModule { }
+      </stache-code-block>
     </li>
   </ol>
-  <stache-code-block
-    languageType="typescript">
-    import { NgModule } from '@angular/core';
-
-    import { StacheModule } from '@blackbaud/stache';
-
-    // Specify entry components, module-level providers, etc. here.
-    @NgModule({
-      imports: [
-        StacheModule
-      ],
-      exports: [
-        StacheModule
-      ],
-      entryComponents: []
-    })
-    export class AppExtrasModule { }
-  </stache-code-block>
 
 </stache>
