@@ -1,16 +1,24 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Hero Component"
-  layout="sidebar"
->
+  layout="sidebar">
+
   <stache-page-summary>
     <p>
       The Hero component adds a Hero with a background image, title, and subheading information to your Stache page.
     </p>
-    <sky-alert alertType="info">
+
+    <sky-alert
+      alertType="info">
       <b>Note:</b> This component should be used outside of a <stache-code>stache</stache-code> tag.
     </sky-alert>
-    <h3>Hero properties</h3>
+
+    <h3>
+      Hero properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>overlayOpacity</stache-code>  —
@@ -27,6 +35,7 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
     <stache-container>
       <stache-hero
@@ -46,22 +55,22 @@
     Code
   </stache-page-anchor>
 
-    <sky-tabset>
-      <sky-tab
+  <sky-tabset>
+    <sky-tab
       tabHeading="hero.component.html">
-        <stache-code-block languageType="markup">
-          <stache-hero
-            overlayOpacity="0.4"
-            backgroundImageUrl="~/assets&#x200B;/image-name.jpg">
-            <stache-hero-heading>
-              Demo Hero
-            </stache-hero-heading>
-            <stache-hero-subheading>
-              Hero demo subheading information.
-            </stache-hero-subheading>
-          </stache-hero>
-        </stache-code-block>
-      </sky-tab>
-    </sky-tabset>
-
+      <stache-code-block
+        languageType="markup">
+        <stache-hero
+          overlayOpacity="0.4"
+          backgroundImageUrl="~/assets&#x200B;/image-name.jpg">
+          <stache-hero-heading>
+            Demo Hero
+          </stache-hero-heading>
+          <stache-hero-subheading>
+            Hero demo subheading information.
+          </stache-hero-subheading>
+        </stache-hero>
+      </stache-code-block>
+    </sky-tab>
+  </sky-tabset>
 </stache>

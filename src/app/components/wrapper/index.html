@@ -1,12 +1,20 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Wrapper"
   layout="sidebar"
   showBreadcrumbs="true">
-  <stache-page-summary>
-    The wrapper component is the primary component for Stache. It handles configuration, layouts, and routing for every Stache page.
 
-    <h3>Wrapper properties</h3>
+  <stache-page-summary>
+    <p>
+      The wrapper component is the primary component for Stache. It handles configuration, layouts, and routing for every Stache page.
+    </p>
+
+    <h3>
+      Wrapper properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>pageTitle</stache-code> — Sets the heading for the page.
@@ -49,15 +57,17 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
     <stache
       pageTitle="Wrapper"
       showTableOfContents="true"
-      layout="container"
-    >
+      layout="container">
+
       <stache-page-summary>
         Summary section for the page.
       </stache-page-summary>
+
       <stache-page-anchor>
         Sub heading
       </stache-page-anchor>
@@ -67,17 +77,21 @@
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="wrapper-demo-component.html">
-        <stache-code-block languageType="markup">
+      <sky-tab
+        tabHeading="wrapper-demo-component.html">
+        <stache-code-block
+          languageType="markup">
           <stache
             pageTitle="Wrapper"
-            showTableOfContents="true"
-          >
+            showTableOfContents="true">
+
             <stache-page-summary>
               Summary section for the page.
             </stache-page-summary>
+
             <stache-page-anchor>
               Sub heading
             </stache-page-anchor>

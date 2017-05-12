@@ -1,9 +1,18 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Image">
+
   <stache-page-summary>
-    The Image component provides a responsive container for an image.
-    <h3>Image properties</h3>
+    <p>
+      The Image component provides a responsive container for an image.
+    </p>
+
+    <h3>
+      Image properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>imageSource</stache-code> — The path to the image to render.
@@ -14,18 +23,26 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
-    <stache-image imageSource="~/assets/hero-sample-1.jpg"></stache-image>
+    <stache-image
+      imageSource="~/assets/hero-sample-1.jpg">
+    </stache-image>
   </div>
 
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="code-demo-component.html">
-        <stache-code-block languageType="markup">
-          <stache-image imageSource="~/assets&#x200B;/hero-sample-1.jpg"></stache-image>
+      <sky-tab
+        tabHeading="code-demo-component.html">
+        <stache-code-block
+          languageType="markup">
+          <stache-image
+            imageSource="~/assets&#x200B;/hero-sample-1.jpg">
+          </stache-image>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>

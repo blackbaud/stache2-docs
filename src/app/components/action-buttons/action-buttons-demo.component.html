@@ -2,13 +2,22 @@
   pageTitle="Action Buttons"
   layout="sidebar"
   showBreadcrumbs="true">
-  <stache-page-summary>
-    The Action Buttons component provides a clean, visual navigation pattern for linking to multiple documents using the <a href="https://developer.blackbaud.com/skyux2/components/action-button">SKY UX Action Button</a>.
 
-    <h3>Action Buttons properties</h3>
+  <stache-page-summary>
+    <p>
+      The Action Buttons component provides a clean, visual navigation pattern for linking to multiple documents using the <a href="https://developer.blackbaud.com/skyux2/components/action-button">SKY UX Action Button</a>.
+    </p>
+
+    <h3>
+      Action Buttons properties
+    </h3>
+
     <ul>
       <li>
-        <stache-code>routes</stache-code> — Specifies the properties for each action button in the list. Each button has the following properties:
+        <p>
+          <stache-code>routes</stache-code> — Specifies the properties for each action button in the list. Each button has the following properties:
+        </p>
+
         <ul>
           <li>
             <stache-code>name</stache-code> — The name of the button.
@@ -30,24 +39,32 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
-    <stache-action-buttons [routes]="routes">
+    <stache-action-buttons
+      [routes]="routes">
     </stache-action-buttons>
   </div>
 
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="action-buttons-demo-component.html">
-        <stache-code-block languageType="markup">
-          <stache-action-buttons [routes]="routes">
+      <sky-tab
+        tabHeading="action-buttons-demo-component.html">
+        <stache-code-block
+          languageType="markup">
+          <stache-action-buttons
+            [routes]="routes">
           </stache-action-buttons>
         </stache-code-block>
       </sky-tab>
-      <sky-tab tabHeading="action-buttons-demo-component.ts">
-        <stache-code-block languageType="typescript">
+      <sky-tab
+        tabHeading="action-buttons-demo-component.ts">
+        <stache-code-block
+          languageType="typescript">
           import { Component } from '@angular/core';
 
           @Component({
