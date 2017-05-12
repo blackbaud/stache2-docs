@@ -1,12 +1,20 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Code Block"
   layout="sidebar"
   showBreadcrumbs="true">
-  <stache-page-summary>
-    The code block component displays a formatted block of code with syntax highlighting.
 
-    <h3>Code Block properties</h3>
+  <stache-page-summary>
+    <p>
+      The code block component displays a formatted block of code with syntax highlighting.
+    </p>
+
+    <h3>
+      Code Block properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>code</stache-code> — <i>(Optional.)</i> Pass a code sample into the component. You must use the raw loader for the code to render it as a string.
@@ -20,8 +28,10 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
-    <stache-code-block languageType="js">
+    <stache-code-block
+      languageType="js">
       $(document).ready(() => {
         console.log('jQuery is ready!');
       });
@@ -32,11 +42,15 @@
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="code-block-demo-component.html">
-        <stache-code-block languageType="markup">
-          <stache-code-block languageType="js">
+      <sky-tab
+        tabHeading="code-block-demo-component.html">
+        <stache-code-block
+          languageType="markup">
+          <stache-code-block
+            languageType="js">
             $(document).ready(() => {
               console.log('jQuery is ready!');
             });
@@ -44,14 +58,22 @@
           </stache-code-block>
         </stache-code-block>
       </sky-tab>
-      <sky-tab tabHeading="code-block-property-demo.component.html">
-        <stache-code-block languageType="markup">
-          <stache-code-block code="sample" languageType="js">
+
+      <sky-tab
+        tabHeading="code-block-property-demo.component.html">
+        <stache-code-block
+          languageType="markup">
+          <stache-code-block
+            code="sample"
+            languageType="js">
           </stache-code-block>
         </stache-code-block>
       </sky-tab>
-      <sky-tab tabHeading="code-block-property-demo.component.ts">
-        <stache-code-block languageType="typescript">
+
+      <sky-tab
+        tabHeading="code-block-property-demo.component.ts">
+        <stache-code-block
+          languageType="typescript">
           import { Component } from '@angular/core';
 
           @Component({

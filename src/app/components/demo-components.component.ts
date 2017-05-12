@@ -15,6 +15,7 @@ export class StacheDemoComponentsComponent implements OnInit {
 
   public ngOnInit(): void {
     let components = this.componentService.getAllSorted();
+
     components.forEach(component => {
       this.routes.push({
         path: [component.route],

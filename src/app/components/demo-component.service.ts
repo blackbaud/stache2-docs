@@ -129,12 +129,15 @@ export class StacheDemoComponentService {
     return this.developmentComponents.sort((a, b) => {
       let nameA = a.name.toLowerCase();
       let nameB = b.name.toLowerCase();
+
       if (nameA < nameB) {
           return -1;
       }
+
       if (nameA > nameB) {
           return 1;
       }
+
       return 0;
     });
   }
@@ -143,12 +146,15 @@ export class StacheDemoComponentService {
     return this.components.sort((a, b) => {
       let nameA = a.name.toLowerCase();
       let nameB = b.name.toLowerCase();
+
       if (nameA < nameB) {
           return -1;
       }
+
       if (nameA > nameB) {
           return 1;
       }
+
       return 0;
     });
   }

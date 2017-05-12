@@ -1,9 +1,18 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Sidebar">
+
   <stache-page-summary>
-    The Sidebar component generates the navigation for the sidebar layout.
-    <h3>Sidebar properties</h3>
+    <p>
+      The Sidebar component generates the navigation for the sidebar layout.
+    </p>
+
+    <h3>
+      Sidebar properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>routes</stache-code> — The routes that populate the sidebar navigation. This property takes an array of <stache-code>stache-nav-link</stache-code> objects.
@@ -14,29 +23,23 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
     <stache-row>
-      <stache-column screenSmall="2">
-        <stache-sidebar [routes]="[
-          {
-            path: '/learn',
-            name: 'Learn',
-            children: [
-              {
-                path: '/basics',
-                name: 'Basics'
-              }
-            ]
-          },
-          {
-            path: '/components',
-            name: 'Components'
-          },
-          {
-            path: '/contribute',
-            name: 'Contribute'
-          }
-        ]">
+      <stache-column
+        screenSmall="2">
+        <stache-sidebar
+          [routes]="[
+            {
+              path: '/learn',
+              name: 'Learn',
+              children: [
+                { path: '/basics', name: 'Basics' }
+              ]
+            },
+            { path: '/components', name: 'Components' },
+            { path: '/contribute', name: 'Contribute' }
+          ]">
         </stache-sidebar>
       </stache-column>
     </stache-row>
@@ -45,20 +48,27 @@
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="sidebar-demo-component.html">
-        <stache-code-block languageType="markup">
+      <sky-tab
+        tabHeading="sidebar-demo-component.html">
+        <stache-code-block
+          languageType="markup">
           <stache-row>
-            <stache-column screenSmall="2">
-              <stache-sidebar [routes]="routes">
+            <stache-column
+              screenSmall="2">
+              <stache-sidebar
+                [routes]="routes">
               </stache-sidebar>
             </stache-column>
           </stache-row>
         </stache-code-block>
       </sky-tab>
-      <sky-tab tabHeading="sidebar-demo-component.ts">
-        <stache-code-block languageType="typescript">
+      <sky-tab
+        tabHeading="sidebar-demo-component.ts">
+        <stache-code-block
+          languageType="typescript">
           import { Component} from '@angular/core';
 
           @Component({
@@ -71,20 +81,11 @@
                 path: '/learn',
                 name: 'Learn',
                 children: [
-                  {
-                    path: '/basics',
-                    name: 'Basics'
-                  }
+                  { path: '/basics', name: 'Basics' }
                 ]
               },
-              {
-                path: '/components',
-                name: 'Components'
-              },
-              {
-                path: '/contribute',
-                name: 'Contribute'
-              }
+              { path: '/components', name: 'Components' },
+              { path: '/contribute', name: 'Contribute' }
             ];
           }
         </stache-code-block>
@@ -92,5 +93,3 @@
     </sky-tabset>
   </div>
 </stache>
-
-

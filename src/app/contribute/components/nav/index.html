@@ -1,9 +1,18 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Nav">
+
   <stache-page-summary>
-    The Nav component handles and automates navigation and routing throughout a Stache application.
-    <h3>Nav properties</h3>
+    <p>
+      The Nav component handles and automates navigation and routing throughout a Stache application.
+    </p>
+
+    <h3>
+      Nav properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>routes</stache-code> — The routes that the nav component is responsible for. This property takes an array of <stache-code>stache-nav-link</stache-code> objects.
@@ -17,6 +26,7 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
+
   <div class="stache-demo-page-result">
     <stache-nav
       [routes]="[
@@ -32,18 +42,23 @@
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="nav-demo-component.html">
-        <stache-code-block languageType="markup">
+      <sky-tab
+        tabHeading="nav-demo-component.html">
+        <stache-code-block
+          languageType="markup">
           <stache-nav
             [routes]="routes"
             navType="breadcrumbs">
           </stache-nav>
         </stache-code-block>
       </sky-tab>
-      <sky-tab tabHeading="nav-demo-component.ts">
-        <stache-code-block languageType="typescript">
+      <sky-tab
+        tabHeading="nav-demo-component.ts">
+        <stache-code-block
+          languageType="typescript">
           import { Component} from '@angular/core';
 
           @Component({
