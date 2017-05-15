@@ -20,7 +20,7 @@
     "@blackbaud/skyux-builder-plugin-stache-include": "1.0.0"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder": "1.0.0-beta.24",
+    "@blackbaud/skyux-builder": "1.0.0-beta.25",
     "codelyzer": "1.0.0-beta.4"
   },
   "repository": {
