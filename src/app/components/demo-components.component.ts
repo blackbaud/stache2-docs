@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { StacheDemoComponentService } from './demo-component.service';
-import { StacheDemoComponent } from './demo-component';
 
 @Component({
   selector: 'stache-demo-components',
@@ -10,7 +9,8 @@ import { StacheDemoComponent } from './demo-component';
 export class StacheDemoComponentsComponent implements OnInit {
   public routes: any[] = [];
 
-  public constructor(private componentService: StacheDemoComponentService) { }
+  public constructor(
+    private componentService: StacheDemoComponentService) { }
 
   public ngOnInit(): void {
     let components = this.componentService.getAllSorted();
