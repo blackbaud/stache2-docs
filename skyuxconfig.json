@@ -1,5 +1,5 @@
 {
-  "name": "stache-docs",
+  "name": "stache",
   "mode": "easy",
   "compileMode": "aot",
   "plugins": [
