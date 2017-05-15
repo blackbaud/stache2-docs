@@ -27,7 +27,8 @@ export class StacheDemoComponentService {
       name: 'Action Buttons',
       route: '/components/action-buttons',
       icon: 'th-list',
-      summary: 'Provides a clean, visual navigation pattern for linking to multiple documents using the SKY UX Action Button.'
+      summary: 'Provides a clean, visual navigation pattern for linking \
+      to multiple documents using the SKY UX Action Button.'
     },
     {
       name: 'Grid',
@@ -51,7 +52,8 @@ export class StacheDemoComponentService {
       name: 'Hero',
       route: '/components/hero',
       icon: 'photo',
-      summary: 'Provides a Hero with a background image, title, and subheading information to your Stache page.'
+      summary: 'Provides a Hero with a background image, title, and subheading \
+      information to your Stache page.'
     },
     {
       name: 'Image',

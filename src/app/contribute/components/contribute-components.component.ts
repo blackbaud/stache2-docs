@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { StacheDemoComponentService } from '../../components/demo-component.service';
-import { StacheDemoComponent } from '../../components/demo-component';
 
 @Component({
   selector: 'stache-contribute-components',
