@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import { StacheDemoComponentService } from '../../components/demo-component.service';
 import { StacheDemoComponent } from '../../components/demo-component';
-import { StacheNavLink } from '../../../modules/nav/nav-link';
 
 @Component({
   selector: 'stache-contribute-components',
   templateUrl: './contribute-components.component.html'
 })
 export class StacheContributeComponentsComponent implements OnInit {
-  public routes: StacheNavLink[] = [];
+  public routes: any[] = [];
 
   public constructor(
     private componentService: StacheDemoComponentService) { }
