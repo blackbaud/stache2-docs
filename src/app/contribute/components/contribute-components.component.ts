@@ -11,10 +11,12 @@ import { StacheNavLink } from '../../../modules/nav/nav-link';
 export class StacheContributeComponentsComponent implements OnInit {
   public routes: StacheNavLink[] = [];
 
-  public constructor(private componentService: StacheDemoComponentService) { }
+  public constructor(
+    private componentService: StacheDemoComponentService) { }
 
   public ngOnInit(): void {
     let components = this.componentService.getAllDevelopmentSorted();
+
     components.forEach(component => {
       this.routes.push({
         path: [component.route],

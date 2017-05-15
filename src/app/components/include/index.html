@@ -1,9 +1,18 @@
-<app-nav></app-nav>
+<app-nav>
+</app-nav>
+
 <stache
   pageTitle="Include">
+
   <stache-page-summary>
-    The include component supports single source documentation. It allows you to store content in the <stache-code>src/stache/includes/</stache-code> directory and then reuse it throughout your documentation.
-    <h3>Include properties</h3>
+    <p>
+      The include component supports single source documentation. It allows you to store content in the <stache-code>src/stache/includes/</stache-code> directory and then reuse it throughout your documentation.
+    </p>
+
+    <h3>
+      Include properties
+    </h3>
+
     <ul>
       <li>
         <stache-code>fileName</stache-code> — The name of the file in your <stache-code>src/stache/includes/</stache-code> directory, including the extension. For more information, see <a routerLink="/learn/basics#include">include</a>.
@@ -14,21 +23,24 @@
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
-  <div class="stache-demo-page-result">
-    <stache-include fileName="example.html">
 
+  <div class="stache-demo-page-result">
+    <stache-include
+      fileName="example.html">
     </stache-include>
   </div>
 
   <stache-page-anchor>
     Code
   </stache-page-anchor>
+
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="code-demo-component.html">
-        <stache-code-block languageType="markup">
+      <sky-tab
+        tabHeading="code-demo-component.html">
+        <stache-code-block
+          languageType="markup">
           &lt;stache-include fileName="example.html"&gt;
-
           &lt;/stache-include&gt;
         </stache-code-block>
       </sky-tab>
