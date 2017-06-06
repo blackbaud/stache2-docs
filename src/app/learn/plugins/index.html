@@ -1,0 +1,65 @@
+<app-nav>
+</app-nav>
+<stache
+  pageTitle="Stache 2 plugins"
+  showTableOfContents="true">
+  <stache-page-summary>
+    <p>
+      In order to expand upon and create new functionality with SKY UX Builder, Stache makes use of plugins.  Each plugin is geared towards a specific purpose, and most of them are required to make use of certain stache components.
+    </p>
+  </stache-page-summary>
+
+    <p>
+      The majority of plugins are required by Stache 2 in order to make use of all components.  Below are lists of required and optional plugins, and instructions on importing them into your Stache 2 project.
+    </p>
+    <sky-alert>
+      If you created a new project with <stache-code>skyux new --template stache</stache-code> these plugins should be already added for you.   If you are upgrading to a newer version of stache, please check to ensure you have all required plugins installed.
+    </sky-alert>
+
+  <stache-page-anchor>
+    Required Plugins for all projects
+  </stache-page-anchor>
+
+  <stache-code-block
+    languageType="markup">
+    @blackbaud/skyux-builder-plugin-stache-code-block,
+    @blackbaud/skyux-builder-plugin-stache-include,
+    @blackbaud/skyux-builder-plugin-stache-route-metadata/collector,
+    @blackbaud/skyux-builder-plugin-stache-route-metadata/generator
+  </stache-code-block>
+
+  <stache-page-anchor>
+    Optional Plugins
+  </stache-page-anchor>
+
+
+  <stache-code-block
+    languageType="markup">
+    @blackbaud/skyux-builder-plugin-auth-email-whitelist
+  </stache-code-block>
+
+  <stache-page-anchor>
+    Adding Plugins to your project
+  </stache-page-anchor>
+
+  <p>
+    Once you have your <stache-code>package.json</stache-code> updated to install the latest version of <strong>stache2</strong>, you will need to also add any required plugins to the <stache-code>plugins</stache-code> array in your <stache-code>skyuxconfig.json</stache-code> file.
+  </p>
+  <stache-code-block
+    languageType="json">
+    {
+      "name": "stache",
+      "mode": "easy",
+      "compileMode": "aot",
+      "plugins": [
+        "@blackbaud/skyux-builder-plugin-stache-code-block",
+        "@blackbaud/skyux-builder-plugin-stache-include",
+        "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
+        "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+      ],
+      "app": {
+        "title": "Stache 2 Documentation"
+      }
+    }
+  </stache-code-block>
+</stache>
