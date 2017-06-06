@@ -95,33 +95,37 @@
               }
             }
         </stache-code-block>
-        <p>
-          If you set <stache-code>"auth": true</stache-code> in <stache-code>skyuxconfig.json</stache-code> to require Blackbaud authentication, you can also use the <stache-code>skyux-builder-plugin-auth-email-whitelist</stache-code> plugin to lock authentication to the following approved email extensions:
-        </p>
-        <ul>
-          <li>
-            <p>blackbaud.com</p>
-          </li>
-          <li>
-            <p>blackbaud.me</p>
-          </li>
-          <li>
-            <p>blackbaud.co.uk</p>
-          </li>
-          <li>
-            <p>blackbaud.au</p>
-          </li>
-          <li>
-            <p>microedge.com</p>
-          </li>
-          <li>
-            <p>attentive.ly</p>
-          </li>
-          <li>
-            <p>everydayhero.com</p>
-          </li>
-        </ul>
-        <p>You can add the whitelist plugin to the <stache-code>plugins</stache-code> array.</p>
+        <sky-alert alertType="info">
+          <p>
+            If you set <stache-code>"auth": true</stache-code> in <stache-code>skyuxconfig.json</stache-code> to require Blackbaud authentication, you can also use the <stache-code>skyux-builder-plugin-auth-email-whitelist</stache-code> plugin to lock authentication to the following approved email extensions:
+          </p>
+
+          <ul>
+            <li>
+              blackbaud.com
+            </li>
+            <li>
+              blackbaud.me
+            </li>
+            <li>
+              blackbaud.co.uk
+            </li>
+            <li>
+              blackbaud.au
+            </li>
+            <li>
+              microedge.com
+            </li>
+            <li>
+              attentive.ly
+            </li>
+            <li>
+              everydayhero.com
+            </li>
+          </ul>
+        </sky-alert>
+        <p>If you opt to use the whitelist plugin, you must add it to the <stache-code>plugins</stache-code> array.</p>
+
         <stache-code-block>
           "auth": true
           "plugins": [
