@@ -2,32 +2,32 @@
 </app-nav>
 
 <stache
-  pageTitle="Getting Started"
+  pageTitle="Get started"
   showTableOfContents="true">
 
   <stache-page-anchor>
       Prerequisites
   </stache-page-anchor>
   <p>
-    Stache components require SKY UX to use. To learn more, refer to the <a href="https://developer.blackbaud.com/skyux2/learn">SKY UX documentation</a>.
+    Stache components require SKY UX. To learn more, see <a href="https://developer.blackbaud.com/skyux2">the SKY UX website</a>.
   </p>
 
   <stache-page-anchor>
-    Start a Stache Project
+    Create a Stache project
   </stache-page-anchor>
   <p>
-    Starting a Stache project is quick and easy. To get started, from the command prompt, <stache-code>cd</stache-code> into the directory where you want to create the project and run <stache-code>skyux new --template stache</stache-code>. This will generate a new SKY UX project with the Stache template and components. For more information about starting a new SKY UX project, refer to their <a href="https://developer.blackbaud.com/skyux2/learn/tutorials/create-project">documentation</a>.
+    Starting a Stache project is quick and easy. To get started from the command prompt, <stache-code>cd</stache-code> into the directory where you want to create the project and run <stache-code>skyux new --template stache</stache-code>. This generates a new SKY UX project with the Stache template and components. For more information about creating a project, see <a href="https://developer.blackbaud.com/skyux2/learn/get-started/3.-create-project">the SKY UX website</a>.
   </p>
 
   <stache-page-anchor>
-    Add Stache to an Existing SKY UX Project
+    Add Stache to an existing SKY UX project
   </stache-page-anchor>
   <stache-tutorial>
     <stache-tutorial-heading>
-      Adding Stache to your SPA
+      Add Stache to your SPA
     </stache-tutorial-heading>
     <stache-tutorial-summary>
-      This tutorial will show you step by step how to add Stache 2 to an existing SPA built with SKY UX builder.
+      This tutorial provides step-by-step instructions to add Stache to an existing application.
     </stache-tutorial-summary>
 
     <stache-tutorial-step>
@@ -43,11 +43,11 @@
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Add Stache 2 module into your app
+        Add the Stache module to your application
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open your <stache-code>app-extras.module.ts</stache-code> file in your project.  Here we need to import and export the <stache-code>Stache Module</stache-code> to use the Stache components throughout your project.
+          Open the <stache-code>app-extras.module.ts</stache-code> file in your project. Import and export <stache-code>StacheModule</stache-code> to make Stache components available throughout the project.
         </p>
 
         <stache-code-block
@@ -71,11 +71,11 @@
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Declare the needed plugins in skyuxconfig
+        Declare plugins
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>skyuxconfig.json</stache-code> file in your project.  Add the required plugins to the <stache-code>plugins</stache-code> array.
+          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Add the required Stache plugins to the <stache-code>plugins</stache-code> array.
         </p>
 
         <stache-code-block
@@ -95,25 +95,33 @@
               }
             }
         </stache-code-block>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
-
-    <stache-tutorial-step
-      showNumber="false">
-      <stache-tutorial-step-body>
-        <sky-alert alertType="info">
-          If you are using <stache-code>"auth" : true</stache-code> in your <stache-code>skyuxconfig.json</stache-code> settings, you can make use of the <strong>skyux-builder-plugin-auth-email-whitelist</strong> plugin to lock authentication to the following approved email addresses.
-        </sky-alert>
-        <stache-code-block>
-          blackbaud.com,
-          blackbaud.me,
-          blackbaud.co.uk,
-          blackbaud.au,
-          microedge.com,
-          attentive.ly,
-          everydayhero.com
-        </stache-code-block>
-        you can add the white list plugin to your plugins array.
+        <p>
+          If you set <stache-code>"auth": true</stache-code> in <stache-code>skyuxconfig.json</stache-code> to require Blackbaud authentication, you can also use the <stache-code>skyux-builder-plugin-auth-email-whitelist</stache-code> plugin to lock authentication to the following approved email extensions:
+        </p>
+        <ul>
+          <li>
+            <p>blackbaud.com</p>
+          </li>
+          <li>
+            <p>blackbaud.me</p>
+          </li>
+          <li>
+            <p>blackbaud.co.uk</p>
+          </li>
+          <li>
+            <p>blackbaud.au</p>
+          </li>
+          <li>
+            <p>microedge.com</p>
+          </li>
+          <li>
+            <p>attentive.ly</p>
+          </li>
+          <li>
+            <p>everydayhero.com</p>
+          </li>
+        </ul>
+        <p>You can add the whitelist plugin to the <stache-code>plugins</stache-code> array.</p>
         <stache-code-block>
           "auth": true
           "plugins": [
@@ -125,11 +133,11 @@
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Import and Export Stache Config Service
+        Import and export StacheConfigService
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          In order to make use of the <stache-code>StacheConfigService</stache-code>, we need to declare it in our <stache-code>app-extras.module.ts</stache-code> file, and tie it into the <stache-code>SkyAppConfig</stache-code>.  To do this, we need to first <strong>import</strong> both modules, and declare them in the <stache-code>providers</stache-code> array.
+          To use the <stache-code>StacheConfigService</stache-code> module, declare it in the project's <stache-code>app-extras.module.ts</stache-code> file and then tie it to the <stache-code>SkyAppConfig</stache-code> module. In <stache-code>app-extras.module.ts</stache-code>, import both modules and then declare them in the <stache-code>providers</stache-code> array.
         </p>
 
         <stache-code-block
