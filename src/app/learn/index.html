@@ -22,50 +22,88 @@
   <stache-page-anchor>
     Add Stache to an Existing SKY UX Project
   </stache-page-anchor>
-  <p>
-    If you want to add Stache to an established project:
-  </p>
-  <ol>
-    <li>
-      Run the following command in your project directory:
-      <stache-code-block>
-        npm install --save @blackbaud/stache
-        npm install --save @blackbaud/skyux-builder-plugin-stache-code-block
-        npm install --save @blackbaud/skyux-builder-plugin-stache-includes
-      </stache-code-block>
-    </li>
-    <li>
-      Add the <stache-code>StacheModule</stache-code> to your app's <strong>app-extras.module.ts</strong>. Import the module and add it to the imports and exports to use the Stache components throughout your project.
-    </li>
-    <li>
-      Import the `SkyAppConfig` and `StacheConfigService` into <strong>app-extras.module.ts</strong> and add them to the `resolves` array.
 
-      <stache-code-block
-        languageType="typescript">
-        import { NgModule } from '@angular/core';
+  <stache-tutorial>
+    <stache-tutorial-heading>
+      Add Stache to an Existing SKY UX Project
+    </stache-tutorial-heading>
+    <stache-tutorial-summary>
+      This tutorial will show you step by step how to add Stache 2 to an existing SPA built with SKY UX builder.
+    </stache-tutorial-summary>
 
-        import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
-        import { StacheModule, StacheConfigService } from '@blackbaud/stache';
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Install dependencies
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <stache-code-block>
+          npm install --save @blackbaud/stache
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
 
-        // Specify entry components, module-level providers, etc. here.
-        @NgModule({
-          imports: [
-            StacheModule
-          ],
-          exports: [
-            StacheModule
-          ],
-          providers: [
-            {
-              provide: StacheConfigService,
-              useExisting: SkyAppConfig
-            }
-          ],
-          entryComponents: []
-        })
-        export class AppExtrasModule { }
-      </stache-code-block>
-    </li>
-  </ol>
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Add Stache 2 module into your app
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open your <stache-code>app-extras.module.ts</stache-code> file in your project.  Here we need to import and export the <stache-code>Stache Module</stache-code> to use the Stache components throughout your project.
+        </p>
 
+        <stache-code-block
+          languageType="typescript">
+          import { NgModule } from '@angular/core';
+
+          import { StacheModule } from '@blackbaud/stache';
+
+          // Specify entry components, module-level providers, etc. here.
+          @NgModule({
+            imports: [
+              StacheModule
+            ],
+            exports: [
+              StacheModule
+            ],
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Add the config service.
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          In order to make use of the <stache-code>StacheConfigService</stache-code>, we need to declare it in our <stache-code>app-extras.module.ts</stache-code> file, and tie it into the <stache-code>SkyAppConfig</stache-code>.  To do this, we need to first <strong>import</strong> both modules, and declare them in the <stache-code>providers</stache-code> array.
+        </p>
+
+        <stache-code-block
+          languageType="typescript">
+          import { NgModule } from '@angular/core';
+
+          import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
+          import { StacheModule, StacheConfigService } from '@blackbaud/stache';
+
+          // Specify entry components, module-level providers, etc. here.
+          @NgModule({
+            imports: [
+              StacheModule
+            ],
+            exports: [
+              StacheModule
+            ],
+            providers: [
+              {
+                provide: StacheConfigService,
+                useExisting: SkyAppConfig
+              }
+            ],
+            entryComponents: []
+          })
+          export class AppExtrasModule { }
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+  </stache-tutorial>
 </stache>
