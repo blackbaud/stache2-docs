@@ -62,6 +62,12 @@ export class StacheDemoComponentService {
       summary: 'Provides a responsive image container.'
     },
     {
+      name: 'Tutorial',
+      route: '/components/tutorial',
+      icon: 'book',
+      summary: 'Provides a formatted and styled tutorial pattern.'
+    },
+    {
       name: 'Video',
       route: '/components/video',
       icon: 'video-camera',
