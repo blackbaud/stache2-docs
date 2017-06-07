@@ -1,0 +1,156 @@
+<app-nav>
+</app-nav>
+
+<stache
+  navTitle="Add Stache">
+  <stache-tutorial>
+    <stache-tutorial-heading>
+      Add Stache to an existing SKY UX project
+    </stache-tutorial-heading>
+    <stache-tutorial-summary>
+      This tutorial provides step-by-step instructions to add Stache to an existing application.
+    </stache-tutorial-summary>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Install dependencies
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <stache-code-block>
+          npm install --save @blackbaud/stache
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Add the Stache module to your application
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>app-extras.module.ts</stache-code> file in your project. Import and export <stache-code>StacheModule</stache-code> to make Stache components available throughout the project.
+        </p>
+
+        <stache-code-block
+          languageType="typescript">
+          import { NgModule } from '@angular/core';
+
+          import { StacheModule } from '@blackbaud/stache';
+
+          // Specify entry components, module-level providers, etc. here.
+          @NgModule({
+            imports: [
+              StacheModule
+            ],
+            exports: [
+              StacheModule
+            ],
+            ...
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Declare plugins
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Add the required Stache plugins to the <stache-code>plugins</stache-code> array.
+        </p>
+
+        <stache-code-block
+          languageType="json">
+            {
+              "name": "stache",
+              "mode": "easy",
+              "compileMode": "aot",
+              "plugins": [
+                "@blackbaud/skyux-builder-plugin-stache-code-block",
+                "@blackbaud/skyux-builder-plugin-stache-include",
+                "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
+                "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+              ],
+              "app": {
+                "title": "Stache 2 Documentation"
+              }
+            }
+        </stache-code-block>
+        <sky-alert alertType="info">
+          <p>
+            If you set <stache-code>"auth": true</stache-code> in <stache-code>skyuxconfig.json</stache-code> to require Blackbaud authentication, you can also use the <stache-code>skyux-builder-plugin-auth-email-whitelist</stache-code> plugin to lock authentication to the following approved email extensions:
+          </p>
+
+          <ul>
+            <li>
+              blackbaud.com
+            </li>
+            <li>
+              blackbaud.me
+            </li>
+            <li>
+              blackbaud.co.uk
+            </li>
+            <li>
+              blackbaud.au
+            </li>
+            <li>
+              microedge.com
+            </li>
+            <li>
+              attentive.ly
+            </li>
+            <li>
+              everydayhero.com
+            </li>
+          </ul>
+        </sky-alert>
+        <p>If you opt to use the whitelist plugin, you must add it to the <stache-code>plugins</stache-code> array.</p>
+
+        <stache-code-block>
+          "auth": true
+          "plugins": [
+            "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
+            ...
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Import and export StacheConfigService
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          To use the <stache-code>StacheConfigService</stache-code> module, declare it in the project's <stache-code>app-extras.module.ts</stache-code> file and then tie it to the <stache-code>SkyAppConfig</stache-code> module. In <stache-code>app-extras.module.ts</stache-code>, import both modules and then declare them in the <stache-code>providers</stache-code> array.
+        </p>
+
+        <stache-code-block
+          languageType="typescript">
+          import { NgModule } from '@angular/core';
+
+          import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
+          import { StacheModule, StacheConfigService } from '@blackbaud/stache';
+
+          // Specify entry components, module-level providers, etc. here.
+          @NgModule({
+            imports: [
+              StacheModule
+            ],
+            exports: [
+              StacheModule
+            ],
+            providers: [
+              {
+                provide: StacheConfigService,
+                useExisting: SkyAppConfig
+              }
+            ],
+            entryComponents: []
+          })
+          export class AppExtrasModule { }
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+  </stache-tutorial>
+</stache>

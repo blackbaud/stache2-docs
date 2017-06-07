@@ -1,0 +1,98 @@
+<app-nav>
+</app-nav>
+
+<stache
+  navTitle="Update Stache">
+  <stache-tutorial>
+    <stache-tutorial-heading>
+      Update Stache to the newest release
+    </stache-tutorial-heading>
+    <stache-tutorial-summary>
+      The following steps will walk you through updating the various parts of your app needed to use the latest version of Stache.
+    </stache-tutorial-summary>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update Stache version
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>package.json</stache-code> file found in your app. Here you will need to update the <stache-code>dependencies</stache-code> to install Stache at the latest version.
+        </p>
+        <sky-alert alertType="info">
+          You can find the latest released version of Stache by checking the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">change log</a>
+        </sky-alert>
+        <stache-code-block
+          languageType="json">
+            "dependencies": {
+              "@blackbaud/stache": "2.0.0-beta.2",
+              ...
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update the required plugins
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Add the required Stache plugins to the <stache-code>plugins</stache-code> array.
+        </p>
+
+        <stache-code-block
+          languageType="json">
+            {
+              "name": "stache",
+              "mode": "easy",
+              "compileMode": "aot",
+              "plugins": [
+                "@blackbaud/skyux-builder-plugin-stache-code-block",
+                "@blackbaud/skyux-builder-plugin-stache-include",
+                "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
+                "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+              ],
+              "app": {
+                "title": "Stache 2 Documentation"
+              }
+            }
+        </stache-code-block>
+        <sky-alert alertType="info">
+          For more information on which plugins are currently required or for optional plugins you may be interested in adding, reference our <a routerLink="../../plugins">plugins section</a>.
+        </sky-alert>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update node_modules
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <ol>
+          <li>
+            Delete your <stache-code>node_modules/@blackbaud/</stache-code> folder. This will remove any outdated versions of plugins or Stache you may have.
+          </li>
+          <li>
+            From your terminal run <stache-code>npm install</stache-code>. This will install the new version of the Stache module and it's dependencies.
+          </li>
+        </ol>
+        <sky-alert
+          alertType="warning">
+          When updating Stache versions, be sure you read through the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">change log</a> for notes on any breaking changes that may require you to update how certain components are being used.
+        </sky-alert>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update components
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          As with any major update, there is a chance existing components or implementations may have changed. Please read through the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">change log</a> for notes on any breaking changes that may require you to update how certain components are being used.
+        </p>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+  </stache-tutorial>
+</stache>
+`
