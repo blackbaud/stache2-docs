@@ -7,7 +7,8 @@
     "@blackbaud/skyux-builder-plugin-stache-include",
     "@blackbaud/skyux-builder-plugin-stache-json-data",
     "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
-    "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+    "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator",
+    "@blackbaud/skyux-builder-plugin-stache-template-reference-variable"
   ],
   "app": {
     "title": "Stache 2 Documentation"
