@@ -4,7 +4,7 @@ import { StacheDemoComponent } from './demo-component';
 
 @Injectable()
 export class StacheDemoComponentService {
-  private components: StacheDemoComponent[] = [
+  public components: StacheDemoComponent[] = [
     {
       name: 'Stache Wrapper',
       route: '/components/wrapper',
@@ -81,7 +81,7 @@ export class StacheDemoComponentService {
     }
   ];
 
-  private developmentComponents: StacheDemoComponent[] = [
+  public developmentComponents: StacheDemoComponent[] = [
     {
       name: 'Breadcrumbs',
       route: '/contribute/components/breadcrumbs',
@@ -133,25 +133,17 @@ export class StacheDemoComponentService {
     }
   ];
 
-  public getAllDevelopmentSorted(): StacheDemoComponent[] {
-    return this.developmentComponents.sort((a, b) => {
-      let nameA = a.name.toLowerCase();
-      let nameB = b.name.toLowerCase();
+  public directives: StacheDemoComponent[] = [
+    {
+      name: 'Affix Top',
+      route: '/contribute/directives/affix-top',
+      icon: 'wrench',
+      summary: `Causes the affected component to affix to the top of the page.`
+    }
+  ];
 
-      if (nameA < nameB) {
-          return -1;
-      }
-
-      if (nameA > nameB) {
-          return 1;
-      }
-
-      return 0;
-    });
-  }
-
-  public getAllSorted(): StacheDemoComponent[] {
-    return this.components.sort((a, b) => {
+  public getAllSortedByCollection(collection: string): StacheDemoComponent[] {
+    return this[collection].sort((a, b) => {
       let nameA = a.name.toLowerCase();
       let nameB = b.name.toLowerCase();
 
