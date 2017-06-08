@@ -303,4 +303,109 @@
     <b>Note: </b> Includes are for static content. For dynamic content, create a custom component instead.
   </sky-alert>
 
+  <stache-page-anchor>
+    JSON Data Service
+  </stache-page-anchor>
+
+  <p>
+    Stache can consume JSON data files and provide them to you for use in your Stache templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include.
+  </p>
+
+  <sky-alert alertType="info">
+    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/json-data">JSON data</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
+  </sky-alert>
+
+  <p>
+    Data you wish to consume should be placed in the <stache-code>src/stache/data/</stache-code> directory. For example:
+  </p>
+
+  <ul>
+    <li>
+      <i class="fa fa-folder"></i> src
+      <ul>
+        <li>
+          <i class="fa fa-folder"></i> stache
+          <ul>
+            <li>
+              <i class="fa fa-folder"></i> data
+              <ul>
+                <li>
+                  <i class="fa fa-file"></i> example.json
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    We can then use that data in a template like so:
+  </p>
+
+  <stache-code-block
+    languageType="markup">
+    <p>{{ stache.jsonData.example.key }}</p>
+  </stache-code-block>
+
+  <p>If you want to use the data in a component, you can do so with the <stache-code>StacheJsonDataService</stache-code> by adding it to the providers in your <stache-code>app-extras.module.ts</stache-code>:</p>
+
+  <stache-code-block>
+    import { NgModule } from '@angular/core';
+
+    import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
+    import { StacheModule, StacheConfigService, StacheJsonDataService } from '@blackbaud/stache';
+
+    import { StacheDemoComponentService } from './components/demo-component.service';
+
+    require('style-loader!./app.scss');
+
+    // Specify entry components, module-level providers, etc. here.
+    @NgModule({
+      imports: [
+        StacheModule
+      ],
+      exports: [
+        StacheModule
+      ],
+      providers: [
+        {
+          provide: StacheConfigService,
+          useExisting: SkyAppConfig
+        },
+        StacheJsonDataService,
+        StacheDemoComponentService
+      ],
+      entryComponents: []
+    })
+    export class AppExtrasModule { }
+  </stache-code-block>
+
+  <p>You then add the service to your component: </p>
+
+  <stache-code-block
+    langagueType="typescript">
+    import { Component, OnInit } from '@angular/core';
+    import { StacheJsonDataService } from '@blackbaud/stache';
+
+    @Component({
+      selector: 'my-component',
+      template: './my-component.component.html'
+    })
+    export class MyComponent implements OnInit {
+
+      public allData: any;
+      public specificData: any;
+
+      constructor(
+        private dataService: StacheJsonDataService
+      ) { }
+
+      ngOnInit() {
+        this.allData = this.dataService.getAll();
+        this.specificData = this.dataService.getFileData('example');
+      }
+    }
+  </stache-code-block>
 </stache>
