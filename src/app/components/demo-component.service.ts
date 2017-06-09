@@ -130,6 +130,12 @@ export class StacheDemoComponentService {
       route: '/contribute/components/page-header',
       icon: 'header',
       summary: `Provides a title for each Stache page.`
+    },
+    {
+      name: 'Affix Top',
+      route: '/contribute/components/affix-top',
+      icon: 'wrench',
+      summary: `Wraps elements and causes them to affix to the window on scroll.`
     }
   ];
 
