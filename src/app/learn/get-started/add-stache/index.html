@@ -66,10 +66,7 @@
               "mode": "easy",
               "compileMode": "aot",
               "plugins": [
-                "@blackbaud/skyux-builder-plugin-stache-code-block",
-                "@blackbaud/skyux-builder-plugin-stache-include",
-                "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
-                "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+                "@blackbaud/skyux-builder-plugin-stache"
               ],
               "app": {
                 "title": "Stache 2 Documentation"
@@ -112,43 +109,6 @@
           "plugins": [
             "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
             ...
-        </stache-code-block>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
-
-    <stache-tutorial-step>
-      <stache-tutorial-step-heading>
-        Import and export StacheConfigService
-      </stache-tutorial-step-heading>
-      <stache-tutorial-step-body>
-        <p>
-          To use the <stache-code>StacheConfigService</stache-code> module, declare it in the project's <stache-code>app-extras.module.ts</stache-code> file and then tie it to the <stache-code>SkyAppConfig</stache-code> module. In <stache-code>app-extras.module.ts</stache-code>, import both modules and then declare them in the <stache-code>providers</stache-code> array.
-        </p>
-
-        <stache-code-block
-          languageType="typescript">
-          import { NgModule } from '@angular/core';
-
-          import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
-          import { StacheModule, StacheConfigService } from '@blackbaud/stache';
-
-          // Specify entry components, module-level providers, etc. here.
-          @NgModule({
-            imports: [
-              StacheModule
-            ],
-            exports: [
-              StacheModule
-            ],
-            providers: [
-              {
-                provide: StacheConfigService,
-                useExisting: SkyAppConfig
-              }
-            ],
-            entryComponents: []
-          })
-          export class AppExtrasModule { }
         </stache-code-block>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
