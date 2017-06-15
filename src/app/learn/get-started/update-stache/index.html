@@ -25,7 +25,7 @@
         <stache-code-block
           languageType="json">
             "dependencies": {
-              "@blackbaud/stache": "2.0.0-beta.2",
+              "@blackbaud/stache": "2.0.0-beta.3",
               ...
         </stache-code-block>
       </stache-tutorial-step-body>
@@ -37,9 +37,12 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Add the required Stache plugins to the <stache-code>plugins</stache-code> array.
+          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Be sure you are listing all the required <stache-code>plugins</stache-code> for your project.
         </p>
-
+        <sky-alert
+          alertType="info">
+          <strong>NOTE:</strong> With Stache Beta release 2.0.0-beta.3, all <stache-code>plugins</stache-code> required by Stache are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
+        </sky-alert>
         <stache-code-block
           languageType="json">
             {
@@ -47,12 +50,7 @@
               "mode": "easy",
               "compileMode": "aot",
               "plugins": [
-                "@blackbaud/skyux-builder-plugin-stache-code-block",
-                "@blackbaud/skyux-builder-plugin-stache-include",
-                "@blackbaud/skyux-builder-plugin-stache-json-data",
-                "@blackbaud/skyux-builder-plugin-stache-template-reference-variable",
-                "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
-                "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+                "@blackbaud/skyux-builder-plugin-stache"
               ],
               "app": {
                 "title": "Stache 2 Documentation"
@@ -62,6 +60,41 @@
         <sky-alert alertType="info">
           For more information on which plugins are currently required or for optional plugins you may be interested in adding, reference our <a routerLink="../../plugins">plugins section</a>.
         </sky-alert>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update App-Extras
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>src/app-extras.module.ts</stache-code> file. Here we need to ensure we are importing the <stache-code>StacheModule</stache-code>.
+        </p>
+          <sky-alert
+            alertType="info">
+            <strong>NOTE:</strong> With Stache Beta release 2.0.0-beta.3, we no longer need to require or declare the StacheConfigService in our providers array. The only Stache relevant code for this file should be the <stache-code>StacheModule</stache-code>.
+          </sky-alert>
+
+          <stache-code-block
+            languageType="typescript">
+            import { NgModule } from '@angular/core';
+
+            import { StacheModule } from '@blackbaud/stache';
+
+            // Specify entry components, module-level providers, etc. here.
+            @NgModule({
+              imports: [
+                StacheModule
+              ],
+              exports: [
+                StacheModule
+              ],
+              providers: [],
+              entryComponents: []
+            })
+            export class AppExtrasModule { }
+          </stache-code-block>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -97,4 +130,3 @@
     </stache-tutorial-step>
   </stache-tutorial>
 </stache>
-`

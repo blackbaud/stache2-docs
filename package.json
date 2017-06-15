@@ -14,11 +14,11 @@
   "author": "Blackbaud",
   "license": "MIT",
   "dependencies": {
-    "@blackbaud/skyux": "2.0.0-beta.29",
-    "@blackbaud/stache": "blackbaud/stache2"
+    "@blackbaud/skyux": "2.0.0-beta.31",
+    "@blackbaud/stache": "blackbaud/stache2#fix-plugin-services"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder": "1.0.0-beta.30",
+    "@blackbaud/skyux-builder": "1.0.0-beta.33",
     "codelyzer": "2.0.0-beta.1"
   },
   "repository": {

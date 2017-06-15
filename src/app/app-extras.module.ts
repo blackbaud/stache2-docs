@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
-import { StacheModule, StacheConfigService } from '@blackbaud/stache';
+import { StacheModule } from '@blackbaud/stache';
 
 import { StacheDemoComponentService } from './components/demo-component.service';
 
@@ -16,10 +15,6 @@ require('style-loader!./app.scss');
     StacheModule
   ],
   providers: [
-    {
-      provide: StacheConfigService,
-      useExisting: SkyAppConfig
-    },
     StacheDemoComponentService
   ],
   entryComponents: []
