@@ -10,24 +10,19 @@
   </stache-page-summary>
 
     <p>
-      The majority of plugins are required by Stache in order to make use of all components. Below are lists of required and optional plugins, and instructions on importing them into your Stache project.
+      The majority of plugins required by Stache in order to make use of all components are bundled into the <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin. Below are lists of required and optional plugins, and instructions on importing them into your Stache project.
     </p>
     <sky-alert>
       If you created a new project with <stache-code>skyux new --template stache</stache-code> these plugins are added for you. If you are upgrading to a newer version of stache, please check to ensure you have all required plugins installed.
     </sky-alert>
 
   <stache-page-anchor>
-    Required Plugins for all projects
+    Required Plugin for all projects
   </stache-page-anchor>
 
   <stache-code-block
     languageType="markup">
-    @blackbaud/skyux-builder-plugin-stache-code-block,
-    @blackbaud/skyux-builder-plugin-stache-include,
-    @blackbaud/skyux-builder-plugin-stache-json-data,
-    @blackbaud/skyux-builder-plugin-stache-template-reference-variable,
-    @blackbaud/skyux-builder-plugin-stache-route-metadata/collector,
-    @blackbaud/skyux-builder-plugin-stache-route-metadata/generator
+    "@blackbaud/skyux-builder-plugin-stache"
   </stache-code-block>
 
   <stache-page-anchor>
@@ -54,10 +49,7 @@
       "mode": "easy",
       "compileMode": "aot",
       "plugins": [
-        "@blackbaud/skyux-builder-plugin-stache-code-block",
-        "@blackbaud/skyux-builder-plugin-stache-include",
-        "@blackbaud/skyux-builder-plugin-stache-route-metadata/collector",
-        "@blackbaud/skyux-builder-plugin-stache-route-metadata/generator"
+        "@blackbaud/skyux-builder-plugin-stache"
       ],
       "app": {
         "title": "Stache 2 Documentation"
