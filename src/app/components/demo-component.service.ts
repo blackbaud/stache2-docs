@@ -4,6 +4,7 @@ import { StacheDemoComponent } from './demo-component';
 
 @Injectable()
 export class StacheDemoComponentService {
+  [index: string]: any;
   public components: StacheDemoComponent[] = [
     {
       name: 'Stache wrapper',
@@ -149,7 +150,7 @@ export class StacheDemoComponentService {
   ];
 
   public getAllSortedByCollection(collection: string): StacheDemoComponent[] {
-    return this[collection].sort((a, b) => {
+    return this[collection].sort((a: StacheDemoComponent, b: StacheDemoComponent) => {
       let nameA = a.name.toLowerCase();
       let nameB = b.name.toLowerCase();
 
