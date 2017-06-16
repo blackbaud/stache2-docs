@@ -5,15 +5,16 @@
   navTitle="Update Stache">
   <stache-tutorial>
     <stache-tutorial-heading>
-      Update Stache to the newest release
+      Update {{ stache.jsonData.global.productNameShort }} to the newest release
     </stache-tutorial-heading>
     <stache-tutorial-summary>
-      This tutorial provides step-by-step instructions to update your app to the latest version of Stache.
+      This tutorial provides step-by-step instructions to update your app to the latest version of
+      {{ stache.jsonData.global.productNameShort }}.
     </stache-tutorial-summary>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Update the Stache version
+        Update the {{ stache.jsonData.global.productNameShort }} version
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
@@ -46,7 +47,7 @@
         </p>
         <sky-alert
           alertType="info">
-          <strong>NOTE:</strong> With Stache Beta release 2.0.0-beta.3, all <stache-code>plugins</stache-code> required by Stache are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
+          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.3, all <stache-code>plugins</stache-code> required by  {{ stache.jsonData.global.productNameShort }} are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
         </sky-alert>
         <stache-code-block
           languageType="json">
@@ -75,7 +76,7 @@
         </p>
           <sky-alert
             alertType="info">
-            <strong>NOTE:</strong> With Stache Beta release 2.0.0-beta.3, we no longer need to require or declare the StacheConfigService in our providers array. The only Stache relevant code for this file should be the <stache-code>StacheModule</stache-code>.
+            <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.3, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLShort }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
           </sky-alert>
 
           <stache-code-block
@@ -107,10 +108,10 @@
       <stache-tutorial-step-body>
         <ol>
           <li>
-            Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove any outdated versions of Stache or its plugins.
+            Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove any outdated versions of {{ stache.jsonData.global.productNameShort }} or its plugins.
           </li>
           <li>
-            From the command prompt, run <stache-code>npm install</stache-code> to install Stache and its dependencies.
+            From the command prompt, run <stache-code>npm install</stache-code> to install {{ stache.jsonData.global.productNameShort }} and its dependencies.
           </li>
         </ol>
       </stache-tutorial-step-body>
@@ -122,7 +123,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          As with any major update, existing components or implementations may change. Please make sure to review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">Stache changelog</a> for notes on breaking changes that may require you changes in how you use Stache components.
+          As with any major update, existing components or implementations may change. Please make sure to review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a> for notes on breaking changes that may require you changes in how you use  {{ stache.jsonData.global.productNameShort }} components.
         </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
