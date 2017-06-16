@@ -263,6 +263,10 @@
     Include enables you to single source your content and reuse it throughout your documentation. This is useful if you have small chunks of content that you find yourself repeating in several places. You can use an include, update it in one place, and it'll change everywhere it's used.
   </p>
 
+  <sky-alert alertType="info">
+    <b>Note: </b> To use includes, you need to add the <a routerLink="/learn/plugins/stache">Stache</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
+  </sky-alert>
+
   <p>
     Content you wish to include should be placed in the <stache-code>src/stache/includes/</stache-code> directory. For example:
   </p>
@@ -312,7 +316,7 @@
   </p>
 
   <sky-alert alertType="info">
-    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/json-data">JSON data</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
+    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/stache">Stache</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
   </sky-alert>
 
   <p>
@@ -340,6 +344,11 @@
     </li>
   </ul>
 
+  <sky-alert alertType="warning">
+    <b>Note: </b> Make sure to name your files with names that can be converted to valid object keys. Ex: <stache-code>data_file.json</stache-code> or <stache-code>dataFile.json</stache-code></sky-alert>
+  </sky-alert>
+
+
   <p>
     We can then use that data in a template like so:
   </p>
@@ -349,40 +358,7 @@
     <p>{{ stache.jsonData.example.key }}</p>
   </stache-code-block>
 
-  <p>If you want to use the data in a component, you can do so with the <stache-code>StacheJsonDataService</stache-code> by adding it to the providers in your <stache-code>app-extras.module.ts</stache-code>:</p>
-
-  <stache-code-block>
-    import { NgModule } from '@angular/core';
-
-    import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
-    import { StacheModule, StacheConfigService, StacheJsonDataService } from '@blackbaud/stache';
-
-    import { StacheDemoComponentService } from './components/demo-component.service';
-
-    require('style-loader!./app.scss');
-
-    // Specify entry components, module-level providers, etc. here.
-    @NgModule({
-      imports: [
-        StacheModule
-      ],
-      exports: [
-        StacheModule
-      ],
-      providers: [
-        {
-          provide: StacheConfigService,
-          useExisting: SkyAppConfig
-        },
-        StacheJsonDataService,
-        StacheDemoComponentService
-      ],
-      entryComponents: []
-    })
-    export class AppExtrasModule { }
-  </stache-code-block>
-
-  <p>You then add the service to your component: </p>
+  <p>If you want to use the data in a component, you can do so with the <stache-code>StacheJsonDataService</stache-code> by adding it to your component:</p>
 
   <stache-code-block
     langagueType="typescript">
@@ -404,7 +380,7 @@
 
       ngOnInit() {
         this.allData = this.dataService.getAll();
-        this.specificData = this.dataService.getFileData('example');
+        this.specificData = this.dataService.getByName('example');
       }
     }
   </stache-code-block>
