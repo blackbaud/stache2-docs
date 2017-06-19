@@ -13,7 +13,7 @@ export class StacheDemoComponentsComponent implements OnInit {
     private componentService: StacheDemoComponentService) { }
 
   public ngOnInit(): void {
-    let components = this.componentService.getAllSorted();
+    let components = this.componentService.getAllSortedByCollection('components');
 
     components.forEach(component => {
       this.routes.push({

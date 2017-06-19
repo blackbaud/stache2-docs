@@ -1,0 +1,131 @@
+<app-nav>
+</app-nav>
+
+<stache
+  navTitle="Update Stache">
+  <stache-tutorial>
+    <stache-tutorial-heading>
+      Update {{ stache.jsonData.global.productNameShort }} to the newest release
+    </stache-tutorial-heading>
+    <stache-tutorial-summary>
+      This tutorial provides step-by-step instructions to update your app to the latest version of
+      {{ stache.jsonData.global.productNameShort }}.
+    </stache-tutorial-summary>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update the {{ stache.jsonData.global.productNameShort }} version
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/stache</stache-code> under the <stache-code>dependencies</stache-code> property to install the latest version of Stache.
+        </p>
+        <sky-alert alertType="info">
+          To find the latest version, check the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">Stache changelog</a>.
+        </sky-alert>
+        <stache-code-block
+          languageType="json">
+            "dependencies": {
+              "@blackbaud/stache": "2.0.0-beta.3",
+              ...
+        </stache-code-block>
+        <sky-alert
+                   alertType="warning">
+          Before you update, review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog</a> for breaking changes.
+        </sky-alert>
+
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update the required plugins
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Be sure you are listing all the required <stache-code>plugins</stache-code> for your project.
+        </p>
+        <sky-alert
+          alertType="info">
+          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.3, all <stache-code>plugins</stache-code> required by  {{ stache.jsonData.global.productNameShort }} are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
+        </sky-alert>
+        <stache-code-block
+          languageType="json">
+            {
+              "name": "stache",
+              "mode": "easy",
+              "compileMode": "aot",
+              "plugins": [
+                "@blackbaud/skyux-builder-plugin-stache"
+              ],
+              "app": {
+                "title": "Stache 2 Documentation"
+              }
+            }
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update App-Extras
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>src/app-extras.module.ts</stache-code> file. Here we need to ensure we are importing the <stache-code>StacheModule</stache-code>.
+        </p>
+          <sky-alert
+            alertType="info">
+            <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.3, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLShort }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
+          </sky-alert>
+
+          <stache-code-block
+            languageType="typescript">
+            import { NgModule } from '@angular/core';
+
+            import { StacheModule } from '@blackbaud/stache';
+
+            // Specify entry components, module-level providers, etc. here.
+            @NgModule({
+              imports: [
+                StacheModule
+              ],
+              exports: [
+                StacheModule
+              ],
+              providers: [],
+              entryComponents: []
+            })
+            export class AppExtrasModule { }
+          </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update node_modules
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <ol>
+          <li>
+            Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove any outdated versions of {{ stache.jsonData.global.productNameShort }} or its plugins.
+          </li>
+          <li>
+            From the command prompt, run <stache-code>npm install</stache-code> to install {{ stache.jsonData.global.productNameShort }} and its dependencies.
+          </li>
+        </ol>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update components
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          As with any major update, existing components or implementations may change. Please make sure to review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a> for notes on breaking changes that may require you changes in how you use  {{ stache.jsonData.global.productNameShort }} components.
+        </p>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+  </stache-tutorial>
+</stache>

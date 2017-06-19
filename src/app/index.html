@@ -5,7 +5,7 @@
   overlayOpacity="0.4"
   backgroundImageUrl="~/assets/hero-sample-1.jpg">
   <stache-hero-heading>
-    Stache
+   {{ stache.jsonData.global.productNameShort }}
   </stache-hero-heading>
   <stache-hero-subheading>
     Documentation components designed for SKY UX applications
@@ -18,6 +18,7 @@
   layout="container">
 
   <p>
-    This is the work-in-progress documentation site for Stache 2, a component library designed to work with SKY UX Builder single-page applications. For more information about SKY UX, visit their <a href="https://developer.blackbaud.com/skyux2/">documentation</a>.
+
+    This is the work-in-progress documentation site for {{ stache.jsonData.global.productNameLong }}, a component library designed to work with SKY UX Builder single-page applications. For more information about SKY UX, visit their <a href="https://developer.blackbaud.com/skyux2/">documentation</a>.
   </p>
 </stache>
