@@ -2,70 +2,15 @@
 </app-nav>
 
 <stache
-  pageTitle="Getting Started"
-  showTableOfContents="true">
-
-  <stache-page-anchor>
-      Prerequisites
-  </stache-page-anchor>
-  <p>
-    Stache components require SKY UX to use. To learn more, refer to the <a href="https://developer.blackbaud.com/skyux2/learn">SKY UX documentation</a>.
-  </p>
-
-  <stache-page-anchor>
-    Start a Stache Project
-  </stache-page-anchor>
-  <p>
-    Starting a Stache project is quick and easy. To get started, from the command prompt, <stache-code>cd</stache-code> into the directory where you want to create the project and run <stache-code>skyux new --template stache</stache-code>. This will generate a new SKY UX project with the Stache template and components. For more information about starting a new SKY UX project, refer to their <a href="https://developer.blackbaud.com/skyux2/learn/tutorials/create-project">documentation</a>.
-  </p>
-
-  <stache-page-anchor>
-    Add Stache to an Existing SKY UX Project
-  </stache-page-anchor>
-  <p>
-    If you want to add Stache to an established project:
-  </p>
-  <ol>
-    <li>
-      Run the following command in your project directory:
-      <stache-code-block>
-        npm install --save @blackbaud/stache
-        npm install --save @blackbaud/skyux-builder-plugin-stache-code-block
-        npm install --save @blackbaud/skyux-builder-plugin-stache-includes
-      </stache-code-block>
-    </li>
-    <li>
-      Add the <stache-code>StacheModule</stache-code> to your app's <strong>app-extras.module.ts</strong>. Import the module and add it to the imports and exports to use the Stache components throughout your project.
-    </li>
-    <li>
-      Import the `SkyAppConfig` and `StacheConfigService` into <strong>app-extras.module.ts</strong> and add them to the `resolves` array.
-
-      <stache-code-block
-        languageType="typescript">
-        import { NgModule } from '@angular/core';
-
-        import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
-        import { StacheModule, StacheConfigService } from '@blackbaud/stache';
-
-        // Specify entry components, module-level providers, etc. here.
-        @NgModule({
-          imports: [
-            StacheModule
-          ],
-          exports: [
-            StacheModule
-          ],
-          providers: [
-            {
-              provide: StacheConfigService,
-              useExisting: SkyAppConfig
-            }
-          ],
-          entryComponents: []
-        })
-        export class AppExtrasModule { }
-      </stache-code-block>
-    </li>
-  </ol>
+  pageTitle="Learn">
+  <stache-page-summary>
+    Stache 2 is a component library for SKY UX single-page applications. The Stache components facilitate the creation of consistent, coordinated documentation that features SKY UX-approved styles.
+  </stache-page-summary>
+  
+  <br />
+  
+  <sky-alert alertType="info">
+    We continue to flesh out features and add components in Stache as necessary to better support documentation.
+  </sky-alert>
 
 </stache>
