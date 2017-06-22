@@ -2,34 +2,114 @@
 </app-nav>
 
 <stache
-  pageTitle="Get started">
+  navTitle="Getting Started">
 
-  <stache-page-anchor>
-      Prerequisites
-  </stache-page-anchor>
-  <p>
-    Stache 2 components require SKY UX 2. For information about how to install SKY UX 2 and its prerequisites, see <a href="https://developer.blackbaud.com/skyux2/learn/get-started/2.-initial-setup">the SKY UX setup instructions</a>.
-  </p>
+    <stache-tutorial>
+      <stache-tutorial-heading>
+          Create a New {{ stache.jsonData.global.productNameLong }} Documentation Site
+        </stache-tutorial-heading>
+        <stache-tutorial-summary><p>This tutorial provides step-by-step instructions on how to create a new SKY UX Builder single-page application (SPA) with the {{ stache.jsonData.global.productNameLong }} component library.</p>
+            <p><strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> Do you already have a SPA? Learn how to <a routerLink="/learn/add-stache">add the Stache component library</a>.</p>
+          <p>If you require a GitHub repo, contact us before continuing.</p>
+        </stache-tutorial-summary>
+  
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>Install SKY UX Prerequisites      
+    </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        To prepare your machine for your new {{ stache.jsonData.global.productNameShort }} documentation site, you need to install SKY UX's prerequisites. 
+    <ol>
+    <li><p>Install <a href="https://nodejs.org/en/">Node.js version 6+</a>. Do not use Node.js verison 7+.<br />
+    Do you already have Node installed? To check your version, run <stache-code>node –v</stache-code> from the <a routerLink="/learn/basics" fragment="command-line">command line</a>.</p></li>
+        <sky-alert alertType="info">For Mac OS X, we recommend that you use <a href="https://github.com/creationix/nvm">Node Version Manager (nvm)</a> to wrap your NodeJS installation so that it installs in your user directory and avoids permissions-related issues.</sky-alert>
+    <li><p>Install <a href="https://git-scm.com/">Git</a>.</p></li>
+        <li><p>From the <a routerLink="/learn/basics" fragment="command-line">command line</a>, run <stache-code>npm install -g @blackbaud/skyux-cli</stache-code>.</p></li>
+    <li><p><a href="https://host.nxt.blackbaud.com/engineering-system-docs/learn/vsts/vsts-access">Verify you have access</a> to Visual Studio Team Services (VSTS).</p></li>
+</ol>
+        </stache-tutorial-step-body></stache-tutorial-step>
+     
+    <stache-tutorial-step>
+        <stache-tutorial-step-heading>
+            Create and Provision your SKY UX Application in the App Management Portal</stache-tutorial-step-heading>
+        <stache-tutorial-step-body>
+        <p>Next, we'll create your SKY UX application and repo with the SKY UX App Management Portal. This creates a Visual Studio Team Services (VSTS) repo for the application and also creates VSTS build and release definitions.</p>
+    <ol>
+        <li><p>Navigate to the <a href="https://host.nxt.blackbaud.com/skyux-apps/">SKY UX App Management Portal</a>.</p></li>
+        <li>Enter a name for your {{ stache.jsonData.global.productNameShort }} site. We request that you append any documentation sites with <stache-code>-docs</stache-code>. For example: <stache-code>engineering-system-docs</stache-code>. </li>
+        <p><strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> The name you enter here will become part of your site's URL. </p>
+    <li><p>Review and approve the terms and conditions.</p></li>
+    <li><p>Select <strong>Create Your Application</strong>. This process may take a few minutes.</p></li>
+    <li>When the application is created, a ready page appears. We recommend you save a copy of this page.</li>
+    <li>Copy the Git Repo URL.</li>
+            </ol>
+        </stache-tutorial-step-body>
+        </stache-tutorial-step>
+   <stache-tutorial-step>
+       <stache-tutorial-step-heading>Clone your Repo and Set Up Your {{ stache.jsonData.global.productNameShort }} Site </stache-tutorial-step-heading>  
+        <stache-tutorial-step-body>
+       <p>In this step, we'll set up your local working copy of the VSTS repo and install {{ stache.jsonData.global.productNameShort }}.</p>
+           <ol>
+    <li><p>Navigate to the folder on your computer where you have your VSTS and GitHub repos, or where you'd like to save your new repo. </p></li>
+    <li><p>Right-click and select <strong>Git Bash Here</strong>.</p></li>
+    <li><p>In the command line, enter <stache-code>skyux new --template stache</stache-code>.</p></li>
+    <li><p>In the first prompt, enter the name you provided in the SKY UX App Management Portal. For example <stache-code>engineering-system-docs</stache-code>. The SKY UX CLI creates a folder with this name and prefixes it with "skyux-spa."</p></li>
+    <li><p>In the second prompt, paste in the URL to your repo that we copied in step 2.6.  </p></li>
+    <p>Your repo is now being cloned and set up. This will take a few minutes. </p>
+    </ol>
+       </stache-tutorial-step-body>
+    
+        </stache-tutorial-step>     
+        
+    <stache-tutorial-step>
+        <stache-tutorial-step-heading>Add Authentication to your Application</stache-tutorial-step-heading>
+        <stache-tutorial-step-body>
+        <p>After you create your application, it is available on the public Internet. Be careful to not allow anonymous users access to protected Blackbaud assets such as user data or internal Blackbaud systems.</p>
+            <p>We recommend your first step be to add Blackbaud Authentication.</p>
+    <ol>
+    <li><p>Navigate to the repo on your local machine.</p></li>
+    <li><p>Open <stache-code>skyuxconfig.json</stache-code> file in your preferred text editor.</p></li>
+    <li><p>Add <stache-code>"auth": true</stache-code> as seen below.</p></li>
+    <stache-code-block languageType="json">
+    {
+  "mode": "easy",
+  "compileMode": "aot",
+  "auth": true,
+  "plugins": [
+    "@blackbaud/skyux-builder-plugin-stache",
+    "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
+  ],
+  "app": {
+    "title": "Stache 2 Template"
+  },
+  "appSettings": {
+    "stache": {
+    }
+  }
+}
+        </stache-code-block>
+    <li><p>Save and commit your changes.</p></li>
+            </ol>
+        </stache-tutorial-step-body>
+        </stache-tutorial-step>
+       <stache-tutorial-step>
+           <stache-tutorial-step-heading>View your New {{ stache.jsonData.global.productNameShort }} Application </stache-tutorial-step-heading>
+        <stache-tutorial-step-body><p>In {{ stache.jsonData.global.productNameLong }}, to see your site is slightly different from {{ stache.jsonData.global.productNameShort }} 1. </p>
+        <p>From the command line, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.</p>
+            <p><strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> The URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select delete next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again. </p>
+           </stache-tutorial-step-body>
+        
+        </stache-tutorial-step> 
+    
+    <stache-tutorial-step>
+        <stache-tutorial-step-heading>Next Steps</stache-tutorial-step-heading>
+        <stache-tutorial-step-body><p>You are now ready to create stellar technical documentation. To continue the learning, we recommend you review:</p>
+    <ul>
+        <li><p><a routerLink="/learn/basics">{{ stache.jsonData.global.productNameShort }} Basics</a></p></li>
 
-  <stache-page-anchor>
-    Create a Stache application
-  </stache-page-anchor>
-  <p>
-    After the SKY UX CLI and its prerequisites are in place, creating a Stache application is quick and easy. You just specify the Stache 2 template when you create your SKY UX  application.</p>
-  <ol>
-    <li>
-      <p>From the command prompt, <stache-code>cd</stache-code> into the directory where you want to create the project.</p>
-    </li>
-    <li>
-      <p>Run the <stache-code>skyux new</stache-code> command use the <stache-code>--template</stache-code> option to specify the Stache template: <stache-code>skyux new --template stache</stache-code>. This creates a SKY UX application with the Stache template and components.</p>
-      <p>For more information about how to create a SKY UX project, see <a href="https://developer.blackbaud.com/skyux2/learn/get-started/3.-create-project">the SKY UX instructions</a>.</p>
-    </li>
-  </ol>
+        <li><p><a routerLink="/learn/update-stache">How to update {{ stache.jsonData.global.productNameShort }}</a></p></li>        <li><p><a routerLink="/components/">Components</a></p></li>
+            </ul>
+        </stache-tutorial-step-body>
+        </stache-tutorial-step>
+    </stache-tutorial>
 
-  <stache-page-anchor>
-    Add Stache to an existing SKY UX application
-  </stache-page-anchor>
-    <p>
-      To add the Stache template and components to an existing SKY UX project, follow our <a routerLink="./add-stache">tutorial to add Stache</a>.
-    </p>
 </stache>
