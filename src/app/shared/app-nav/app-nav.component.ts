@@ -21,6 +21,10 @@ export class AppNavComponent {
     {
       name: 'Contribute',
       path: '/contribute'
+    },
+    {
+      name: 'Changelog',
+      path: '/changelog'
     }
   ];
 }
