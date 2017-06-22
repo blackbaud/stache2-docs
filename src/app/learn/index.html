@@ -2,7 +2,8 @@
 </app-nav>
 
 <stache
-  pageTitle="Learn">
+  pageTitle="Learn"
+  layout="container">
   <stache-page-summary>
     Stache 2 is a component library for SKY UX single-page applications (SPAs). The Stache components facilitate the creation of consistent, coordinated technical documentation that features SKY UX-approved styles.
   </stache-page-summary>
@@ -10,7 +11,41 @@
   <br />
   
   <sky-alert alertType="info">
-    We continue to flesh out features and add components in Stache as necessary to better support documentation.
+    <strong><i class="fa fa-cogs" aria-hidden="true"></i> Work in Progress! </strong> To better support technical documentation, we are continuing to add new features and components.  
   </sky-alert>
+    
+  <stache-action-buttons [routes]="[
+        {
+          name: 'Getting Started',
+          path: '/learn/get-started',
+          icon: 'certificate',
+          summary: 'Building from scratch? Learn how to create a brand new Stache 2 SPA!'
+        },
+         {
+          name: 'Basics',
+          path: '/learn/basics',
+          icon: 'pencil-square-o',
+          summary: 'Learn how Stache is organized and how to get started creating documentation. '
+        },
+        {
+          name: 'Add Stache to an existing SKYUX SPA',
+          path: '/learn/add-stache',
+          icon: 'plus-square',
+          summary: 'To add the Stache template and components to an existing SKY UX project, follow our tutorial.'
+        },
+        {
+          name: 'Update Stache',
+          path: '/learn/update-stache/',
+          icon: 'wrench',
+          summary: 'Learn how to update your app to the latest version of Stache.'
+        },
+        {
+          name: 'Stache 2 Plugins',
+          path: '/learn/plugins/',
+          icon: 'puzzle-piece',
+          summary: 'Learn about the plugins Stache uses to expand the features of SKY UX Builder.'
+        }
+      ]">
+         </stache-action-buttons>  
 
 </stache>
