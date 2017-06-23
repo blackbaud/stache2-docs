@@ -1,5 +1,14 @@
 {
   "name": "blackbaud-skyux-spa-stache2-docs",
+  "mode": "easy",
+  "compileMode": "aot",
+  "plugins": [
+    "@blackbaud/skyux-builder-plugin-stache"
+  ],
+  "app": {
+    "title": "Stache 2 Documentation"
+  },
+  "auth": true,
   "version": "1.0.0",
   "description": "Single-page-application for skyux-spa-stache2-docs",
   "main": "index.js",
