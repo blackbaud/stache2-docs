@@ -98,6 +98,10 @@
     The currently active page in the sidebar navigation show any children underneath. All other child pages are hidden until the route becomes active.
   </p>
 
+  <p>
+    The order the sidebar routes appear is determined first by the <stache-code>navOrder</stache-code> attribute on the <stache-code>{{stache.jsonData.global.productNameShort}}</stache-code> tag.  If there is no <stache-code>navOrder</stache-code> specified, or if two sibling routes have the same <stache-code>navOrder</stache-code>, the routes will be ordered alphabetically by name.
+  </p>
+
   <h3>
     Container
   </h3>
