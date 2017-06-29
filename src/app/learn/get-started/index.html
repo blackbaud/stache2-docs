@@ -38,7 +38,7 @@
         <li>Enter a name for your {{ stache.jsonData.global.productNameShort }} site. We request that you append any documentation sites with <stache-code>-docs</stache-code>. For example: <stache-code>engineering-system-docs</stache-code>. </li>
         <p><strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> The name you enter here will become part of your site's URL. </p>
     <li><p>Review and approve the terms and conditions.</p></li>
-    <li><p>Select <strong>Create Your Application</strong>. This process may take a few minutes.</p></li>
+    <li><p>Select <strong>Create Your Application</strong>. This process may take a moment.</p></li>
     <li>When the application is created, a ready page appears. We recommend you save a copy of this page.</li>
     <li>Copy the Git Repo URL.</li>
             </ol>
@@ -61,14 +61,14 @@
         </stache-tutorial-step>     
         
     <stache-tutorial-step>
-        <stache-tutorial-step-heading>Add authentication to your application</stache-tutorial-step-heading>
+        <stache-tutorial-step-heading>Verify authentication for your application</stache-tutorial-step-heading>
         <stache-tutorial-step-body>
-        <p>After you create your application, it is available on the public Internet. Be careful to not allow anonymous users access to protected Blackbaud assets such as user data or internal Blackbaud systems.</p>
-            <p>We recommend your first step be to add Blackbaud Authentication.</p>
+        <p>After you create your application, it is available on the public Internet. Be careful to not allow anonymous users access to protected Blackbaud assets, such as user data or internal Blackbaud systems.</p>
+            <p>We default to Blackbaud Authentication turned on, but we recommend your first step be to verify it.</p>
     <ol>
     <li><p>Navigate to the repo on your local machine.</p></li>
     <li><p>Open <stache-code>skyuxconfig.json</stache-code> file in your preferred text editor.</p></li>
-    <li><p>Add <stache-code>"auth": true</stache-code> as seen below.</p></li>
+    <li><p>Find <stache-code>"auth": true</stache-code> as seen below and double-check that the config setting is <strong>true</strong>.</p></li>
     <stache-code-block languageType="json">
     {
   "mode": "easy",
@@ -87,7 +87,6 @@
   }
 }
         </stache-code-block>
-    <li><p>Save and commit your changes.</p></li>
             </ol>
         </stache-tutorial-step-body>
         </stache-tutorial-step>
