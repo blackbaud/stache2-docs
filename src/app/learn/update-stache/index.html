@@ -5,7 +5,7 @@
   navTitle="Update Stache">
   <stache-tutorial>
     <stache-tutorial-heading>
-      Update {{ stache.jsonData.global.productNameShort }} to the newest release
+      Update {{ stache.jsonData.global.productNameShort }}
     </stache-tutorial-heading>
     <stache-tutorial-summary>
       This tutorial provides step-by-step instructions to update your app to the latest version of
@@ -18,10 +18,10 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/stache</stache-code> under the <stache-code>dependencies</stache-code> property to install the latest version of Stache.
+          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/stache</stache-code> under the <stache-code>dependencies</stache-code> property to install the latest version of {{ stache.jsonData.global.productNameShort }}.
         </p>
         <sky-alert alertType="info">
-          To find the latest version, check the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">Stache changelog</a>.
+          To find the latest version, check the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a>.
         </sky-alert>
         <stache-code-block
           languageType="json">

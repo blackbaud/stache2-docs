@@ -3,31 +3,24 @@
 
 <stache
   pageTitle="Basics"
-  showTableOfContents="true"
-  layout="container">
+  showTableOfContents="true">
 
   <stache-page-summary>
     <p>
-      As you are getting to know Stache, use the documentation below to understand how it's organized and how to create documentation using Stache. For information about specific components, refer to our <a routerLink="/components">Components</a>.
+      As you are getting to know {{ stache.jsonData.global.productNameShort }}, use the documentation below to understand how it's organized and how to create documentation using {{ stache.jsonData.global.productNameShort }}. For information about specific components, refer to our <a routerLink="/components">Components</a>.
     </p>
   </stache-page-summary>
 
+  <stache-page-anchor>
+    Stache Wrapper
+  </stache-page-anchor>
 
-    <sky-tile isCollapsed="true" >
-  <sky-tile-title>
-    Stache wrapper
-  </sky-tile-title>
-  <sky-tile-summary>
-    &lt;stache&gt;
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
-        <p>
-    The Stache wrapper is the primary tag in a Stache project, and contains all the other Stache tags and content. Most of your page level configuration is done through the Stache wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any Stache page.
+  <p>
+    The {{ stache.jsonData.global.productNameShort }} Wrapper is the primary tag in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page.
   </p>
 
   <p>
-    Stache takes a prescriptive approach to configuration. Most of the properties on the Stache tag have defaults, so you will rarely have to set them yourself. The main exception is the page title.
+    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exception is the page title.
   </p>
 
   <stache-code-block>
@@ -35,22 +28,16 @@
       // Your content here.
     </stache>
   </stache-code-block>
-    </sky-tile-content-section>
-  </sky-tile-content>
-</sky-tile>
-    <sky-tile isCollapsed="true">
-  <sky-tile-title>
+
+  <stache-page-anchor>
     Layouts
-  </sky-tile-title>
-  <sky-tile-summary>
-   layout=" "
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section> 
-  <p>Stache layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:  </p>
-      </sky-tile-content-section>
-    <sky-tile-content-section>
-     <h3>
+  </stache-page-anchor>
+
+  <p>
+    {{ stache.jsonData.global.productNameShort }} layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
+  </p>
+
+  <h3>
     Sidebar
   </h3>
 
@@ -63,7 +50,7 @@
   </stache-code-block>
 
   <p>
-    The sidebar layout is the default Stache layout, and adds a side navigation on the left side of your content. This is useful for quickly navigating between sibling and child content within your site. Stache populates the routes in the sidebar for you automatically based on the directory structure of your project. A Stache project with the following structure:
+    The sidebar layout is the default {{ stache.jsonData.global.productNameShort }} layout, and adds a side navigation on the left side of your content. This is useful for quickly navigating between sibling and child content within your site. {{ stache.jsonData.global.productNameShort }} populates the routes in the sidebar for you automatically based on the directory structure of your project. A {{ stache.jsonData.global.productNameShort }} project with the following structure:
   </p>
 
   <ul>
@@ -110,12 +97,8 @@
   <p>
     The currently active page in the sidebar navigation show any children underneath. All other child pages are hidden until the route becomes active.
   </p>
-  <p>
-  The order the sidebar routes appear is determined first by the <stache-code>navOrder</stache-code> attribute on the <stache-code>{{stache.jsonData.global.productNameShort}}</stache-code> tag.  If there is no <stache-code>navOrder</stache-code> specified, or if two sibling routes have the same <stache-code>navOrder</stache-code>, the routes will be ordered alphabetically by name.
-        </p>
-    </sky-tile-content-section>
-    <sky-tile-content-section>
-      <h3>
+
+  <h3>
     Container
   </h3>
 
@@ -128,12 +111,10 @@
   </stache-code-block>
 
   <p>
-    The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">Stache Grid</a>.
+    The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">{{ stache.jsonData.global.productNameShort }} Grid</a>.
   </p>
 
-    </sky-tile-content-section>
-    <sky-tile-content-section>
-     <h3>
+  <h3>
     Blank
   </h3>
 
@@ -148,24 +129,16 @@
   <p>
     The blank layout provides no formatting for the content inside. This allows you to do whatever you wish inside of the container but still make use of the utility of the <stache-code>stache</stache-code> tag.
   </p>
-    </sky-tile-content-section>
-  </sky-tile-content>
-</sky-tile>
 
-<sky-tile isCollapsed="true">
-      <sky-tile-title>
+  <stache-page-anchor>
     Navigation
-  </sky-tile-title>
-  <sky-tile-summary>
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
-    <p>
-    Stache provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default.
+  </stache-page-anchor>
+
+  <p>
+    {{ stache.jsonData.global.productNameShort }} provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
   </p>
-      </sky-tile-content-section>
-<sky-tile-content-section>
-      <h3>
+
+  <h3>
     Back To Top
   </h3>
 
@@ -174,15 +147,14 @@
   </p>
 
   <stache-code-block>
-    &lt;stache
+    <stache
       pageTitle="My Sample Page"
-      showBackToTop="false"&gt;
+      showBackToTop="false">
       // Your content here.
-    &lt;/stache&gt;
+    </stache>
   </stache-code-block>
-      </sky-tile-content-section>
-  <sky-tile-content-section>
-      <h3>
+
+  <h3>
     Breadcrumbs
   </h3>
 
@@ -191,15 +163,14 @@
   </p>
 
   <stache-code-block>
-    &lt;stache
+    <stache
       pageTitle="My Sample Page"
-      showBreadcrumbs="false"&gt;
+      showBreadcrumbs="false">
       // Your content here.
-    &lt;/stache&gt;
+    </stache>
   </stache-code-block>
-      </sky-tile-content-section>
-      <sky-tile-content-section>
-      <h3>
+
+  <h3>
     Page Anchor
   </h3>
 
@@ -208,23 +179,22 @@
   </p>
 
   <stache-code-block>
-    &lt;stache
-      pageTitle="My Sample Page"&gt;
-      &lt;stache-page-anchor&gt;
+    <stache
+      pageTitle="My Sample Page">
+      <stache-page-anchor>
         Section One
-      &lt;/stache-page-anchor&gt;
+      </stache-page-anchor>
       // Some content
 
-      &lt;stache-page-anchor&gt;
+      <stache-page-anchor>
         Section Two
-      &lt;/stache-page-anchor&gt;
+      </stache-page-anchor>
       // More content
 
-    &lt;/stache&gt;
+    </stache>
   </stache-code-block>
-      </sky-tile-content-section>
-      <sky-tile-content-section>
-      <h3>
+
+  <h3>
     Table of Contents
   </h3>
 
@@ -241,22 +211,22 @@
   </p>
 
   <stache-code-block>
-    &lt;stache
+    <stache
       pageTitle="My Sample Page"
-      showTableOfContents="true"&gt;
-      &lt;stache-page-anchor&gt;
+      showTableOfContents="true">
+      <stache-page-anchor>
         Section One
-      &lt;/stache-page-anchor&gt;
+      </stache-page-anchor>
 
       // Some content
 
-      &lt;stache-page-anchor&gt;
+      <stache-page-anchor>
         Section Two
-      &lt;/stache-page-anchor&gt;
+      </stache-page-anchor>
 
       // More content
 
-    &lt;/stache&gt;
+    </stache>
   </stache-code-block>
 
   <stache-page-anchor>
@@ -264,7 +234,7 @@
   </stache-page-anchor>
 
   <p>
-    To use local images in your Stache project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your Stache pages like so:
+    To use local images in your {{ stache.jsonData.global.productNameShort }} project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your {{ stache.jsonData.global.productNameShort }} pages like so:
   </p>
 
   <stache-code-block>
@@ -284,26 +254,17 @@
   <p>
     Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
   </p>
-      </stky-tile-content-section>
-    </sky-tile-content>
-    </sky-tile>
 
-
-
-<sky-tile isCollapsed="true">
-      <sky-tile-title>
+  <stache-page-anchor>
     JSON Data Service
-  </sky-tile-title>
-  <sky-tile-summary>
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
+  </stache-page-anchor>
+
   <p>
-    Stache can consume JSON data files and provide them to you for use in your Stache templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include.
+    {{ stache.jsonData.global.productNameShort }} can consume JSON data files and provide them to you for use in your {{ stache.jsonData.global.productNameShort }} templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include.
   </p>
 
   <sky-alert alertType="info">
-    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/stache">Stache</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
+    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/stache">{{ stache.jsonData.global.productNameShort }}</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
   </sky-alert>
 
   <p>
@@ -370,44 +331,5 @@
         this.specificData = this.dataService.getByName('example');
       }
     }
-    </stache-code-block>
-</sky-tile-content>
-</sky-tile>
-    
-    <sky-tile isCollapsed="true">
-      <sky-tile-title>
-    Command Line
-  </sky-tile-title>
-  <sky-tile-summary>
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
-        <p>Stache asks you to use commands when installing and working with your repo.</p>
- <p>On a Mac, use Terminal.</p>
- <p>On a PC, type <strong>cmd</strong> in the search box to access the command line. Once you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line.</p>
-      </sky-tile-content-section>
-        </sky-tile-content>
-</sky-tile>
-
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-    Sample Page
-  </sky-tile-title>
-  <sky-tile-summary>
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
-        <p>Here's a sample of a completed page in {{stache.jsonData.global.productNameShort}}. To see it in action, copy it to your site. </p>
-
-<stache-code-block>
-                
-</stache-code-block>
-
-</sky-tile-content-section>
-    
- </sky-tile-content>
-</sky-tile>
-    
-
-
+  </stache-code-block>
 </stache>
