@@ -7,7 +7,7 @@
 
   <stache-page-summary>
     <p>
-      As you are getting to know Stache, use the documentation below to understand how it's organized and how to create documentation using Stache. For information about specific components, refer to our <a routerLink="/components">Components</a>.
+      As you are getting to know {{ stache.jsonData.global.productNameShort }}, use the documentation below to understand how it's organized and how to create documentation using {{ stache.jsonData.global.productNameShort }}. For information about specific components, refer to our <a routerLink="/components">Components</a>.
     </p>
   </stache-page-summary>
 
@@ -16,11 +16,11 @@
   </stache-page-anchor>
 
   <p>
-    The Stache Wrapper is the primary tag in a Stache project, and contains all the other Stache tags and content. Most of your page level configuration is done through the Stache Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any Stache page.
+    The {{ stache.jsonData.global.productNameShort }} Wrapper is the primary tag in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page.
   </p>
 
   <p>
-    Stache takes a prescriptive approach to configuration. Most of the properties on the Stache tag have defaults, so you will rarely have to set them yourself. The main exception is the page title.
+    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exception is the page title.
   </p>
 
   <stache-code-block>
@@ -34,7 +34,7 @@
   </stache-page-anchor>
 
   <p>
-    Stache layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
+    {{ stache.jsonData.global.productNameShort }} layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
   </p>
 
   <h3>
@@ -50,7 +50,7 @@
   </stache-code-block>
 
   <p>
-    The sidebar layout is the default Stache layout, and adds a side navigation on the left side of your content. This is useful for quickly navigating between sibling and child content within your site. Stache populates the routes in the sidebar for you automatically based on the directory structure of your project. A Stache project with the following structure:
+    The sidebar layout is the default {{ stache.jsonData.global.productNameShort }} layout, and adds a side navigation on the left side of your content. This is useful for quickly navigating between sibling and child content within your site. {{ stache.jsonData.global.productNameShort }} populates the routes in the sidebar for you automatically based on the directory structure of your project. A {{ stache.jsonData.global.productNameShort }} project with the following structure:
   </p>
 
   <ul>
@@ -111,7 +111,7 @@
   </stache-code-block>
 
   <p>
-    The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">Stache Grid</a>.
+    The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">{{ stache.jsonData.global.productNameShort }} Grid</a>.
   </p>
 
   <h3>
@@ -135,7 +135,7 @@
   </stache-page-anchor>
 
   <p>
-    Stache provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
+    {{ stache.jsonData.global.productNameShort }} provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
   </p>
 
   <h3>
@@ -234,7 +234,7 @@
   </stache-page-anchor>
 
   <p>
-    To use local images in your Stache project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your Stache pages like so:
+    To use local images in your {{ stache.jsonData.global.productNameShort }} project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your {{ stache.jsonData.global.productNameShort }} pages like so:
   </p>
 
   <stache-code-block>
@@ -256,67 +256,15 @@
   </p>
 
   <stache-page-anchor>
-    Include
-  </stache-page-anchor>
-
-  <p>
-    Include enables you to single source your content and reuse it throughout your documentation. This is useful if you have small chunks of content that you find yourself repeating in several places. You can use an include, update it in one place, and it'll change everywhere it's used.
-  </p>
-
-  <sky-alert alertType="info">
-    <b>Note: </b> To use includes, you need to add the <a routerLink="/learn/plugins/stache">Stache</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
-  </sky-alert>
-
-  <p>
-    Content you wish to include should be placed in the <stache-code>src/stache/includes/</stache-code> directory. For example:
-  </p>
-
-  <ul>
-    <li>
-      <i class="fa fa-folder"></i> src
-      <ul>
-        <li>
-          <i class="fa fa-folder"></i> stache
-          <ul>
-            <li>
-              <i class="fa fa-folder"></i> includes
-              <ul>
-                <li>
-                  <i class="fa fa-file"></i> example.html
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <p>
-    We can then refer to that file anywhere in our app with the <a routerLink="/components/include">include</a> tag:
-  </p>
-
-  <stache-code-block
-    languageType="markup">
-    &lt;stache-include
-      fileName="example.html"&gt;
-    &lt;/stache-include&gt;
-  </stache-code-block>
-
-  <sky-alert alertType="info">
-    <b>Note: </b> Includes are for static content. For dynamic content, create a custom component instead.
-  </sky-alert>
-
-  <stache-page-anchor>
     JSON Data Service
   </stache-page-anchor>
 
   <p>
-    Stache can consume JSON data files and provide them to you for use in your Stache templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include.
+    {{ stache.jsonData.global.productNameShort }} can consume JSON data files and provide them to you for use in your {{ stache.jsonData.global.productNameShort }} templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include.
   </p>
 
   <sky-alert alertType="info">
-    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/stache">Stache</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
+    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/stache">{{ stache.jsonData.global.productNameShort }}</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
   </sky-alert>
 
   <p>
