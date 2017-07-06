@@ -26,7 +26,7 @@
         <stache-code-block
           languageType="json">
             "dependencies": {
-              "@blackbaud/stache": "2.0.0-beta.3",
+              "@blackbaud/stache": "2.0.0-beta.9",
               ...
         </stache-code-block>
         <sky-alert
@@ -34,6 +34,35 @@
           Before you update, review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog</a> for breaking changes.
         </sky-alert>
 
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update the dev dependencies
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/skyux</stache-code> and <stache-code>@blackbaud/skyux-builder</stache-code> under the <stache-code>dev-dependencies</stache-code> property to install the latest versions of each.
+        </p>
+
+        <sky-alert alertType="info">
+          Your updated <stache-code>package.json</stache-code> file with all {{ stache.jsonData.global.productNameShort }} dependencies should look as follows.
+        </sky-alert>
+        <sky-alert
+          alertType="info">
+          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release {{ stache.jsonData.global.stacheVersion }}, codelyzer was removed as a dependency, and skyux was changed to a dev dependency.
+        </sky-alert>
+        <stache-code-block
+          languageType="json">
+            "dependencies": {
+              "@blackbaud/stache": "2.0.0-beta.9"
+            },
+            "devDependencies": {
+              "@blackbaud/skyux": "2.0.0-rc.4",
+              "@blackbaud/skyux-builder": "1.0.0-rc.6"
+            }
+        </stache-code-block>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -47,7 +76,7 @@
         </p>
         <sky-alert
           alertType="info">
-          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.3, all <stache-code>plugins</stache-code> required by  {{ stache.jsonData.global.productNameShort }} are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
+          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release {{ stache.jsonData.global.stacheVersion }}, all <stache-code>plugins</stache-code> required by  {{ stache.jsonData.global.productNameShort }} are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
         </sky-alert>
         <stache-code-block
           languageType="json">
@@ -76,7 +105,7 @@
         </p>
           <sky-alert
             alertType="info">
-            <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.3, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLShort }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
+            <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release {{ stache.jsonData.global.stacheVersion }}, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLShort }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
           </sky-alert>
 
           <stache-code-block
