@@ -15,16 +15,15 @@ export class AppNavComponent {
       path: '/learn'
     },
     {
-      name: 'Components',
-      path: '/components'
+      name: 'Content',
+      path: '/content'
+    },{
+      name: 'API',
+      path: '/api'
     },
     {
-      name: 'Contribute',
-      path: '/contribute'
-    },
-    {
-      name: 'Changelog',
-      path: '/changelog'
+      name: 'Support',
+      path: '/support'
     }
   ];
 }

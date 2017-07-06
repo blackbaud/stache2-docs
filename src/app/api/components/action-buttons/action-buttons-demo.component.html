@@ -1,0 +1,94 @@
+<stache
+  pageTitle="Action Buttons"
+  layout="sidebar"
+  showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The Action Buttons component provides a clean, visual navigation pattern for linking to multiple documents using the <a href="https://developer.blackbaud.com/skyux2/components/action-button">SKY UX Action Button</a>.
+    </p>
+
+    <h3>
+      Action Buttons properties
+    </h3>
+
+    <ul>
+      <li>
+        <p>
+          <stache-code>routes</stache-code> — Specifies the properties for each action button in the list. Each button has the following properties:
+        </p>
+
+        <ul>
+          <li>
+            <stache-code>name</stache-code> — The name of the button.
+          </li>
+          <li>
+            <stache-code>path</stache-code> — The path the button will route to when clicked.
+          </li>
+          <li>
+            <stache-code>icon</stache-code> — The <a href="https://fontawesome.io/cheatsheet/">font awesome</a> icon for the button.
+          </li>
+          <li>
+            <stache-code>summary</stache-code> — A description for the button.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-action-buttons
+      [routes]="routes">
+    </stache-action-buttons>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="action-buttons-demo-component.html">
+        <stache-code-block
+          languageType="markup">
+          <stache-action-buttons
+            [routes]="routes">
+          </stache-action-buttons>
+        </stache-code-block>
+      </sky-tab>
+      <sky-tab
+        tabHeading="action-buttons-demo-component.ts">
+        <stache-code-block
+          languageType="typescript">
+          import { Component } from '@angular/core';
+
+          @Component({
+            selector: 'stache-action-buttons-demo',
+            templateUrl: 'action-buttons-demo.component.html'
+          })
+          export class StacheActionButtonsDemoComponent {
+            public routes = [
+              {
+                name: 'Layout',
+                path: '/components/layout',
+                icon: 'map-o',
+                summary: 'Basic page layouts using Stache and skyux pattern, for quick page layouts.'
+              },
+              {
+                name: 'Layout: Sidebar',
+                path: '/components/layout-sidebar',
+                icon: 'columns',
+                summary: 'Side bar navigation layout pattern for creating quick documentation.'
+              }
+            ];
+          }
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
