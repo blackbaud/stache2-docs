@@ -82,7 +82,6 @@ export class StacheDemoContentService {
     }
   ];
 
-
   public getAllSortedByCollection(collection: string): StacheDemoContent[] {
     return this[collection].sort((a: StacheDemoContent, b: StacheDemoContent) => {
       let nameA = a.name.toLowerCase();

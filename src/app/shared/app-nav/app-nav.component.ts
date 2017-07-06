@@ -17,7 +17,8 @@ export class AppNavComponent {
     {
       name: 'Content',
       path: '/content'
-    },{
+    },
+    {
       name: 'API',
       path: '/api'
     },
