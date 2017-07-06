@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { StacheDemoComponent } from './api/demo-component';
+import { StacheDemoComponent } from './api/components/demo-component';
 
 @Injectable()
 export class StacheDemoComponentService {
