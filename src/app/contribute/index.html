@@ -2,9 +2,53 @@
 </app-nav>
 
 <stache
-  pageTitle="Contribute">
+  pageTitle="Contribute"
+  layout="container">
 
   <stache-page-summary>
-    Stache has several components that are supplemental or abstracted away through configuration in the <stache-code>stache</stache-code> tag. While we don't recommend you use these components on their own in a Stache project, they are useful for understanding the functionality of Stache.
+To enhance the creation of quality techical documentation, we highly encourage contributions from all {{ stache.jsonData.global.productNameShort }} 2 users!
   </stache-page-summary>
+
+  <stache-action-buttons [routes]="[
+        {
+          name: 'Submit a Request or Issue',
+          path: '/contribute/issues/',
+          icon: 'github',
+          summary: 'Request new features or file a bug in our GitHub repo.'
+        },
+         {
+          name: 'Component Library',
+          path: '/contribute/library/',
+          icon: 'wrench',
+          summary: 'We welcome contributions to the component library. Review our contribution guidelines before getting started.'
+        },
+        {
+          name: 'Documentation',
+          path: '/contribute/stache-docs/',
+          icon: 'book',
+          summary: 'We welcome contributions to our documentation. Follow git best practices and submit a PR for edits. '
+        }
+      ]">
+         </stache-action-buttons> 
+
+  <h2>Angular 2</h2>
+
+  <p>{{ stache.jsonData.global.productNameShort }} has several components that are supplemental or abstracted away through configuration in the <stache-code>stache</stache-code> tag. While we don't recommend you use these components on their own in a {{ stache.jsonData.global.productNameShort }} project, they are useful for understanding the functionality of {{ stache.jsonData.global.productNameShort }}.</p>
+
+    <stache-action-buttons [routes]="[
+        {
+          name: 'Components',
+          path: 'contribute/components',
+          icon: 'file-code-o',
+          summary: 'Review how these Angular 2 components, services, and modules facilitate Stache 2.'
+        },
+         {
+          name: 'Directives',
+          path: '/contribute/directives',
+          icon: 'wrench',
+          summary: 'Review how these Angular 2 directives facilitate Stache 2.'
+        }
+      ]">
+         </stache-action-buttons> 
+
 </stache>
