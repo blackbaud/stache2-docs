@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StacheDemoComponentService } from '../../components/demo-component.service';
+import { StacheDemoComponentService } from '../../../components/demo-component.service';
 
 @Component({
   selector: 'stache-contribute-components',
-  templateUrl: './contribute-components.component.html'
+  templateUrl: './support/contribute-components.component.html'
 })
 export class StacheContributeComponentsComponent implements OnInit {
   public routes: any[] = [];

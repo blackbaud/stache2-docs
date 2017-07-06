@@ -1,0 +1,28 @@
+<app-nav>
+</app-nav>
+
+<stache
+  pageTitle="Support">
+
+  <stache-page-summary>
+    Do you need help with {{ stache.jsonData.global.productNameLong }}? Contact us on the <a href="https://blackbaud.slack.com/messages/C1R3XB8GZ"><i class="fa fa-slack" aria-hidden="true"></i> stache-general</a> slack channel or <a href="mailto:RDOSDKAPIusereducationteam@blackbaud.com">email the User Ed SDK/API team</a>.
+  </stache-page-summary>
+
+  <stache-action-buttons [routes]="[
+        {
+          name: 'Changelog',
+          path: '/support/changelog/',
+          icon: 'book',
+          summary: ' Monitor this page to keep up with the latest changes and releases for Stache.'
+        },
+         {
+          name: 'Contribute',
+          path: '/support/contribute/',
+          icon: 'pencil-square-o',
+          summary: 'To enhance the creation of quality techical documentation, we highly encourage contributions from all Stache 2 users!'
+        }
+      ]">
+         </stache-action-buttons>  
+
+
+</stache>
