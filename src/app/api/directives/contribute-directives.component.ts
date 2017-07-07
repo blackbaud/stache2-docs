@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StacheDemoComponentService } from '../../components/demo-component.service';
+import { StacheDemoComponentService } from '../components/demo-component.service';
 
 @Component({
   selector: 'stache-contribute-directives',
