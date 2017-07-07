@@ -7,5 +7,10 @@
   ],
   "app": {
     "title": "Stache 2 Documentation"
+  },
+  "appSettings": {
+    "stache": {
+
+    }
   }
 }
