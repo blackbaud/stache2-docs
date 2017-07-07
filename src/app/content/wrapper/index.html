@@ -51,6 +51,9 @@
       <li>
         <stache-code>breadcrumbsRoutes</stache-code> — The routes used to populate the breadcrumbs navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
       </li>
+      <li>
+        <stache-code>navOrder</stache-code> — This number dictates the order in which your routes will render in the sidebar next to their sibling routes.
+      </li>
     </ul>
   </stache-page-summary>
 
@@ -86,6 +89,7 @@
           languageType="markup">
           <stache
             pageTitle="Wrapper"
+            navOrder="5"
             showTableOfContents="true">
 
             <stache-page-summary>
