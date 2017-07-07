@@ -1,0 +1,40 @@
+<app-nav>
+</app-nav>
+
+<stache
+  pageTitle="Code"
+  layout="sidebar"
+  showBreadcrumbs="true">
+
+  <stache-page-summary>
+    The code component formats in line code snippets in a consistent way.
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <p>
+      This page uses the <stache-code>layout="sidebar"</stache-code> property.
+    </p>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="code-demo-component.html">
+        <stache-code-block
+          languageType="markup">
+          <p>
+            This page uses the <stache-code>layout="sidebar"</stache-code> property.
+          </p>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
