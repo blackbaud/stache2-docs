@@ -1,0 +1,36 @@
+<app-nav>
+</app-nav>
+
+<stache
+  pageTitle="Contribute"
+  layout="container">
+
+  <stache-page-summary>
+To enhance the creation of quality techical documentation, we highly encourage contributions from all {{ stache.jsonData.global.productNameShort }} 2 users!
+  </stache-page-summary>
+
+  <stache-action-buttons [routes]="[
+        {
+          name: 'Submit a Request or Issue',
+          path: '/support/contribute/issues/',
+          icon: 'github',
+          summary: 'Request new features or file a bug in our GitHub repo.'
+        },
+         {
+          name: 'Component Library',
+          path: '/api/',
+          icon: 'wrench',
+          summary: 'We welcome contributions to the component library.'
+        },
+        {
+          name: 'Documentation',
+          path: '/support/contribute/stache-docs/',
+          icon: 'book',
+          summary: 'We welcome contributions to our documentation. Follow git best practices and submit a PR for edits. '
+        }
+      ]">
+         </stache-action-buttons> 
+
+
+
+</stache>
