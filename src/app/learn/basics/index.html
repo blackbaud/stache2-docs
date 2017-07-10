@@ -16,11 +16,11 @@
   </stache-page-anchor>
 
   <p>
-    The {{ stache.jsonData.global.productNameShort }} Wrapper is the primary tag in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page.
+    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} Wrapper</a> is the primary tag in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page.
   </p>
 
   <p>
-    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exception is the page title.
+    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exceptions are the pageTitle, navTitle, and navOrder.
   </p>
 
   <stache-code-block>
@@ -44,6 +44,7 @@
   <stache-code-block>
     <stache
       pageTitle="My Sample Page"
+      navOrder="5"
       layout="sidebar">
       // Your content here.
     </stache>
@@ -96,6 +97,10 @@
 
   <p>
     The currently active page in the sidebar navigation show any children underneath. All other child pages are hidden until the route becomes active.
+  </p>
+
+  <p>
+    The order the sidebar routes appear is determined first by the <stache-code>navOrder</stache-code> attribute on the <stache-code>{{stache.jsonData.global.productNameShort}}</stache-code> tag.  If there is no <stache-code>navOrder</stache-code> specified, or if two sibling routes have the same <stache-code>navOrder</stache-code>, the routes will be ordered alphabetically by name.
   </p>
 
   <h3>
