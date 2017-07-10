@@ -79,6 +79,12 @@ export class StacheDemoContentService {
       route: '/content/include',
       icon: 'photo',
       summary: 'Provides a mechanism for single sourcing static content.'
+    },
+    {
+      name: 'Configuration and Data',
+      route: '/content/config-data',
+      icon: 'database',
+      summary: 'Provides a mechanism for accessing data and site configuration.'
     }
   ];
 
