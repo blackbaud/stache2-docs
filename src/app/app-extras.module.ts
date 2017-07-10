@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 
 import { StacheModule } from '@blackbaud/stache';
 
-import { StacheDemoComponentService } from './components/demo-component.service';
+import { StacheDemoComponentService } from './api/components/demo-component.service';
+
+import { StacheDemoContentService } from './content/demo-content.service';
 
 // Specify entry components, module-level providers, etc. here.
 @NgModule({
@@ -15,7 +17,8 @@ import { StacheDemoComponentService } from './components/demo-component.service'
     StacheModule
   ],
   providers: [
-    StacheDemoComponentService
+    StacheDemoComponentService,
+    StacheDemoContentService
   ],
   entryComponents: []
 })

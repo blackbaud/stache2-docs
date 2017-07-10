@@ -1,0 +1,103 @@
+<app-nav>
+</app-nav>
+
+<stache
+  pageTitle="Wrapper"
+  layout="sidebar"
+  showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The wrapper component is the primary component for {{ stache.jsonData.global.productNameShort }}. It handles configuration, layouts, and routing for every {{ stache.jsonData.global.productNameShort }} page.
+    </p>
+
+    <h3>
+      Wrapper properties
+    </h3>
+
+    <ul>
+      <li>
+        <stache-code>pageTitle</stache-code> — Sets the heading for the page.
+      </li>
+      <li>
+        <stache-code>layoutType</stache-code> — <i>(Optional.)</i> You can specify a specific type of layout for each {{ stache.jsonData.global.productNameShort }} page. The default is <stache-code>sidebar</stache-code>.
+        <ul>
+          <li>
+            <stache-code>sidebar</stache-code> — Displays a sidebar navigation on the page for each child directory.
+          </li>
+          <li>
+            <stache-code>container</stache-code> — Displays content in a responsive container with margins on either side.
+          </li>
+          <li>
+            <stache-code>blank</stache-code> — Displays content with no container.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <stache-code>showBackToTop</stache-code> — Determines if the back to top button displays on the page when the user scrolls past a 200px offset from the top. The default is <stache-code>true</stache-code>.
+      </li>
+      <li>
+        <stache-code>showBreadcrumbs</stache-code> — Determines if the breadcrumb navigation displays on the page. The default is <stache-code>true</stache-code>.
+      </li>
+      <li>
+        <stache-code>showTableOfContents</stache-code> — Determines if the table of contents displays on the page. The default is <stache-code>false</stache-code>.
+      </li>
+      <li>
+        <stache-code>sidebarRoutes</stache-code> — The routes used to populate the sidebar navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
+      </li>
+      <li>
+        <stache-code>inPageRoutes</stache-code> — The routes used to populate the table of contents navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
+      </li>
+      <li>
+        <stache-code>breadcrumbsRoutes</stache-code> — The routes used to populate the breadcrumbs navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache
+      pageTitle="Wrapper"
+      showTableOfContents="true"
+      layout="container">
+
+      <stache-page-summary>
+        Summary section for the page.
+      </stache-page-summary>
+
+      <stache-page-anchor>
+        Sub heading
+      </stache-page-anchor>
+    </stache>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="wrapper-demo-component.html">
+        <stache-code-block
+          languageType="markup">
+          <stache
+            pageTitle="Wrapper"
+            showTableOfContents="true">
+
+            <stache-page-summary>
+              Summary section for the page.
+            </stache-page-summary>
+
+            <stache-page-anchor>
+              Sub heading
+            </stache-page-anchor>
+          </stache>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
