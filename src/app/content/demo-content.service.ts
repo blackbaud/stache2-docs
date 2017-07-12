@@ -85,6 +85,18 @@ export class StacheDemoContentService {
       route: '/content/config-data',
       icon: 'database',
       summary: 'Provides a mechanism for accessing data and site configuration.'
+    },
+    {
+      name: 'Alerts',
+      route: '/content/alerts',
+      icon: 'exclamation-triangle',
+      summary: 'Provides a formatted SKY UX-themed alert.'
+    },
+    {
+      name: 'Table of Contents',
+      route: '/content/table-of-contents',
+      icon: 'list-ol',
+      summary: 'Provides a quick and effortless way to navigate content on a page.'
     }
   ];
 

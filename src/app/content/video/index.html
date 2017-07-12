@@ -18,7 +18,24 @@
         <stache-code>videoSource</stache-code> — The url for the video.
       </li>
     </ul>
-  </stache-page-summary>
+    <h4>YouTube</h4>
+    <p>To find the <a href="http://www.youtube.com">YouTube</a> url to use as the video source, you need to grab the source url from within the embed code. From a video's page on Youtube, select <strong>Share</strong> and then the <strong>Embed</strong> tab. Copy the <stache-code>src=""</stache-code> url. Use this url with the Video component.
+      <stache-image
+        imageSource="~/assets/youtube-video.png">
+      </stache-image>
+      <h4>Vimeo</h4>
+      <p>To find the <a href="http://www.vimeo.com">Vimeo</a> url to use as the video source, you need to grab the source url from within the embed code. From a video's page on Vimeo, select the share button and then copy the embed code. Vimeo does not enable you to select a portion. Paste the code into a text editor and copy the portion of the URL you need, starting with <stache-code>src=""</stache-code>.  </p>
+            <stache-image
+        imageSource="~/assets/vimeo-video.png">
+      </stache-image>
+      <h4>O365</h4>
+      <p>When you copy the source url from an O365 video, you need to copy the entire source url and not just a portion. If you use a portion, you may receive a "This video is private" or "This video isn't available" error on your page. The url you need to copy should look similar to this:
+        <stache-code-block>
+          <stache-video
+          videoSource="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=fedcfc02%2Dd545%2D4155%2D973a%2Dd09a1fa6e003&amp;vId=d2977531%2D1ce0%2D45c7%2D9b15%2D112f6cabe5f9&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true">
+    </stache-video>
+        </stache-code-block>
+ </stache-page-summary>
 
   <stache-page-anchor>
     Demo
@@ -37,7 +54,7 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab
-        tabHeading="code-demo-component.html">
+        tabHeading="sample">
         <stache-code-block
           languageType="markup">
           <stache-video
