@@ -114,7 +114,7 @@ export class StacheDemoContentService {
       name: 'Labels',
       route: '/content/labels',
       icon: 'tag',
-      summary: 'Provides a SKY UX-themed label for when you need to display important info..'
+      summary: 'Provides a SKY UX-themed label for when you need to display important info.'
     },
     {
       name: 'Tabs',
@@ -142,11 +142,11 @@ export class StacheDemoContentService {
       let nameB = b.name.toLowerCase();
 
       if (nameA < nameB) {
-        return -1;
+          return -1;
       }
 
       if (nameA > nameB) {
-        return 1;
+          return 1;
       }
 
       return 0;
