@@ -25,3 +25,4 @@ export class StacheDemoContentComponent implements OnInit {
     });
   }
 }
+
