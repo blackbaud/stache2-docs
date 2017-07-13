@@ -97,32 +97,38 @@ export class StacheDemoContentService {
       route: '/content/table-of-contents',
       icon: 'list-ol',
       summary: 'Provides a quick and effortless way to navigate content on a page.'
-    },{
+    },
+    {
       name: 'Buttons',
       route: '/content/buttons',
       icon: 'square-o',
       summary: 'Provides a formatted SKY UX-themed button.'
-    },{
+    },
+    {
       name: 'Cards',
       route: '/content/cards',
       icon: 'list-alt',
       summary: 'Provides a formatted SKY UX-themed container to highlight important information.'
-    },{
+    },
+    {
       name: 'Labels',
       route: '/content/labels',
       icon: 'tag',
-      summary: 'Provides a formatted SKY UX-themed label for when you need to call out important status information.'
-    },{
+      summary: 'Provides a SKY UX-themed label for when you need to display important info..'
+    },
+    {
       name: 'Tabs',
       route: '/content/tabs',
       icon: 'file-o',
       summary: 'Provides a formatted SKY UX-themed tabset for your page.'
-    },{
+    },
+    {
       name: 'Text Expand',
       route: '/content/text-expand',
       icon: 'font',
-      summary: 'Truncates long text with an ellipsis and a link that allows the user to fully expand the text.'
-    },{
+      summary: 'Truncates long text with an ellipsis and a link to expand the text.'
+    },
+    {
       name: 'Repeater',
       route: '/content/repeater',
       icon: 'bars',
