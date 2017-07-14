@@ -4,7 +4,7 @@
   pageTitle="Tutorial">
   <stache-page-summary>
     <p>
-      The Tutorial component creates styled and comprehensive tutorials and numbered steps.
+      The Tutorial component creates styled and comprehensive step-by-step guides with numbered steps.
     </p>
 
     <h3>
@@ -13,7 +13,9 @@
 
     <ul>
       <li>
-        <stache-code>showNumber</stache-code> — boolean value to count and show the number of the step.  defaults to true.
+       <p><stache-code>showNumber</stache-code> — boolean value (true/false) to count and show the number of the step. Defaults to true.</p>
+        <p>For example, if you want an unnumbered step, such as an introduction, you can create a card outside of the tutorials automatic numbering with <stache-code>showNumber="false"</stache-code>.</p>
+
       </li>
     </ul>
   </stache-page-summary>
@@ -36,15 +38,15 @@
           This is our first demo step.
         </stache-tutorial-step-heading>
         <stache-tutorial-step-body>
-          This is tutorial information about this first step.
+          <p>This is tutorial information about this first step.</p>
           <sky-alert alertType="info">
-            You can include other components, and columns inside of these steps.
+            You can include other components and columns inside of these steps.
           </sky-alert>
         </stache-tutorial-step-body>
       </stache-tutorial-step>
 
       <sky-alert alertType="info">
-        You can include other components, and columns outside of these too.
+        You can include other components and columns outside of these steps too.
       </sky-alert>
 
       <stache-tutorial-step
@@ -58,8 +60,17 @@
       </stache-tutorial-step>
 
       <stache-tutorial-step>
+       <stache-tutorial-step-heading>
+          Steps resume
+        </stache-tutorial-step-heading>
         <stache-tutorial-step-body>
-          This step resumes the numbering at the appropriate step number. Also does not include a title.
+          This step resumes the numbering at the appropriate step number.
+        </stache-tutorial-step-body>
+      </stache-tutorial-step>
+
+    <stache-tutorial-step>
+        <stache-tutorial-step-body>
+          I'm a step without a title.
         </stache-tutorial-step-body>
       </stache-tutorial-step>
     </stache-tutorial>
@@ -72,57 +83,68 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab
-        tabHeading="demo tutorial component">
+        tabHeading="sample">
         <stache-code-block
           languageType="markup">
-            <stache-tutorial>
-              <stache-tutorial-heading>
-                Demo Tutorial
-              </stache-tutorial-heading>
-              <stache-tutorial-summary>
-                Summary information about this demo tutorial.
-              </stache-tutorial-summary>
+               <stache-tutorial>
+      <stache-tutorial-heading>
+        Demo Tutorial
+      </stache-tutorial-heading>
+      <stache-tutorial-summary>
+        Summary information about this demo tutorial.
+      </stache-tutorial-summary>
 
-              <stache-tutorial-step>
-                <stache-tutorial-step-heading>
-                  This is our first demo step.
-                </stache-tutorial-step-heading>
-                <stache-tutorial-step-body>
-                  This is tutorial information about this first step.
-                  <sky-alert alertType="info">
-                    You can include other components, and columns inside of these steps.
-                  </sky-alert>
-                </stache-tutorial-step-body>
-              </stache-tutorial-step>
+      <stache-tutorial-step>
+        <stache-tutorial-step-heading>
+          This is our first demo step.
+        </stache-tutorial-step-heading>
+        <stache-tutorial-step-body>
+          <p>This is tutorial information about this first step.</p>
+          <sky-alert alertType="info">
+            You can include other components and columns inside of these steps.
+          </sky-alert>
+        </stache-tutorial-step-body>
+      </stache-tutorial-step>
 
-              <sky-alert alertType="info">
-                You can include other components, and columns outside of these too.
-              </sky-alert>
+      <sky-alert alertType="info">
+        You can include other components and columns outside of these steps too.
+      </sky-alert>
 
-              <stache-tutorial-step
-                showNumber="false">
-                <stache-tutorial-step-heading>
-                  Informational card without a step
-                </stache-tutorial-step-heading>
-                <stache-tutorial-step-body>
-                  We remove this step number and get a blank card.
-                </stache-tutorial-step-body>
-              </stache-tutorial-step>
+      <stache-tutorial-step
+        showNumber="false">
+        <stache-tutorial-step-heading>
+          Informational card without a step
+        </stache-tutorial-step-heading>
+        <stache-tutorial-step-body>
+          We remove this step number and get a blank card.
+        </stache-tutorial-step-body>
+      </stache-tutorial-step>
 
-              <stache-tutorial-step>
-                <stache-tutorial-step-body>
-                  This step resumes the numbering at the appropriate step number. Also does not include a title.
-                </stache-tutorial-step-body>
-              </stache-tutorial-step>
-            </stache-tutorial>
+      <stache-tutorial-step>
+       <stache-tutorial-step-heading>
+          Steps resume
+        </stache-tutorial-step-heading>
+        <stache-tutorial-step-body>
+          This step resumes the numbering at the appropriate step number.
+        </stache-tutorial-step-body>
+      </stache-tutorial-step>
+
+      <stache-tutorial-step>
+        <stache-tutorial-step-body>
+          I'm a step without a title.
+        </stache-tutorial-step-body>
+      </stache-tutorial-step>
+    </stache-tutorial>
         </stache-code-block>
       </sky-tab>
 
       <sky-tab
-        tabHeading="stache tutorial component">
+        tabHeading="title and summary">
         <p>
-          The <stache-code>stache-tutorial-component</stache-code> tag is a wrapper that holds the rest of the information (heading, summary, and steps) for the tutorial on your page.
+          The <stache-code>stache-tutorial</stache-code> tag is a wrapper that holds the rest of the information (heading, summary, and steps) for the tutorial on your page.
         </p>
+
+        <p>Before you get to your steps, we recommend you provide a tutorial title and summary of what the user should expect to learn.</p>
 
           <stache-code-block
             languageType="markup">
@@ -141,10 +163,10 @@
       </sky-tab>
 
       <sky-tab
-        tabHeading="stache tutorial step component">
+        tabHeading="step">
         <p>
-          The <stache-code>stache-tutorial-step-component</stache-code> tag is used for each step in your tutorial.   It has the optional property <stache-code>showNumber</stache-code>.  This allows you to decide if you want your tutorial step to have a number associated with it.   (defaults to true).
-        </p>
+          The <stache-code>stache-tutorial-step</stache-code> tag is used for each step in your tutorial.  It has the optional property <stache-code>showNumber</stache-code>.  This allows you to decide if you want your tutorial step to have a number associated with it (defaults to true).
+         </p>
 
           <stache-code-block
             languageType="markup">

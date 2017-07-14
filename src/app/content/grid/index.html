@@ -17,7 +17,7 @@
 
     <ul>
       <li>
-        <stache-code>reverseColumnOrder</stache-code> — <i>(Optional.)</i> Reverses the display order for the columns when set to <stache-code>true</stache-code>.
+        <stache-code>reverseColumnOrder</stache-code> — <i>(Optional)</i> Reverses the display order for the columns when set to <stache-code>true</stache-code>.
       </li>
     </ul>
 
@@ -36,6 +36,7 @@
         <stache-code>screenLarge</stache-code> — The number of columns (1-12) for a large screen (1200px).
       </li>
     </ul>
+    <p>To handle behavior for multiple screen sizes, you can combine more than one size for each column. For example: <stache-code>&lt;stache-column screenSmall="8" screenMedium="9" screenLarge="10"&gt;</stache-code>. This is helpful if you want to more carefully control the breakpoints.</p>
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -220,7 +221,7 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab
-        tabHeading="grid-demo-component.html">
+        tabHeading="sample">
         <stache-code-block
           languageType="markup">
           <stache-row>

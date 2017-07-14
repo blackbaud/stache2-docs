@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Rock",
+    "path": "/",
+    "icon": "hand-rock-o",
+    "summary": "Enter a description of what to find at the navigation item. "
+  },
+  {
+    "name": "Paper",
+    "path": "/",
+    "icon": "hand-paper-o",
+    "summary": "Keep the length relatively short."
+  },
+  {
+    "name": "Scissors",
+    "path": "/",
+    "icon": "hand-scissors-o",
+    "summary": "Write the description with a positive verb about what the user can do on the next page. "
+  },
+  {
+    "name": "Lizard",
+    "path": "/",
+    "icon": "hand-lizard-o",
+    "summary": "Action buttons are great for top-level pages."
+  },
+  {
+    "name": "Spock",
+    "path": "/",
+    "icon": "hand-spock-o",
+    "summary": "It's okay to leverage some modest humor to amuse the user."
+  }
+]
