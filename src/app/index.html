@@ -1,16 +1,18 @@
 <app-nav>
 </app-nav>
 
-<stache-hero
-  overlayOpacity="0.5"
-  backgroundImageUrl="~/assets/stache-einstein-optimized.jpg">
-  <stache-hero-heading>
-   {{ stache.jsonData.global.productNameShort }}
-  </stache-hero-heading>
-  <stache-hero-subheading>
-    Documentation components designed for SKY UX applications!
-  </stache-hero-subheading>
-</stache-hero>
+<div id="hero-over-ride">
+  <stache-hero
+    overlayOpacity="0.5"
+    backgroundImageUrl="~/assets/stache-einstein-hero.jpg">
+    <stache-hero-heading>
+    {{ stache.jsonData.global.productNameShort }}
+    </stache-hero-heading>
+    <stache-hero-subheading>
+      Documentation components designed for SKY UX applications!
+    </stache-hero-subheading>
+  </stache-hero>
+</div>
 
 <stache
   showBreadcrumbs="false"
