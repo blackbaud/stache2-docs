@@ -13,3 +13,25 @@
     align-items: center;
     text-align: center;
 }
+
+
+#hero-over-ride {
+  /deep/
+  .stache-hero {
+    @media (min-width: 992px) {
+      background-position-y: -150px;
+    }
+
+    @media (min-width: 1200px) {
+      background-position-y: -230px;
+    }
+
+    @media (min-width: 1500px) {
+      background-position-y: -320px;
+    }
+
+    @media (min-width: 1800px) {
+      background-position-y: -360px;
+    }
+  }
+}
