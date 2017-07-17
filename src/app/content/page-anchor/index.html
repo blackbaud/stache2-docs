@@ -8,7 +8,7 @@
 
   <stache-page-summary>
     <p>
-      The page anchor component is used to construct the table of contents and creates an anchor to specific sections on a page.
+      The page anchor component is used to construct the <a routerLink="/content/table-of-contents/">table of contents</a> and creates an anchor to specific sections on a page. It also formats as a natural section header.
     </p>
   </stache-page-summary>
 
@@ -18,7 +18,10 @@
 
   <div class="stache-demo-page-result">
     <stache-page-anchor>
-      Section Anchor
+      Anchor #1
+    </stache-page-anchor>
+    <stache-page-anchor>
+      Anchor #2
     </stache-page-anchor>
   </div>
 
@@ -29,11 +32,14 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab
-        tabHeading="page-anchor-demo-component.html">
+        tabHeading="sample">
         <stache-code-block
           languageType="markup">
           <stache-page-anchor>
-            Section Anchor
+            Anchor #1
+          </stache-page-anchor>
+          <stache-page-anchor>
+            Anchor #2
           </stache-page-anchor>
         </stache-code-block>
       </sky-tab>

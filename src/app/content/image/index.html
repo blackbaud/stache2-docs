@@ -18,6 +18,25 @@
         <stache-code>imageSource</stache-code> — The path to the image to render.
       </li>
     </ul>
+   <p>All images and other static assets should be stored in the<stache-code>src/assets</stache-code> directory.</p>
+  <ul>
+    <li>
+      <i class="fa fa-folder"></i> src
+      <ul>
+        <li>
+          <i class="fa fa-folder"></i> assets
+          <ul>
+            <li>
+              <i class="fa fa-folder"></i> image-name.jpg
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <sky-alert alertType="info">
+  If you need to upload a lot of image files, we recommend you organize your images into subfolders by page name.
+</sky-alert>
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -37,12 +56,12 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab
-        tabHeading="code-demo-component.html">
+        tabHeading="sample">
         <stache-code-block
           languageType="markup">
-          <stache-image
-            imageSource="~/assets&#x200B;/hero-sample-1.jpg">
-          </stache-image>
+         &lt;stache-image
+            imageSource="&#126;&#47;assets&#47;image-name.jpg"&gt;
+          &lt;&#47;stache-image&gt;
         </stache-code-block>
       </sky-tab>
     </sky-tabset>
