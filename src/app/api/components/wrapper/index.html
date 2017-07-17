@@ -20,7 +20,7 @@
         <stache-code>pageTitle</stache-code> — Sets the heading for the page.
       </li>
       <li>
-        <stache-code>layoutType</stache-code> — <i>(Optional.)</i> You can specify a specific type of layout for each {{ stache.jsonData.global.productNameShort }} page. The default is <stache-code>sidebar</stache-code>.
+        <stache-code>layout</stache-code> — <i>(Optional.)</i> You can specify a specific type of layout for each {{ stache.jsonData.global.productNameShort }} page. The default is <stache-code>sidebar</stache-code>.
         <ul>
           <li>
             <stache-code>sidebar</stache-code> — Displays a sidebar navigation on the page for each child directory.
@@ -43,16 +43,19 @@
         <stache-code>showTableOfContents</stache-code> — Determines if the table of contents displays on the page. The default is <stache-code>false</stache-code>.
       </li>
       <li>
-        <stache-code>sidebarRoutes</stache-code> — The routes used to populate the sidebar navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
+        <stache-code>sidebarRoutes</stache-code> — The routes used to populate the sidebar navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }} but can be overwritten with a custom value.
       </li>
       <li>
-        <stache-code>inPageRoutes</stache-code> — The routes used to populate the table of contents navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
+        <stache-code>inPageRoutes</stache-code> — The routes used to populate the table of contents navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }} but can be overwritten with a custom value.
       </li>
       <li>
-        <stache-code>breadcrumbsRoutes</stache-code> — The routes used to populate the breadcrumbs navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }}.
+        <stache-code>breadcrumbsRoutes</stache-code> — The routes used to populate the breadcrumbs navigation. These are set automatically by {{ stache.jsonData.global.productNameShort }} but can be overwritten with a custom value.
       </li>
       <li>
         <stache-code>navOrder</stache-code> — This number dictates the order in which your routes will render in the sidebar next to their sibling routes.
+      </li>
+      <li>
+        <stache-code>navTitle</stache-code> — Sets the route's title in the sidebar and breadcrumb navigations.
       </li>
     </ul>
   </stache-page-summary>
