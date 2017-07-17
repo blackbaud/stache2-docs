@@ -8,6 +8,10 @@
   </p>
   </stache-page-summary>
 
+  <div class="content-search-container">
+    <sky-search expandMode="fit" (searchApply)="searchApplied($event)">
+    </sky-search>
+  </div>
 
   <stache-action-buttons
     [routes]="routes">
