@@ -3,21 +3,67 @@
 
 <stache
   pageTitle="Basics"
-  showTableOfContents="true"
-  navOrder="2">
+  navOrder="2"
+  layout="container">
 
   <stache-page-summary>
     <p>
-      As you are getting to know {{ stache.jsonData.global.productNameShort }}, use the documentation below to understand how it's organized and how to create documentation using {{ stache.jsonData.global.productNameShort }}. For information about specific components, refer to our <a routerLink="/components">Components</a>.
+      As you are getting to know {{ stache.jsonData.global.productNameShort }}, use the documentation below to understand how it's organized and how to create documentation using {{ stache.jsonData.global.productNameShort }}.
     </p>
   </stache-page-summary>
 
-  <stache-page-anchor>
-    Stache Wrapper
-  </stache-page-anchor>
+ <stache-row>
+   <stache-column screenLarge="12">
+<sky-tile isCollapsed="true">
+<sky-tile-title>
+Folder Structure
+</sky-tile-title>
+<sky-tile-summary>
+Where to edit content.
+</sky-tile-summary>
+<sky-tile-content>
+<sky-tile-content-section>
+  When working on a SKY UX application, there is some folder structure to learn.
+</sky-tile-content-section>
+<sky-tile-content-section>
+  <ul>
+    <li><i class="fa fa-folder"></i> src</li>
+      <ul>
+      <li><i class="fa fa-folder"></i> app</li>
+      <ul>
+        <li><i class="fa fa-folder"></i> content folders</li>
+        <li><i class="fa fa-file"></i> app.scss</li>
+        <li><i class="fa fa-folder"></i> shared</li>
+        <ul><i class="fa fa-folder"></i> app-nav</li>
+        </ul>
+      </ul>
+      <li><i class="fa fa-folder"></i> assets</li>
+      <li><i class="fa fa-folder"></i> stache</li>
+      <ul>
+        <li><i class="fa fa-folder"></i> data</li>
+        <ul><li><i class="fa fa-file"></i> global.json</li></ul>
+        <li><i class="fa fa-folder"></i> includes</li>
+      </ul></ul>
+  </ul>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<basics-definition-list>
+</basics-definition-list>
+</sky-tile-content-section>
+</sky-tile-content>
+</sky-tile>
 
-  <p>
-    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} Wrapper</a> is the primary tag in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page.
+  <sky-tile isCollapsed="true">
+  <sky-tile-title>
+    Stache Wrapper
+  </sky-tile-title>
+    <sky-tile-summary>
+    Add to every page.
+  </sky-tile-summary>
+  <sky-tile-content>
+    <sky-tile-content-section>
+        <p>
+    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} Wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page.
   </p>
 
   <p>
@@ -29,18 +75,33 @@
       // Your content here.
     </stache>
   </stache-code-block>
+  <p><a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-primary">Learn More</button></a></p>
+    </sky-tile-content-section>
+  </sky-tile-content>
+</sky-tile>
 
-  <stache-page-anchor>
+<sky-tile isCollapsed="true">
+  <sky-tile-title>
     Layouts
-  </stache-page-anchor>
+  </sky-tile-title>
+    <sky-tile-summary>
 
-  <p>
+  </sky-tile-summary>
+  <sky-tile-content>
+    <sky-tile-content-section>
+        <p>
     {{ stache.jsonData.global.productNameShort }} layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
   </p>
-
-  <h3>
+    </sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
     Sidebar
-  </h3>
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Default
+  </sky-key-info-label>
+</sky-key-info>
 
   <stache-code-block>
     <stache
@@ -96,6 +157,7 @@
     </stache-column>
   </stache-row>
 
+
   <p>
     The currently active page in the sidebar navigation show any children underneath. All other child pages are hidden until the route becomes active.
   </p>
@@ -103,10 +165,16 @@
   <p>
     The order the sidebar routes appear is determined first by the <stache-code>navOrder</stache-code> attribute on the <stache-code>{{stache.jsonData.global.productNameShort}}</stache-code> tag.  If there is no <stache-code>navOrder</stache-code> specified, or if two sibling routes have the same <stache-code>navOrder</stache-code>, the routes will be ordered alphabetically by name.
   </p>
-
-  <h3>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
     Container
-  </h3>
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
 
   <stache-code-block>
     <stache
@@ -119,10 +187,17 @@
   <p>
     The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">{{ stache.jsonData.global.productNameShort }} Grid</a>.
   </p>
+</sky-tile-content-section>
+<sky-tile-content-section>
 
-  <h3>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
     Blank
-  </h3>
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
 
   <stache-code-block>
     <stache
@@ -135,18 +210,32 @@
   <p>
     The blank layout provides no formatting for the content inside. This allows you to do whatever you wish inside of the container but still make use of the utility of the <stache-code>stache</stache-code> tag.
   </p>
+</sky-tile-content-section>
+  </sky-tile-content>
+</sky-tile>
 
-  <stache-page-anchor>
-    Navigation
-  </stache-page-anchor>
+<sky-tile isCollapsed="true">
+<sky-tile-title>
+Navigation
+</sky-tile-title>
+<sky-tile-summary>
 
+</sky-tile-summary>
+<sky-tile-content>
+<sky-tile-content-section>
   <p>
     {{ stache.jsonData.global.productNameShort }} provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
   </p>
-
-  <h3>
-    Back To Top
-  </h3>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
+    Back to Top
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Set by default
+  </sky-key-info-label>
+</sky-key-info>
 
   <p>
     For long form content, having to scroll manually to the top of the page is annoying. The back to top button provides a quick way to navigate back to the top of a page. Back to top is enabled by default. You can disable it on the <stache-code>stache</stache-code> tag.
@@ -159,10 +248,16 @@
       // Your content here.
     </stache>
   </stache-code-block>
-
-  <h3>
-    Breadcrumbs
-  </h3>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
+    Breadrumbs
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Set by default
+  </sky-key-info-label>
+</sky-key-info>
 
   <p>
     Breadcrumbs provide you a direct path from your current location to the home page. This pattern gives users an easy way to see exactly where they are in the context of the site. Breadcrumbs are enabled by default. You can disable them on the <stache-code>stache</stache-code> tag when you don't want them to display, such as on the home page.
@@ -175,10 +270,16 @@
       // Your content here.
     </stache>
   </stache-code-block>
-
-  <h3>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
     Page Anchor
-  </h3>
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
 
   <p>
     Page anchors provide inter-page navigation and allow you to link to specific sections of a page. These serve a dual purpose as page section headers. Page anchors are used to generate the links for the table of contents.
@@ -199,10 +300,16 @@
 
     </stache>
   </stache-code-block>
-
-  <h3>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
     Table of Contents
-  </h3>
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
 
   <p>
     The table of contents allows you to navigate quickly within a page using page anchors. It also serves as an overview of the page contents. This component, combined with the back to top and page anchors, creates a quick and effortless way to navigate long form content.
@@ -234,16 +341,67 @@
 
     </stache>
   </stache-code-block>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
+    Navigation Title
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
 
-  <stache-page-anchor>
-    Images
-  </stache-page-anchor>
+  <p>
+   You can set the page's title in the sidebar and breadcrumb navigations.
+  </p>
 
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      navTitle="Sample">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+</sky-tile-content-section>
+<sky-tile-content-section>
+<sky-key-info layout="horizontal">
+  <sky-key-info-value>
+    Navigation Order
+  </sky-key-info-value>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
+
+  <p>
+   You can set the order the page appears in the sidebar navigation, relative to the sibling pages.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      navOrder="1">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+</sky-tile-content-section>
+</sky-tile-content>
+</sky-tile>
+
+<sky-tile isCollapsed="true">
+<sky-tile-title>
+Images
+</sky-tile-title>
+<sky-tile-summary>
+
+</sky-tile-summary>
+<sky-tile-content>
+<sky-tile-content-section>
   <p>
     To use local images in your {{ stache.jsonData.global.productNameShort }} project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your {{ stache.jsonData.global.productNameShort }} pages like so:
   </p>
-
-        <stache-code-block>
+ <stache-code-block>
          &lt;stache-image
             imageSource="&#126;&#47;assets&#47;hero-sample-1.jpg"&gt;
           &lt;&#47;stache-image&gt;
@@ -260,11 +418,53 @@
   <p>
     Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
   </p>
+</sky-tile-content-section>
+</sky-tile-content>
+</sky-tile>
 
-  <stache-page-anchor>
-    Command Line
-  </stache-page-anchor>
+<sky-tile isCollapsed="true">
+<sky-tile-title>
+Links
+</sky-tile-title>
+<sky-tile-summary>
+
+</sky-tile-summary>
+<sky-tile-content>
+<sky-tile-content-section>
+ In {{ stache.jsonData.global.productNameShort }}, internal and external links are not implemented the same way in the code.
+ <ul>
+   <li><stache-code>href</stache-code> — external links</li>
+   <li><stache-code>routerLink</stache-code> — internal links</li>
+ </ul>
+  <stache-code-block>
+    <a href="www.google.com">I'm an external link.</a>
+    <a routerLink="/learn/basics/">I'm an internal link.</a>
+    <a routerLink="/content/action-buttons" fragment="demo">I'm a link to a page anchor.</a>
+  </stache-code-block>
+</sky-tile-content-section>
+</sky-tile-content>
+</sky-tile>
+
+<sky-tile isCollapsed="true">
+<sky-tile-title>
+Command Line
+</sky-tile-title>
+<sky-tile-summary>
+
+</sky-tile-summary>
+<sky-tile-content>
+<sky-tile-content-section>
 <p>Stache asks you to use commands when installing and working with your repo.</p>
 <p>On a Mac, use Terminal.</p>
 <p>On a PC, type <strong>cmd</strong> in the search box to access the command line. Once you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line.</p>
+</sky-tile-content-section>
+</sky-tile-content>
+</sky-tile>
+   </stache-column>
+ </stache-row>
+
+
+
+
+
 </stache>
