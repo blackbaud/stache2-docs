@@ -1,19 +1,10 @@
 {
-  "name": "blackbaud-skyux-spa-stache2-docs",
-  "mode": "easy",
-  "compileMode": "aot",
-  "plugins": [
-    "@blackbaud/skyux-builder-plugin-stache"
-  ],
-  "app": {
-    "title": "Stache 2 Documentation"
-  },
-  "auth": true,
+  "name": "stache2-docs",
   "version": "1.0.0",
-  "description": "Single-page-application for skyux-spa-stache2-docs",
+  "description": "Stache 2 Component Library documentation",
   "main": "index.js",
   "engines": {
-    "node": ">=6.3.1"
+    "node": ">=6.11.1"
   },
   "scripts": {
     "skyux": "skyux",
@@ -30,7 +21,7 @@
   },
   "devDependencies": {
     "@blackbaud/skyux": "2.0.0-rc.5",
-    "@blackbaud/skyux-builder": "1.0.0-rc.7"
+    "@blackbaud/skyux-builder": "1.0.0-rc.8"
   },
   "repository": {
     "type": "git",
