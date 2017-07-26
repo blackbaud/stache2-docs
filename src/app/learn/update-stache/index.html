@@ -27,7 +27,7 @@
         <stache-code-block
           languageType="json">
             "dependencies": {
-              "@blackbaud/stache": "2.0.0-rc.0",
+              "@blackbaud/stache": "2.0.0-rc.1",
               ...
         </stache-code-block>
         <sky-alert
@@ -44,7 +44,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/skyux</stache-code> and <stache-code>@blackbaud/skyux-builder</stache-code> under the <stache-code>dev-dependencies</stache-code> property to install the latest versions of each.
+          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/skyux</stache-code> under <stache-code>dependencies</stache-code> and <stache-code>@blackbaud/skyux-builder</stache-code> under the <stache-code>devDependencies</stache-code> property to install the latest versions of each.
         </p>
 
         <sky-alert alertType="info">
@@ -57,10 +57,10 @@
         <stache-code-block
           languageType="json">
             "dependencies": {
-              "@blackbaud/stache": "2.0.0-rc.0"
+              "@blackbaud/skyux": "2.0.0-rc.9",
+              "@blackbaud/stache": "2.0.0-rc.1"
             },
             "devDependencies": {
-              "@blackbaud/skyux": "2.0.0-rc.9",
               "@blackbaud/skyux-builder": "1.0.0-rc.12"
             }
         </stache-code-block>
