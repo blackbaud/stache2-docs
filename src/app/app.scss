@@ -14,8 +14,10 @@
     text-align: center;
 }
 
-img {
-  border: 1px solid #cccccc;
+.stache-image-border {
+  .stache-image-object {
+    border: 1px solid #cdcfd2;
+  }
 }
 
 .sky-tile {
