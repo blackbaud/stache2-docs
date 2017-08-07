@@ -4,8 +4,6 @@ import { browser, element, by } from 'protractor';
 // Use SkyHostBrowser to access your locally served SPA
 import { SkyHostBrowser } from '@blackbaud/skyux-builder/runtime/testing/e2e';
 
-// import { SkyAppConfig } from '@blackbaud/skyux-builder/runtime';
-
 const fs = require('fs');
 const path = require('path');
 
@@ -74,31 +72,5 @@ describe('Search Results', () => {
         console.log('ERROR', error);
         done();
       });
-
-    // function scrapePageContent(file) {
-    //   SkyHostBrowser.get(file);
-
-    //   return element(by.css('stache-container'))
-    //     .getText()
-    //     .then((bodyText: string) => {
-    //       return new Promise((resolve, reject) => {
-    //         let fileName = file.replace(/\//g, '-');
-    //         fs.writeFile('src/app/search/' + fileName + '.txt', bodyText, (err) => {
-    //           err ? reject(err) : resolve();
-    //         });
-    //       });
-    //     });
-    // }
-
-    // Promise.all(files.map(file => {
-    //   return scrapePageContent(file);
-    // }))
-    //   .then(() => {
-    //     done();
-    //   })
-    //   .catch(error => {
-    //     console.log('ERROR', error);
-    //     done();
-    //   });
   });
 });
