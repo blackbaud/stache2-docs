@@ -14,7 +14,22 @@
     text-align: center;
 }
 
-img {
+.stache-image-border {
+  .stache-image-object {
+    border: 1px solid #cdcfd2;
+  }
+}
+
+.sky-tile {
+    margin-top: 5px;
+  }
+
+
+.basics-well {
+  padding: 10px 10px 0px 10px;
+  background-color: #f3f3f4;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #cccccc;
 }
 
