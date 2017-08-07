@@ -131,39 +131,9 @@
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
-    <stache-tutorial-step>
-      <stache-tutorial-step-heading>
-        Update app-nav Component
-      </stache-tutorial-step-heading>
-      <stache-tutorial-step-body>
-        <ol>
-          <li>
-            Open the <stache-code>src/app/shared/app-nav</stache-code> directory.
-          </li>
-          <li>
-            Create a file named <stache-code>app-nav.component.scss</stache-code> and add the following style.
-            <stache-code-block
-               languageType="css">
-               .sky-container {
-                 display: flex;
-               }
-            </stache-code-block>
-          </li>
-          <li>
-            Open the <stache-code>src/app/shared/app-nav/app-nav.component.ts</stache-code> file and add the <stache-code>./app-nav.component.scss</stache-code> file to the <stache-code>styleUrls</stache-code> array.
-
-            <stache-code-block
-              languageType="typescript">
-               @Component({
-                 selector: 'app-nav',
-                 templateUrl: './app-nav.component.html',
-                 styleUrls: ['./app-nav.component.scss']
-                })
-            </stache-code-block>
-          </li>
-        </ol>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
+    <stache-include
+      fileName="nav-style-override.html">
+    </stache-include>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
