@@ -1,5 +1,5 @@
 // Use browser to access other sites (that are running angular)
-import { element, by } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 // Use SkyHostBrowser to access your locally served SPA
 import { SkyHostBrowser } from '@blackbaud/skyux-builder/runtime/testing/e2e';
@@ -34,22 +34,23 @@ describe('Search Results', () => {
     route = route.slice(0, route.length - 11);
     return route;
   });
-  // files.unshift('/');
 
   it('should generate search results', (done) => {
+    let content = {};
+    let appName = JSON.parse(browser.params.skyPagesConfig).skyux.name;
+
+    content[appName] = [];
 
     function scrapePageContent(file) {
       SkyHostBrowser.get(file);
-
-      return element(by.css('stache-container'))
+      return element(by.css('body'))
         .getText()
-        .then((bodyText: string) => {
-          return new Promise((resolve, reject) => {
-            let fileName = file.replace(/\//g, '-');
-            fs.writeFile(fileName + '.txt', bodyText, (err) => {
-              err ? reject(err) : resolve();
-            });
+        .then((text: string): Promise<any> => {
+          content[appName].push({
+            path: file,
+            text: text
           });
+          return Promise.resolve();
         });
     }
 
@@ -57,11 +58,47 @@ describe('Search Results', () => {
       return scrapePageContent(file);
     }))
       .then(() => {
+        return new Promise((resolve, reject) => {
+          fs.writeFile(
+            path.join('src/search/search.json'),
+            JSON.stringify(content),
+            (err) => {
+              err ? reject(err) : resolve();
+            });
+        });
+      })
+      .then(() => {
         done();
       })
       .catch(error => {
         console.log('ERROR', error);
         done();
       });
+
+    // function scrapePageContent(file) {
+    //   SkyHostBrowser.get(file);
+
+    //   return element(by.css('stache-container'))
+    //     .getText()
+    //     .then((bodyText: string) => {
+    //       return new Promise((resolve, reject) => {
+    //         let fileName = file.replace(/\//g, '-');
+    //         fs.writeFile('src/app/search/' + fileName + '.txt', bodyText, (err) => {
+    //           err ? reject(err) : resolve();
+    //         });
+    //       });
+    //     });
+    // }
+
+    // Promise.all(files.map(file => {
+    //   return scrapePageContent(file);
+    // }))
+    //   .then(() => {
+    //     done();
+    //   })
+    //   .catch(error => {
+    //     console.log('ERROR', error);
+    //     done();
+    //   });
   });
 });
