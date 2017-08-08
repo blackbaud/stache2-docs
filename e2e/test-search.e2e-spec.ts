@@ -13,7 +13,7 @@ const walkSync = (dir, filePaths: string[] = []) => {
     if (fs.statSync(path.join(dir, file)).isDirectory()) {
       filePaths = walkSync(path.join(dir, file), filePaths);
     } else {
-      if (file.indexOf('index.html') > -1) {
+      if (file.includes('index.html')) {
         filePaths.push(path.join(dir, file));
       }
     }
@@ -22,15 +22,16 @@ const walkSync = (dir, filePaths: string[] = []) => {
 };
 
 describe('Search Results', () => {
+  let files;
+
   beforeEach(() => {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 500000;
-  });
-
-  let files = walkSync(path.join(__dirname, '../src/app'));
-  files = files.map(file => {
-    let route = file.split('/app')[1];
-    route = route.slice(0, route.length - 11);
-    return route;
+    files = walkSync(path.join(__dirname, '..', 'src', 'app'));
+    files = files.map(file => {
+      let route = file.split('/app')[1];
+      route = route.slice(0, route.length - 11);
+      return route;
+    });
   });
 
   it('should generate search results', (done) => {
@@ -39,7 +40,7 @@ describe('Search Results', () => {
 
     content[appName] = [];
 
-    function scrapePageContent(file) {
+    function scrapePageContent(file: string) {
       SkyHostBrowser.get(file);
       return element(by.css('body'))
         .getText()
@@ -58,11 +59,18 @@ describe('Search Results', () => {
       .then(() => {
         return new Promise((resolve, reject) => {
           fs.writeFile(
-            path.join('src/search/search.json'),
+            path.join(
+              __dirname,
+              '..',
+              'src',
+              'search',
+              'search.json'
+            ),
             JSON.stringify(content),
             (err) => {
               err ? reject(err) : resolve();
-            });
+            }
+          );
         });
       })
       .then(() => {
