@@ -1,65 +1,30 @@
 <app-nav>
 </app-nav>
 
-<stache
-  pageTitle="July 2017"
-  navTitle="Changelog"
-  showTableOfContents="true">
+<stache pageTitle="August 2017" navTitle="Changelog" showTableOfContents="true">
 
-<stache-page-summary>
+  <stache-page-summary>
     Monitor this page to keep up with the latest changes and releases for {{ stache.jsonData.global.productNameLong }}.
-</stache-page-summary>
+  </stache-page-summary>
 
-<stache-page-anchor>
-  2.0.0-rc.0 (2017-07-26)
-</stache-page-anchor>
+  <stache-page-anchor>
+     2.0.0-rc.2 (2017-08-11)
+  </stache-page-anchor>
   <ul>
     <li>
-      Converted `StachePageAnchorComponent` to an anchor tag, to allow users to open the link in a new window. <a href="https://github.com/blackbaud/stache2/pull/277">[#277]</a>
+      Added support for <stache-code>stache-code-block</stache-code> in <stache-code>stache-include</stache-code> to contain <stache-code>{{ '{' }}</stache-code> and <stache-code>}</stache-code>. <a href="https://github.com/blackbaud/skyux-builder-plugin-stache/pull/13">#13</a>
     </li>
     <li>
-      Added search form to `StacheActionButtonsComponent`. <a href="https://github.com/blackbaud/stache2/pull/270">#270</a>
+       Updated <stache-code>navOrder</stache-code> to allow nav order to be set on only one item. <a href="https://github.com/blackbaud/stache2/pull/288">#288</a>
     </li>
     <li>
-      Removed custom bundling commands, relying on SKY UX Builder's new `skyux build-public-library` command. <a href="https://github.com/blackbaud/stache2/pull/234">#234</a>
+       Limited support for <stache-code>navOrder</stache-code> values to <a href="https://www.mathsisfun.com/definitions/counting-number.html">Counting Numbers</a>. <a href="https://github.com/blackbaud/stache2/pull/288">#288</a>
     </li>
     <li>
-      Added support for external URLs in `StacheActionButtonsComponent`. <a href="https://github.com/blackbaud/stache2/pull/262">#262</a>
+       Added support for SKY UX Builder <stache-code>1.0.0-rc.15</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/288">#288</a>
     </li>
     <li>
-      Added ability to include property bindings in `StacheTableOfContentsComponent`. <a href="https://github.com/blackbaud/stache2/pull/261">#261</a>
-    </li>
-    <li>
-      Added support for SKY UX `2.0.0-rc.9`. <a href="https://github.com/blackbaud/stache2/pull/278">#278</a>
-    </li>
-    <li>
-      Added support for SKY UX Builder `1.0.0-rc.12`.
-    </li>
-    <li>
-      Updated version of Node.JS due to security implications. <a href="https://github.com/blackbaud/stache2/pull/264">#264</a>
-    </li>
-    <li>
-      Fixed `StacheAffixComponent` sizing issues on smaller screens. <a href="https://github.com/blackbaud/stache2/pull/279">#279</a>
-    </li>
-    <li>
-      General cleanup and refactoring of existing code.
-      <a href="(https://github.com/blackbaud/stache2/pull/276">#276</a>
-      <a href="https://github.com/blackbaud/stache2/pull/269">#269</a>
-      <a href="https://github.com/blackbaud/stache2/pull/267">#267</a>
-      <a href="https://github.com/blackbaud/stache2/pull/259">#259</a>
-      <a href="https://github.com/blackbaud/stache2/pull/260">#260</a>
+        Added support for SKY UX <stache-code>2.0.0-rc.10</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/2887">#287</a>
     </li>
   </ul>
-
-<stache-page-anchor>
-  2.0.0-beta.9 (2017-07-06)
-</stache-page-anchor>
-    <ul>
-      <li>Added navOrder to <stache-code>stache tag</stache-code>, to allow ordering of sidebar routes.</li>
-      <li>Added more language options for <stache-code>StacheCodeBlockComponent</stache-code></li>
-      <li>Added support for SKY UX 2.0.0-rc.4</li>
-      <li>Added support for SKY UX Builder 1.0.0-rc.6</li>
-      <li>Fixed bug with StacheAffixComponent</li>
-    </ul>
-
 </stache>
