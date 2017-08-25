@@ -1,0 +1,14 @@
+<sky-alert alertType="info">
+  <p>
+    If you opt not to use Blackbaud authentication for your SPA, you can remove the
+    <stache-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</stache-code> from the
+    <stache-code>plugins</stache-code> array and set
+    <stache-code>"auth": "false"</stache-code>.
+  </p>
+</sky-alert>
+<stache-code-block languageType="json">
+  "auth": "false",
+  "plugins": [
+    "@blackbaud/skyux-builder-plugin-stache"
+  ]
+</stache-code-block>

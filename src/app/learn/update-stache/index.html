@@ -27,12 +27,12 @@
         <stache-code-block
           languageType="json">
             "dependencies": {
-              "@blackbaud/stache": "2.0.0-rc.2",
+              "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}",
               ...
         </stache-code-block>
         <sky-alert
-                   alertType="warning">
-          Before you update, review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog</a> for breaking changes.
+          alertType="warning">
+            Before you update, review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog</a> for breaking changes.
         </sky-alert>
 
       </stache-tutorial-step-body>
@@ -54,16 +54,7 @@
           alertType="warning">
           <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release <stache-code>2.0.0-beta.9</stache-code>, codelyzer was removed as a dependency, and skyux was changed to a dev dependency.
         </sky-alert>
-        <stache-code-block
-          languageType="json">
-            "dependencies": {
-              "@blackbaud/skyux": "2.0.0-rc.10",
-              "@blackbaud/stache": "2.0.0-rc.2"
-            },
-            "devDependencies": {
-              "@blackbaud/skyux-builder": "1.0.0-rc.15"
-            }
-        </stache-code-block>
+        <stache-include fileName="package-json-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -79,20 +70,7 @@
           alertType="warning">
           <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.9, all <stache-code>plugins</stache-code> required by  {{ stache.jsonData.global.productNameShort }} are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
         </sky-alert>
-        <stache-code-block
-          languageType="json">
-            {
-              "name": "stache",
-              "mode": "easy",
-              "compileMode": "aot",
-              "plugins": [
-                "@blackbaud/skyux-builder-plugin-stache"
-              ],
-              "app": {
-                "title": "Stache 2 Documentation"
-              }
-            }
-        </stache-code-block>
+        <stache-include fileName="skyux-config-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -104,30 +82,12 @@
         <p>
           Open the <stache-code>src/app-extras.module.ts</stache-code> file. Here we need to ensure we are importing the <stache-code>StacheModule</stache-code>.
         </p>
-          <sky-alert
-            alertType="warning">
-            <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.9, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLShort }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
-          </sky-alert>
+        <sky-alert
+          alertType="warning">
+          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.9, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLong }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
+        </sky-alert>
 
-          <stache-code-block
-            languageType="typescript">
-            import { NgModule } from '@angular/core';
-
-            import { StacheModule } from '@blackbaud/stache';
-
-            // Specify entry components, module-level providers, etc. here.
-            @NgModule({
-              imports: [
-                StacheModule
-              ],
-              exports: [
-                StacheModule
-              ],
-              providers: [],
-              entryComponents: []
-            })
-            export class AppExtrasModule { }
-          </stache-code-block>
+        <stache-include fileName="app-extras-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
