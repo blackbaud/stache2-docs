@@ -1,3 +1,5 @@
+<app-nav>
+</app-nav>
 <stache
   showTableOfContents="true"
   pageTitle="Configuration and Data">
@@ -54,6 +56,30 @@
   <stache-code-block
     languageType="markup">
     <p>{{ stache.jsonData.example.key }}</p>
+  </stache-code-block>
+
+  <sky-alert alertType="info">
+    <strong>NOTE:</strong> If you need your variable data to be parsed at build time instead of run time, such as inside a <a routerLink="content/code-block"><stache-code>stache-code-block</stache-code></a> or as an <stache-code>attribute value</stache-code>, you will need to add the <stache-code>@buildtime:</stache-code> flag to your variable binding:
+  </sky-alert>
+  <p>
+    <strong>
+      In a <stache-code>stache-code-block</stache-code>:
+    </strong>
+  </p>
+  <stache-code-block
+    languageType="markup">
+     {&#123; @buildtime:stache.jsonData.global.productNameShort }} will render {{ @buildtime:stache.jsonData.global.productNameShort }}.
+
+    {{ stache.jsonData.global.productNameShort }} will not.
+  </stache-code-block>
+  <p>
+    <strong>
+      As an attribute:
+    </strong>
+  </p>
+  <stache-code-block>
+    <stache
+      pageTitle="{&#123; @buildtime:stache.jsonData.global.productNameShort }} Title">
   </stache-code-block>
 
   <p>If you want to use the data in a component, you can do so with the <stache-code>StacheJsonDataService</stache-code> by adding it to your component:</p>
