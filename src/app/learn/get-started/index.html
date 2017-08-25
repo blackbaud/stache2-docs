@@ -176,23 +176,7 @@
             </p>
           </li>
         </ol>
-        <stache-code-block languageType="json">
-          {
-            "mode": "easy",
-            "compileMode": "aot",
-            "auth": true,
-            "plugins": [
-              "@blackbaud/skyux-builder-plugin-stache", "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
-            ],
-            "app": {
-              "title": "{{ @buildtime:stache.jsonData.global.productNameLong }} Template"
-            },
-            "appSettings": {
-              "stache": { }
-            }
-          }
-        </stache-code-block>
-        <stache-include fileName="auth-opt-out.html"></stache-include>
+        <stache-include fileName="skyux-config-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
     <stache-tutorial-step>
