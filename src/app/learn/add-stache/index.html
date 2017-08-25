@@ -51,6 +51,41 @@
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
+    <stache-include fileName="nav-style-override.html">
+    </stache-include>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Update the Sky dependencies
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Open the
+          <stache-code>package.json</stache-code> file in your project. Update
+          <stache-code>@blackbaud/skyux</stache-code> under
+          <stache-code>dependencies</stache-code> and
+          <stache-code>@blackbaud/skyux-builder</stache-code> under the
+          <stache-code>devDependencies</stache-code> property to install the latest versions of each.
+        </p>
+
+        <sky-alert alertType="info">
+          Your updated
+          <stache-code>package.json</stache-code> file with all {{ stache.jsonData.global.productNameShort }} and Sky dependencies
+          should look as follows.
+        </sky-alert>
+
+        <stache-code-block languageType="json">
+          "dependencies": {
+            "@blackbaud/skyux": "2.0.0-rc.10",
+            "@blackbaud/stache": "2.0.0-rc.2"
+          },
+          "devDependencies": {
+            "@blackbaud/skyux-builder": "1.0.0-rc.15"
+          }
+        </stache-code-block>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
         Declare plugins
@@ -84,6 +119,9 @@
               blackbaud.com
             </li>
             <li>
+              blackbaud.ca
+            </li>
+            <li>
               blackbaud.me
             </li>
             <li>
@@ -93,6 +131,9 @@
               blackbaud.au
             </li>
             <li>
+              blackbaud.com.au
+            </li>
+            <li>
               microedge.com
             </li>
             <li>
@@ -100,6 +141,9 @@
             </li>
             <li>
               everydayhero.com
+            </li>
+            <li>
+              smarttuition.com
             </li>
           </ul>
         </sky-alert>
