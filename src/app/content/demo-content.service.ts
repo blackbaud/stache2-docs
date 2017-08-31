@@ -32,6 +32,12 @@ export class StacheDemoContentService {
       to multiple documents using the SKY UX Action Button.'
     },
     {
+      name: 'Blockquote',
+      route: '/content/blockquote',
+      icon: 'quote-left',
+      summary: 'Provides a formatted blockquote.'
+    },
+    {
       name: 'Grid',
       route: '/content/grid',
       icon: 'table',
