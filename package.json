@@ -14,8 +14,8 @@
   "author": "Blackbaud",
   "license": "MIT",
   "dependencies": {
-    "@blackbaud/skyux": "2.0.0-rc.11",
-    "@blackbaud/stache": "2.0.0-rc.2"
+    "@blackbaud/skyux": "2.0.0-rc.12",
+    "@blackbaud/stache": "2.0.0-rc.3"
   },
   "devDependencies": {
     "@blackbaud/skyux-builder": "1.0.0-rc.17"

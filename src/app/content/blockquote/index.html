@@ -1,0 +1,63 @@
+<app-nav>
+</app-nav>
+
+<stache pageTitle="Blockquote" layout="sidebar" showBreadcrumbs="true">
+
+  <stache-page-summary>
+    The blockquote component provides a stylized and formatted blockquote.
+  </stache-page-summary>
+
+  <h3>
+    Blockquote properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>author</stache-code> - <i>(Optional)</i> Sets the source author / quotee.
+    </li>
+    <li>
+      <stache-code>quoteSource</stache-code> - <i>(Optional)</i> Sets the link to the source of the quote.
+    </li>
+  </ul>
+
+  <sky-alert
+    alertType="info">
+    If you set the <stache-code>quoteSource</stache-code>, we highly recommend you set the <stache-code>author</stache-code>. Otherwise the default will display as <strong>&mdash; Source<strong>.
+  </sky-alert>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-blockquote
+      author="Aibileen Clark"
+      quoteSource="http://www.imdb.com/character/ch0257060/quotes">
+      God says we need to love our enemies. It hard to do. But it can start by telling the truth. No one had ever asked me what
+      it feel like to be me. Once I told the truth about that, I felt free. And I got to thinking about all the people I know.
+      And the things I seen and done. My boy Trelaw always said we gonna have a writer in the family one day. I guess it's
+      gonna be me.
+    </stache-blockquote>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="markup">
+          <stache-blockquote
+            author="Aibileen Clark"
+            quoteSource="http://www.imdb.com/character/ch0257060/quotes">
+            God says we need to love our enemies. It hard to do. But it can start by telling the truth. No one had ever asked me what
+            it feel like to be me. Once I told the truth about that, I felt free. And I got to thinking about all the people I know.
+            And the things I seen and done. My boy Trelaw always said we gonna have a writer in the family one day. I guess it's
+            gonna be me.
+          </stache-blockquote>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
