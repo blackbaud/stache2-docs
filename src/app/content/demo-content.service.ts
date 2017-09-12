@@ -139,6 +139,12 @@ export class StacheDemoContentService {
       route: '/content/repeater',
       icon: 'bars',
       summary: 'Creates a SKY UX-themed container to display information for a list of objects.'
+    },
+    {
+      name: 'Swagger',
+      route: '/content/swagger',
+      icon: 'sticky-note',
+      summary: 'Provides an endpoint referenced based on a swagger.json file.'
     }
   ];
 
