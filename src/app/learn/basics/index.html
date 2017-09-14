@@ -481,6 +481,11 @@ img &#123;
 
 </stache-code-block>
 </sky-tile-content-section>
+<sky-tile-content-section>
+Then, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file. Insert this line of code at the very beginning of the file. 
+<stache-code-block>require('style-loader!./app.scss');</stache-code-block>
+
+</sky-tile-content-section>
 </sky-tile-content>
 </sky-tile>
 
