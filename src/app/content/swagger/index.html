@@ -1,0 +1,51 @@
+<app-nav>
+</app-nav>
+
+<stache pageTitle="Swagger" layout="sidebar" showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The swagger component is used to generate an endpoint reference from a swagger.json file.
+    </p>
+
+    <h3>
+      Swagger properties
+    </h3>
+
+    <ul>
+      <li>
+        <stache-code>swaggerUrl</stache-code> - The source for the swagger json file.
+      </li>
+    </ul>
+
+    <sky-alert alertType="info">
+      Note: All urls must be https.
+    </sky-alert>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-swagger
+      swaggerUrl="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v2.0/json/petstore-expanded.json">
+    </stache-swagger>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="markup">
+          <stache-swagger
+            swaggerUrl="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v2.0/json/petstore-expanded.json">
+          </stache-swagger>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
