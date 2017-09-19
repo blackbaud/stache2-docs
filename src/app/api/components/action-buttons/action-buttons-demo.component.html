@@ -15,6 +15,11 @@
     <ul>
       <li>
         <p>
+          <stache-code>showSearch</stache-code> — (<i>Optional</i>) Specifies whether to include the search field for the action buttons. Default is true. 
+        </p>
+      </li>
+      <li>
+        <p>
           <stache-code>routes</stache-code> — Specifies the properties for each action button in the list. Each button has the following properties:
         </p>
 
@@ -57,7 +62,7 @@
         <stache-code-block
           languageType="markup">
           <stache-action-buttons
-            [routes]="routes">
+            [routes]="routes" showSearch="false">
           </stache-action-buttons>
         </stache-code-block>
       </sky-tab>
