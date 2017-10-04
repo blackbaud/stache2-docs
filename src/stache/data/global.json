@@ -1,7 +1,7 @@
 {
   "productNameLong": "Stache 2",
   "productNameShort": "Stache",
-  "stacheVersion": "2.0.0-rc.3",
-  "skyUXVersion": "2.0.0-rc.12",
-  "builderVersion": "1.0.0-rc.17"
+  "stacheVersion": "^2.0.1",
+  "skyUXVersion": "^2.0.1",
+  "builderVersion": "^1.0.0"
 }
