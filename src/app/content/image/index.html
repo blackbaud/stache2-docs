@@ -17,6 +17,9 @@
       <li>
         <stache-code>imageSource</stache-code> — The path to the image to render.
       </li>
+      <li>
+        <stache-code>imageAlt</stache-code> — The alt tag for the image. Used for accessibility.
+      </li>
     </ul>
    <p>All images and other static assets should be stored in the<stache-code>src/assets</stache-code> directory.</p>
   <ul>
@@ -45,6 +48,7 @@
 
   <div class="stache-demo-page-result">
     <stache-image
+      imageAlt="This is an example hero."
       imageSource="~/assets/hero-sample-1.jpg">
     </stache-image>
   </div>
@@ -60,6 +64,7 @@
         <stache-code-block
           languageType="markup">
          &lt;stache-image
+            imageAlt="This is an example hero."
             imageSource="&#126;&#47;assets&#47;image-name.jpg"&gt;
           &lt;&#47;stache-image&gt;
         </stache-code-block>
