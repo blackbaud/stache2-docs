@@ -10,6 +10,16 @@
     The code component formats in line code snippets in a consistent way.
   </stache-page-summary>
 
+  <h3>
+    Back To Top properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>escapeCharacters</stache-code> — <i>(Optional.)</i> set a boolean to escape convert special characters into HTML Entities.
+    </li>
+  </ul>
+
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
@@ -18,6 +28,14 @@
     <p>
       This page uses the <stache-code>layout="sidebar"</stache-code> property.
     </p>
+    <ul>
+      <li>
+        With EscapeCharacters: <stache-code escapeCharacters="true">{{ stache.jsonData.global.demoVariable }}</stache-code>
+      </li>
+      <li>
+        Without EscapeCharacters: <stache-code>{{ stache.jsonData.global.demoVariable }}</stache-code>
+      </li>
+    </ul>
   </div>
 
   <stache-page-anchor>
@@ -33,6 +51,8 @@
           <p>
             This page uses the <stache-code>layout="sidebar"</stache-code> property.
           </p>
+
+          <stache-code escapeCharacters="true"> {{ stache.jsonData.global.demoVariable }} </stache-code>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>
