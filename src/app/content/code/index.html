@@ -1,14 +1,22 @@
 <app-nav>
 </app-nav>
 
-<stache
-  pageTitle="Code"
-  layout="sidebar"
-  showBreadcrumbs="true">
+<stache pageTitle="Code" layout="sidebar" showBreadcrumbs="true">
 
   <stache-page-summary>
     The code component formats in line code snippets in a consistent way.
   </stache-page-summary>
+
+  <h3>
+    Code properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>escapeCharacters</stache-code> —
+      <i>(Optional.)</i> set a boolean to escape convert special characters into HTML Entities.
+    </li>
+  </ul>
 
   <stache-page-anchor>
     Demo
@@ -16,8 +24,19 @@
 
   <div class="stache-demo-page-result">
     <p>
-      This page uses the <stache-code>layout="sidebar"</stache-code> property.
+      This page uses the
+      <stache-code>layout="sidebar"</stache-code> property.
     </p>
+    <ul>
+      <li>
+        With EscapeCharacters:
+        <stache-code escapeCharacters="true">{{ stache.jsonData.global.demoVariable }}</stache-code>
+      </li>
+      <li>
+        Without EscapeCharacters:
+        <stache-code>{{ stache.jsonData.global.demoVariable }}</stache-code>
+      </li>
+    </ul>
   </div>
 
   <stache-page-anchor>
@@ -26,13 +45,14 @@
 
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab
-        tabHeading="sample">
-        <stache-code-block
-          languageType="markup">
+      <sky-tab tabHeading="code-demo-component.html">
+        <stache-code-block languageType="markup">
           <p>
-            This page uses the <stache-code>layout="sidebar"</stache-code> property.
+            This page uses the
+            <stache-code>layout="sidebar"</stache-code> property.
           </p>
+
+          <stache-code escapeCharacters="true"> {{ stache.jsonData.global.demoVariable }} </stache-code>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>
