@@ -1,10 +1,13 @@
 <app-nav>
 </app-nav>
 
-<stache pageTitle="Code" layout="sidebar" showBreadcrumbs="true">
+<stache
+  pageTitle="Code"
+  layout="sidebar"
+  showBreadcrumbs="true">
 
   <stache-page-summary>
-    The code component formats in line code snippets in a consistent way.
+    The code component formats inline code snippets in a consistent way.
   </stache-page-summary>
 
   <h3>
@@ -13,8 +16,7 @@
 
   <ul>
     <li>
-      <stache-code>escapeCharacters</stache-code> —
-      <i>(Optional.)</i> set a boolean to escape convert special characters into HTML Entities.
+      <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to convert special characters into HTML entities. Defaults to false.
     </li>
   </ul>
 
@@ -23,18 +25,12 @@
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <p>
-      This page uses the
-      <stache-code>layout="sidebar"</stache-code> property.
-    </p>
     <ul>
       <li>
-        With EscapeCharacters:
-        <stache-code escapeCharacters="true">{{ stache.jsonData.global.demoVariable }}</stache-code>
+        With <stache-code>escapeCharacters</stache-code> set to <stache-code>true</stache-code>: <stache-code escapeCharacters="true">{{ stache.jsonData.global.demoVariable }}</stache-code>
       </li>
       <li>
-        Without EscapeCharacters:
-        <stache-code>{{ stache.jsonData.global.demoVariable }}</stache-code>
+        Without <stache-code>escapeCharacters</stache-code>: <stache-code>{{ stache.jsonData.global.demoVariable }}</stache-code>
       </li>
     </ul>
   </div>
@@ -45,14 +41,13 @@
 
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="code-demo-component.html">
+      <sky-tab tabHeading="sample">
         <stache-code-block languageType="markup">
-          <p>
-            This page uses the
-            <stache-code>layout="sidebar"</stache-code> property.
-          </p>
-
+          With escapeCharacters set to true:
           <stache-code escapeCharacters="true"> {{ stache.jsonData.global.demoVariable }} </stache-code>
+
+          Without escapeCharacters:
+          <stache-code> {{ stache.jsonData.global.demoVariable }} </stache-code>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>
