@@ -7,7 +7,7 @@
   showBreadcrumbs="true">
 
   <stache-page-summary>
-    The code component formats inline code snippets in a consistent way.
+    The code component formats inline code and text snippets in a consistent way.
   </stache-page-summary>
 
   <h3>
@@ -16,7 +16,7 @@
 
   <ul>
     <li>
-      <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to convert special characters into HTML entities. Defaults to false.
+      <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <stache-code escapeCharacters="true"> { and < </stache-code>. Defaults to false.
     </li>
   </ul>
 
@@ -27,10 +27,13 @@
   <div class="stache-demo-page-result">
     <ul>
       <li>
-        With <stache-code>escapeCharacters</stache-code> set to <stache-code>true</stache-code>: <stache-code escapeCharacters="true">{{ stache.jsonData.global.demoVariable }}</stache-code>
+        With <stache-code>escapeCharacters</stache-code> set to <stache-code>true</stache-code> : Add a <stache-code escapeCharacters="true"><span>span tag</span></stache-code>
       </li>
       <li>
-        Without <stache-code>escapeCharacters</stache-code>: <stache-code>{{ stache.jsonData.global.demoVariable }}</stache-code>
+        Without <stache-code>escapeCharacters</stache-code> : Add a <stache-code><span>span tag</span></stache-code>
+      </li>
+      <li>
+        <stache-code>Highlighted text</stache-code>
       </li>
     </ul>
   </div>
@@ -41,13 +44,17 @@
 
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="sample">
-        <stache-code-block languageType="markup">
+      <sky-tab
+        tabHeading="sample">
+        <stache-code-block
+          languageType="markup">
           With escapeCharacters set to true:
-          <stache-code escapeCharacters="true"> {{ stache.jsonData.global.demoVariable }} </stache-code>
+           Add a <stache-code escapeCharacters="true"> <span>span tag</span> </stache-code>
 
           Without escapeCharacters:
-          <stache-code> {{ stache.jsonData.global.demoVariable }} </stache-code>
+           Add a <stache-code> <span>span tag</span> </stache-code>
+
+          <stache-code>Highlighted text</stache-code>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>
