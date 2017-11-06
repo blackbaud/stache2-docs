@@ -53,7 +53,7 @@ export class StacheDemoContentService {
       name: 'Code',
       route: '/content/code',
       icon: 'code',
-      summary: 'Provides a formatted in line snippet of code.'
+      summary: 'Provides a formatted inline snippet of code.'
     },
     {
       name: 'Hero',
