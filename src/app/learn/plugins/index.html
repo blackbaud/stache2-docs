@@ -1,47 +1,52 @@
 <app-nav>
 </app-nav>
 <stache
-  pageTitle="Stache 2 Plugins"
+  pageTitle="Stache Plugins"
   showTableOfContents="true"
   navOrder="5">
   <stache-page-summary>
     <p>
-      In order to expand upon and create new functionality with SKY UX Builder, {{ stache.jsonData.global.productNameShort }} makes use of plugins. Each plugin is geared towards a specific purpose, and most of them are required to make use of certain {{ stache.jsonData.global.productNameShort }} components.
+      To expand on existing SKY UX Builder functionality and create new functionality, {{ stache.jsonData.global.productNameShort }} uses plugins. Each plugin is geared toward a specific purpose, and most of them are required to make use of certain {{ stache.jsonData.global.productNameShort }} components.
     </p>
   </stache-page-summary>
 
     <p>
-      The majority of plugins required by {{ stache.jsonData.global.productNameShort }} in order to make use of all components are bundled into the <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin. Below are lists of required and optional plugins, and instructions on importing them into your {{ stache.jsonData.global.productNameShort }} project.
+      All the plugins that {{ stache.jsonData.global.productNameShort }} requires are bundled into the <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin.
     </p>
     <sky-alert>
-      If you created a new project with <stache-code>skyux new --template stache</stache-code> these plugins are added for you. If you are upgrading to a newer version of stache, please check to ensure you have all required plugins installed.
+      If you create a project with the <stache-code>skyux new --template stache</stache-code> command, plugins are added for you. If you <a routerLink="/learn/update-stache">upgrade to a newer version of Stache</a>, make sure all required plugins are installed.
     </sky-alert>
 
   <stache-page-anchor>
-    Required Plugin for all projects
+    Required plugin for all projects
   </stache-page-anchor>
-
+  
+  <p>
+    The required <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin bundles all other plugins that {{ stache.jsonData.global.productNameShort }} requires.
+  </p>
   <stache-code-block
     languageType="markup">
     "@blackbaud/skyux-builder-plugin-stache"
   </stache-code-block>
 
   <stache-page-anchor>
-    Optional Plugins
+    Optional plugins
   </stache-page-anchor>
-
-
+  
+  <p>
+    The optional <stache-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</stache-code> plugin allows you to enable Blackbaud authentication for internal sites so that you can restrict access to internal users only.
+  </p>
   <stache-code-block
     languageType="markup">
     @blackbaud/skyux-builder-plugin-auth-email-whitelist
   </stache-code-block>
 
   <stache-page-anchor>
-    Adding Plugins to your project
+    Add plugins to your project
   </stache-page-anchor>
 
   <p>
-    Once you have your <stache-code>package.json</stache-code> updated to install the latest version of <strong>stache2</strong>, you will need to also add any required plugins to the <stache-code>plugins</stache-code> array in your <stache-code>skyuxconfig.json</stache-code> file.
+    After you update the <stache-code>package.json</stache-code> file to install the latest version of Stache, you need to add required plugins to the <stache-code>plugins</stache-code> array in the <stache-code>skyuxconfig.json</stache-code> file.
   </p>
   <stache-include fileName="skyux-config-sample.html"></stache-include>
 </stache>
