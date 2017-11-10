@@ -139,6 +139,12 @@ export class StacheDemoContentService {
       route: '/content/repeater',
       icon: 'bars',
       summary: 'Creates a SKY UX-themed container to display information for a list of objects.'
+    },
+    {
+      name: 'Markdown',
+      route: '/content/markdown',
+      icon: 'file-text',
+      summary: 'Coverts markdown to HTML/Stache2 components.'
     }
   ];
 
