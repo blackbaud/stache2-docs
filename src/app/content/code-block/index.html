@@ -2,28 +2,31 @@
 </app-nav>
 
 <stache
-  pageTitle="Code Block"
+  pageTitle="Code block"
   layout="sidebar"
   showBreadcrumbs="true">
 
   <stache-page-summary>
     <p>
-      The code block component displays a formatted block of code with syntax highlighting.
+      The code block component allows you to format a block of text as a code snippet with syntax highlighting. You wrap <stache-code>stache-code-block</stache-code> tags around the code block.
     </p>
+    <sky-alert alertType="info">
+      To format shorter code snippets that appear inline within a larger block of text, use <a routerLink="/content/code">the code component</a> instead.
+    </sky-alert>
+  </stache-page-summary>
 
     <h3>
-      Code Block properties
+      Code block properties
     </h3>
 
     <ul>
       <li>
-        <stache-code>code</stache-code> — <i>(Optional)</i> Pass a code sample into the component.
+        <stache-code>code</stache-code> — <i>(Optional)</i> Passes a code sample into the component.
       </li>
       <li>
-        <stache-code>languageType</stache-code> — <i>(Optional)</i> The language of the code sample for syntax highlighting. You can see the supported languages <a href="http://prismjs.com/#languages-list">here</a>. The default is <stache-code>markup</stache-code>.
+        <stache-code>languageType</stache-code> — <i>(Optional)</i> Indicates the language of the code sample. Supports <a href="http://prismjs.com/#languages-list">a variety of languages</a>. The default language is <stache-code>markup</stache-code>.
       </li>
     </ul>
-  </stache-page-summary>
 
   <stache-page-anchor>
     Demo

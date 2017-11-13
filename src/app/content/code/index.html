@@ -7,8 +7,22 @@
   showBreadcrumbs="true">
 
   <stache-page-summary>
-    The code component formats in line code snippets in a consistent way.
+    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <stache-code>stache-code</stache-code> tags around the code snippet.</p>
+    <sky-alert alertType="info">
+      To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/content/code-block">the code block component</a> instead.
+    </sky-alert>
   </stache-page-summary>
+
+
+  <h3>
+    Code properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <stache-code escapeCharacters="true">{</stache-code> and <stache-code escapeCharacters="true"><</stache-code>. Escaping these characters renders them as text instead of code. Defaults to <stache-code>false</stache-code>.
+    </li>
+  </ul>
 
   <stache-page-anchor>
     Demo
@@ -16,7 +30,19 @@
 
   <div class="stache-demo-page-result">
     <p>
-      This page uses the <stache-code>layout="sidebar"</stache-code> property.
+      The component formats code snippets such as <stache-code>stache-code</stache-code>.
+    </p>
+    <p>
+      <stache-code>escapeCharacters="true"</stache-code> renders special characters as text.
+    </p>
+    <p>
+      Example: "<stache-code escapeCharacters="true"><span>span tag content</span></stache-code>."
+    </p>
+    <p>
+      Otherwise, the component renders special characters as code.
+    </p>
+    <p>
+      Example: "<stache-code><span>span tag content</span></stache-code>."
     </p>
   </div>
 
@@ -31,7 +57,19 @@
         <stache-code-block
           languageType="markup">
           <p>
-            This page uses the <stache-code>layout="sidebar"</stache-code> property.
+            The component formats code snippets such as <stache-code>stache-code</stache-code>.
+          </p>
+          <p>
+            <stache-code>escapeCharacters="true"</stache-code> renders special characters as text.
+          </p>
+          <p>
+            For example: "<stache-code escapeCharacters="true"><span>span tag content</span></stache-code>."
+          </p>
+          <p>
+            Otherwise, the component renders special characters as code.
+          </p>
+          <p>
+            For example: "<stache-code><span>span tag content</span></stache-code>."
           </p>
         </stache-code-block>
       </sky-tab>
