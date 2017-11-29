@@ -1,0 +1,76 @@
+<app-nav>
+</app-nav>
+
+<stache pageTitle="Markdown" layout="sidebar" showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The markdown component is used to allow users to write markdown inside their HTML files. Within these tags you can mix markdown
+      and HTML elements to write your documentation in MD without losing out on all the features of {{ stache.jsonData.global.productNameLong
+      }}.
+    </p>
+
+    <h3>
+      Stache specific markdown
+    </h3>
+    <ul>
+      <li>
+        <stache-code>Page Anchors</stache-code> - Using the <stache-code>##</stache-code> for an h2 tag will create a <a routerLink="/content/page-anchor">stache page anchor</a> around the title, and add it to the <stache-code>table of contents</stache-code>.
+      </li>
+      <sky-alert alertType="info">
+        If you want to use a regular <stache-code>h2</stache-code>, simply use the HTML <stache-code escapeCharacters="true"><h2></stache-code> inside your markdown.
+      </sky-alert>
+      <li>
+        <stache-code>Codeblock</stache-code> - Using the <stache-code>```</stache-code> to wrap a codeblock in the markdown component will create a <a routerLink="/content/code-block">stache code block</a>. Directly following the opening <stache-code>```</stache-code> marks, you can specify your languageType for the codeblock. eg: <stache-code>```js</stache-code> will create a <stache-code>stache-code-block</stache-code> with the languagetype of <stache-code>js</stache-code>.
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-markdown>
+
+### H3 title
+
+<stache-blockquote>
+  Using a [stache blockquote](https://docs.blackbaud.com/stache/api/components/code-block)
+</stache-blockquote>
+
+```markup
+<div>
+  stache code block with markup languageType
+</div>
+```
+
+    </stache-markdown>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="markdown-demo-component.html">
+        <stache-code-block languageType="markup">
+        <stache-markdown>
+### H3 title
+
+<stache-blockquote>
+  Using a [stache blockquote](https://docs.blackbaud.com/stache/api/components/code-block)
+</stache-blockquote>
+
+```markup
+<div>
+  stache code block with markup languageType
+</div>
+```
+        </stache-markdown>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

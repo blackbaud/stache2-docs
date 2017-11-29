@@ -1,0 +1,105 @@
+<app-nav>
+</app-nav>
+
+<stache
+  pageTitle="Markdown"
+  layout="sidebar"
+  showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The markdown component is used to allow users to write markdown inside their HTML files. Within these tags you can mix markdown and HTML elements to write your documentation in MD without losing out on all the features of {{ stache.jsonData.global.productNameLong }}.
+    </p>
+
+    <h3>
+      Stache specific markdown
+    </h3>
+    <ul>
+      <li>
+        <stache-code>Page Anchors</stache-code> - Using the <stache-code>##</stache-code> for an h2 tag will create a <a routerLink="/content/page-anchor">stache page anchor</a> around the title, and add it to the <stache-code>table of contents</stache-code>.
+      </li>
+      <sky-alert alertType="info">
+        If you want to use a regular <stache-code>h2</stache-code>, simply use the HTML <stache-code escapeCharacters="true"><h2></stache-code> inside your markdown.
+      </sky-alert>
+      <li>
+        <stache-code>Codeblock</stache-code> - Using the <stache-code>```</stache-code> to wrap a codeblock in the markdown component will create a <a routerLink="/content/code-block">stache code block</a>. Directly following the opening <stache-code>```</stache-code> marks, you can specify your languageType for the codeblock.
+        eg: <stache-code>```js</stache-code> will create a <stache-code>stache-code-block</stache-code> with the languagetype of <stache-code>js</stache-code>.
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-markdown>
+### Now supporting Markdown!
+
+<stache-blockquote
+  author="Reluctant engineer faced with an enormous amount of work">
+  Lots of content on a Stache 1 site and we've been dragging our feet a bit on migrating due to lack of Markdown support.
+</stache-blockquote>
+#### Dear Reluctant engineer faced with an enormous amount of work,
+
+*We heard you, and we are here to `help`! With the <stache-code escapeCharacters="true"><stache-markdown></stache-code> tag, we can save you time copying over all that markdown!*
+
+<stache-blockquote
+  author="Doesn’t want to tell his team that they have to give up markdown">
+  I would love to the migrate [our] Stache site to stache v2, but I think something that really works for our team is the simple markdown experience. From my understanding, stache v2 does not have baked-in support for markdown.
+</stache-blockquote>
+
+#### Dear Doesn’t want to tell his team that they have to give up markdown,
+
+*Now we do! We hope this markdown experience helps you and your team come to love {{ stache.jsonData.global.productNameLong }}.*
+
+```js
+function doesSupportMarkdown() {
+  if (stache.supportsMarkdown) {
+    return 'Yes we do!'
+  }
+}
+```
+    </stache-markdown>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="markup">
+### Now supporting Markdown!
+
+<stache-blockquote author="Reluctant engineer faced with an enormous amount of work">
+  Lots of content on a Stache 1 site and we've been dragging our feet a bit on migrating due to lack of Markdown support.
+</stache-blockquote>
+
+#### Dear Reluctant engineer faced with an enormous amount of work,
+
+*We heard you, and we are here to `help`! With the <stache-code escapeCharacters="true"><stache-markdown></stache-code> tag, we can save you time copying over all that markdown!*
+
+<stache-blockquote author="Doesn’t want to tell his team that they have to give up markdown">
+  I would love to the migrate [our] Stache site to stache v2, but I think something that really works for our team is the simple
+  markdown experience. From my understanding, stache v2 does not have baked-in support for markdown.
+</stache-blockquote>
+
+#### Dear Doesn’t want to tell his team that they have to give up markdown,
+
+*Now we do! We hope this markdown experience
+helps you and your team come to love {{ stache.jsonData.global.productNameLong }}.*
+
+```js
+function doesSupportMarkdown() {
+  if (stache.supportsMarkdown) {
+    return 'Yes we do!'
+  }
+}
+```
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
