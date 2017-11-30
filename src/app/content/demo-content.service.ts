@@ -144,7 +144,7 @@ export class StacheDemoContentService {
       name: 'Markdown',
       route: '/content/markdown',
       icon: 'hashtag',
-      summary: 'Allows the use of markdown inside your Stache 2 project'
+      summary: 'Allows the use of Markdown in Stache 2 projects.'
     }
   ];
 

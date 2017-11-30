@@ -139,7 +139,7 @@ export class StacheDemoComponentService {
       name: 'Markdown',
       route: '/api/components/markdown',
       icon: 'hashtag',
-      summary: 'Allows the use of markdown within Stache 2.'
+      summary: 'Allows the use of Markdown in Stache 2 projects.'
     }
   ];
 
