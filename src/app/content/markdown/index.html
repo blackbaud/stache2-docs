@@ -49,7 +49,7 @@
 
 <stache-blockquote
   author="Doesn’t want to tell his team that they have to give up Markdown">
-  I would love to the migrate our Stache site to Stache 2, but I think something that really works for our team is the simple Markdown experience. From my understanding, Stache 2 does not have baked-in support for Markdown.
+  I would love to migrate our Stache site to Stache 2, but I think something that really works for our team is the simple Markdown experience. From my understanding, Stache 2 does not have baked-in support for Markdown.
 </stache-blockquote>
 
 #### Dear Doesn’t want to tell his team that they have to give up Markdown,
@@ -76,23 +76,23 @@ function doesSupportMarkdown() {
         <stache-code-block languageType="markup">
 &#60;stache-markdown&#62;
   ### Stache now supports Markdown!
-  
+
   <stache-blockquote author="Reluctant engineer faced with an enormous amount of work">
     Lots of content on a Stache 1 site, and we've been dragging our feet a bit on migrating due to lack of Markdown support.
   </stache-blockquote>
-  
+
   #### Dear Reluctant engineer faced with an enormous amount of work,
-  
+
   *We heard you, and we are here to help! With the <stache-code escapeCharacters="true"><stache-markdown></stache-code> tags, we can save you time copying over all that Markdown!*
-  
+
   <stache-blockquote author="Doesn’t want to tell his team that they have to give up markdown">
-    I would love to the migrate our Stache site to stache v2, but I think something that really works for our team is the simple Markdown experience. From my understanding, Stache 2 does not have baked-in support for Markdown.
+    I would love to migrate our Stache site to stache v2, but I think something that really works for our team is the simple Markdown experience. From my understanding, Stache 2 does not have baked-in support for Markdown.
   </stache-blockquote>
-  
+
   #### Dear Doesn’t want to tell his team that they have to give up Markdown,
-  
+
   *Now we do! We hope this Markdown experience helps you and your team come to love {{ stache.jsonData.global.productNameLong }}.*
-  
+
   ```js
 function doesSupportMarkdown() {
   if (stache.supportsMarkdown) {
