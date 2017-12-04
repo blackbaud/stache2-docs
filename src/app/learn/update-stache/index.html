@@ -9,8 +9,7 @@
       Update {{ stache.jsonData.global.productNameShort }}
     </stache-tutorial-heading>
     <stache-tutorial-summary>
-      This tutorial provides step-by-step instructions to update your app to the latest version of
-      {{ stache.jsonData.global.productNameShort }}.
+      This tutorial provides step-by-step instructions to update your app to the latest version of {{ stache.jsonData.global.productNameShort }}.
     </stache-tutorial-summary>
 
     <stache-tutorial-step>
@@ -19,11 +18,8 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/stache</stache-code> under the <stache-code>dependencies</stache-code> property to install the latest version of {{ stache.jsonData.global.productNameShort }}.
+          Open the <stache-code>package.json</stache-code> file in your project. Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a>.
         </p>
-        <sky-alert alertType="info">
-          To find the latest version, check the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a>.
-        </sky-alert>
         <stache-code-block
           languageType="json">
             "dependencies": {
@@ -40,51 +36,52 @@
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Update the Sky dependencies
+        Update the SKY UX dependencies
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/skyux</stache-code> under <stache-code>dependencies</stache-code> and <stache-code>@blackbaud/skyux-builder</stache-code> under the <stache-code>devDependencies</stache-code> property to install the latest versions of each.
+          Under the <stache-code>dependencies</stache-code> property in the <stache-code>package.json</stache-code> file, update <stache-code>@blackbaud/skyux</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux2/blob/master/CHANGELOG.md">SKY UX changelog</a>.</p>
+        <p>And under the <stache-code>devDependencies</stache-code> property, update <stache-code>@blackbaud/skyux-builder</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux-builder/blob/master/CHANGELOG.md">SKY UX Builder changelog</a>.
         </p>
-
-        <sky-alert alertType="info">
-          Your updated <stache-code>package.json</stache-code> file with all {{ stache.jsonData.global.productNameShort }} and Sky dependencies should look as follows.
-        </sky-alert>
-        <sky-alert
-          alertType="warning">
-          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release <stache-code>2.0.0-beta.9</stache-code>, codelyzer was removed as a dependency, and skyux was changed to a dev dependency.
-        </sky-alert>
         <stache-include fileName="package-json-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Update the required plugins
+        Specify plugins
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Be sure you are listing all the required <stache-code>plugins</stache-code> for your project.
+          Open the <stache-code>skyuxconfig.json</stache-code> file, and make sure it <a routerLink="/learn/plugins">lists the plugins that you need</a> in the <stache-code>plugins</stache-code> array.
         </p>
-        <sky-alert
-          alertType="warning">
-          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.9, all <stache-code>plugins</stache-code> required by  {{ stache.jsonData.global.productNameShort }} are bundled into the one <stache-code>skyux-builder-plugin-stache</stache-code> plugin.
-        </sky-alert>
+        <ul>
+          <li>
+            <p>
+              The required <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin bundles all other plugins that {{ stache.jsonData.global.productNameShort }} requires.
+            </p>
+          </li>
+          <li>
+            <p>
+              The optional <stache-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</stache-code> plugin allows you to enable Blackbaud authentication for internal sites so that you can restrict access to internal users only.
+            </p>
+          </li>
+        </ul>
         <stache-include fileName="skyux-config-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Update App-Extras
+        Register {{ stache.jsonData.global.productNameShort }} module
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>src/app-extras.module.ts</stache-code> file. Here we need to ensure we are importing the <stache-code>StacheModule</stache-code>.
+          Open the <stache-code>src/app-extras.module.ts</stache-code> file, and make sure it imports <stache-code>StacheModule</stache-code>.
         </p>
         <sky-alert
-          alertType="warning">
-          <strong>NOTE:</strong> With {{ stache.jsonData.global.productNameShort }} Beta release 2.0.0-beta.9, we no longer need to require or declare the StacheConfigService in our providers array. The only  {{ stache.jsonData.global.productNameLong }} relevant code for this file should be the <stache-code>StacheModule</stache-code>.
+          alertType="info">
+          Prior to {{ stache.jsonData.global.productNameShort }} 2.0.0-beta.9, it was also necessary to declare <stache-code>StacheConfigService</stache-code> as a provider. This is no longer required.
         </sky-alert>
 
         <stache-include fileName="app-extras-sample.html"></stache-include>
@@ -102,10 +99,10 @@
       <stache-tutorial-step-body>
         <ol>
           <li>
-            Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove any outdated versions of {{ stache.jsonData.global.productNameShort }} or its plugins.
+            Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove outdated versions of {{ stache.jsonData.global.productNameShort }} and its plugins.
           </li>
           <li>
-            From the command prompt, run <stache-code>npm install</stache-code> to install {{ stache.jsonData.global.productNameShort }} and its dependencies.
+            From the command prompt, run <stache-code>npm install</stache-code> to re-install {{ stache.jsonData.global.productNameShort }} and its dependencies.
           </li>
         </ol>
       </stache-tutorial-step-body>
@@ -117,7 +114,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          As with any major update, existing components or implementations may change. Please make sure to review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a> for notes on breaking changes that may require you changes in how you use  {{ stache.jsonData.global.productNameShort }} components.
+          As with any major update, existing components or implementations may change. Please review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog</a> for breaking changes that may require changes in how you use {{ stache.jsonData.global.productNameShort }} components.
         </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>

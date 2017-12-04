@@ -53,7 +53,7 @@ export class StacheDemoContentService {
       name: 'Code',
       route: '/content/code',
       icon: 'code',
-      summary: 'Provides a formatted in line snippet of code.'
+      summary: 'Provides a formatted inline snippet of code.'
     },
     {
       name: 'Hero',
@@ -139,6 +139,12 @@ export class StacheDemoContentService {
       route: '/content/repeater',
       icon: 'bars',
       summary: 'Creates a SKY UX-themed container to display information for a list of objects.'
+    },
+    {
+      name: 'Markdown',
+      route: '/content/markdown',
+      icon: 'hashtag',
+      summary: 'Allows the use of Markdown in Stache 2 projects.'
     }
   ];
 
