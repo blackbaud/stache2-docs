@@ -1,36 +1,32 @@
-<app-nav>
-</app-nav>
-
 <stache
   pageTitle="Contribute"
   layout="container">
 
   <stache-page-summary>
-To enhance the creation of quality techical documentation, we highly encourage contributions from all {{ stache.jsonData.global.productNameShort }} 2 users!
+    To enhance the creation of quality techical documentation, we highly encourage contributions from all {{ stache.jsonData.global.productNameShort }} 2 users!
   </stache-page-summary>
 
-  <stache-action-buttons showSearch="false" [routes]="[
+  <stache-action-buttons
+    showSearch="false"
+    [routes]="[
+      {
+        name: 'Submit a Request or Issue',
+        path: 'https://github.com/blackbaud/stache2/issues',
+        icon: 'github',
+        summary: 'Request new features or file a bug in our GitHub repo.'
+      },
         {
-          name: 'Submit a Request or Issue',
-          path: 'https://github.com/blackbaud/stache2/issues',
-          icon: 'github',
-          summary: 'Request new features or file a bug in our GitHub repo.'
-        },
-         {
-          name: 'Component Library',
-          path: '/api/',
-          icon: 'wrench',
-          summary: 'We welcome contributions to the component library.'
-        },
-        {
-          name: 'Documentation',
-          path: 'https://github.com/blackbaud/stache2-docs',
-          icon: 'book',
-          summary: 'We welcome contributions to our documentation. Follow git best practices and submit a PR for edits. '
-        }
-      ]">
-         </stache-action-buttons>
-
-
-
+        name: 'Component Library',
+        path: '/api/',
+        icon: 'wrench',
+        summary: 'We welcome contributions to the component library.'
+      },
+      {
+        name: 'Documentation',
+        path: 'https://github.com/blackbaud/stache2-docs',
+        icon: 'book',
+        summary: 'We welcome contributions to our documentation. Follow git best practices and submit a PR for edits. '
+      }
+    ]">
+  </stache-action-buttons>
 </stache>

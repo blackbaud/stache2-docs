@@ -1,6 +1,3 @@
-<app-nav>
-</app-nav>
-
 <stache
   pageTitle="Basics"
   navOrder="2"
@@ -63,8 +60,8 @@ Application Navigation
 <sky-tile-content-section>
 To place the navigation bar on your page, start every page with the <stache-code>app-nav</stache-code> tag.
 <stache-code-block languageType="js">
-&lt;app-nav&gt;
-&lt;/app-nav&gt;
+<!-- &lt;app-nav&gt;
+&lt;/app-nav&gt; -->
 </stache-code-block>
 </sky-tile-content-section>
 </sky-tile-content>
@@ -482,7 +479,7 @@ img &#123;
 </stache-code-block>
 </sky-tile-content-section>
 <sky-tile-content-section>
-Then, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file. Insert this line of code at the very beginning of the file. 
+Then, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file. Insert this line of code at the very beginning of the file.
 <stache-code-block>require('style-loader!./app.scss');</stache-code-block>
 
 </sky-tile-content-section>
@@ -576,8 +573,8 @@ Tools
 <p>Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it friendly and brief. Then, create a new file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.</p>
 
 <stache-code-block>
-&lt;app-nav&gt;
-&lt;/app-nav&gt;
+<!-- &lt;app-nav&gt;
+&lt;/app-nav&gt; -->
 
 &lt;stache
   pageTitle="Awesome Documentation"
