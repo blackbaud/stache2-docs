@@ -22,6 +22,7 @@
       "services": [
         {
           "title": "Stache 2 Docs",
+          "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
           "items": [
             {
               "title": "Home",
