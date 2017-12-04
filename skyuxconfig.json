@@ -10,6 +10,79 @@
   },
   "appSettings": {
     "stache": {
+      "searchConfig": {
+        "is_internal": false
+      }
+    }
+  },
+  "auth": false,
+  "omnibar": {
+    "experimental": true,
+    "nav": {
+      "services": [
+        {
+          "title": "Stache 2 Docs",
+          "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
+          "items": [
+            {
+              "title": "Home",
+              "route": "/"
+            },
+            {
+              "title": "Learn",
+              "items": [
+                {
+                  "title": "Getting Started",
+                  "route": "/learn/get-started"
+                },
+                {
+                  "title": "Basics",
+                  "route": "/learn/basics"
+                },
+                {
+                  "title": "Add Stache",
+                  "route": "/learn/add-stache"
+                },
+                {
+                  "title": "Update Stache",
+                  "route": "/learn/update-stache"
+                },
+                {
+                  "title": "Plugins",
+                  "route": "/learn/plugins"
+                }
+              ]
+            },
+            {
+              "title": "Content",
+              "route": "/content"
+            },
+            {
+              "title": "API",
+              "route": "/api"
+            },
+            {
+              "title": "Support",
+              "items": [
+                {
+                  "title": "Contact Us",
+                  "route": "/support"
+                },
+                {
+                  "title": "Changelog",
+                  "route": "/support/changelog"
+                },
+                {
+                  "title": "Contribute",
+                  "route": "/support/contribute"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }
+
+
