@@ -18,11 +18,13 @@
       <stache-tutorial-step-body>
       <ol>
       <li>Visit the page on the {{ stache.jsonData.global.productNameShort }} site you're planning to edit.</li>
-      <li>The page address will look like <stache-code>https://host.nxt.blackbaud.com/&lt;repo-name&gt;/&lt;path/to/page&gt;</stache-code>. You'll use these parts of the page address to locate the corresponding file in VSTS.</li>
+      <li>The page address will look like <stache-code>https://host.nxt.blackbaud.com/&lt;repository-name&gt;/&lt;path/to/page&gt;</stache-code>. You'll use these parts of the page address to locate the corresponding file in VSTS.</li>
       <li>Visit the <a href="https://blackbaud.visualstudio.com/Products/_git/">Code tab in VSTS</a>.</li>
-      <li>Use the repository drop down to switch to the repository you saw in the page address. You may need switch from "Favorites" to "All repositories" to find it.</li>
+      <li>The name you saw in the address bar corresponds to a repository that starts with <stache-code>skyux-spa-</stache-code>. Use the repository drop down to switch to that repository. You may need switch from "Favorites" to "All repositories" to find it.</li>
       <li>Browse the folder structure to locate the page you want to edit. It will be located under the <stache-code>src/app/path/to/page</stache-code> folder.</li>
       </ol>
+      <img src="~/assets/vsts-editor-01-address.png">
+      <img src="~/assets/vsts-editor-02-repository.png">
       </stache-tutorial-step-body>
     </stache-tutorial-step>
     
@@ -38,6 +40,7 @@
       <li>The Based on field should be set to <stache-code>master</stache-code>.</li>
       <li>Click Create branch. You'll see that the branch drop-down now shows the name of your new branch.</li>
       </ol>
+      <img src="~/assets/vsts-editor-03-new-branch.png">
       </stache-tutorial-step-body>
     </stache-tutorial-step>
     
