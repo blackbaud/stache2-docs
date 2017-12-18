@@ -1,0 +1,81 @@
+<stache
+  navTitle="Clone and Install Stache Locally"
+  navOrder="1"
+  layout="container">
+
+  <stache-tutorial>
+    <stache-tutorial-heading>
+        Clone and Install a {{ stache.jsonData.global.productNameShort }} SPA
+    </stache-tutorial-heading>
+    <stache-tutorial-summary>
+      <p>
+        This tutorial provides step-by-step instructions on how to clone an existing Stache SPA from VSTS and install locally.
+      </p>
+    </stache-tutorial-summary>
+
+    <sky-alert alertType="info">Before you begin this tutorial, you need to complete the <a routerLink="/learn/get-started">SKY UX prerequisites</a>. </sky-alert>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Clone the Git Repo from VSTS
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <ol>
+          <li>
+          <p>
+            From <a href="https://blackbaud.visualstudio.com/Products/_git/">VSTS Git</a>, select the repo name field and then select the All repositories tab. Use the search to find your repo. Almost all Stache SPAs start with <stache-code>skyux-spa</stache-code>.
+          </p>
+              <div class="retina-screenshot">
+                <stache-image
+                  imageSource="~/assets/vsts_git_search.jpg" class="stache-image-border">
+                </stache-image>
+              </div>
+          <p>
+            If you're still unsure if you have the correct VSTS repo, ask the person who set up the Stache SPA for you.
+          </p>
+          </li>
+          <li>
+            <p>Select the Clone button.</p>
+            <div class="retina-screenshot">
+              <stache-image
+                imageSource="~/assets/vsts_git_clone.jpg" class="stache-image-border">
+              </stache-image>
+            </div>
+          </li>
+          <li>
+            <p>
+              Under Command line, make sure the "HTTPS" button is selected and select the copy button.
+            </p>
+            <div class="retina-screenshot">
+              <stache-image
+                imageSource="~/assets/vsts_git_copy.jpg"class="stache-image-border">
+              </stache-image>
+            </div>
+          </li>
+          <li>
+            Open a terminal or command prompt on your local machine where you store all of your Git repos. Enter <stache-code>git clone</stache-code> and then paste the link you just copied.
+          </li>
+          <li>
+            Press <kbd>Enter</kbd> (Windows) or <kbd>Return</kbd> (Mac). The repo clones locally.
+          </li>
+        </ol>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        NPM Install
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          After the repo finishes cloning, change your directory into the new repo folder. For example, <stache-code>cd skyux-spa-engineering-system-docs</stache-code>.
+        </p>
+        <p>To be able to serve locally, you need to install the SKY UX dependencies. In the command prompt, enter <stache-code>npm install</stache-code>.</p>
+        <p>This will take a few minutes. Once it completes, you can test the new install by serving locally. Enter <stache-code>skyux serve</stache-code>. When it finishes preparing to serve, a browser will open to a local development instance of your Stache SPA.</p>
+
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    </stache-tutorial>
+
+  </stache>
