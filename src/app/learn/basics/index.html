@@ -67,27 +67,19 @@ Application Navigation
 </stache-code-block>
   <h3>Set up navigation bar</h3>
   <p>To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA.</p>
+  <sky-alert alertType="info">To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial</a> on the SKY UX website.</sky-alert>
   <ol>
     <li>
-      <p>In the <stache-code>src/assets/locals</stache-code> folder, open the <stache-code>resources_en_US.json</stache-code> file and add localization strings for your top-level navigation items.</p>
-      <stache-code-block languageType="typescript">
-"app_nav_demo": {
-  "message": "Demo",
-  "_description": "The text for a Demo top-level navigation item"
-},
-      </stache-code-block>
+      <p>In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.</p>
     </li>
     <li>
-      <p>In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file and add entries to the <stache-code>AppNavComponent</stache-code> class for top-level navigation items.</p>
-      <ul>
-        <li>
-          <p>The <stache-code>titleKey</stache-code> property specifies a label for a navigation item. When you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.</p>
-        </li>
-        <li>
-          <p>The <stache-code>path</stache-code> property specifies where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.</p>
-        </li>
-      </ul>
-      <stache-code-block languageType="typescript">
+      <p>Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.</p>
+      <sky-alert alertType="info">If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.</sky-alert>
+    </li>
+    <li>
+      <p>Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.</p>
+    </li>
+    <stache-code-block languageType="typescript">
         export class AppNavComponent {
           public nav = [
             {
@@ -99,13 +91,12 @@ Application Navigation
               path: '/about'
             },
             {
-              titleKey: 'app_nav_demo',
+              titleKey: 'Demo',
               path: '/demo'
             }
           ];
         }
-      </stache-code-block>
-    </li>
+    </stache-code-block>
   </ol>
 </sky-tile-content-section>
 </sky-tile-content>
