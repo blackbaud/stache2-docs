@@ -1,0 +1,20 @@
+[
+  {
+    "name": "New Stache SPA",
+    "path": "/learn/get-started/new-stache",
+    "icon": "bolt",
+    "summary": "Do you need to set up a brand new Stache website?"
+  },
+  {
+    "name": "Add Stache to Existing SKYUX SPA",
+    "path": "/learn/get-started/add-stache",
+    "icon": "plus-circle",
+    "summary": "Do you already have a SPA that you want to add Stache to?"
+  },
+  {
+    "name": "Clone and Install a Stache SPA Only",
+    "path": "/learn/get-started/clone-install",
+    "icon": "clone",
+    "summary": "Did someone set up a Stache website for you, and you need to clone and install locally?"
+  }
+]

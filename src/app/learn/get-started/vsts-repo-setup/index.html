@@ -1,0 +1,58 @@
+<stache
+navTitle="VSTS Repo Set Up"
+layout="container">
+<stache-tutorial>
+  <stache-tutorial-heading>
+    Branch Policies and Security in VSTS
+  </stache-tutorial-heading>
+  <stache-tutorial-summary>
+    New Stache SPAs in VSTS are set up with standard policies and security. Learn how to edit these policies for your documentation sites.
+  </stache-tutorial-summary>
+
+  <stache-tutorial-step>
+    <stache-tutorial-step-heading>
+      Edit Branch Policies
+    </stache-tutorial-step-heading>
+    <stache-tutorial-step-body>
+      <p>When you create a new SKYUX 2 SPA, it creates a new VSTS repo with a locked down <stache-code>master</stache-code> branch. The person who created the repo is automatically included as a required code reviewer. The <stache-code>master</stache-code> branch also requires at least 1 reviewer for each pull request (PR) into <stache-code>master</stache-code>.</p>
+      <p>If you need to set up a team as reviewers for a SPA, or if you are going to be the only person working in the repo, you may need to edit the branch policies.</p>
+      <ol>
+        <li>From your VSTS repo main page, select the Branches tab.</li>
+        <li>
+          <p>Hover your cursor over the master branch, and select the <stache-code>...</stache-code>.
+          </p>
+            <stache-image imageSource="~/assets/masterbranchmenu.jpg" class="stache-image-border">
+        </li>
+        <li>From the menu, select Branch policies.</li>
+        <li>Under Protect this branch, review the settings and make adjustments. For example, if you are the only person setting up a new Stache SPA, you can temporarily disable the "Require a minimum number of reviewers" setting until others join you in the SPA. We do recommend you have at least one other person review your changes, but we understand in some sites, you may be the only person making edits in the beginning. </li>
+        <li>Next, scroll down to the bottom of the page and under Automatically include code reviewers, make adjustments as necessary. For example, you may want to chnage your own setting from "Required" to "Optional." You may also want to add other individuals or your scrum team.</li>
+        <li>When done making adjustments, at the top of the page, select Save changes.</li>
+      </ol>
+    </stache-tutorial-step-body>
+  </stache-tutorial-step>
+  <stache-tutorial-step>
+    <stache-tutorial-step-heading>
+      Edit Branch Security
+    </stache-tutorial-step-heading>
+    <stache-tutorial-step-body>
+      <p>
+      By default, all VSTS Git repos are set up with the same security permissions, including enabling all Products Contributors to contribute to repos. If you want to review and modify individual security permissions for your <stache-code>master</stache-code> branch, review the steps below.
+      </p>
+      <ol>
+        <li>From your VSTS repo main page, select the Branches tab.</li>
+        <li>
+          <p>Hover your cursor over the master branch, and select the <stache-code>...</stache-code>.
+          </p>
+            <stache-image imageSource="~/assets/masterbranchmenu.jpg" class="stache-image-border">
+        </li>
+        <li><p>From the menu, select Branch security.</p>
+        <stache-image imageSource="~/assets/masterbranchsecurity.jpg" class="stache-image-border">
+        </stache-image>
+        </li>
+        <li>If you have permission, modify the security settings for groups and users. For example, you can add additional users who can edit policies and manage permissions.</li>
+        <li>After modifying permissions, select Save changes.</li>
+    </stache-tutorial-step-body>
+  </stache-tutorial-step>
+</stache-tutorial>
+
+</stache>
