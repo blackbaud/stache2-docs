@@ -1,7 +1,7 @@
 [
   {
     "name": "Git Workflow for Updating a Repo",
-    "url": "https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/git-workflow",
+    "path": "https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/git-workflow",
     "icon": "git",
     "summary": "New to Git? Learn how to use Git process for updating your repo. The Engineering System has adopted Git as a standard version control for VSTS and GitHub."
   },
