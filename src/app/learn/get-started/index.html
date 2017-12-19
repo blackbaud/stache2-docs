@@ -12,75 +12,86 @@
   <stache-page-anchor>
         Install SKY UX prerequisites
   </stache-page-anchor>
-    <p>
-        To prepare your machine for your new {{ stache.jsonData.global.productNameShort }} documentation site, you need to install SKY UX's prerequisites.</p>
-        <ol>
-          <li>
-            <p>
-              To load your local single-page application into SKY UX Host, you must install the skyux-ca.crt root certificate. Follow the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/1.-SSL-certification">SSL certification installation instructions</a> on the SKY UX website.
-            </p>
-          </li>
-          <li>
-            <p>
-              Install <a href="https://nodejs.org/en/">Node.js version 6+</a>.
-            </p>
-            <sky-alert alertType="danger">
-              Do not use Node.js verison 7+.
-            </sky-alert>
-            <p>
-              Do you already have Node installed? To check your version, run <stache-code>node –v</stache-code> from the <a routerLink="/learn/basics" fragment="command-line">command line</a>.
-            </p>
-          </li>
-          <sky-alert alertType="info">
-            For Mac OS X, we recommend that you use <a href="https://github.com/creationix/nvm">Node Version Manager (nvm)</a> to wrap your NodeJS installation so that it installs in your user directory and avoids permissions-related issues.
-          </sky-alert>
-          <li>
-            <p>
-              Install <a href="https://git-scm.com/">Git</a>.
-            </p>
-          </li>
-          <li>
-            <p>
-              From the <a routerLink="/learn/basics" fragment="command-line">command line</a>, run <stache-code>npm install -g @blackbaud/skyux-cli</stache-code>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">Verify you have access</a> to Visual Studio Team Services (VSTS).
-            </p>
-          </li>
-        </ol>
 
-  <stache-page-anchor>Set Up a Stache SPA</stache-page-anchor>
+    <p>
+      To prepare your machine for your new {{ stache.jsonData.global.productNameShort }} documentation site, you need to install SKY UX's prerequisites.
+    </p>
+    <ol>
+      <li>
+        <p>
+          To load your local single-page application into SKY UX Host, you must install the skyux-ca.crt root certificate. Follow the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/1.-SSL-certification">SSL certification installation instructions</a> on the SKY UX website.
+        </p>
+      </li>
+      <li>
+        <p>
+          Install <a href="https://nodejs.org/en/">Node.js version 6+</a>.
+        </p>
+        <sky-alert alertType="danger">
+          Do not use Node.js verison 7+.
+        </sky-alert>
+        <p>
+          Do you already have Node installed? To check your version, run <stache-code>node –v</stache-code> from the <a routerLink="/learn/basics" fragment="command-line">command line</a>.
+        </p>
+      </li>
+      <sky-alert alertType="info">
+        For Mac OS X, we recommend that you use <a href="https://github.com/creationix/nvm">Node Version Manager (nvm)</a> to wrap your NodeJS installation so that it installs in your user directory and avoids permissions-related issues.
+      </sky-alert>
+      <li>
+        <p>
+          Install <a href="https://git-scm.com/">Git</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          From the <a routerLink="/learn/basics" fragment="command-line">command line</a>, run <stache-code>npm install -g @blackbaud/skyux-cli</stache-code>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">Verify you have access</a> to Visual Studio Team Services (VSTS).
+        </p>
+      </li>
+    </ol>
+
+  <stache-page-anchor>
+    Set Up a Stache SPA
+  </stache-page-anchor>
+
   <p>
     Based on your situation, you'll set up Stache in one of three ways.
   </p>
 
-<stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
-</stache-action-buttons>
+  <stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
+  </stache-action-buttons>
 
  <stache-page-anchor>
   Learn About Git Workflow and VSTS
  </stache-page-anchor>
 
- <stache-action-buttons [routes]="stache.jsonData.gitvsts" showSearch="false">
+  <stache-action-buttons [routes]="stache.jsonData.gitvsts" showSearch="false">
   </stache-action-buttons>
 
- <stache-page-anchor>
+  <stache-page-anchor>
     Learn How to Update Stache
- </stache-page-anchor>
+  </stache-page-anchor>
 
- <p>As new features and bug fixes are added to Stache and SKY UX, you will need to update your SPA.</p>
+  <p>
+   As new features and bug fixes are added to Stache and SKY UX, you will need to update your SPA.
+  </p>
 
- <p>Use our tutorial to learn <a routerLink="/learn/update-stache">how to update Stache</a>!</p>
+  <p>
+   Use our tutorial to learn <a routerLink="/learn/update-stache">how to update Stache</a>!
+  </p>
 
  <stache-page-anchor>
    Next Steps
  </stache-page-anchor>
 
- <p>Ready to extend your learning and see what Stache can do?</p>
+  <p>
+   Ready to extend your learning and see what Stache can do?
+  </p>
 
- <stache-action-buttons [routes]="stache.jsonData.startnextsteps" showSearch="false">
-</stache-action-buttons>
+  <stache-action-buttons [routes]="stache.jsonData.startnextsteps" showSearch="false">
+  </stache-action-buttons>
 
 </stache>
