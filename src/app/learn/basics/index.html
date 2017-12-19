@@ -58,11 +58,46 @@ Application Navigation
 </sky-tile-summary>
 <sky-tile-content>
 <sky-tile-content-section>
-To place the navigation bar on your page, start every page with the <stache-code>app-nav</stache-code> tag.
+  <p>To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.</p>
+  <sky-alert alertType="info">For internal Blackbaud SPAs, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. The omnibar provides a common UI element for Blackbaud applications and allows users to navigate between applications. However, it is for internal Blackbaud use only. For Blackbaud developers, <a href="https://host.nxt.blackbaud.com/omnibar-docs/">the omnibar documentation site</a> describes how to set up top-level navigation with the omnibar.</sky-alert>
+  <h3>Display navigation bar</h3>
+  <p>To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.</p>
 <stache-code-block languageType="js">
-<!-- &lt;app-nav&gt;
-&lt;/app-nav&gt; -->
+&lt;app-nav&gt;&lt;/app-nav&gt;
 </stache-code-block>
+  <h3>Set up navigation bar</h3>
+  <p>To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA.</p>
+  <sky-alert alertType="info">To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial</a> on the SKY UX website.</sky-alert>
+  <ol>
+    <li>
+      <p>In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.</p>
+    </li>
+    <li>
+      <p>Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.</p>
+      <sky-alert alertType="info">If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.</sky-alert>
+    </li>
+    <li>
+      <p>Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.</p>
+    </li>
+    <stache-code-block languageType="typescript">
+        export class AppNavComponent {
+          public nav = [
+            {
+              titleKey: 'app_nav_home',
+              path: '/'
+            },
+            {
+              titleKey: 'app_nav_about',
+              path: '/about'
+            },
+            {
+              titleKey: 'Demo',
+              path: '/demo'
+            }
+          ];
+        }
+    </stache-code-block>
+  </ol>
 </sky-tile-content-section>
 </sky-tile-content>
 </sky-tile>
