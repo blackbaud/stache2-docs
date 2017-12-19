@@ -58,10 +58,6 @@
               "route": "/content"
             },
             {
-              "title": "API",
-              "route": "/api"
-            },
-            {
               "title": "Support",
               "items": [
                 {
