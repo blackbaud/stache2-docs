@@ -1,0 +1,100 @@
+<stache
+  layout="container"
+  navTitle="Editing in VSTS">
+  <stache-tutorial>
+    <stache-tutorial-heading>
+      Edit a VSTS {{ stache.jsonData.global.productNameLong }} Site in Your Browser
+    </stache-tutorial-heading>
+    <stache-tutorial-summary>
+      <p>
+        When you're working on a small edit to a {{ stache.jsonData.global.productNameShort }} site, you can use VSTS to make your changes without leaving your web browser.
+      </p>
+    </stache-tutorial-summary>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Locate the page in VSTS
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+      <ol>
+        <li>
+          Visit the page on the {{ stache.jsonData.global.productNameShort }} site you're planning to edit.
+        </li>
+        <li>
+          The page address will look like <stache-code>https://host.nxt.blackbaud.com/&lt;repository-name&gt;/&lt;path/to/page&gt;</stache-code>. You'll use these parts of the page address to locate the corresponding file in VSTS.
+          <stache-image class="stache-image-border" imageSource="~/assets/vsts-editor-01-address.png">
+          </stache-image>
+        </li>
+        <li>
+          Visit the <a href="https://blackbaud.visualstudio.com/Products/_git/">Code tab in VSTS</a>.
+        </li>
+        <li>
+          The name you saw in the address bar corresponds to a repository that starts with <stache-code>skyux-spa-</stache-code>. Use the repository drop down to switch to that repository. You may need switch from "Favorites" to "All repositories" to find it.
+          <stache-image class="stache-image-border" imageSource="~/assets/vsts-editor-02-repository.png">
+          </stache-image>
+        </li>
+        <li>
+          Browse the folder structure to locate the page you want to edit. It will be located under the <stache-code>src/app/path/to/page</stache-code> folder.
+        </li>
+      </ol>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Create a branch
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          Each change added to a {{ stache.jsonData.global.productNameShort }} repository must first be added to its own branch. You can create one branch and commit several related changes so that they are all added to the site at the same time.
+        </p>
+        <ol>
+          <li>
+            Click the branch drop-down and select New branch...
+          </li>
+          <li>
+            Give your branch a name that starts with <stache-code>feature-</stache-code>.
+          </li>
+          <li>
+            The Based on field should be set to <stache-code>master</stache-code>.
+          </li>
+          <li>
+            Click Create branch. You'll see that the branch drop-down now shows the name of your new branch.
+          </li>
+        </ol>
+        <stache-image
+          class="stache-image-border"
+          imageSource="~/assets/vsts-editor-03-new-branch.png">
+        </stache-image>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Make your changes
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          You can edit pages in the broswer by using the Edit button. After making your changes, use the Commit... button to save those changes to your branch. You can make edits to a single page, to multiple pages, or even add new pages. Afer committing all of your edits, you'll create a new pull request for your branch.
+        </p>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Create a pull request
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          After you commit a change, you'll see a message with your commit summary and a link that says <stache-code>Create a pull request</stache-code>. You can also create a pull request by clicking on the Pull Requests header.
+        </p>
+        <p>
+          Enter a title and description for your pull request and clear the reviewers field. When you save your pull request, the repository's required reviewers will be automatically added. After a few minutes, the Project Collection Build Service account will add a comment to your pull request with a link to a site where you can preview your changes.
+        </p>
+        <p>
+          You can make additional edits and commit them to your branch after creating your pull request. After a few minutes, the Project Collection Build Service account will post a new comment with a new link that incorporates those changes. When you're happy with your changes, click the Complete or Set auto-complete button to mark the pull request as ready to release. Once one of the reviewers for that repository review your changes, they will be merged into the master branch and your branch will be deleted. Create a new branch and repeat this process the next time you want to edit the site.
+        </p>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+  </stache-tutorial>
+</stache>
