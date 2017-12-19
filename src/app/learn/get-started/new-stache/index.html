@@ -21,7 +21,10 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          We'll create your SKY UX application and repo with the SKY UX App Management Portal. This creates a Visual Studio Team Services (VSTS) repo for the application and also creates VSTS build and release definitions.
+          For internal Blackbaud users only, we'll create your SKY UX application and repo with the SKY UX App Management Portal. This creates a Visual Studio Team Services (VSTS) repo for the application and also creates VSTS build and release definitions.
+        </p>
+        <p>
+          If you are not an internal Blackbaud user, skip to step 2.
         </p>
         <ol>
           <li>
@@ -82,16 +85,18 @@
           </li>
           <li>
             <p>
-              In the first prompt, enter the name you provided in the SKY UX App Management Portal. For example <stache-code>engineering-system-docs</stache-code>. The SKY UX CLI creates a folder with this name and prefixes it with "skyux-spa."
+              For internal Blackbaud users, in the first prompt, enter the name you provided in the SKY UX App Management Portal. For example <stache-code>engineering-system-docs</stache-code>. The SKY UX CLI creates a folder with this name and prefixes it with "skyux-spa."
             </p>
+            <p>For non-Blackbaud users, enter the name of your SPA.</p>
           </li>
           <li>
             <p>
-              In the second prompt, paste in the URL to your repo that we copied in step 2.6.
+              In the second prompt, if you are an internal Blackbaud user, paste in the URL to your repo that we copied in step 1.6.
             </p>
+            <p>For non-Blackbaud users, enter the location of your repo.</p>
           </li>
           <p>
-            Your repo is now being cloned and set up. This will take a few minutes.
+            Your repo is now being cloned and set up locally. This will take a few minutes.
           </p>
         </ol>
       </stache-tutorial-step-body>
@@ -134,13 +139,10 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          In {{ stache.jsonData.global.productNameLong }}, to see your site is slightly different from {{ stache.jsonData.global.productNameShort }} 1.
+          To serve your site locally, from the command line, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
         </p>
         <p>
-          From the command line, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
-        </p>
-        <p>
-          <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> The URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select delete next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
+          <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> For internal Blackbaud users, the URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select delete next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
         </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>

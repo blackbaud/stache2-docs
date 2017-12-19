@@ -12,7 +12,7 @@
     "summary": "Do you already have a SPA that you want to add Stache to?"
   },
   {
-    "name": "Clone and Install a Stache SPA Only",
+    "name": "Clone and Install a Stache SPA Locally",
     "path": "/learn/get-started/clone-install",
     "icon": "clone",
     "summary": "Did someone set up a Stache website for you, and you need to clone and install locally?"
