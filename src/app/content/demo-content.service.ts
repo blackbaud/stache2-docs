@@ -145,6 +145,12 @@ export class StacheDemoContentService {
       route: '/content/markdown',
       icon: 'hashtag',
       summary: 'Allows the use of Markdown in Stache 2 projects.'
+    },
+    {
+      name: 'Affix top',
+      route: '/content/affix-top',
+      icon: 'wrench',
+      summary: `Wraps elements and causes them to affix to the window on scroll.`
     }
   ];
 
