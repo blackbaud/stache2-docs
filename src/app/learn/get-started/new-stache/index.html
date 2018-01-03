@@ -5,11 +5,11 @@
 
   <stache-tutorial>
     <stache-tutorial-heading>
-        Create a New {{ stache.jsonData.global.productNameLong }} Documentation Site
+        Create a {{ stache.jsonData.global.productNameLong }} Documentation Site
     </stache-tutorial-heading>
     <stache-tutorial-summary>
       <p>
-        This tutorial provides step-by-step instructions on how to create a new SKY UX Builder single-page application (SPA) with the {{ stache.jsonData.global.productNameLong }} component library. Internal Blackbaud users will also be set up with a new VSTS Git repo. Internal users who require GitHub should contact us before continuing.
+        This tutorial provides step-by-step instructions on how to create a new SKY UX single-page application (SPA) with the {{ stache.jsonData.global.productNameLong }} component library. Internal Blackbaud users will also be set up with a new VSTS Git repo. Internal users who require GitHub should contact us before continuing.
       </p>
     </stache-tutorial-summary>
 
@@ -64,23 +64,15 @@
         Clone your repo and set up your {{ stache.jsonData.global.productNameShort }} site
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
-        <p>
-          In this step, we'll set up your local working copy of the VSTS repo and install {{ stache.jsonData.global.productNameShort }}.
-        </p>
         <ol>
           <li>
             <p>
-              Navigate to the folder on your computer where you have your VSTS and GitHub repos, or where you'd like to save your new repo.
+              Navigate to the folder with your VSTS and/or GitHub repos, or the location you want to save your new repo.
             </p>
           </li>
           <li>
             <p>
-              <stache-code>Windows only:</stache-code> Right-click and select <strong>Git Bash Here</strong>.
-            </p>
-          </li>
-          <li>
-            <p>
-              In the command line, enter <stache-code>skyux new --template stache</stache-code>.
+              Open command prompt (Windows) or Terminal (Mac) and in the command line, enter <stache-code>skyux new --template stache</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
             </p>
           </li>
           <li>
@@ -108,11 +100,12 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          After you create your application, it is available on the public Internet. Be careful to not allow anonymous users access to protected Blackbaud assets, such as user data or internal Blackbaud systems.
+          After you create your application, it is potentially available on the public Internet. Be careful to not allow anonymous users access to protected assets, such as user data or internal systems.
         </p>
         <p>
-          We default to Blackbaud Authentication turned on, but we recommend your first step be to verify it.
+          We default to Blackbaud Identity Service turned on, but we recommend your first step be to verify it.
         </p>
+        <sky-alert alertType="warning">If you're a non-Blackbaud user, you need to turn the Blackbaud Identity Service off.</sky-alert>
         <ol>
           <li>
             <p>
@@ -126,7 +119,7 @@
           </li>
           <li>
             <p>
-              Find <stache-code>"auth": true</stache-code> as seen below and double-check that the config setting is <strong>true</strong>.
+              Find <stache-code>"auth": true</stache-code> as seen below. If you are a Blackbaud user, double-check that the config setting is <strong>true</strong>. If you're a non-Blackbaud user, change the setting to <strong>false</strong>.
             </p>
           </li>
         </ol>
@@ -135,27 +128,26 @@
     </stache-tutorial-step>
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        View your new {{ stache.jsonData.global.productNameShort }} application
+        Serve your {{ stache.jsonData.global.productNameShort }} application
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
           To serve your site locally, from the command line, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
         </p>
-        <p>
-          <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> For internal Blackbaud users, the URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select delete next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
-        </p>
+      <sky-alert alertType="info"><strong>Tip:</strong> For internal Blackbaud users, the URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select <strong>delete</strong> next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
+      </sky-alert>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Push up your initial commit
+        Push your initial commit
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-        When you created your new SPA and repo, your VSTS repo only has the basics set up. Locally, we created an <stache-code>initial-commit</stache-code> branch for you with a copy of the Stache template. We provided the template to help you get to know Stache features as well as see general best practices of the type of information you should provide on your site.
+        When you run <stache-code>skyux new --template stache</stache-code> your local SPA, the SKY UX CLI creates an <stache-code>initial commit</stache-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
         </p>
-        <p>Let's walk through how to add, commit, push, and merge this branch to master in VSTS.</p>
+        <p>Let's walk through how to add, commit, push, and merge this branch to <stache-code>master</stache-code>.</p>
         <ol>
           <li>
             From command prompt or Terminal within your project, enter <stache-code>git add --all</stache-code>.
@@ -167,19 +159,24 @@
             Enter <stache-code>git push origin initial-commit</stache-code>.
           </li>
           <li>
-            Navigate to your repo on the <a href="https://blackbaud.visualstudio.com/Products/_git/">VSTS Git website</a>.
+            Navigate to your repo. For most Blackbaud users, your repo is in <a href="https://blackbaud.visualstudio.com/Products/_git/">VSTS Git website</a>.
           </li>
           <li>
-            Create a pull request (PR) into the <stache-code>Master</stache-code> branch. You can do this from Files page with the link VSTS provides when you push up a new branch, or from the Pull Requests page.
+            Create a pull request into the <stache-code>master</stache-code> branch.
+            <ul>
+              <li>For VSTS repos, you can do this from Files page with the link VSTS provides when you push up a new branch, or from the Pull Requests page.</li>
+              <li>For GitHub repos, you can create the pull request from the <strong>Code</strong> or <strong>Pull Requests</strong> tabs.</li>
+            </ul>
           </li>
           <li>
-            When you make the pull request, a build will kick off to test your new changes. Upon successful completion, a preview link is added to the comments of your PR. You can share this preview link with others so they can see how your changes will appear. This preview link does not affect your live production site.
+            For Blackbaud VSTS repos, when you make the pull request, a build will kick off to test your new changes. Upon successful completion, a preview link is added to the comments of your PR. You can share this preview link with others so they can see how your changes will appear. This preview link does not affect your live production site.
           </li>
           <li>
             <p>
-              After meeting the basic requirements for merging to <stache-code>Master</stache-code> (1 peer review and a successful build), select the Complete button.
+              For Blackbaud VSTS repos, after meeting the requirements for merging to <stache-code>master</stache-code> (merging requires 1 peer review and a successful build), select the Complete button.
             </p>
-            <p>The merge will kick off another build that when it completes will update your live site. Once you get the email that the merge to master build succeeded, navigate to your SPA's production URL. The URL will be <stache-code>https://docs.blackbaud.com/(repo name minus skyux-spa)</stache-code>. For example, https://docs.blackbaud.com/engineering-system-docs/.</p>
+            <p>For GitHub repos, depending on your repo settings, select <strong>Merge pull request</strong> or <strong>Squash and merge</strong>.</p>
+            <sky-alert alertType="info">For Blackbaud users with VSTS repos, the merge kicks off another build that updates your live production site. After you get the email that the build succeeded, navigate to your SPA's production URL. The URL will be <stache-code>https://docs.blackbaud.com/(repo name minus skyux-spa)</stache-code>. For example, https://docs.blackbaud.com/engineering-system-docs/.</sky-alert>
           </li>
 
         </ol>
@@ -197,7 +194,7 @@
         <ul>
           <li>
             <p>
-              <a routerLink="/learn/basics">{{ stache.jsonData.global.productNameShort }} Basics</a>
+              <a routerLink="/learn/basics">{{ stache.jsonData.global.productNameShort }} basics</a>
             </p>
           </li>
           <li>
@@ -207,7 +204,7 @@
           </li>
           <li>
             <p>
-              <a routerLink="/content/">Learn about what cool things you can do with Stache</a>
+              <a routerLink="/content/">Learn about the cool things you can do with Stache</a>
             </p>
           </li>
         </ul>
