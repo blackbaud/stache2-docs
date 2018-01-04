@@ -36,10 +36,10 @@
             <p>
               Enter a name for your {{ stache.jsonData.global.productNameShort }} site. We request that you append any documentation sites with <stache-code>-docs</stache-code>. For example: <stache-code>engineering-system-docs</stache-code>.
             </p>
+            <p>
+              The name you enter here will become part of your site's URL.
+            </p>
           </li>
-          <p>
-            <strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip:</strong> The name you enter here will become part of your site's URL.
-          </p>
           <li>
             <p>
               Review and approve the terms and conditions.
@@ -74,6 +74,9 @@
             <p>
               Open command prompt (Windows) or Terminal (Mac) and in the command line, enter <stache-code>skyux new --template stache</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
             </p>
+            <sky-alert alertType="danger">
+              For Windows users, do not use Git Bash. There's a known timeout issue when you run <stache-code>skyux new</stache-code>. The install may not complete. Use the Windows command prompt only.
+            </sky-alert>
           </li>
           <li>
             <p>
@@ -134,7 +137,7 @@
         <p>
           To serve your site locally, from the command line, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
         </p>
-      <sky-alert alertType="info"><strong>Tip:</strong> For internal Blackbaud users, the URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select <strong>delete</strong> next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
+      <sky-alert alertType="info">For internal Blackbaud users, the URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select <strong>delete</strong> next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
       </sky-alert>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
