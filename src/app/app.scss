@@ -20,10 +20,22 @@
   }
 }
 
+.retina-screenshot {
+  max-width: 65%;
+  height: auto;
+}
+
 .sky-tile {
     margin-top: 5px;
   }
 
+  kbd {
+    background-color: #292b2c;
+    color: #ffffff;
+    padding: 3px;
+    font-size: 90%;
+    border-radius: .2em;
+}
 
 .basics-well {
   padding: 10px 10px 0px 10px;

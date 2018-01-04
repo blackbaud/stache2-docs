@@ -40,10 +40,6 @@
                   "route": "/learn/basics"
                 },
                 {
-                  "title": "Add Stache",
-                  "route": "/learn/add-stache"
-                },
-                {
                   "title": "Update Stache",
                   "route": "/learn/update-stache"
                 },

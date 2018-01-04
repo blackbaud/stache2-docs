@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Basics",
+    "path": "/learn/basics",
+    "icon": "cutlery",
+    "summary": "Learn how Stache is organized and how to get started creating content for your site."
+  },
+  {
+    "name": "Content",
+    "path": "/content",
+    "icon": "birthday-cake",
+    "summary": "After you learn the basics, review the different elements and components that can style your technical documentation."
+  }
+]
