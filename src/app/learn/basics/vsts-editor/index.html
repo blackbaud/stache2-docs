@@ -18,7 +18,7 @@
       <stache-tutorial-step-body>
       <ol>
         <li>
-          On the {{ stache.jsonData.global.productNameShort }} site, go to the page you want to edit. The page address looks like <stache-code>https://host.nxt.blackbaud.com/&lt;repository-name&gt;/&lt;path/to/page&gt;</stache-code>. The page address helps to locate the corresponding file in VSTS.
+          On the {{ stache.jsonData.global.productNameShort }} site, go to the page to edit. The page address looks like <stache-code>https://host.nxt.blackbaud.com/&lt;repository-name&gt;/&lt;path/to/page&gt;</stache-code>. The page address helps to locate the corresponding file in VSTS.
           <stache-image class="stache-image-border" imageSource="~/assets/vsts-editor-01-address.png">
           </stache-image>
         </li>
@@ -47,16 +47,16 @@
         </p>
         <ol>
           <li>
-            Select the branch dropdown and then select <strong>New branch</strong>.
+            Click the branch dropdown and then select <strong>New branch</strong>.
           </li>
           <li>
             On the Create a branch screen, enter a branch name that starts with <stache-code>feature-</stache-code>.
           </li>
           <li>
-            Select the <strong>Based on</strong> field to <stache-code>master</stache-code>.
+            In the <strong>Based on</strong> field, select <stache-code>master</stache-code>.
           </li>
           <li>
-            Select <strong>Create branch</strong>. Your new branch appears in the branch dropdown.
+            Click <strong>Create branch</strong>. Your new branch appears in the branch dropdown.
           </li>
         </ol>
         <stache-image
@@ -72,7 +72,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          To edit pages in the browser, select <strong>Edit</strong>. Then, to save the changes to your branch, select <strong>Commit...</strong>. You can edit one or many pages, or you can add new pages.
+          To edit pages in the browser, click <strong>Edit</strong>. Then to save the changes to your branch, click <strong>Commit</strong>. You can edit one or many pages, or you can add new pages.
         </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
@@ -83,7 +83,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          After committing all of your edits, you need to create a pull request for your branch. When you commit a change, you'll see a message with your commit summary and a <stache-code>Create a pull request</stache-code> link. Select the link, or you can also create a pull request from the Pull Requests page.
+          After you commit all of your edits, you need to create a pull request for your branch. When you commit a change, you'll see a message with your commit summary and a <stache-code>Create a pull request</stache-code> link. Select the link, or create a pull request from the Pull Requests page.
         </p>
         <p>
           Enter a title and description for your pull request, and clear the <strong>Reviewers</strong> field. When you save your pull request, the repository's required reviewers are automatically added. After the build passes, the Project Collection Build Service account adds a comment to your pull request with a link to a site where you can preview your changes.
