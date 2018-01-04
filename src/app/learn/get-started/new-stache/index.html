@@ -148,7 +148,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-        When you run <stache-code>skyux new --template stache</stache-code> your local SPA, the SKY UX CLI creates an <stache-code>initial commit</stache-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
+        When you run <stache-code>skyux new --template stache</stache-code> to create your local SPA, the SKY UX CLI creates an <stache-code>initial commit</stache-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
         </p>
         <p>Let's walk through how to add, commit, push, and merge this branch to <stache-code>master</stache-code>.</p>
         <ol>
@@ -172,11 +172,11 @@
             </ul>
           </li>
           <li>
-            For Blackbaud VSTS repos, when you make the pull request, a build will kick off to test your new changes. Upon successful completion, a preview link is added to the comments of your PR. You can share this preview link with others so they can see how your changes will appear. This preview link does not affect your live production site.
+            For internal Blackbaud VSTS repos, a build will kick off to test your changes when you make the pull request. Upon successful completion, a preview link is added to the comments of your PR. You can share this preview link with others so they can see how your changes will appear. This preview link does not affect your live production site.
           </li>
           <li>
             <p>
-              For Blackbaud VSTS repos, after meeting the requirements for merging to <stache-code>master</stache-code> (merging requires 1 peer review and a successful build), select the Complete button.
+              For internal Blackbaud VSTS repos, select the Complete button after meeting the requirements for merging to <stache-code>master</stache-code>. (Merging requires 1 peer review and a successful build.)
             </p>
             <p>For GitHub repos, depending on your repo settings, select <strong>Merge pull request</strong> or <strong>Squash and merge</strong>.</p>
             <sky-alert alertType="info">For Blackbaud users with VSTS repos, the merge kicks off another build that updates your live production site. After you get the email that the build succeeded, navigate to your SPA's production URL. The URL will be <stache-code>https://docs.blackbaud.com/(repo name minus skyux-spa)</stache-code>. For example, https://docs.blackbaud.com/engineering-system-docs/.</sky-alert>
