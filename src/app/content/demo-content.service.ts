@@ -156,7 +156,7 @@ export class StacheDemoContentService {
       name: 'Search',
       route: '/content/search',
       icon: 'search',
-      summary: `Allows site content to be searchable.`
+      summary: `Enables search capabilities for site content.`
     }
   ];
 
