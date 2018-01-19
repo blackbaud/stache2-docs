@@ -151,6 +151,12 @@ export class StacheDemoContentService {
       route: '/content/affix-top',
       icon: 'wrench',
       summary: `Wraps elements and causes them to affix to the window on scroll.`
+    },
+    {
+      name: 'Search',
+      route: '/content/search',
+      icon: 'search',
+      summary: `Allows site content to be searchable.`
     }
   ];
 
