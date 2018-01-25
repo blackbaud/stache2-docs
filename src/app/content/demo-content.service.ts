@@ -163,6 +163,12 @@ export class StacheDemoContentService {
       route: '/content/edit-button',
       icon: 'edit',
       summary: `Adds edit button to each page that links to the content in the site's repo.`
+    },
+    {
+      name: 'Search',
+      route: '/content/search',
+      icon: 'search',
+      summary: `Enables search capabilities for site content.`
     }
   ];
 
