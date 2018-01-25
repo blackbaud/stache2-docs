@@ -151,6 +151,18 @@ export class StacheDemoContentService {
       route: '/content/affix-top',
       icon: 'wrench',
       summary: `Wraps elements and causes them to affix to the window on scroll.`
+    },
+    {
+      name: 'Link',
+      route: '/content/link',
+      icon: 'link',
+      summary: `Links to a page or section of a page in a site.`
+    },
+    {
+      name: 'Edit Button',
+      route: '/content/edit-button',
+      icon: 'edit',
+      summary: `Adds edit button to each page that links to the content in the site's repo.`
     }
   ];
 
