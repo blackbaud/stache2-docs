@@ -2,7 +2,7 @@
 
   <stache-page-summary>
     <p>
-      The edit button feature adds a link to the repository for each page in your site to facilitate contributions. This feature is enabled globally, but you can opt out of showing the button on individual pages.
+      The edit button facilitates contributions by adding a link to the repository on each page in your site. This feature is enabled globally, but you can opt out on individual pages.
     </p>
 
     <h3>
@@ -12,13 +12,13 @@
     <ul>
       <li>
         <p>
-          <stache-code>showEditButton</stache-code> — This flag exists on the <stache-code>Stache Wrapper</stache-code> and is used to disable the edit button on individual pages.
+          <stache-code>showEditButton</stache-code> — This flag exists on the Stache wrapper and disables the edit button on individual pages.
         </p>
       </li>
     </ul>
 
     <p>
-      To enable the search button, add the following to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>:
+      To enable the edit button, add <stache-code>showEdit</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>:
     </p>
 
     <stache-code-block languageType="json">
@@ -26,7 +26,7 @@
       "appSettings": {
         "stache": {
           "showEdit": {
-            "url": "Url to your repository",
+            "url": "URL to your repository",
             "text": "The text for your edit button. Defaults to 'Edit'"
           }
         }

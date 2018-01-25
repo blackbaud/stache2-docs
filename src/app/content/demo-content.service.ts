@@ -156,13 +156,13 @@ export class StacheDemoContentService {
       name: 'Link',
       route: '/content/link',
       icon: 'link',
-      summary: `Links to a page or section of a page in a site.`
+      summary: `Links to a page or page section in a site.`
     },
     {
       name: 'Edit Button',
       route: '/content/edit-button',
       icon: 'edit',
-      summary: `Adds edit button to each page that links to the content in the site's repo.`
+      summary: `Adds an edit button to each page to allow users to edit.`
     },
     {
       name: 'Search',
