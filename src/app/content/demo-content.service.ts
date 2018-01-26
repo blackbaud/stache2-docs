@@ -153,6 +153,18 @@ export class StacheDemoContentService {
       summary: `Wraps elements and causes them to affix to the window on scroll.`
     },
     {
+      name: 'Link',
+      route: '/content/link',
+      icon: 'link',
+      summary: `Links to a page or page section in a site.`
+    },
+    {
+      name: 'Edit Button',
+      route: '/content/edit-button',
+      icon: 'edit',
+      summary: `Adds an edit button to each page to allow users to edit.`
+    },
+    {
       name: 'Search',
       route: '/content/search',
       icon: 'search',

@@ -10,6 +10,9 @@
   },
   "appSettings": {
     "stache": {
+      "editButton": {
+        "url": "https://github.com/blackbaud/stache2-docs"
+      },
       "searchConfig": {
         "is_internal": false
       }
