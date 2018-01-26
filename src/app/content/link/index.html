@@ -1,0 +1,65 @@
+<stache pageTitle="Link" showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The link directive allows for navigation within a Stache site, including anchor points on a page.
+    </p>
+
+  <h3>
+    Link properties
+  </h3>
+
+  <ul>
+    <li>
+      <p>
+        <stache-code>stacheRouterLink</stache-code> — Specifies the path to link to. To link to a section on the same page, pass in <stache-code>.</stache-code> for the route instead of the full path.
+      </p>
+    </li>
+    <li>
+      <p>
+        <stache-code>fragment (Optional)</stache-code> — Specifies the ID of the anchor point. For Stache page anchors, the ID will be a hypenated, lowercase version of the text.
+      </p>
+    </li>
+  </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <a stacheRouterLink="." fragment="test">To Test</a>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
+    <stache-page-anchor>Test</stache-page-anchor>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="markup">
+          <a stacheRouterLink="." fragment="test">To Test</a>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
