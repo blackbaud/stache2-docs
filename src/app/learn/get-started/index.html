@@ -10,7 +10,7 @@
   </stache-page-summary>
 
   <stache-page-anchor>
-        Install SKY UX prerequisites
+    Install SKY UX prerequisites
   </stache-page-anchor>
 
     <p>
@@ -59,6 +59,10 @@
   <p>
     Depending on your situation, you can set up a Stache site in one of three ways.
   </p>
+
+  <sky-alert alertType="warning">
+    When you set up a {{ stache.jsonData.global.productNameLong }} project, the path to your local repo cannot contain a folder titled <stache-code>/stache2/</stache-code>. This folder name in the resource path causes the <a routerLink="/learn/plugins/stache">Stache Plugin</a> to attempt loading modules from the wrong location resulting in an error when serving locally.
+  </sky-alert>
 
   <stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
   </stache-action-buttons>
