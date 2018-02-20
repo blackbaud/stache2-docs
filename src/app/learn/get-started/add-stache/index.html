@@ -18,6 +18,9 @@
         <stache-code-block>
           npm install --save @blackbaud/stache
         </stache-code-block>
+        <stache-code-block>
+          npm install --save @blackbaud/skyux-builder-plugin-auth-email-whitelist
+        </stache-code-block>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -65,6 +68,20 @@
           Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Add the required {{ stache.jsonData.global.productNameShort }} plugins to the <stache-code>plugins</stache-code> array.
         </p>
         <stache-include fileName="skyux-config-sample.html"></stache-include>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Create Stache specific folders
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+            Stache requires adding a few specific folders to your projects structure. Open the <stache-code>src</stache-code> folder in your project and create a <stache-code>stache/</stache-code> folder. Inside the stache folder, create two sub folders <stache-code>includes</stache-code> and <stache-code>data</stache-code>. The resulting project folder structure should resemble the following:
+        </p>
+        <stache-include
+          fileName="folder-structure-example.html">
+        </stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
   </stache-tutorial>
