@@ -9,19 +9,19 @@
     </stache-tutorial-heading>
     <stache-tutorial-summary>
       <p>
-        This tutorial provides step-by-step instructions on how to create a new SKY UX single-page application (SPA) with the {{ stache.jsonData.global.productNameLong }} component library. Internal Blackbaud users will also be set up with a new VSTS Git repo. Internal users who require GitHub should contact us before continuing.
+        This tutorial provides step-by-step instructions on how to create a new SKY UX single-page application (SPA) with the {{ stache.jsonData.global.productNameLong }} component library. Internal Blackbaud users will also be set up with a new VSTS Git repo. Internal users who require GitHub should <a routerLink="/support">contact us</a> before continuing.
       </p>
     </stache-tutorial-summary>
 
-    <sky-alert alertType="info">Before you begin this tutorial, you need to complete the <a routerLink="/learn/get-started">SKY UX prerequisites</a>. </sky-alert>
+    <sky-alert alertType="warning">Before you begin this tutorial, you need to complete the <a routerLink="/learn/get-started" fragment="install-prerequisites">prerequisites</a>. </sky-alert>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Create and provision your SKY UX application in the App Management Portal
+        Create and provision your Stache SPA with the SKY UX App Management Portal
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          For internal Blackbaud users only, we'll create your SKY UX application and repo with the SKY UX App Management Portal. This creates a Visual Studio Team Services (VSTS) repo for the application and also creates VSTS build and release definitions.
+          For internal Blackbaud users only, we'll create your Stache application and repo with the SKY UX App Management Portal. This creates a Visual Studio Team Services (VSTS) repo for the application and also creates VSTS build and release definitions.
         </p>
         <p>
           If you are not an internal Blackbaud user, skip to step 2.
@@ -30,6 +30,11 @@
           <li>
             <p>
               Navigate to the <a href="https://host.nxt.blackbaud.com/skyux-apps/">SKY UX App Management Portal</a>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Select the Stache checkbox.
             </p>
           </li>
           <li>
@@ -51,7 +56,7 @@
             </p>
           </li>
           <li>
-            When the application is created, a ready page appears. We recommend you save a copy of this page.
+            When the application is created, a ready page appears. We recommend you immediately save a PDF copy of this page or take a screenshot. If you are inactive on this page for too long, it can either time out or refresh.
           </li>
           <li>
             Copy the Git Repo URL.
@@ -67,18 +72,25 @@
         <ol>
           <li>
             <p>
-              Navigate to the folder with your VSTS and/or GitHub repos, or the location you want to save your new repo.
+              Navigate to the folder where you want to save your new repo. Note the folder location.
             </p>
             <stache-include fileName="folder-warning.html">
             </stache-include>
           </li>
           <li>
             <p>
-              Open command prompt (Windows) or Terminal (Mac) and in the command line, enter <stache-code>skyux new --template stache</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
+              Open command prompt (Windows) or Terminal (Mac).
             </p>
             <sky-alert alertType="danger">
               For Windows users, do not use Git Bash. There's a known timeout issue when you run <stache-code>skyux new</stache-code>. The install may not complete. Use the Windows command prompt only.
             </sky-alert>
+          </li>
+          <li>
+            <p>From the command line, change the directory to the folder you chose in step 1.</p>
+            <p>For example, if you have Windows OS and save all your Git repos to <stache-code>C:\Git\</stache-code>, enter <stache-code>cd C:\Git\</stache-code>. </p>
+          </li>
+          <li>
+            <p>Enter <stache-code>skyux new --template stache</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).</p>
           </li>
           <li>
             <p>
@@ -88,7 +100,7 @@
           </li>
           <li>
             <p>
-              In the second prompt, if you are an internal Blackbaud user, paste in the URL to your repo that we copied in step 1.6.
+              In the second prompt, if you are an internal Blackbaud user, paste in the URL to your repo that we copied in step 1.7.
             </p>
             <p>For non-Blackbaud users, enter the location of your repo.</p>
           </li>
@@ -137,7 +149,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          To serve your site locally, from the command line, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
+          To serve your site locally, from the command line change the directory into your new Stache site folder. For example <stache-code>cd skyux-spa-stache2-docs</stache-code>. Then, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
         </p>
       <sky-alert alertType="info">For internal Blackbaud users, the URL in your browser is the same as your production URL. The red bar at the top of the page indicates when you are in "dev mode." To see your production site, select the red bar and then select <strong>delete</strong> next to <strong>Custom Config</strong>. To return to dev mode, stop serving in your command prompt and serve again.
       </sky-alert>
@@ -197,6 +209,12 @@
           You are now ready to create stellar technical documentation. To continue the learning, we recommend you review:
         </p>
         <ul>
+          <li>
+            <p>
+              <a routerLink="/learn/get-started" fragment="learn-about-git-workflow-and-vsts">Git workflow tutorial and how to edit VSTS settings
+              </a>
+            </p>
+          </li>
           <li>
             <p>
               <a routerLink="/learn/basics">{{ stache.jsonData.global.productNameShort }} basics</a>
