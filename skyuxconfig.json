@@ -3,10 +3,11 @@
   "mode": "easy",
   "compileMode": "aot",
   "plugins": [
-    "@blackbaud/skyux-builder-plugin-stache"
+    "@blackbaud/skyux-builder-plugin-stache",
+    "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
   ],
   "app": {
-    "title": "Stache 2 Documentation"
+    "title": "SkyMail Documentation"
   },
   "appSettings": {
     "stache": {

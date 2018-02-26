@@ -1,0 +1,27 @@
+<stache
+  navTitle="Troubleshooting"
+  pageTitle="Troubleshooting Stache"
+  layout="container"
+  showTableOfContents="true">
+
+<stache-page-summary>
+  While we try prevent issues by creating exceptional documentation, we know you may run into problems from time-to-time. On this page, learn how to resolve them. Based on feedback from you and trends we notice, we'll continue to update our documentation and add notes here. Let us know how we can help you better in our <a href="https://blackbaud.slack.com/messages/C1R3XB8GZ">#stache-general</a> Slack channel.
+</stache-page-summary>
+
+<stache-page-anchor>NPM Install</stache-page-anchor>
+<h3>Scenarios</h3>
+<ul>
+  <li>
+    <p>When you were running <stache-code>skyux new --template stache</stache-code> or <stache-code>npm install</stache-code>, did the install time out?</p>
+  </li>
+  <li>
+    <p>Are you having a problem serving your site locally?</p>
+  </li>
+  <li>
+    <p>Did you update the dependencies in the <stache-code>package.json</stache-code> file?</p>
+  </li>
+</ul>
+<h3>Solution</h3>
+<p>You may want to re-run <stache-code>npm install</stache-code>. Before you do that, we recommend you delete your entire <stache-code>node_modules</stache-code> folder. In the command line for the Stache site folder, enter <stache-code>npm cache clear</stache-code>. When that completes, enter <stache-code>npm install</stache-code>.</p>
+
+</stache>
