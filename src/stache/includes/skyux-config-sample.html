@@ -1,3 +1,26 @@
+<p>
+  Setup without authentication:
+</p>
+<stache-code-block languageType="json">
+  {
+    "mode": "easy",
+    "compileMode": "aot",
+    "auth": false,
+    "plugins": [
+      "@blackbaud/skyux-builder-plugin-stache"
+    ],
+    "app": {
+      "title": "your_project_title"
+    },
+    "appSettings": {
+      "stache": {
+      }
+    }
+  }
+</stache-code-block>
+<p>
+  Blackbaud setup with authentication:
+</p>
 <stache-code-block languageType="json">
   {
     "mode": "easy",
@@ -16,5 +39,4 @@
     }
   }
 </stache-code-block>
-<stache-include fileName="auth-opt-out.html"></stache-include>
 

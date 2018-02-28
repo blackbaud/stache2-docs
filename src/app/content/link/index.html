@@ -1,26 +1,28 @@
-<stache pageTitle="Link" showBreadcrumbs="true">
+<stache pageTitle="Links" showBreadcrumbs="true" navTitle="Links">
 
   <stache-page-summary>
     <p>
-      The link directive allows for navigation within a Stache site, including anchor points on a page.
+      In Angular, relative links for navigation within a site are implemented differently than external HMTL <stache-code>href</stache-code> links. To simplify this process for you, we created a Stache link directive that enables you to use it for external links and internal navigation links within a Stache site, including anchor points on the same page.
     </p>
+    <h3>
+      Link properties
+    </h3>
 
-  <h3>
-    Link properties
-  </h3>
-
-  <ul>
-    <li>
-      <p>
-        <stache-code>stacheRouterLink</stache-code> — Specifies the path to link to. To link to a section on the same page, pass in <stache-code>.</stache-code> for the route instead of the full path.
-      </p>
-    </li>
-    <li>
-      <p>
-        <stache-code>fragment (Optional)</stache-code> — Specifies the ID of the anchor point. For Stache page anchors, the ID will be a hypenated, lowercase version of the text.
-      </p>
-    </li>
-  </ul>
+    <ul>
+      <li>
+        <p>
+          <stache-code>stacheRouterLink</stache-code> — Specifies the link path. To link to a section on the same page, pass in <stache-code>.</stache-code> for the route instead of the full path.
+        </p>
+      </li>
+      <li>
+        <p>
+          <stache-code>fragment </stache-code> — <i>(Optional)</i>  Specifies the ID of the anchor point. For Stache page anchors, the ID will be a hypenated, lowercase version of the text.
+        </p>
+      </li>
+    </ul>
+    <sky-alert alertType="info">
+      For external hrefs, <stache-code>stacheRouterLink</stache-code> doesn't enable users to right-click the link and open in a new window or tab. If you have an external link you'd like to open in a new window, or give the users the option open in a new window, use an HTML <stache-code>href</stache-code> instead. Example: <stache-code escapeCharacters="true"><a href="www.google.com">I'm an external link.</a></stache-code>
+    </sky-alert>
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -28,7 +30,15 @@
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <a stacheRouterLink="." fragment="test">To Test</a>
+    <p>
+      <a stacheRouterLink="https://www.google.com">External link</a>
+    </p>
+    <p>
+    <a stacheRouterLink="/content/action-buttons" fragment="code">Internal navigation link to Action buttons code sample</a>
+    </p>
+    <p>
+    <a stacheRouterLink="." fragment="test">Internal navigation within a page</a>
+    </p>
 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
@@ -46,7 +56,10 @@
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
-    <stache-page-anchor>Test</stache-page-anchor>
+
+    <stache-page-anchor>
+      Test
+    </stache-page-anchor>
   </div>
 
   <stache-page-anchor>
@@ -57,7 +70,9 @@
     <sky-tabset>
       <sky-tab tabHeading="sample">
         <stache-code-block languageType="markup">
-          <a stacheRouterLink="." fragment="test">To Test</a>
+          <a stacheRouterLink="https://www.google.com">External link</a>
+          <a stacheRouterLink="/content/action-buttons" fragment="code">Internal navigation link to Action buttons code sample</a>
+          <a stacheRouterLink="." fragment="test">Internal navigation within a page</a>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>

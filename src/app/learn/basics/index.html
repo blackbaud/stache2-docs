@@ -1,7 +1,8 @@
 <stache
   pageTitle="Basics"
   navOrder="2"
-  layout="container">
+  layout="container"
+  showTableOfContents="true">
 
   <stache-page-summary>
     <p>
@@ -9,485 +10,127 @@
     </p>
   </stache-page-summary>
 
-<div class="basics-well">
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Folder Structure
-</sky-tile-title>
-<sky-tile-summary>
 
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
+<stache-page-anchor>
+Folder structure
+</stache-page-anchor>
+
+<p>
   When working on a SKY UX application, there is some folder structure to learn.
-</sky-tile-content-section>
-<sky-tile-content-section>
-  <stache-include
-    fileName="folder-structure-example.html">
-  </stache-include>
-</sky-tile-content-section>
-<sky-tile-content-section>
+</p>
+
+<stache-include
+  fileName="folder-structure-example.html">
+</stache-include>
+
 <basics-definition-list>
 </basics-definition-list>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
 
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Application Navigation
-</sky-tile-title>
-<sky-tile-summary>
+<stache-page-anchor>
+    Stache wrapper
+</stache-page-anchor>
 
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
-  <p>To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.</p>
-  <sky-alert alertType="info">For internal Blackbaud SPAs, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. The omnibar provides a common UI element for Blackbaud applications and allows users to navigate between applications. However, it is for internal Blackbaud use only. For Blackbaud developers, <a href="https://host.nxt.blackbaud.com/omnibar-docs/">the omnibar documentation site</a> describes how to set up top-level navigation with the omnibar.</sky-alert>
-  <h3>Display navigation bar</h3>
-  <p>To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.</p>
+<p>
+  The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} Wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
+</p>
+
+<p>
+  {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exceptions are the pageTitle, navTitle, and navOrder.
+</p>
+
+<stache-code-block>
+  <stache pageTitle="My Sample Page">
+    // Your content here.
+  </stache>
+</stache-code-block>
+
+  <p>
+    <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-primary">Learn More</button></a>
+  </p>
+
+<stache-page-anchor>
+Application navigation
+</stache-page-anchor>
+
+<p>
+  To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.
+</p>
+
+<sky-alert alertType="info">
+  For <strong>internal Blackbaud SPAs</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. However, it is for internal Blackbaud use only. To learn how to set up top-level navigation with the omnibar, see step 4 of the <a href="https://docs.blackbaud.com/stache-internal/new-bb-stache">Create a Blackbaud Internal Stache SPA</a> tutorial.
+</sky-alert>
+
+<h3>
+  Display navigation bar
+</h3>
+
+<p>
+  To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
+</p>
+
 <stache-code-block languageType="js">
 &lt;app-nav&gt;&lt;/app-nav&gt;
 </stache-code-block>
-  <h3>Set up navigation bar</h3>
-  <p>To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA.</p>
-  <sky-alert alertType="info">To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial</a> on the SKY UX website.</sky-alert>
-  <ol>
-    <li>
-      <p>In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.</p>
-    </li>
-    <li>
-      <p>Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.</p>
-      <sky-alert alertType="info">If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.</sky-alert>
-    </li>
-    <li>
-      <p>Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.</p>
-    </li>
-    <stache-code-block languageType="typescript">
-        export class AppNavComponent {
-          public nav = [
-            {
-              titleKey: 'app_nav_home',
-              path: '/'
-            },
-            {
-              titleKey: 'app_nav_about',
-              path: '/about'
-            },
-            {
-              titleKey: 'Demo',
-              path: '/demo'
-            }
-          ];
-        }
-    </stache-code-block>
-  </ol>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
 
-  <sky-tile isCollapsed="true">
-  <sky-tile-title>
-    Stache Wrapper
-  </sky-tile-title>
-    <sky-tile-summary>
+<h3>
+  Set up navigation bar
+</h3>
 
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
-        <p>
-    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} Wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
-  </p>
+<p>
+  To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA.
+</p>
 
-  <p>
-    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exceptions are the pageTitle, navTitle, and navOrder.
-  </p>
+<sky-alert alertType="info">
+  To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial</a> on the SKY UX website.
+</sky-alert>
 
-  <stache-code-block>
-    <stache pageTitle="My Sample Page">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-  <p><a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-primary">Learn More</button></a></p>
-    </sky-tile-content-section>
-  </sky-tile-content>
-</sky-tile>
-
-<sky-tile isCollapsed="true">
-  <sky-tile-title>
-    Layouts
-  </sky-tile-title>
-    <sky-tile-summary>
-
-  </sky-tile-summary>
-  <sky-tile-content>
-    <sky-tile-content-section>
-        <p>
-    {{ stache.jsonData.global.productNameShort }} layouts enable consistent formatting for your content. You specify the layout on the <stache-code>stache</stache-code> tag's <stache-code>layout</stache-code> property. Swapping layouts is as simple as updating the property with a new layout name. There are three different layouts you can use:
-  </p>
-    </sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Sidebar
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Default
-  </sky-key-info-label>
-</sky-key-info>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      navOrder="5"
-      layout="sidebar">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-
-  <p>
-    The sidebar layout is the default {{ stache.jsonData.global.productNameShort }} layout, and adds a side navigation on the left side of your content. This is useful for quickly navigating between sibling and child content within your site. {{ stache.jsonData.global.productNameShort }} populates the routes in the sidebar for you automatically based on the directory structure of your project. A {{ stache.jsonData.global.productNameShort }} project with the following structure:
-  </p>
-
-  <ul>
-    <li><i class="fa fa-folder"></i> learn
-      <ul>
-        <li><i class="fa fa-folder"></i> basics</li>
-      </ul>
-    </li>
-    <li><i class="fa fa-folder"></i> components</li>
-    <li><i class="fa fa-folder"></i> contribute</li>
-  </ul>
-
-  <p>
-    would have a sidebar like this:
-  </p>
-
-  <stache-row>
-    <stache-column screenSmall="2">
-      <stache-sidebar
-        [routes]="[
+<ol>
+  <li>
+    <p>
+      In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.
+    </p>
+  </li>
+  <li>
+    <p>
+      Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.
+    </p>
+    <sky-alert alertType="info">
+      If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.
+    </sky-alert>
+  </li>
+  <li>
+    <p>
+      Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.
+    </p>
+  </li>
+  <stache-code-block languageType="typescript">
+      export class AppNavComponent {
+        public nav = [
           {
-            path: '/learn',
-            name: 'Learn',
-            children: [
-              {
-                path: '/basics',
-                name: 'Basics'
-              }
-            ]
+            titleKey: 'app_nav_home',
+            path: '/'
           },
           {
-            path: '/components',
-            name: 'Components'
+            titleKey: 'app_nav_about',
+            path: '/about'
           },
           {
-            path: '/contribute',
-            name: 'Contribute'
+            titleKey: 'Demo',
+            path: '/demo'
           }
-        ]">
-      </stache-sidebar>
-    </stache-column>
-  </stache-row>
-
-
-  <p>
-    The currently active page in the sidebar navigation show any children underneath. All other child pages are hidden until the route becomes active.
-  </p>
-
-  <p>
-    The order the sidebar routes appear is determined first by the <stache-code>navOrder</stache-code> attribute on the <stache-code>{{stache.jsonData.global.productNameShort}}</stache-code> tag.  If there is no <stache-code>navOrder</stache-code> specified, or if two sibling routes have the same <stache-code>navOrder</stache-code>, the routes will be ordered alphabetically by name.
-  </p>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Container
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Optional
-  </sky-key-info-label>
-</sky-key-info>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      layout="container">
-      // Your content here.
-    </stache>
+        ];
+      }
   </stache-code-block>
+</ol>
 
-  <p>
-    The container layout provides a responsive container for your content based on the <a routerLink="/components/grid">{{ stache.jsonData.global.productNameShort }} Grid</a>.
-  </p>
-</sky-tile-content-section>
-<sky-tile-content-section>
+<stache-page-anchor>
+  Custom CSS
+</stache-page-anchor>
 
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Blank
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Optional
-  </sky-key-info-label>
-</sky-key-info>
+<p>
+  In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
+</p>
 
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      layout="blank">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-
-  <p>
-    The blank layout provides no formatting for the content inside. This allows you to do whatever you wish inside of the container but still make use of the utility of the <stache-code>stache</stache-code> tag.
-  </p>
-</sky-tile-content-section>
-  </sky-tile-content>
-</sky-tile>
-
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Navigation
-</sky-tile-title>
-<sky-tile-summary>
-
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
-  <p>
-    {{ stache.jsonData.global.productNameShort }} provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
-  </p>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Back to Top
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Set by default
-  </sky-key-info-label>
-</sky-key-info>
-
-  <p>
-    For long form content, having to scroll manually to the top of the page is annoying. The back to top button provides a quick way to navigate back to the top of a page. Back to top is enabled by default. You can disable it on the <stache-code>stache</stache-code> tag.
-  </p>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      showBackToTop="false">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Breadrumbs
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Set by default
-  </sky-key-info-label>
-</sky-key-info>
-
-  <p>
-    Breadcrumbs provide you a direct path from your current location to the home page. This pattern gives users an easy way to see exactly where they are in the context of the site. Breadcrumbs are enabled by default. You can disable them on the <stache-code>stache</stache-code> tag when you don't want them to display, such as on the home page.
-  </p>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      showBreadcrumbs="false">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Page Anchor
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Optional
-  </sky-key-info-label>
-</sky-key-info>
-
-  <p>
-    Page anchors provide inter-page navigation and allow you to link to specific sections of a page. These serve a dual purpose as page section headers. Page anchors are used to generate the links for the table of contents.
-  </p>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page">
-      <stache-page-anchor>
-        Section One
-      </stache-page-anchor>
-      // Some content
-
-      <stache-page-anchor>
-        Section Two
-      </stache-page-anchor>
-      // More content
-
-    </stache>
-  </stache-code-block>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Table of Contents
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Optional
-  </sky-key-info-label>
-</sky-key-info>
-
-  <p>
-    The table of contents allows you to navigate quickly within a page using page anchors. It also serves as an overview of the page contents. This component, combined with the back to top and page anchors, creates a quick and effortless way to navigate long form content.
-  </p>
-
-  <sky-alert alertType="info">
-    <b>Note: </b> This is the only navigation component not enabled by default.
-  </sky-alert>
-
-  <p>
-    To use the table of contents on your page, enable it on the <stache-code>stache</stache-code> tag.
-  </p>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      showTableOfContents="true">
-      <stache-page-anchor>
-        Section One
-      </stache-page-anchor>
-
-      // Some content
-
-      <stache-page-anchor>
-        Section Two
-      </stache-page-anchor>
-
-      // More content
-
-    </stache>
-  </stache-code-block>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Navigation Title
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Optional
-  </sky-key-info-label>
-</sky-key-info>
-
-  <p>
-   You can set the page's title in the sidebar and breadcrumb navigations.
-  </p>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      navTitle="Sample">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Navigation Order
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Optional
-  </sky-key-info-label>
-</sky-key-info>
-
-  <p>
-   You can set the order the page appears in the sidebar navigation, relative to the sibling pages.
-  </p>
-
-  <stache-code-block>
-    <stache
-      pageTitle="My Sample Page"
-      navOrder="1">
-      // Your content here.
-    </stache>
-  </stache-code-block>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
-
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Images
-</sky-tile-title>
-<sky-tile-summary>
-
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
-  <p>
-    To use local images in your {{ stache.jsonData.global.productNameShort }} project, add them to your <stache-code>src/assets</stache-code> directory in the source folder. You can then reference them in your {{ stache.jsonData.global.productNameShort }} pages like so:
-  </p>
- <stache-code-block>
-         &lt;stache-image
-            imageSource="&#126;&#47;assets&#47;hero-sample-1.jpg"&gt;
-          &lt;&#47;stache-image&gt;
-        </stache-code-block>
-
-  <stache-row>
-    <stache-column screenSmall="4">
-      <stache-image
-        imageSource="~/assets/hero-sample-1.jpg">
-      </stache-image>
-    </stache-column>
-  </stache-row>
-
-  <p>
-    Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
-  </p>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
-
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Links
-</sky-tile-title>
-<sky-tile-summary>
-
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
- In {{ stache.jsonData.global.productNameShort }}, internal and external links are not implemented the same way in the code.
- <ul>
-   <li><stache-code>href</stache-code> — external links</li>
-   <li><stache-code>routerLink</stache-code> — internal links</li>
- </ul>
-  <stache-code-block>
-    <a href="www.google.com">I'm an external link.</a>
-    <a routerLink="/learn/basics/">I'm an internal link.</a>
-    <a routerLink="/content/action-buttons" fragment="demo">I'm a link to a page anchor.</a>
-  </stache-code-block>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
-
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Custom CSS
-</sky-tile-title>
-<sky-tile-summary>
-
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
-In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
 <stache-code-block languageType="scss">
   &#47;&#47;CSS
 
@@ -496,66 +139,68 @@ img &#123;
 &#125;
 
 </stache-code-block>
-</sky-tile-content-section>
-<sky-tile-content-section>
-Then, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file. Insert this line of code at the very beginning of the file.
+
+<p>
+  Then, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file. Insert this line of code at the very beginning of the file.
+</p>
+
 <stache-code-block>require('style-loader!./app.scss');</stache-code-block>
 
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
+<stache-page-anchor>
+  Command line
+</stache-page-anchor>
 
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Command Line
-</sky-tile-title>
-<sky-tile-summary>
+<p>
+  Stache asks you to use commands when installing and working with your repo.
+</p>
 
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
-<p>Stache asks you to use commands when installing and working with your repo.</p>
-<p>On a Mac, use Terminal.</p>
-<p>On a PC, type <strong>cmd</strong> in the search box to access the command line. Once you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line.</p>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
+<p>
+  On a Mac, use Terminal.
+</p>
 
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-VSTS
-</sky-tile-title>
-<sky-tile-summary>
+<p>
+  On a PC, type <strong>cmd</strong> in the search box to access the command line. Once you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code>. Git Bash causes a conflict that prevents the install from completing.
+</p>
 
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
-<p>Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git</a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">VSTS</a>. VSTS has pull requests just like GitHub. However, there are three key differences to know about. </p>
+<stache-page-anchor>
+VSTS for Blackbaud users
+</stache-page-anchor>
+
+<p>
+  Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git</a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">VSTS</a>. VSTS has pull requests just like GitHub. However, there are three key differences to know about.
+</p>
+
 <ol>
-  <li>When you create a pull request (PR),  please remove <stache-code>[Products]\Products Team</stache-code> from the reviewers or edit the branch policies. <br />If you have VSTS permission, from your repo's Branches page, hover over the branch row, select the "...", and then select Branch policies. On this page you can set many branch settings, including who to automatically include on code reviews. <br /> If you don't have permission, speak to your repo creator/owner.</li>
-  <li>Each time you create a PR, or make a change to your pull request, it kicks off a build. The build takes a few minutes to complete and tests to make sure there aren't any problems with your code before it merges.</li>
-  <li>The PR build is one part of the PR approval process. Most VSTS repos also require you to get at least one code review approval.</li>
+  <li>
+    When you create a pull request (PR),  please remove <stache-code>[Products]\Products Team</stache-code> from the reviewers or edit the branch policies. <br />If you have VSTS permission, from your repo's Branches page, hover over the branch row, select the "...", and then select Branch policies. On this page you can set many branch settings, including who to automatically include on code reviews. <br /> If you don't have permission, speak to your repo creator/owner.
+  </li
+  >
+  <li>
+    Each time you create a PR, or make a change to your pull request, it kicks off a build. The build takes a few minutes to complete and tests to make sure there aren't any problems with your code before it merges.
+  </li>
+
+  <li>
+    The PR build is one part of the PR approval process. Most VSTS repos also require you to get at least one code review approval.
+  </li>
 </ol>
-<p>Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.</p>
-</sky-tile-content-section>
-<sky-tile-content-section>
-<p>You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in VSTS lets you make quick changes without leaving the browser. To learn how to make changes with the VSTS web-based editor, see the <a routerLink="/learn/basics/vsts-editor/">Edit a VSTS Stache 2 Site in Your Browser tutorial</a>.</p>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
 
-<sky-tile isCollapsed="true">
-<sky-tile-title>
-Tools
-</sky-tile-title>
-<sky-tile-summary>
+<p>
+  Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.
+</p>
 
-</sky-tile-summary>
-<sky-tile-content>
-<sky-tile-content-section>
+<p>
+  You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in VSTS lets you make quick changes without leaving the browser. To learn how to make changes with the VSTS web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/vsts-editor/">Edit a VSTS Stache 2 Site in Your Browser tutorial <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a>.
+</p>
+
+<stache-page-anchor>
+  Tools
+</stache-page-anchor>
+
+<p>
   To help you work with {{ stache.jsonData.global.productNameLong }} SPAs, we have some tool recommendations.
-</sky-tile-content-section>
-<sky-tile-content-section>
+</p>
+
+
 <sky-key-info layout="horizontal">
   <sky-key-info-value>
     VS Code
@@ -564,7 +209,11 @@ Tools
     Code editor
   </sky-key-info-label>
 </sky-key-info>
-<p><a href="https://code.visualstudio.com/">Visual Studio Code</a> (VS Code) is a code editor well suited towards working with SKY UX SPAs. In addition, VS Code enables many extensions that can help you validate your work before checking in your changes. Here are some extensions we recommend:</p>
+
+<p>
+  <a href="https://code.visualstudio.com/">Visual Studio Code</a> (VS Code) is a code editor well suited towards working with SKY UX SPAs. In addition, VS Code enables many extensions that can help you validate your work before checking in your changes. Here are some extensions we recommend:
+</p>
+
 <ul>
   <li>TSLint</li>
   <li>HTMLHint</li>
@@ -572,9 +221,11 @@ Tools
   <li>Guides</li>
   <li>seti-icons</li>
 </ul>
-<p>If you are a developer, you'll want to search the marketplace for technical extensions that can help you work more efficiently.</p>
-</sky-tile-content-section>
-<sky-tile-content-section>
+
+<p>
+  If you are a developer, you'll want to search the marketplace for technical extensions that can help you work more efficiently.
+</p>
+
 <sky-key-info layout="horizontal">
   <sky-key-info-value>
     Markdown Editor
@@ -583,20 +234,25 @@ Tools
     Converts markdown to html
   </sky-key-info-label>
 </sky-key-info>
-<p>If you are new (or rusty) to HTML, but know markdown, this <a href="https://jbt.github.io/markdown-editor/">(GitHub-Flavored) Markdown Editor</a> tool was recommended to us. When you navigate to the page, it creates a unique link. You can edit the text in markdown on the left and it will convert it to HTML on the right. Then, you can use the inspect tool in your browser to copy the html.</p>
-<p>Best yet, you can share this unique link with others so they can edit the content too. A great way in general to collaborate on content before posting to your SPA.</p>
-</sky-tile-content-section>
-</sky-tile-content>
-</sky-tile>
 
-</div>
+<p>
+  If you are new (or rusty) to HTML, but know markdown, this <a href="https://jbt.github.io/markdown-editor/">(GitHub-Flavored) Markdown Editor</a> tool was recommended to us. When you navigate to the page, it creates a unique link. You can edit the text in markdown on the left and it will convert it to HTML on the right. Then, you can use the inspect tool in your browser to copy the html.
+</p>
+
+<p>
+  Best yet, you can share this unique link with others so they can edit the content too. A great way in general to collaborate on content before posting to your SPA.
+</p>
 
 <stache-page-anchor>Sample page</stache-page-anchor>
-<p>Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it friendly and brief. Then, create a new file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.</p>
+<p>
+  Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it friendly and brief. Then, create a new file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
+</p>
+
+<sky-alert alertType="info">If you are a Blackbaud user and have your omnibar set up, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.</sky-alert>
 
 <stache-code-block>
-<!-- &lt;app-nav&gt;
-&lt;/app-nav&gt; -->
+&lt;app-nav&gt;
+&lt;/app-nav&gt;
 
 &lt;stache
   pageTitle="Awesome Documentation"
@@ -614,7 +270,7 @@ Tools
 &lt;stache-image imageSource="~/assets​/hero-sample-1.jpg"&gt;
 &lt;/stache-image&gt;
 
-&lt;p>&lt;a routerLink="/support/changelog"&gt;Good stuff can be found in our Changelog.&lt;/a&gt;&lt;/p&gt;
+&lt;p>&lt;a stacheRouterLink="/support/changelog"&gt;Good stuff can be found in our Changelog.&lt;/a&gt;&lt;/p&gt;
 
 &lt;/stache&gt;
 </stache-code-block>
@@ -622,13 +278,11 @@ Tools
 
 
 <stache-page-anchor>Next steps</stache-page-anchor>
-<p>Now that you've learned some basics about {{ stache.jsonData.global.productNameLong }}, you're ready to dive in!</p>
-<ul>
-<li>To learn how to improve your documentation with layouts, style, and elements see the <a routerLink="/content/">Content page</a>.</li>
-<li>To learn about the technical side of {{ stache.jsonData.global.productNameShort }} and contribute, see the <a routerLink="/api/">API page</a>.
-</ul>
-
-
-
+<p>
+  Now that you've learned some basics about {{ stache.jsonData.global.productNameLong }}, you're ready to dive in!
+</p>
+<p>
+  To learn how to improve your documentation with layouts, style, and elements see the <a routerLink="/content/">Content page</a>.
+</p>
 
 </stache>

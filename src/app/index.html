@@ -18,7 +18,7 @@
 
  <stache-row>
      <stache-column screenSmall="12">
-         <p>This is the <em>work-in-progress</em> documentation site for {{ stache.jsonData.global.productNameLong }}, a component library designed to work with SKY UX Builder single-page applications (SPAs). For more information about SKY UX, visit their <a href="https://developer.blackbaud.com/skyux2/">documentation</a>.
+         <p>This is the <em>work-in-progress</em> documentation site for {{ stache.jsonData.global.productNameLong }}, a component library designed to work with SKY UX Builder single-page applications (SPAs). For more information about SKY UX, visit their <a href="https://developer.blackbaud.com/skyux/">documentation</a>.
   </p>
      </stache-column>
     </stache-row>
@@ -40,25 +40,11 @@
     </stache-column>
     <stache-column screenSmall="4">
       <div class="text-center">
-        <a routerLink="/learn/basics">
-          <h2 class="sky-section-heading">Basics</h2>
-          <span class="fa-stack fa-4x">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
-</span>
-        </a>
-          <p>
-            Get to know {{ stache.jsonData.global.productNameShort }} better, including how it's organized and how to create documentation.
-          </p>
-      </div>
-    </stache-column>
-    <stache-column screenSmall="4">
-      <div class="text-center">
         <a routerLink="/content">
           <h2 class="sky-section-heading">Content</h2>
           <span class="fa-stack fa-4x">
         <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+        <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
 </span>
         </a>
           <p>
@@ -66,51 +52,78 @@
           </p>
       </div>
     </stache-column>
+    <stache-column screenSmall="4">
+      <div class="text-center">
+        <a routerLink="/support/migrate">
+          <h2 class="sky-section-heading">Migrating from Stache 1?</h2>
+          <span class="fa-stack fa-4x">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-suitcase fa-stack-1x fa-inverse"></i>
+</span>
+        </a>
+          <p>
+            Follow our step-by-step guide to moving your content to Stache 2.
+          </p>
+      </div>
+    </stache-column>
   </stache-row>
 
 <div class="secondary-bgd">
-  <h1>Why Stache?</h1>
-
-  <p>Are you ready for consumers to use what you've engineered? Then it's time to set up a Stache site and convert your brainstorming and in-development documentation into ready-to-consume, polished content. Stache enforces strong information architecture, proven navigation methods, and well-designed information. Learn why Stache is a great resource for technical documentation.</p>
-
   <stache-row>
       <stache-column screenSmall="5">
         <stache-image
-          imageAlt="A First-class Experience for Consumers"
-          imageSource="~/assets/consumer.jpg">
+          imageAlt="Easy to Set Up, Add Content, and Extend"
+          imageSource="~/assets/content-developer.jpg">
         </stache-image>
       </stache-column>
       <stache-column screenSmall="7">
-        <h3>A High-quality Experience for Consumers</h3>
+        <h2>Why Stache?</h2>
         <p>
-          Building off the styles and components of SKY UX, Stache simplifies your technical documentation and optimizes it for consumers. Stache's built-in templates and components are designed specifically for documentation and help you tailor content to your audience’s needs.
+          Stache enables you to create documentation websites optimized for consumers. Stache is a SKY UX SPA with additional documentation-orientated features. With the power of Stache and SKY UX, your site will have a consistent user experience and strong information architecture that's accessible from anywhere on any device.
         </p>
         <p>
-          For Blackbaud users, additional features are available to help you meet Blackbaud standards. Stache uses the Blackbaud Identity Service for quick authentication, and to complement Stache's strong information architecture, we built a Stache Search Service specifically for Blackbaud SKY UX SPAs.
+          Best of all, you don't need to create your own components or learn Angular; you can start adding content in Markdown or HTML. With our pre-defined options for styling content, you can grab and go!
         </p>
         <p>
-          With these features and many others, your consumers can focus on learning and spend less time searching for the information they need to succeed.
+          Ready to learn more? [insert link to why page]
         </p>
       </stache-column>
   </stache-row>
   <br />
   <stache-row>
     <stache-column screenSmall="7">
-      <h3>Spend Time on What Matters Most</h3>
+      <h2>Stache for Blackbaud users</h2>
       <p>
-        When you create technical documentation, Stache eliminates tedious, time-consuming tasks so that you can focus on what matters most. With a few simple commands, you can set up a new website and start adding content in minutes. You don't need to create your own components or learn Angular; you can start adding content in Markdown or HTML. With our pre-defined options for styling content, you can just grab and go! And because Stache is open source, you can build on the Stache foundation if you have custom requirements.
+          For Blackbaud users, additional features are available to help you meet Blackbaud standards.
       </p>
-      <p>
-        Stache is a component library for SKY UX,  so Blackbaud users also get the benefits of SKY UX. This inclues quick setup with the SKY UX App Management Portal. Your Stache SPA also comes with Azure server storage and automatically configured deployments. With the power of SKY UX and Stache, you can go from concept to customer-ready website in no time!
-      </p>
-      <p>
-        Are you ready <a routerLink="/learn/get-started">to get started</a>?
-      </p>
+        <ul>
+          <li>
+            <p>
+              To verify internal content is accessible to Blackbaud employees only, Stache uses the Blackbaud Identity Service for authentication.
+            </p>
+          </li>
+          <li>
+            <p>
+              To enable search for your site and include your content in the <a href="https://docs.blackbaud.com">Blackbaud global search</a>, we provide the Stache Search Service.
+            </p>
+          </li>
+          <li>
+            <p>Blackbaud Stache SPAs use Git in VSTS. Blackbaud VSTS repos are set up with branch policies that encourage peer review and a build process for ensuring your content can deploy successfully to Azure. This means you can have more confidence that your consumers have the most accurate information with no website downtime. </p>
+          </li>
+          <li>
+            <p>
+              Quick self-serve setup provides you with a VSTS repo, Azure server storage, automatically configured deployments, and publishes your app to – <stache-code escapeCharacters="true">https://docs.blackbaud.com/{yourappname}</stache-code>.
+            </p>
+          </li>
+        </ul>
+        <p>
+          You can create a new Stache site, edit content, and publish on your own without any additional requests or assistance!
+        </p>
     </stache-column>
     <stache-column screenSmall="5">
         <stache-image
-          imageAlt="Easy to Set Up, Add Content, and Extend"
-          imageSource="~/assets/content-developer.jpg">
+          imageAlt="Stache for Blackbaud users"
+          imageSource="~/assets/consumer.jpg">
         </stache-image>
     </stache-column>
   </stache-row>

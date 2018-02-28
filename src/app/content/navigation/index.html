@@ -1,0 +1,164 @@
+<stache pageTitle="Navigation" showBreadcrumbs="true" showTableOfContents="true">
+
+
+<stache-page-summary>
+    {{ stache.jsonData.global.productNameShort }} provides several navigational utilities for moving users quickly thorough your content. Most of these are enabled by default and handled for you automatically.
+</stache-page-summary>
+
+<stache-page-anchor>
+  Back to Top
+</stache-page-anchor>
+
+  <sky-key-info>
+    <sky-key-info-label>
+      Set by default
+    </sky-key-info-label>
+  </sky-key-info>
+
+  <p>
+    For long form content, having to scroll manually to the top of the page is annoying. The back to top button provides a quick way to navigate back to the top of a page. Back to top is enabled by default. You can disable it on the <stache-code>stache</stache-code> tag.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      showBackToTop="false">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+
+<stache-page-anchor>
+  Breadrumbs
+</stache-page-anchor>
+
+<sky-key-info>
+  <sky-key-info-label>
+    Set by default
+  </sky-key-info-label>
+</sky-key-info>
+
+  <p>
+    Breadcrumbs provide you a direct path from your current location to the home page. This pattern gives users an easy way to see exactly where they are in the context of the site. Breadcrumbs are enabled by default. You can disable them on the <stache-code>stache</stache-code> tag when you don't want them to display, such as on the home page.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      showBreadcrumbs="false">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+<stache-page-anchor>
+  Page Anchor
+</stache-page-anchor>
+
+<sky-key-info>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
+
+  <p>
+    Page anchors provide inter-page navigation and allow you to link to specific sections of a page. These serve a dual purpose as page section headers. Page anchors are used to generate the links for the table of contents.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page">
+      <stache-page-anchor>
+        Section One
+      </stache-page-anchor>
+      // Some content
+
+      <stache-page-anchor>
+        Section Two
+      </stache-page-anchor>
+      // More content
+
+    </stache>
+  </stache-code-block>
+
+<stache-page-anchor>
+  Table of Contents
+</stache-page-anchor>
+
+<sky-key-info>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
+
+  <p>
+    The table of contents allows you to navigate quickly within a page using page anchors. It also serves as an overview of the page contents. This component, combined with the back to top and page anchors, creates a quick and effortless way to navigate long form content.
+  </p>
+
+  <p>
+    To use the table of contents on your page, enable it on the <stache-code>stache</stache-code> tag.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      showTableOfContents="true">
+      <stache-page-anchor>
+        Section One
+      </stache-page-anchor>
+
+      // Some content
+
+      <stache-page-anchor>
+        Section Two
+      </stache-page-anchor>
+
+      // More content
+
+    </stache>
+  </stache-code-block>
+
+<stache-page-anchor>
+  Navigation Title
+</stache-page-anchor>
+
+<sky-key-info>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
+
+  <p>
+   You can set the page's title in the sidebar and breadcrumb navigations.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      navTitle="Sample">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+<stache-page-anchor>
+  Navigation Order
+</stache-page-anchor>
+
+<sky-key-info>
+  <sky-key-info-label>
+    Optional
+  </sky-key-info-label>
+</sky-key-info>
+
+  <p>
+   You can set the order the page appears in the sidebar navigation, relative to the sibling pages.
+  </p>
+
+  <stache-code-block>
+    <stache
+      pageTitle="My Sample Page"
+      navOrder="1">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+
+</stache>

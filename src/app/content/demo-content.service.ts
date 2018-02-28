@@ -83,7 +83,7 @@ export class StacheDemoContentService {
     {
       name: 'Include',
       route: '/content/include',
-      icon: 'photo',
+      icon: 'recycle',
       summary: 'Provides a mechanism for single sourcing static content.'
     },
     {
@@ -153,10 +153,10 @@ export class StacheDemoContentService {
       summary: `Wraps elements and causes them to affix to the window on scroll.`
     },
     {
-      name: 'Link',
+      name: 'Links',
       route: '/content/link',
       icon: 'link',
-      summary: `Links to a page or page section in a site.`
+      summary: `Links to an internal page or a page section in a site, or to an external website.`
     },
     {
       name: 'Edit Button',
@@ -169,6 +169,18 @@ export class StacheDemoContentService {
       route: '/content/search',
       icon: 'search',
       summary: `Enables search capabilities for site content.`
+    },
+    {
+      name: 'Navigation',
+      route: '/content/navigation',
+      icon: 'chevron-circle-up',
+      summary: 'Stache provides several navigational utilities for moving users quickly thorough your content.'
+    },
+    {
+      name: 'Layouts',
+      route: '/content/layouts',
+      icon: 'file-o',
+      summary: 'Stache layouts enable consistent formatting for your content.'
     }
   ];
 

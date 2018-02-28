@@ -3,7 +3,31 @@
 
   <stache-page-summary>
     <p>
-      The Image component provides a responsive container for an image.
+      To use images in your {{ stache.jsonData.global.productNameShort }} project, add them to your <stache-code>src/assets</stache-code> directory in the source folder.
+    </p>
+    <ul>
+      <li>
+        <i class="fa fa-folder"></i> src
+        <ul>
+          <li>
+            <i class="fa fa-folder"></i> assets
+            <ul>
+              <li>
+                <i class="fa fa-folder"></i> image-name.jpg
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <sky-alert alertType="info">
+    If you need to upload a lot of image files, we recommend you organize your images into subfolders by page name.
+  </sky-alert>
+     <p>
+      You can then reference them in your {{ stache.jsonData.global.productNameShort }} pages. The Image component provides a responsive container for the image.
+    </p>
+    <p>
+      Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
     </p>
 
     <h3>
@@ -18,25 +42,7 @@
         <stache-code>imageAlt</stache-code> — The alt tag for the image. Used for accessibility.
       </li>
     </ul>
-   <p>All images and other static assets should be stored in the<stache-code>src/assets</stache-code> directory.</p>
-  <ul>
-    <li>
-      <i class="fa fa-folder"></i> src
-      <ul>
-        <li>
-          <i class="fa fa-folder"></i> assets
-          <ul>
-            <li>
-              <i class="fa fa-folder"></i> image-name.jpg
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <sky-alert alertType="info">
-  If you need to upload a lot of image files, we recommend you organize your images into subfolders by page name.
-</sky-alert>
+
   </stache-page-summary>
 
   <stache-page-anchor>

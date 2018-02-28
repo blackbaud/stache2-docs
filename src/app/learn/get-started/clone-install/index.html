@@ -9,13 +9,53 @@
     </stache-tutorial-heading>
     <stache-tutorial-summary>
       <p>
-        This tutorial provides step-by-step instructions on how to clone and set up an existing Stache SPA from VSTS on your computer.
+        This tutorial provides step-by-step instructions on how to clone and set up an existing Stache SPA on your computer.
       </p>
     </stache-tutorial-summary>
 
     <sky-alert alertType="info">
       Before you begin this tutorial, you need to complete the <a routerLink="/learn/get-started">SKY UX prerequisites</a>.
     </sky-alert>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Clone the Git repo from GitHub
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          If your repo is in VSTS, skip to step 2.
+        </p>
+        <ol>
+          <li>
+            From GitHub, navigate to your repository.
+          </li>
+          <li>
+            <p>
+              Select the <strong>Clone or download</strong> button and copy the clone link.
+            </p>
+            <stache-image
+              imageAlt="GitHub clone button"
+              imageSource="~/assets/github_clone.png"
+              class="stache-image-border">
+            </stache-image>
+          </li>
+          <li>
+            <p>
+              Open a terminal or command prompt from the location where you store your Git repos. Enter <stache-code>git clone</stache-code> and paste in the link you just copied.
+            </p>
+            <stache-include fileName="folder-warning.html">
+            </stache-include>
+          </li>
+          <li>
+            Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac). The repo clones locally.
+          </li>
+        </ol>
+
+        <p>
+          Continue with step 3.
+        </p>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>

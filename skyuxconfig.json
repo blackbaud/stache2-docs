@@ -7,7 +7,7 @@
     "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
   ],
   "app": {
-    "title": "SkyMail Documentation"
+    "title": "Blackbaud Stache 2 Documentation"
   },
   "appSettings": {
     "stache": {
@@ -50,6 +50,10 @@
                 {
                   "title": "Plugins",
                   "route": "/learn/plugins"
+                },
+                {
+                  "title": "Blackbaud Procedures",
+                  "url": "https://docs.blackbaud.com/stache-internal"
                 }
               ]
             },
