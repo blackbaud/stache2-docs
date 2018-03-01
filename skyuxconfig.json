@@ -3,8 +3,7 @@
   "mode": "easy",
   "compileMode": "aot",
   "plugins": [
-    "@blackbaud/skyux-builder-plugin-stache",
-    "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
+    "@blackbaud/skyux-builder-plugin-stache"
   ],
   "app": {
     "title": "Blackbaud Stache 2 Documentation"
