@@ -75,6 +75,14 @@
                 {
                   "title": "Contribute",
                   "route": "/support/contribute"
+                },
+                {
+                  "title": "Troubleshooting",
+                  "route": "/support/troubleshoot"
+                },
+                {
+                  "title": "Why Stache?",
+                  "route": "/support/why-stache"
                 }
               ]
             }
