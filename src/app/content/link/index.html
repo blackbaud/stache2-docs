@@ -21,7 +21,7 @@
       </li>
     </ul>
     <sky-alert alertType="info">
-      For external hrefs, <stache-code>stacheRouterLink</stache-code> doesn't enable users to right-click the link and open in a new window or tab. If you have an external link you'd like to open in a new window, or give the users the option open in a new window, use an HTML <stache-code>href</stache-code> instead. Example: <stache-code escapeCharacters="true"><a href="www.google.com">I'm an external link.</a></stache-code>
+      For external hrefs, <stache-code>stacheRouterLink</stache-code> doesn't enable users to right-click the link and open in a new window or tab. If you have an external link you'd like to open in a new window, or give the users the option open in a new window, use an HTML <stache-code>href</stache-code> instead. Example: <stache-code escapeCharacters="true"><a href="www.google.com">I'm an external link. <i class="fa fa-external-link" aria-hidden="true"></i></a></stache-code>
     </sky-alert>
   </stache-page-summary>
 
@@ -31,7 +31,7 @@
 
   <div class="stache-demo-page-result">
     <p>
-      <a stacheRouterLink="https://www.google.com">External link</a>
+      <a stacheRouterLink="https://www.google.com">External link <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </p>
     <p>
     <a stacheRouterLink="/content/action-buttons" fragment="code">Internal navigation link to Action buttons code sample</a>
@@ -70,7 +70,7 @@
     <sky-tabset>
       <sky-tab tabHeading="sample">
         <stache-code-block languageType="markup">
-          <a stacheRouterLink="https://www.google.com">External link</a>
+          <a stacheRouterLink="https://www.google.com">External link <i class="fa fa-external-link" aria-hidden="true"></i></a>
           <a stacheRouterLink="/content/action-buttons" fragment="code">Internal navigation link to Action buttons code sample</a>
           <a stacheRouterLink="." fragment="test">Internal navigation within a page</a>
         </stache-code-block>
