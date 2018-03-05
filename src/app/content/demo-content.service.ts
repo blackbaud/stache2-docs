@@ -66,7 +66,7 @@ export class StacheDemoContentService {
       name: 'Image',
       route: '/content/image',
       icon: 'photo',
-      summary: 'Provides a responsive image container.'
+      summary: 'Provides a responsive container to display an image.'
     },
     {
       name: 'Tutorial',
@@ -156,7 +156,7 @@ export class StacheDemoContentService {
       name: 'Links',
       route: '/content/link',
       icon: 'link',
-      summary: `Links to an internal page or a page section in a site, or to an external website.`
+      summary: `Links to an internal page, a page section within a page, or an external website.`
     },
     {
       name: 'Edit Button',
@@ -174,13 +174,13 @@ export class StacheDemoContentService {
       name: 'Navigation',
       route: '/content/navigation',
       icon: 'chevron-circle-up',
-      summary: 'Stache provides several navigational utilities for moving users quickly thorough your content.'
+      summary: 'Provides navigational utilities to let users move through your content.'
     },
     {
       name: 'Layouts',
       route: '/content/layouts',
       icon: 'file-o',
-      summary: 'Stache layouts enable consistent formatting for your content.'
+      summary: 'Enable consistent formatting for the content on your Stache site.'
     }
   ];
 
