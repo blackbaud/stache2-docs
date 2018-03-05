@@ -6,67 +6,64 @@
 
   <stache-page-summary>
     <p>
-      As you are getting to know {{ stache.jsonData.global.productNameShort }}, use the documentation below to understand how it's organized and how to create documentation using {{ stache.jsonData.global.productNameShort }}.
+      As you get to know {{ stache.jsonData.global.productNameShort }}, use the documentation below to understand how it's organized and how to create documentation.
     </p>
   </stache-page-summary>
 
-
-<stache-page-anchor>
-Folder structure
-</stache-page-anchor>
-
-<p>
-  When working on a SKY UX application, there is some folder structure to learn.
-</p>
-
-<stache-include
-  fileName="folder-structure-example.html">
-</stache-include>
-
-<basics-definition-list>
-</basics-definition-list>
-
-<stache-page-anchor>
+  <stache-page-anchor>
+    Folder structure
+  </stache-page-anchor>
+  
+  <p>
+    To work on a SKY UX application, you need to learn about the folder structure.
+  </p>
+  
+  <stache-include
+    fileName="folder-structure-example.html">
+  </stache-include>
+  
+  <basics-definition-list>
+  </basics-definition-list>
+  
+  <stache-page-anchor>
     Stache wrapper
-</stache-page-anchor>
-
-<p>
-  The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} Wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project, and contains all the other {{ stache.jsonData.global.productNameShort }} tags and content. Most of your page level configuration is done through the {{ stache.jsonData.global.productNameShort }} Wrapper, including layouts and navigation. Typically, this is the first tag you will want to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
-</p>
-
-<p>
-  {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most of the properties on the {{ stache.jsonData.global.productNameShort }} tag have defaults, so you will rarely have to set them yourself. The main exceptions are the pageTitle, navTitle, and navOrder.
-</p>
-
-<stache-code-block>
-  <stache pageTitle="My Sample Page">
-    // Your content here.
-  </stache>
-</stache-code-block>
-
+  </stache-page-anchor>
+  
+  <p>
+    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
+  </p>
+  <p>
+    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <stache-code>stache</stache-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <stache-code>pageTitle</stache-code>, <stache-code>navTitle</stache-code>, and <stache-code>navOrder</stache-code>.
+  </p>
+  
+  <stache-code-block>
+    <stache pageTitle="My Sample Page">
+      // Your content here.
+    </stache>
+  </stache-code-block>
+  
   <p>
     <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-primary">Learn More</button></a>
   </p>
-
-<stache-page-anchor>
-Application navigation
-</stache-page-anchor>
-
-<p>
-  To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.
-</p>
-
-<sky-alert alertType="info">
-  For <strong>internal Blackbaud SPAs</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. However, it is for internal Blackbaud use only. To learn how to set up top-level navigation with the omnibar, see step 4 of the <a href="https://docs.blackbaud.com/stache-internal/new-bb-stache">Create a Blackbaud Internal Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a> tutorial.
-</sky-alert>
-
-<h3>
-  Display navigation bar
-</h3>
-
-<p>
-  To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
-</p>
+  
+  <stache-page-anchor>
+    Application navigation
+  </stache-page-anchor>
+  
+  <p>
+    To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.
+  </p>
+  <sky-alert alertType="info">
+    For <strong>internal Blackbaud SPAs</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. However, it is for internal Blackbaud use only. To learn how to set up top-level navigation with the omnibar, see step 4 of the <a href="https://docs.blackbaud.com/stache-internal/new-bb-stache">Create a Blackbaud Internal Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a> tutorial.
+  </sky-alert>
+  
+  <h3>
+    Display navigation bar
+  </h3>
+  
+  <p>
+    To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
+  </p>
 
 <stache-code-block languageType="js">
 &lt;app-nav&gt;&lt;/app-nav&gt;
@@ -77,33 +74,28 @@ Application navigation
 </h3>
 
 <p>
-  To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA.
-</p>
-
-<sky-alert alertType="info">
-  To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial <i class="fa fa-external-link" aria-hidden="true"></i></a> on the SKY UX website.
-</sky-alert>
-
-<ol>
-  <li>
-    <p>
-      In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.
-    </p>
-  </li>
-  <li>
-    <p>
-      Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.
-    </p>
-    <sky-alert alertType="info">
-      If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.
-    </sky-alert>
-  </li>
-  <li>
-    <p>
-      Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.
-    </p>
-  </li>
-  <stache-code-block languageType="typescript">
+  To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA. To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial <i class="fa fa-external-link" aria-hidden="true"></i></a> on the SKY UX website.
+  </p>
+  <ol>
+    <li>
+      <p>
+        In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.
+      </p>
+    </li>
+    <li>
+      <p>
+        Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.
+      </p>
+      <p>
+        If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.
+      </p>
+    </li>
+    <li>
+      <p>
+        Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.
+      </p>
+    </li>
+    <stache-code-block languageType="typescript">
       export class AppNavComponent {
         public nav = [
           {
@@ -122,133 +114,122 @@ Application navigation
       }
   </stache-code-block>
 </ol>
-
-<stache-page-anchor>
-  Custom CSS
-</stache-page-anchor>
-
-<p>
-  In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
-</p>
-
-<stache-code-block languageType="scss">
+  
+  <stache-page-anchor>
+    Custom CSS
+  </stache-page-anchor>
+  
+  <p>
+    In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
+  </p>
+  <stache-code-block languageType="scss">
   &#47;&#47;CSS
 
 img &#123;
   border&#58; 1px solid &#35;cccccc&#59;
 &#125;
-
-</stache-code-block>
-
-<p>
-  Then, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file. Insert this line of code at the very beginning of the file.
-</p>
-
-<stache-code-block>require('style-loader!./app.scss');</stache-code-block>
-
-<stache-page-anchor>
-  Command line
-</stache-page-anchor>
-
-<p>
-  Stache asks you to use commands when installing and working with your repo.
-</p>
-
-<p>
-  On a Mac, use Terminal.
-</p>
-
-<p>
-  On a PC, type <strong>cmd</strong> in the search box to access the command line. Once you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code>. Git Bash causes a conflict that prevents the install from completing.
-</p>
-
-<stache-page-anchor>
-VSTS for Blackbaud users
-</stache-page-anchor>
-
-<p>
-  Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">VSTS <i class="fa fa-external-link" aria-hidden="true"></i></a>. VSTS has pull requests just like GitHub. However, there are three key differences to know about.
-</p>
-
-<ol>
-  <li>
-    When you create a pull request (PR),  please remove <stache-code>[Products]\Products Team</stache-code> from the reviewers or edit the branch policies. <br />If you have VSTS permission, from your repo's Branches page, hover over the branch row, select the "...", and then select Branch policies. On this page you can set many branch settings, including who to automatically include on code reviews. <br /> If you don't have permission, speak to your repo creator/owner.
-  </li
-  >
-  <li>
-    Each time you create a PR, or make a change to your pull request, it kicks off a build. The build takes a few minutes to complete and tests to make sure there aren't any problems with your code before it merges.
-  </li>
-
-  <li>
-    The PR build is one part of the PR approval process. Most VSTS repos also require you to get at least one code review approval.
-  </li>
-</ol>
-
-<p>
-  Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.
-</p>
-
-<p>
-  You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in VSTS lets you make quick changes without leaving the browser. To learn how to make changes with the VSTS web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/vsts-editor/">Edit a VSTS Stache 2 Site in Your Browser tutorial <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a>.
-</p>
-
-<stache-page-anchor>
-  Tools
-</stache-page-anchor>
-
-<p>
-  To help you work with {{ stache.jsonData.global.productNameLong }} SPAs, we have some tool recommendations.
-</p>
-
-
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    VS Code
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Code editor
-  </sky-key-info-label>
-</sky-key-info>
-
-<p>
-  <a href="https://code.visualstudio.com/">Visual Studio Code <i class="fa fa-external-link" aria-hidden="true"></i></a> (VS Code) is a code editor well suited towards working with SKY UX SPAs. In addition, VS Code enables many extensions that can help you validate your work before checking in your changes. Here are some extensions we recommend:
-</p>
-
-<ul>
-  <li>TSLint</li>
-  <li>HTMLHint</li>
-  <li>highlight-matching-tag</li>
-  <li>Guides</li>
-  <li>seti-icons</li>
-</ul>
-
-<p>
-  If you are a developer, you'll want to search the marketplace for technical extensions that can help you work more efficiently.
-</p>
-
-<sky-key-info layout="horizontal">
-  <sky-key-info-value>
-    Markdown Editor
-  </sky-key-info-value>
-  <sky-key-info-label>
-    Converts markdown to html
-  </sky-key-info-label>
-</sky-key-info>
-
-<p>
-  If you are new (or rusty) to HTML, but know markdown, this <a href="https://jbt.github.io/markdown-editor/">(GitHub-Flavored) Markdown Editor <i class="fa fa-external-link" aria-hidden="true"></i></a> tool was recommended to us. When you navigate to the page, it creates a unique link. You can edit the text in markdown on the left and it will convert it to HTML on the right. Then, you can use the inspect tool in your browser to copy the html.
-</p>
-
-<p>
-  Best yet, you can share this unique link with others so they can edit the content too. A great way in general to collaborate on content before posting to your SPA.
-</p>
-
-<stache-page-anchor>Sample page</stache-page-anchor>
-<p>
-  Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it friendly and brief. Then, create a new file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
-</p>
-
-<sky-alert alertType="info">If you are a Blackbaud user and have your omnibar set up, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.</sky-alert>
+  </stache-code-block>
+  <p>
+    After the <stache-code>app.scss</stache-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file and insert this line of code at the beginning of the file.
+  </p>
+  <stache-code-block>require('style-loader!./app.scss');</stache-code-block>
+  
+  <stache-page-anchor>
+    Command line
+  </stache-page-anchor>
+  
+  <p>
+    Stache asks you to use commands when installing and working with your repo.
+  </p>
+  <p>
+    On a Mac, use Terminal.
+  </p>
+  <p>
+    On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code> because it causes a conflict that prevents the install from completing.
+  </p>
+  
+  <stache-page-anchor>
+    VSTS for Blackbaud users
+  </stache-page-anchor>
+  
+  <p>
+    Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">VSTS <i class="fa fa-external-link" aria-hidden="true"></i></a>. VSTS has pull requests just like GitHub. However, there are three key differences to know about.
+  </p>
+  <ol>
+    <li>
+      When you create a pull request (PR),  please remove <stache-code>[Products]\Products Team</stache-code> from the reviewers or edit the branch policies. <br />If you have VSTS permission, from your repo's Branches page, hover over the branch row, select the "...", and then select Branch policies. On this page you can set many branch settings, including who to automatically include on code reviews. <br /> If you don't have permission, speak to your repo creator/owner.
+    </li>
+    <li>
+      Each time you create a PR, or make a change to your pull request, it kicks off a build. The build takes a few minutes to complete and tests to make sure there aren't any problems with your code before it merges.
+    </li>
+    <li>
+      The PR build is one part of the PR approval process. Most VSTS repos also require you to get at least one code review approval.
+    </li>
+  </ol>
+  <p>
+    Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.
+  </p>
+  <p>
+    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in VSTS lets you make quick changes without leaving the browser. To learn how to make changes with the VSTS web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/vsts-editor/">Edit a VSTS Stache 2 Site in Your Browser tutorial <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a>.
+  </p>
+  
+  <stache-page-anchor>
+    Tools
+  </stache-page-anchor>
+  
+  <p>
+    To help you work with {{ stache.jsonData.global.productNameLong }} SPAs, we have some tool recommendations.
+  </p>
+  
+  <sky-key-info layout="horizontal">
+    <sky-key-info-value>
+      VS Code
+    </sky-key-info-value>
+    <sky-key-info-label>
+      Code editor
+    </sky-key-info-label>
+  </sky-key-info>
+  
+  <p>
+    <a href="https://code.visualstudio.com/">Visual Studio Code <i class="fa fa-external-link" aria-hidden="true"></i></a> (VS Code) is a code editor well suited to working with SKY UX SPAs. In addition, VS Code enables many extensions that can help you validate your work before checking in your changes. Here are some extensions we recommend:
+  </p>
+  <ul>
+    <li>TSLint</li>
+    <li>HTMLHint</li>
+    <li>highlight-matching-tag</li>
+    <li>Guides</li>
+    <li>seti-icons</li>
+  </ul>
+  <p>
+    If you are a developer, you'll want to search the marketplace for technical extensions that can help you work more efficiently.
+  </p>
+  
+  <sky-key-info layout="horizontal">
+    <sky-key-info-value>
+      Markdown Editor
+    </sky-key-info-value>
+    <sky-key-info-label>
+      Converts markdown to html
+    </sky-key-info-label>
+  </sky-key-info>
+  
+  <p>
+    If you are new (or rusty) to HTML, but know markdown, this <a href="https://jbt.github.io/markdown-editor/">(GitHub-Flavored) Markdown Editor <i class="fa fa-external-link" aria-hidden="true"></i></a> tool was recommended to us. When you navigate to the page, it creates a unique link. You can edit the text in Markdown on the left, and the editor converts it to HTML on the right. Then, you can use the inspect tool in your browser to copy the HTML.
+  </p>
+  <p>
+    Best of all, you can share this unique link with others so they can edit the content too. This is a great way in general to collaborate on content before posting to your SPA.
+  </p>
+  
+  <stache-page-anchor>
+    Sample page
+  </stache-page-anchor>
+  
+  <p>
+    Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
+  </p>
+  <sky-alert alertType="info">
+    If you are a Blackbaud user and have your omnibar set up, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
+  </sky-alert>
 
 <stache-code-block>
 &lt;app-nav&gt;
@@ -274,15 +255,16 @@ VSTS for Blackbaud users
 
 &lt;/stache&gt;
 </stache-code-block>
-
-
-
-<stache-page-anchor>Next steps</stache-page-anchor>
-<p>
-  Now that you've learned some basics about {{ stache.jsonData.global.productNameLong }}, you're ready to dive in!
-</p>
-<p>
-  To learn how to improve your documentation with layouts, style, and elements see the <a routerLink="/content/">Content page</a>.
-</p>
-
+  
+  <stache-page-anchor>
+    Next steps
+  </stache-page-anchor>
+  
+  <p>
+    Now that you've learned some basics about {{ stache.jsonData.global.productNameLong }}, you're ready to dive in!
+  </p>
+  <p>
+    To learn how to improve your documentation with layouts, style, and elements see the <a routerLink="/content/">Content page</a>.
+  </p>
+  
 </stache>
