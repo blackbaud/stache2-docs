@@ -3,7 +3,7 @@
 
   <stache-page-summary>
     <p>
-      To use images in your {{ stache.jsonData.global.productNameShort }} project, add them to your <stache-code>src/assets</stache-code> directory in the source folder.
+      The image component provides a responsive container to display an image. To display images on your {{ stache.jsonData.global.productNameShort }} site, add them to the <stache-code>src/assets</stache-code> directory in the source folder.
     </p>
     <ul>
       <li>
@@ -13,21 +13,18 @@
             <i class="fa fa-folder"></i> assets
             <ul>
               <li>
-                <i class="fa fa-folder"></i> image-name.jpg
+                <i class="fa fa-file"></i> image-name.jpg
               </li>
             </ul>
           </li>
         </ul>
       </li>
     </ul>
-    <sky-alert alertType="info">
-    If you need to upload a lot of image files, we recommend you organize your images into subfolders by page name.
-  </sky-alert>
-     <p>
-      You can then reference them in your {{ stache.jsonData.global.productNameShort }} pages. The Image component provides a responsive container for the image.
+    <p>
+      If your Stache site requires a lot of image files, we recommend you organize the images into subfolders by page name.
     </p>
     <p>
-      Every image must be referenced with the <stache-code>~/assets&#x200B;/</stache-code> prefix for SKY UX to register it as a static asset and render it.
+      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <stache-code>~/assets&#x200B;/</stache-code> prefix in order for SKY UX to register it as a static asset and render it.
     </p>
 
     <h3>
@@ -39,7 +36,7 @@
         <stache-code>imageSource</stache-code> — The path to the image to render.
       </li>
       <li>
-        <stache-code>imageAlt</stache-code> — The alt tag for the image. Used for accessibility.
+        <stache-code>imageAlt</stache-code> — The alt tag to describe the image for accessibility.
       </li>
     </ul>
 

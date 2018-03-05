@@ -1,14 +1,14 @@
 <stache navTitle="Troubleshooting" pageTitle="Troubleshooting Stache" layout="container" showTableOfContents="true">
 
   <stache-page-summary>
-    While we try prevent issues by creating exceptional documentation, we know you may run into problems from time-to-time. On
-    this page, learn how to resolve them. Based on feedback from you and trends we notice, we'll continue to update our documentation
+    We try prevent issues by creating exceptional documentation, but we know you may run into problems from time-to-time. On
+    this page, learn how to resolve them. Based on your feedback and trends that we notice, we'll continue to update our documentation
     and add notes here.
     <a routerLink="/support">Let us know</a> how we can help you better.
   </stache-page-summary>
 
   <stache-page-anchor>
-    NPM Install
+    NPM install
   </stache-page-anchor>
   <h3>
     Scenarios
@@ -57,36 +57,35 @@
     When this happens, it means there's an error in the code for your Stache site. We recommend you use the browser developer
     tools to find the error. For example, in Chrome, right-click on the page and select
     <strong>Inspect</strong>. Then, select the Console tab. Do you see a lot of red text? Scroll up to the top to see if you can
-    find a clue as to where you made a mistake in the code.
+    find a clue to locate the error in the code.
   </p>
   <p>Common issues we've noticed:</p>
   <ul>
     <li>
       Did you provide an opening tag, like
-      <stache-code escapeCharacters="true">&lt;stache-page-anchor&gt;</stache-code> but not the closing one
+      <stache-code escapeCharacters="true">&lt;stache-page-anchor&gt;</stache-code> but not the closing one like
       <stache-code escapeCharacters="true">&lt;/stache-page-anchor&gt;</stache-code>?
     </li>
     <li>
-      Check your json files for errors. These can include an unnecessary comma, missing comma, unncessary space, unncessary tab,
-      missing character (
+      Check your JSON files for errors. These can include unnecessary commas, missing commas, unncessary spaces, unncessary tabs,
+      missing characters (
       <stache-code escapeCharacters="true">{</stache-code>,
       <stache-code escapeCharacters="true">[</stache-code>,
       <stache-code escapeCharacters="true">}</stache-code>,
       <stache-code escapeCharacters="true">]</stache-code>, etc), and improper formatting.
     </li>
     <li>
-      Did you reference an image that hasn't been added to your assets folder yet?
+      Did you reference an image that wasn't added to your assets folder?
     </li>
     <li>
-      Did you misspell a component? If you reference the
-      <stache-code>stace-code</stache-code>, it will actually go try to find that component and fail.
+      Did you misspell a component? For example, if you reference <stache-code>stace-code</stache-code> instead of <stache-code>stache-code</stache-code>, your SPA will try to find that misspelled component and fail.
     </li>
   </ul>
 
   <p>
-    If you've made a recent change, but everything looks good, you can also stop serving and serve again to see if that fixes
-    the issue. If it didn't, keep looking, as there's an error in there somewhere. Still can't find it?
-    <a routerLink="/support">Contact us</a> and we'd be glad to help hunt it down.
+    If you've made a recent change and everything looks good, you can also stop serving and serve again to see if that fixes
+    the issue. If not, keep looking because there's an error in there somewhere. Still can't find it?
+    <a routerLink="/support">Contact us</a> and we'll be glad to help hunt it down.
   </p>
 
   <stache-page-anchor>
@@ -94,7 +93,7 @@
   </stache-page-anchor>
 
   <p>
-    If you're curious about whether a problem is "just you" or not, search our backlog for feature requests and bugs. We file
+    If you're curious about whether a problem is "just you," search our backlog for feature requests and bugs. We file
     everything about Stache, including its plugins, to the one common log.
   </p>
   <p>
@@ -102,8 +101,8 @@
     <a href="https://github.com/blackbaud/stache2/issues">Stache GitHub backlog <i class="fa fa-external-link" aria-hidden="true"></i></a>
   </p>
   <p>
-    If you see something filed that we have not addressed yet, under Notifications, you can subscribe for updates. Also, we'd
-    love for you to add notes about how this is affecting you or details about how you need the new feature to work!
+    If you find a bug or request that we have not addressed, you can subscribe for updates under Notifications. Also, we'd
+    love for you to add notes about how the issue affects you or details about how you need the new feature to work!
   </p>
-
+  
 </stache>
