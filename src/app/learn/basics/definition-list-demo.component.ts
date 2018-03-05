@@ -44,7 +44,7 @@ export class SkyDefinitionListDemoComponent {
     },
     {
       label: 'global.json',
-      value: 'This file is where you set global data variables such as the application title.'
+      value: 'This file is where you set global data variables, such as the application title.'
     },
     {
       label: 'includes',
