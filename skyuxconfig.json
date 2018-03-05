@@ -6,7 +6,7 @@
     "@blackbaud/skyux-builder-plugin-stache"
   ],
   "app": {
-    "title": "Blackbaud Stache 2 Documentation"
+    "title": "Blackbaud Stache Documentation"
   },
   "appSettings": {
     "stache": {
@@ -24,7 +24,7 @@
     "nav": {
       "services": [
         {
-          "title": "Stache 2 Docs",
+          "title": "Stache Docs",
           "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
           "items": [
             {
