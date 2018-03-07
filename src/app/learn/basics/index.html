@@ -13,54 +13,54 @@
   <stache-page-anchor>
     Folder structure
   </stache-page-anchor>
-  
+
   <p>
     To work on a SKY UX application, you need to learn about the folder structure.
   </p>
-  
+
   <stache-include
     fileName="folder-structure-example.html">
   </stache-include>
-  
+
   <basics-definition-list>
   </basics-definition-list>
-  
+
   <stache-page-anchor>
     Stache wrapper
   </stache-page-anchor>
-  
+
   <p>
-    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
+    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
   </p>
   <p>
     {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <stache-code>stache</stache-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <stache-code>pageTitle</stache-code>, <stache-code>navTitle</stache-code>, and <stache-code>navOrder</stache-code>.
   </p>
-  
+
   <stache-code-block>
     <stache pageTitle="My Sample Page">
       // Your content here.
     </stache>
   </stache-code-block>
-  
+
   <p>
     <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-primary">Learn More</button></a>
   </p>
-  
+
   <stache-page-anchor>
     Application navigation
   </stache-page-anchor>
-  
+
   <p>
     To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.
   </p>
   <sky-alert alertType="info">
     For <strong>internal Blackbaud SPAs</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. However, it is for internal Blackbaud use only. To learn how to set up top-level navigation with the omnibar, see step 4 of the <a href="https://docs.blackbaud.com/stache-internal/new-bb-stache">Create a Blackbaud Internal Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a> tutorial.
   </sky-alert>
-  
+
   <h3>
     Display navigation bar
   </h3>
-  
+
   <p>
     To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
   </p>
@@ -114,11 +114,11 @@
       }
   </stache-code-block>
 </ol>
-  
+
   <stache-page-anchor>
     Custom CSS
   </stache-page-anchor>
-  
+
   <p>
     In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
   </p>
@@ -133,11 +133,11 @@ img &#123;
     After the <stache-code>app.scss</stache-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file and insert this line of code at the beginning of the file.
   </p>
   <stache-code-block>require('style-loader!./app.scss');</stache-code-block>
-  
+
   <stache-page-anchor>
     Command line
   </stache-page-anchor>
-  
+
   <p>
     Stache asks you to use commands when installing and working with your repo.
   </p>
@@ -147,11 +147,11 @@ img &#123;
   <p>
     On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install Git, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code> because it causes a conflict that prevents the install from completing.
   </p>
-  
+
   <stache-page-anchor>
     VSTS for Blackbaud users
   </stache-page-anchor>
-  
+
   <p>
     Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">VSTS <i class="fa fa-external-link" aria-hidden="true"></i></a>. VSTS has pull requests just like GitHub. However, there are three key differences to know about.
   </p>
@@ -172,15 +172,15 @@ img &#123;
   <p>
     You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in VSTS lets you make quick changes without leaving the browser. To learn how to make changes with the VSTS web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/vsts-editor/">Edit a VSTS Stache 2 Site in Your Browser tutorial <i class="fa fa-lock" aria-hidden="true" title="Blackbaud users only"></i></a>.
   </p>
-  
+
   <stache-page-anchor>
     Tools
   </stache-page-anchor>
-  
+
   <p>
     To help you work with {{ stache.jsonData.global.productNameLong }} SPAs, we have some tool recommendations.
   </p>
-  
+
   <sky-key-info layout="horizontal">
     <sky-key-info-value>
       VS Code
@@ -189,7 +189,7 @@ img &#123;
       Code editor
     </sky-key-info-label>
   </sky-key-info>
-  
+
   <p>
     <a href="https://code.visualstudio.com/">Visual Studio Code <i class="fa fa-external-link" aria-hidden="true"></i></a> (VS Code) is a code editor well suited to working with SKY UX SPAs. In addition, VS Code enables many extensions that can help you validate your work before checking in your changes. Here are some extensions we recommend:
   </p>
@@ -203,7 +203,7 @@ img &#123;
   <p>
     If you are a developer, you'll want to search the marketplace for technical extensions that can help you work more efficiently.
   </p>
-  
+
   <sky-key-info layout="horizontal">
     <sky-key-info-value>
       Markdown Editor
@@ -212,18 +212,18 @@ img &#123;
       Converts markdown to html
     </sky-key-info-label>
   </sky-key-info>
-  
+
   <p>
     If you are new (or rusty) to HTML, but know markdown, this <a href="https://jbt.github.io/markdown-editor/">(GitHub-Flavored) Markdown Editor <i class="fa fa-external-link" aria-hidden="true"></i></a> tool was recommended to us. When you navigate to the page, it creates a unique link. You can edit the text in Markdown on the left, and the editor converts it to HTML on the right. Then, you can use the inspect tool in your browser to copy the HTML.
   </p>
   <p>
     Best of all, you can share this unique link with others so they can edit the content too. This is a great way in general to collaborate on content before posting to your SPA.
   </p>
-  
+
   <stache-page-anchor>
     Sample page
   </stache-page-anchor>
-  
+
   <p>
     Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
   </p>
@@ -255,16 +255,16 @@ img &#123;
 
 &lt;/stache&gt;
 </stache-code-block>
-  
+
   <stache-page-anchor>
     Next steps
   </stache-page-anchor>
-  
+
   <p>
     Now that you've learned some basics about {{ stache.jsonData.global.productNameLong }}, you're ready to dive in!
   </p>
   <p>
     To learn how to improve your documentation with layouts, style, and elements see the <a routerLink="/content/">Content page</a>.
   </p>
-  
+
 </stache>
