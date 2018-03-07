@@ -6,7 +6,7 @@
     "@blackbaud/skyux-builder-plugin-stache"
   ],
   "app": {
-    "title": "Stache 2 Documentation"
+    "title": "Blackbaud Stache Documentation"
   },
   "appSettings": {
     "stache": {
@@ -24,7 +24,7 @@
     "nav": {
       "services": [
         {
-          "title": "Stache 2 Docs",
+          "title": "Stache Docs",
           "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
           "items": [
             {
@@ -47,8 +47,16 @@
                   "route": "/learn/update-stache"
                 },
                 {
+                  "title": "Migrate Stache",
+                  "route": "/learn/migrate"
+                },
+                {
                   "title": "Plugins",
                   "route": "/learn/plugins"
+                },
+                {
+                  "title": "Blackbaud Procedures",
+                  "url": "https://docs.blackbaud.com/stache-internal"
                 }
               ]
             },
@@ -70,6 +78,14 @@
                 {
                   "title": "Contribute",
                   "route": "/support/contribute"
+                },
+                {
+                  "title": "Troubleshooting",
+                  "route": "/support/troubleshoot"
+                },
+                {
+                  "title": "Why Stache?",
+                  "route": "/support/why-stache"
                 }
               ]
             }

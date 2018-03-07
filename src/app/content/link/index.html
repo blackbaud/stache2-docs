@@ -1,26 +1,28 @@
-<stache pageTitle="Link" showBreadcrumbs="true">
+<stache pageTitle="Links" showBreadcrumbs="true" navTitle="Links">
 
   <stache-page-summary>
     <p>
-      The link directive allows for navigation within a Stache site, including anchor points on a page.
+      In Angular, relative links for navigation within a site are implemented differently than external HMTL <stache-code>href</stache-code> links. To simplify the process, we created a Stache link directive that works for external links and internal navigation within a Stache site, including links to anchor points on the same page.
     </p>
+    <h3>
+      Link properties
+    </h3>
 
-  <h3>
-    Link properties
-  </h3>
-
-  <ul>
-    <li>
-      <p>
-        <stache-code>stacheRouterLink</stache-code> — Specifies the path to link to. To link to a section on the same page, pass in <stache-code>.</stache-code> for the route instead of the full path.
-      </p>
-    </li>
-    <li>
-      <p>
-        <stache-code>fragment (Optional)</stache-code> — Specifies the ID of the anchor point. For Stache page anchors, the ID will be a hypenated, lowercase version of the text.
-      </p>
-    </li>
-  </ul>
+    <ul>
+      <li>
+        <p>
+          <stache-code>stacheRouterLink</stache-code> — Specifies the link path. To link to a section on the same page, pass in <stache-code>.</stache-code> for the route instead of the full path.
+        </p>
+        <p>
+          <stache-code>stacheRouterLink</stache-code> doesn't enable users to right-click external links to open them in a new window or tab. To open an external link in a new window or tab, or to give users that option when they right-click, use an HTML <stache-code>href</stache-code> tag instead of <stache-code>stacheRouterLink</stache-code>. For example: <stache-code escapeCharacters="true"><a href="www.google.com">I'm an external link. <i class="fa fa-external-link" aria-hidden="true"></i></a></stache-code>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <stache-code>fragment</stache-code> — <i>(Optional)</i>  Specifies the ID of the anchor point. For Stache page anchors, the ID is a hypenated, lowercase version of the text.
+        </p>
+      </li>
+    </ul>
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -28,7 +30,15 @@
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <a stacheRouterLink="." fragment="test">To Test</a>
+    <p>
+      <a stacheRouterLink="https://www.google.com">External link <i class="fa fa-external-link" aria-hidden="true"></i></a>
+    </p>
+    <p>
+    <a stacheRouterLink="/content/action-buttons" fragment="code">Internal link to Action buttons code sample</a>
+    </p>
+    <p>
+    <a stacheRouterLink="." fragment="test">Internal link within the same page</a>
+    </p>
 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
@@ -46,7 +56,10 @@
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut minima illo provident mollitia numquam, dignissimos, nihil adipisci eius facere quisquam, dolorum in quaerat iure possimus consequuntur. Suscipit commodi nam voluptas.</p>
-    <stache-page-anchor>Test</stache-page-anchor>
+
+    <stache-page-anchor>
+      Test
+    </stache-page-anchor>
   </div>
 
   <stache-page-anchor>
@@ -57,7 +70,9 @@
     <sky-tabset>
       <sky-tab tabHeading="sample">
         <stache-code-block languageType="markup">
-          <a stacheRouterLink="." fragment="test">To Test</a>
+          <a stacheRouterLink="https://www.google.com">External link <i class="fa fa-external-link" aria-hidden="true"></i></a>
+          <a stacheRouterLink="/content/action-buttons" fragment="code">Internal navigation link to Action buttons code sample</a>
+          <a stacheRouterLink="." fragment="test">Internal navigation within a page</a>
         </stache-code-block>
       </sky-tab>
     </sky-tabset>

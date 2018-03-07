@@ -1,0 +1,108 @@
+<stache navTitle="Troubleshooting" pageTitle="Troubleshooting Stache" layout="container" showTableOfContents="true">
+
+  <stache-page-summary>
+    We try to prevent issues by creating exceptional documentation, but we know you may run into problems from time-to-time. On this page, learn how to resolve them. Based on your feedback and trends that we notice, we'll continue to update our documentation and add notes here. <a routerLink="/support">Let us know</a> how we can help you better.
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    NPM install
+  </stache-page-anchor>
+  <h3>
+    Scenarios
+  </h3>
+  <ul>
+    <li>
+      <p>When you were running
+        <stache-code>skyux new --template stache</stache-code> or
+        <stache-code>npm install</stache-code>, did the install time out?</p>
+    </li>
+    <li>
+      <p>Are you having a problem serving your site locally?</p>
+    </li>
+    <li>
+      <p>Did you update the dependencies in the
+        <stache-code>package.json</stache-code> file?</p>
+    </li>
+  </ul>
+  <h3>
+    Solution
+  </h3>
+  <p>
+    You may want to re-run
+    <stache-code>npm install</stache-code>. Before you do that, we recommend you delete your entire
+    <stache-code>node_modules</stache-code> folder. In the command line for the Stache site folder, enter
+    <stache-code>npm cache clear</stache-code>. When that completes, enter
+    <stache-code>npm install</stache-code>.
+  </p>
+
+  <stache-page-anchor>
+    Page isn't loading locally
+  </stache-page-anchor>
+  <h3>
+    Scenario
+  </h3>
+  <p>
+    When you run
+    <stache-code>skyux serve</stache-code>, does a browser window open to your "in-dev" site, but all you see is a bouncing green ball
+    and the page doesn't load?
+  </p>
+
+  <h3>
+    Solution
+  </h3>
+  <p>
+    When this happens, it means there's an error in the code for your Stache site. We recommend you use the browser developer
+    tools to find the error. For example, in Chrome, right-click on the page and select
+    <strong>Inspect</strong>. Then, select the Console tab. Do you see a lot of red text? Scroll up to the top to see if you can
+    find a clue to locate the error in the code.
+  </p>
+  <p>Common issues we've noticed:</p>
+  <ul>
+    <li>
+      Did you provide an opening tag, like
+      <stache-code escapeCharacters="true">&lt;stache-page-anchor&gt;</stache-code> but not the closing one like
+      <stache-code escapeCharacters="true">&lt;/stache-page-anchor&gt;</stache-code>?
+    </li>
+    <li>
+      Check your JSON files for errors. These can include unnecessary commas, missing commas, unncessary spaces, unncessary tabs,
+      missing characters (
+      <stache-code escapeCharacters="true">{</stache-code>,
+      <stache-code escapeCharacters="true">[</stache-code>,
+      <stache-code escapeCharacters="true">}</stache-code>,
+      <stache-code escapeCharacters="true">]</stache-code>, etc), and improper formatting.
+    </li>
+    <li>
+      Did you use punctionation, like a <stache-code>-</stache-code>, when you reference json files from a page? For example, when you use the action buttons component, don't use punctuation (ex. dashes) in your unique filename.
+    </li>
+    <li>
+      Did you reference an image that wasn't added to your assets folder?
+    </li>
+    <li>
+      Did you misspell a component? For example, if you reference <stache-code>stace-code</stache-code> instead of <stache-code>stache-code</stache-code>, your SPA will try to find that misspelled component and fail.
+    </li>
+  </ul>
+
+  <p>
+    If you've made a recent change and everything looks good, you can also stop serving and serve again to see if that fixes
+    the issue. If not, keep looking because there's an error in there somewhere. Still can't find it?
+    <a routerLink="/support">Contact us</a> and we'll be glad to help hunt it down.
+  </p>
+
+  <stache-page-anchor>
+    Check the Stache backlog
+  </stache-page-anchor>
+
+  <p>
+    If you're curious about whether a problem is "just you," search our backlog for feature requests and bugs. We file
+    everything about Stache, including its plugins, to the one common log.
+  </p>
+  <p>
+    <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+    <a href="https://github.com/blackbaud/stache2/issues">Stache GitHub backlog <i class="fa fa-external-link" aria-hidden="true"></i></a>
+  </p>
+  <p>
+    If you find a bug or request that we have not addressed, you can subscribe for updates under Notifications. Also, we'd
+    love for you to add notes about how the issue affects you or details about how you need the new feature to work!
+  </p>
+
+</stache>
