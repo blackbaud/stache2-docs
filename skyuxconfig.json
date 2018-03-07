@@ -47,6 +47,10 @@
                   "route": "/learn/update-stache"
                 },
                 {
+                  "title": "Migrate Stache",
+                  "route": "/learn/migrate"
+                },
+                {
                   "title": "Plugins",
                   "route": "/learn/plugins"
                 },
