@@ -55,13 +55,13 @@
                   "route": "/learn/plugins"
                 },
                 {
-                  "title": "Blackbaud Procedures",
+                  "title": "Blackbaud Staff Topics",
                   "url": "https://docs.blackbaud.com/stache-internal"
                 }
               ]
             },
             {
-              "title": "Content",
+              "title": "Components",
               "route": "/content"
             },
             {
