@@ -65,6 +65,10 @@
               "route": "/content"
             },
             {
+              "title": "Layouts",
+              "route": "/layouts"
+            },
+            {
               "title": "Support",
               "items": [
                 {
