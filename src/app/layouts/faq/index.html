@@ -1,0 +1,56 @@
+<stache
+    pageTitle="FAQ"
+    navTitle="FAQ"
+    showEditButton="false">
+
+<stache-page-summary>Like the name suggests, the page answers the most frequently asked questions; however, sometimes this creates an overwhelming wall of text. To avoid the wall of text, add the Repeater component to neatly organize the content. </stache-page-summary>
+
+<p>Use the Repeater component when you have five or more questions in your list and set the Repeater properties to <stache-code>multiple</stache-code> or <stache-code>single</stache-code>.</p>
+
+<p><sky-alert alertType="info">Consider where the answers could be added to other sections of the site. Often times, the FAQ page becomes a laundry list of questions without order or progression.</sky-alert></p>
+
+<stache-page-anchor>Try it!</stache-page-anchor>
+
+<div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <stache-code-block
+          languageType="markup">
+          <stache
+            pageTitle="FAQ">
+
+            <stache-page-summary>Here's a summary of the page.</stache-page-summary>
+
+            <sky-repeater expandMode="multiple">
+              <sky-repeater-item [isExpanded]="false">
+                <sky-repeater-item-title>Question 1</sky-repeater-item-title>
+                <sky-repeater-item-content>
+                    Gingerbread jelly-o lollipop ice cream toffee dragée sweet roll. Cookie gummies croissant jujubes muffin pudding liquorice jelly beans carrot cake. Cheesecake danish pie. Candy canes dragée brownie pie bear claw. Jujubes jelly lollipop cupcake oat cake soufflé halvah pie. Gingerbread halvah sesame snaps.
+                </sky-repeater-content>
+              </sky-repeater-item>
+
+            <sky-repeater expandMode="multiple">
+              <sky-repeater-item [isExpanded]="false">
+                <sky-repeater-item-title>Question 2</sky-repeater-item-title>
+                <sky-repeater-item-content>
+                    Gummies tootsie roll oat cake danish pudding marshmallow danish toffee. Jelly-o apple pie wafer. Gummi bears gummi bears chocolate cake gummi bears jelly bear claw pudding muffin. Tiramisu gummies jelly-o jelly-o icing pastry tootsie roll. Dessert icing donut halvah sweet muffin. Liquorice halvah apple pie bear claw. Tiramisu marshmallow tart gummies topping cake brownie.
+                </sky-repeater-content>
+            </sky-repeater-item>
+
+            <sky-repeater expandMode="multiple">
+              <sky-repeater-item [isExpanded]="false">
+                <sky-repeater-item-title>Question 3</sky-repeater-item-title>
+                <sky-repeater-item-content>
+                    Dragée ice cream croissant lollipop carrot cake caramels chocolate bar pastry chocolate cake. Gummi bears fruitcake tart. Candy sweet ice cream lemon drops dessert tart sweet roll. Croissant sugar plum sweet. Cheesecake sesame snaps bonbon gummies wafer marshmallow icing gingerbread. Marzipan carrot cake dessert brownie pie brownie dragée pudding cake. Brownie cupcake cotton candy. 
+                </sky-repeater-content>
+             </sky-repeater-item>
+            </sky-repeater>
+
+          </stache>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+
+</stache>

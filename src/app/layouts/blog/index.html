@@ -1,0 +1,51 @@
+<stache
+    pageTitle="Blog"
+    showEditButton="false"
+    showTableOfContents="true">
+
+<stache-page-summary>A blog layout lends well to sites with frequent blog posts or recurring meeting minutes. To achieve the blog format, use the list of components below to get started. For a live example, see the PAC Notes from the OCTO site.</stache-page-summary>
+
+<stache-page-anchor>Sidebar Layout</stache-page-anchor>
+<p>Set as the default layout, the sidebar layout makes accessing different blog posts easy. When this layout is used, users can see the list of dates on the left side of the page.</p>
+
+<stache-page-anchor>Table of Contents</stache-page-anchor>
+<p>A table of contents is helpful for breaking up longer content into different sections, and it also provides user with a short overview of the post. When a user selects an item from the table of contents, they're taken to that page anchor.</p>
+
+<sky-alert alertType="info">To generate a table of contents, the page must also use the Page Anchor component.</sky-alert>
+
+<stache-page-anchor>Page Anchor</stache-page-anchor>
+<p>Page anchors are used in conjunction with the Table of Contents and provide users with an easy way to move around your page.</p>
+
+<stache-page-anchor>Text Expand</stache-page-anchor>
+<p>If you'd like to control the amount of content displayed under each anchor, use the Text Expand component to hide content after a specific number of characters.</p>
+
+<stache-page-anchor>Try it!</stache-page-anchor>
+
+<div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <stache-code-block
+          languageType="markup">
+          <stache
+            pageTitle="Blog"
+            showTableOfContents="true">
+
+            <stache-page-summary>Here's a summary of the page.</stache-page-summary>
+
+            <stache-page-anchor>First item</stache-page-anchor>
+            <sky-text-expand text="Pastry tart halvah sugar plum gummies powder soufflé jelly beans. Ice cream carrot cake biscuit dragée chocolate tiramisu biscuit dessert. Jelly pastry caramels cheesecake. Topping cake apple pie. Chocolate cake fruitcake biscuit ice cream jelly-o jelly-o tiramisu macaroon. Cupcake sweet gummies bear claw chocolate. Donut cake dragée candy canes croissant lollipop."></sky-text-expand>
+
+            <stache-page-anchor>Second item </stache-page-anchor>
+            <sky-text-expand text="Halvah toffee apple pie marshmallow liquorice donut. Chocolate cake icing sugar plum pudding macaroon cheesecake. Bear claw jelly topping jujubes bonbon halvah sweet halvah icing. Pie wafer tart caramels. Pudding caramels tart. Toffee dragée sweet roll cotton candy. Sweet liquorice cupcake marshmallow soufflé."></sky-text-expand>
+
+            <stache-page-anchor>Third item</stache-page-anchor>
+            <sky-text-expand text="Sweet danish liquorice. Ice cream tiramisu biscuit pastry dessert cotton candy. Ice cream apple pie gummies danish wafer carrot cake topping. Dessert gummies toffee muffin. Dessert jelly gingerbread. Gingerbread tiramisu oat cake jelly. Ice cream apple pie sugar plum macaroon jelly beans cotton candy croissant lemon drops."></sky-text-expand>
+
+          </stache>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+
+</stache>

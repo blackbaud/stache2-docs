@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Blog",
+      "path": "/layouts/blog",
+      "icon": "rss",
+      "summary": "Learn which components can be used for creating a blog."
+    },
+    {
+      "name": "FAQ",
+      "path": "/layouts/faq",
+      "icon": "question-circle",
+      "summary": "Create a user-friendly FAQ list."
+    }
+]
