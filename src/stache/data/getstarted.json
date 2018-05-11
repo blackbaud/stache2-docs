@@ -3,24 +3,30 @@
     "name": "Create a new Stache SPA",
     "path": "/learn/get-started/new-stache",
     "icon": "bolt",
-    "summary": "Do you need to set up a brand new Stache website?"
+    "summary": "Do you need to set up a brand new Stache SPA?"
   },
   {
-    "name": "Add Stache to existing SKY UX SPA",
-    "path": "/learn/get-started/add-stache",
-    "icon": "plus-circle",
-    "summary": "Do you already have a SPA that you want to add Stache to?"
+    "name": "Blackbaud Staff create a new Stache SPA",
+    "path": "https://docs.blackbaud.com/stache-internal/new-bb-stache",
+    "icon": "bolt",
+    "summary": "Blackbaud Staff should follow the Blackbaud version for a new Stache SPA."
   },
   {
     "name": "Clone and set up a Stache SPA locally",
     "path": "/learn/get-started/clone-install",
     "icon": "clone",
-    "summary": "Did someone set up a Stache website for you, and you need to clone and install locally?"
+    "summary": "Did someone set up a Stache SPA for you, and you need to clone and install locally?"
   },
   {
     "name": "Migrate from Stache 1",
     "path": "/learn/migrate",
     "icon": "suitcase",
     "summary": "Do you want to migrate your site? Learn about the steps and considerations when moving to Stache 2."
+  },
+  {
+    "name": "Add Stache to existing SKY UX SPA",
+    "path": "/learn/get-started/add-stache",
+    "icon": "plus-circle",
+    "summary": "Do you already have a SPA that you want to add Stache to?"
   }
 ]
