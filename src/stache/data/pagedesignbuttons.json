@@ -1,9 +1,9 @@
 [
     {
       "name": "Blog",
-      "path": "/layouts/blog",
+      "path": "/layouts/changelog",
       "icon": "rss",
-      "summary": "Learn which components can be used for creating a blog."
+      "summary": "Learn which components can be used for creating a changelog."
     },
     {
       "name": "FAQ",
