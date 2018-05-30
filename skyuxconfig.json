@@ -35,7 +35,7 @@
               "title": "Learn",
               "items": [
                 {
-                  "title": "Getting Started",
+                  "title": "Getting started",
                   "route": "/learn/get-started"
                 },
                 {
@@ -55,7 +55,7 @@
                   "route": "/learn/plugins"
                 },
                 {
-                  "title": "Blackbaud Staff Topics",
+                  "title": "Blackbaud staff topics",
                   "url": "https://docs.blackbaud.com/stache-internal"
                 }
               ]
@@ -72,7 +72,7 @@
               "title": "Support",
               "items": [
                 {
-                  "title": "Contact Us",
+                  "title": "Contact us",
                   "route": "/support"
                 },
                 {
