@@ -1,14 +1,62 @@
 [
     {
-      "name": "Blog",
-      "path": "/layouts/changelog",
-      "icon": "rss",
-      "summary": "Learn which components can be used for creating a changelog."
+      "name": "Changelog",
+      "path": "/pages/changelog",
+      "icon": "list"
+    },
+    {
+      "name": "Code Sample",
+      "path": "/pages/code-sample",
+      "icon": "code"
+    },
+    {
+      "name": "Contact or About",
+      "path": "/pages/contact-about",
+      "icon": "users"
     },
     {
       "name": "FAQ",
-      "path": "/layouts/faq",
-      "icon": "question-circle",
-      "summary": "Create a user-friendly FAQ list."
+      "path": "/pages/faq",
+      "icon": "question-circle"
+    },
+    {
+      "name": "Home",
+      "path": "/pages/home",
+      "icon": "home"
+    },
+    {
+      "name": "Landing",
+      "path": "/pages/landing",
+      "icon": "plane"
+    },
+    {
+      "name": "Markdown",
+      "path": "/pages/markdown",
+      "icon": "file-code-o"
+    },
+    {
+      "name": "Regular Docs",
+      "path": "/pages/regular-docs",
+      "icon": "book"
+    },
+    {
+      "name": "Resources",
+      "path": "/pages/resources",
+      "icon": "question-circle"
+    },
+    {
+      "name": "Tooling",
+      "path": "/pages/tooling",
+      "icon": "wrench"
+    },
+    {
+      "name": "Tutorials",
+      "path": "/pages/tutorials",
+      "icon": "list-ol"
+    },
+    {
+      "name": "Videos",
+      "path": "/pages/videos",
+      "icon": "video-camera"
     }
 ]
