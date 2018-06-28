@@ -181,6 +181,12 @@ export class StacheDemoContentService {
       route: '/content/layouts',
       icon: 'file-o',
       summary: 'Enable consistent formatting for the content on your Stache site.'
+    },
+    {
+      name: 'Footer',
+      route: '/content/footer',
+      icon: 'window-minimize',
+      summary: 'Settings for including a footer in your layout.'
     }
   ];
 
