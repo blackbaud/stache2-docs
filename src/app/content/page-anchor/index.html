@@ -9,6 +9,17 @@
     </p>
   </stache-page-summary>
 
+
+  <h3>
+    Page anchor properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>anchorId</stache-code> — <i>(Optional)</i> Specifies the anchor's id attribute.
+    </li>
+  </ul>
+
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
@@ -17,7 +28,7 @@
     <stache-page-anchor>
       Anchor #1
     </stache-page-anchor>
-    <stache-page-anchor>
+    <stache-page-anchor anchorId="second-anchor">
       Anchor #2
     </stache-page-anchor>
   </div>
@@ -35,7 +46,7 @@
           <stache-page-anchor>
             Anchor #1
           </stache-page-anchor>
-          <stache-page-anchor>
+          <stache-page-anchor anchorId="second-anchor">
             Anchor #2
           </stache-page-anchor>
         </stache-code-block>

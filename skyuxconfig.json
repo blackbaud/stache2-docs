@@ -15,6 +15,9 @@
       },
       "searchConfig": {
         "is_internal": false
+      },
+      "footer": {
+        "stache_copyright_label": "Blackbaud, Inc. All rights reserved."
       }
     }
   },
