@@ -15,7 +15,7 @@
   <ul>
     <li>
       <p>
-        <stache-code>copyrightLabel</stache-code> — This flag allows you to specify the additional copyright information after the current date. Defaults to <stache-code>Blackbaud, Inc. All rights reserved.</stache-code>
+        <stache-code>copyrightLabel</stache-code> — This flag allows you to include additional copyright information after the current date. The default text is <stache-code>Blackbaud, Inc. All rights reserved.</stache-code>
       </p>
       <sky-alert
       alertType="warning">
@@ -24,7 +24,7 @@
     </li>
     <li>
       <p>
-        <stache-code>nav</stache-code> — This flag contains an <stache-code>items</stache-code> array, allowing you to specify links to be included in the footer.
+        <stache-code>nav</stache-code> — This flag contains an <stache-code>items</stache-code> array,  allowing you to include specific links in the footer..
       </p>
     </li>
     <li>
@@ -35,7 +35,7 @@
   </ul>
 
   <p>
-    To enable the footer, add <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>. This enables the footer globally across your SPA. To disable the footer on specific pages, add the `showFooter: false` attribute to the <a stacheRouterLink="/content/wrapper">stache wrapper</a>.
+    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>. To disable the footer on specific pages, add <stache-code>the showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/content/wrapper">stache wrapper</a>.
   </p>
 
   <stache-page-anchor>
