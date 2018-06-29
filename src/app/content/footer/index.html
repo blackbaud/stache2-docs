@@ -1,0 +1,76 @@
+<stache
+  pageTitle="Footer"
+  showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The footer contains useful links and information for your site.
+    </p>
+  </stache-page-summary>
+
+  <h3>
+    Footer properties
+  </h3>
+
+  <ul>
+    <li>
+      <p>
+        <stache-code>copyrightLabel</stache-code> — This flag allows you to include additional copyright information after the current date. The default text is <stache-code>Blackbaud, Inc. All rights reserved.</stache-code>
+      </p>
+      <sky-alert
+      alertType="warning">
+        To use the default, your project must include a <stache-code>src/assets/locales/resources_en_US.json</stache-code> file.
+      </sky-alert>
+    </li>
+    <li>
+      <p>
+        <stache-code>nav</stache-code> — This flag contains an <stache-code>items</stache-code> array,  allowing you to include specific links in the footer..
+      </p>
+    </li>
+    <li>
+      <p>
+        <stache-code>siteName</stache-code> — Value read from the <stache-code>skyux.app.title</stache-code> attribute in your <stache-code>skyuxconfig.json</stache-code> file.
+      </p>
+    </li>
+  </ul>
+
+  <p>
+    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>. To disable the footer on specific pages, add <stache-code>the showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/content/wrapper">stache wrapper</a>.
+  </p>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="json">
+          ...
+          "app": {
+            "title": "Blackbaud Stache Documentation"
+          },
+          "appSettings": {
+            "stache": {
+              "footer": {
+                "copyrightLabel": "My Company, Inc.",
+                "nav": {
+                  "items": [
+                    {
+                      "title": "Privacy Policy",
+                      "route": "/privacy-policy"
+                    },
+                    {
+                      "title": "Terms of Use",
+                      "route": "/terms-of-use"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

@@ -15,7 +15,8 @@
       },
       "searchConfig": {
         "is_internal": false
-      }
+      },
+      "footer": { }
     }
   },
   "auth": false,
