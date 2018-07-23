@@ -1,0 +1,63 @@
+<stache
+  pageTitle="Copy to Clipboard"
+  layout="sidebar"
+  showBreadcrumbs="true">
+
+  <stache-page-summary>
+    <p>
+      The <stache-code>copy-to-clipboard</stache-code> component allows users to copy content to their clipboard. The content to be copied must be wrapped in an element that can be referenced with the <stache-code>#identifier</stache-code> notation. A <stache-code>stache-copy-to-clipboard</stache-code> element must then be added and contain a <stache-code>[copyTarget]</stache-code> attribute that references the identifier from the previously created element. You can optionally include a <stache-code>buttonText</stache-code> and <stache-code>buttonClickedText</stache-code> attribute to alter the button text. When the button is clicked, all text content within the <stache-code>copyTarget</stache-code> element is copied to the user's clipboard with formatting intact. The content can then be pasted in to any field that can receive text.
+    </p>
+  </stache-page-summary>
+
+  <h3>
+    Copy to clipboard properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>copyTarget</stache-code> — Section of content to be copied.
+    </li>
+    <li>
+      <stache-code>buttonText</stache-code> — <i>(Optional)</i> Text to be displayed by copy-to-clipboard button.
+    </li>
+    <li>
+      <stache-code>buttonClickedText</stache-code> — <i>(Optional)</i> Text to be displayed by copy-to-clipboard button once it has been clicked.
+    </li>
+  </ul>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <div #divReference>
+      Copy text within a div
+      <p>
+        Nested Content within the div
+      </p>
+    </div>
+    <stache-copy-to-clipboard buttonText="Copy From Div" buttonClickedText="Copied!" [copyTarget]="divReference"></stache-copy-to-clipboard>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <stache-code-block
+          languageType="markup">
+          &lt;div #divReference&gt;
+            Copy text within a div
+            <p>
+              Nested Content within the div
+            </p>
+        &lt;/div&gt;
+        <stache-copy-to-clipboard buttonText="Copy From Div" buttonClickedText="Copied!" [copyTarget]="divReference"></stache-copy-to-clipboard>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
