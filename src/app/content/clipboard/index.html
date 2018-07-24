@@ -1,11 +1,11 @@
 <stache
-  pageTitle="Copy to Clipboard"
+  pageTitle="Copy to clipboard"
   layout="sidebar"
   showBreadcrumbs="true">
 
   <stache-page-summary>
     <p>
-      The <stache-code>copy-to-clipboard</stache-code> component allows users to copy content to their clipboard. The content to be copied must be wrapped in an element that can be referenced with the <stache-code>#identifier</stache-code> notation. A <stache-code>stache-copy-to-clipboard</stache-code> element must then be added and contain a <stache-code>[copyTarget]</stache-code> attribute that references the identifier from the previously created element. You can optionally include a <stache-code>buttonText</stache-code> and <stache-code>buttonClickedText</stache-code> attribute to alter the button text. When the button is clicked, all text content within the <stache-code>copyTarget</stache-code> element is copied to the user's clipboard with formatting intact. The content can then be pasted in to any field that can receive text.
+        The copy-to-clipboard component creates a button that allows users to copy content to the clipboard. To implement the component, you wrap text in an HTML element and specify an <stache-code>#identifier</stache-code> for that element. Then you place a <stache-code>stache-copy-to-clipboard</stache-code> element on the page and specify the content to copy by referencing its identifier in the <stache-code>copyTarget</stache-code> attribute. When users click the copy-to-clipboard button, the component copies the text to the user's clipboard with formatting intact. If necessary, you can specify different labels for before and after users click the button.
     </p>
     <sky-alert alertType="warning">
       Only HTML elements can use the <stache-code>#identifier</stache-code> notation. If you would like to copy the content of a non-HTML element, such as a Stache component, that element must be wrapped in a <stache-code>div</stache-code> or another valid HTML element.
@@ -13,18 +13,23 @@
   </stache-page-summary>
 
   <h3>
-    Copy to clipboard properties
+    Copy-to-clipboard properties
   </h3>
 
   <ul>
     <li>
-      <stache-code>copyTarget</stache-code> — Section of content to be copied.
+      <stache-code>copyTarget</stache-code> — Specifies content to copy.
+      <p>
+        <sky-alert alertType="info">
+          This property binds data, so you must use brackets to evaluate the template expression: <stache-code>[copyTarget]</stache-code>. Without the brackets, Angular treats the value as a string and initializes the target property with the string value instead of evaluating the data value.
+        </sky-alert>
+      </p>
     </li>
     <li>
-      <stache-code>buttonText</stache-code> — <i>(Optional)</i> Text to be displayed by copy-to-clipboard button.
+      <stache-code>buttonText</stache-code> — <i>(Optional)</i> Specifies text to be displayed by copy-to-clipboard button.
     </li>
     <li>
-      <stache-code>buttonClickedText</stache-code> — <i>(Optional)</i> Text to be displayed by copy-to-clipboard button once it has been clicked.
+      <stache-code>buttonClickedText</stache-code> — <i>(Optional)</i> Specifies text to be displayed by copy-to-clipboard button once it has been clicked.
     </li>
   </ul>
 
@@ -34,9 +39,9 @@
 
   <div class="stache-demo-page-result">
     <div #divReference>
-      Copy text within a div
+      Text within a div element to copy to the clipboard
       <p>
-        Nested Content within the div
+        Nested text within a div element to copy to the clipboard
       </p>
     </div>
     <stache-copy-to-clipboard buttonText="Copy From Div" buttonClickedText="Copied!" [copyTarget]="divReference"></stache-copy-to-clipboard>
