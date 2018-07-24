@@ -16,20 +16,19 @@ export class StacheDemoContentService {
       name: 'Page summary',
       route: '/content/page-summary',
       icon: 'file-text',
-      summary: 'Provides a formatted section at the top of the page for summary content.'
+      summary: 'Provides a formatted section for summary content at the top of the page.'
     },
     {
       name: 'Page anchor',
       route: '/content/page-anchor',
       icon: 'link',
-      summary: 'Provides a section anchor for inter page navigation.'
+      summary: 'Provides a section anchor for inter-page navigation.'
     },
     {
-      name: 'Action buttons',
+      name: 'Action button',
       route: '/content/action-buttons',
       icon: 'th-list',
-      summary: 'Provides a clean, visual navigation pattern for linking \
-      to multiple documents using the SKY UX Action Button.'
+      summary: 'Provides a clean, visual pattern to navigate content with SKY UX action buttons.'
     },
     {
       name: 'Blockquote',
@@ -41,7 +40,7 @@ export class StacheDemoContentService {
       name: 'Grid',
       route: '/content/grid',
       icon: 'table',
-      summary: 'Provides a layout grid for creating responsive content.'
+      summary: 'Provides a layout grid to create responsive content.'
     },
     {
       name: 'Code block',
@@ -59,8 +58,7 @@ export class StacheDemoContentService {
       name: 'Hero',
       route: '/content/hero',
       icon: 'photo',
-      summary: 'Provides a Hero with a background image, title, and subheading \
-      information to your Stache page.'
+      summary: 'Adds a hero with a background image, title, and subheading to your Stache page.'
     },
     {
       name: 'Image',
@@ -78,58 +76,58 @@ export class StacheDemoContentService {
       name: 'Video',
       route: '/content/video',
       icon: 'video-camera',
-      summary: 'Provides a responsive container for video embeds.'
+      summary: 'Provides a responsive container to embed video.'
     },
     {
       name: 'Include',
       route: '/content/include',
       icon: 'recycle',
-      summary: 'Provides a mechanism for single sourcing static content.'
+      summary: 'Provides a mechanism for single-sourcing static content.'
     },
     {
-      name: 'Configuration and Data',
+      name: 'Configuration and data',
       route: '/content/config-data',
       icon: 'database',
-      summary: 'Provides a mechanism for accessing data and site configuration.'
+      summary: 'Provides a mechanism to access data and site configuration.'
     },
     {
-      name: 'Alerts',
+      name: 'Alert',
       route: '/content/alerts',
       icon: 'exclamation-triangle',
-      summary: 'Provides a formatted SKY UX-themed alert.'
+      summary: 'Provides a SKY UX-themed alert.'
     },
     {
-      name: 'Table of Contents',
+      name: 'Table of contents',
       route: '/content/table-of-contents',
       icon: 'list-ol',
-      summary: 'Provides a quick and effortless way to navigate content on a page.'
+      summary: 'Provides a quick and easy way to navigate content on a page.'
     },
     {
-      name: 'Buttons',
+      name: 'Button',
       route: '/content/buttons',
       icon: 'square-o',
-      summary: 'Provides a formatted SKY UX-themed button.'
+      summary: 'Creates a SKY UX-themed button to trigger an action.'
     },
     {
-      name: 'Cards',
+      name: 'Card',
       route: '/content/cards',
       icon: 'list-alt',
-      summary: 'Provides a formatted SKY UX-themed container to highlight important information.'
+      summary: 'Provides a SKY UX-themed container to highlight important information.'
     },
     {
-      name: 'Labels',
+      name: 'Label',
       route: '/content/labels',
       icon: 'tag',
-      summary: 'Provides a SKY UX-themed label for when you need to display important info.'
+      summary: 'Provides a SKY UX-themed label to call out important information.'
     },
     {
       name: 'Tabs',
       route: '/content/tabs',
       icon: 'file-o',
-      summary: 'Provides a formatted SKY UX-themed tabset for your page.'
+      summary: 'Provides a SKY UX-themed tabset for your page.'
     },
     {
-      name: 'Text Expand',
+      name: 'Text expand',
       route: '/content/text-expand',
       icon: 'font',
       summary: 'Truncates long text with an ellipsis and a link to expand the text.'
@@ -153,16 +151,16 @@ export class StacheDemoContentService {
       summary: `Wraps elements and causes them to affix to the window on scroll.`
     },
     {
-      name: 'Links',
+      name: 'Link',
       route: '/content/link',
       icon: 'link',
       summary: `Links to an internal page, a page section within a page, or an external website.`
     },
     {
-      name: 'Edit Button',
+      name: 'Edit button',
       route: '/content/edit-button',
       icon: 'edit',
-      summary: `Adds an edit button to each page to allow users to edit.`
+      summary: `Adds an edit button to each page to allow users to contribute content.`
     },
     {
       name: 'Search',
@@ -177,16 +175,16 @@ export class StacheDemoContentService {
       summary: 'Provides navigational utilities to let users move through your content.'
     },
     {
-      name: 'Layouts',
+      name: 'Layout',
       route: '/content/layouts',
       icon: 'file-o',
-      summary: 'Enable consistent formatting for the content on your Stache site.'
+      summary: 'Enables consistent formatting for the content on your Stache site.'
     },
     {
       name: 'Footer',
       route: '/content/footer',
       icon: 'window-minimize',
-      summary: 'Settings for including a footer in your layout.'
+      summary: 'Specifies settings for a footer in your layout.'
     }
   ];
 
