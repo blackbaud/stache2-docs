@@ -7,6 +7,9 @@
     <p>
       The <stache-code>copy-to-clipboard</stache-code> component allows users to copy content to their clipboard. The content to be copied must be wrapped in an element that can be referenced with the <stache-code>#identifier</stache-code> notation. A <stache-code>stache-copy-to-clipboard</stache-code> element must then be added and contain a <stache-code>[copyTarget]</stache-code> attribute that references the identifier from the previously created element. You can optionally include a <stache-code>buttonText</stache-code> and <stache-code>buttonClickedText</stache-code> attribute to alter the button text. When the button is clicked, all text content within the <stache-code>copyTarget</stache-code> element is copied to the user's clipboard with formatting intact. The content can then be pasted in to any field that can receive text.
     </p>
+    <sky-alert alertType="warning">
+      Only HTML elements can use the <stache-code>#identifier</stache-code> notation. If you would like to copy the content of a non-HTML element, such as a Stache component, that element must be wrapped in a <stache-code>div</stache-code> or another valid HTML element.
+    </sky-alert>
   </stache-page-summary>
 
   <h3>
@@ -37,7 +40,12 @@
       </p>
     </div>
     <stache-copy-to-clipboard buttonText="Copy From Div" buttonClickedText="Copied!" [copyTarget]="divReference"></stache-copy-to-clipboard>
-  </div>
+
+    <div style="padding-top: 30px;">
+      <b>Paste Here:</b><br/>
+      <textarea rows="5" style="width:100%;"></textarea>
+    </div>
+
 
   <stache-page-anchor>
     Code
