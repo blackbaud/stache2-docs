@@ -70,3 +70,14 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.code-block-supported-language-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 250px;
+  
+  li {
+    padding: 5px 0;
+  }
+}
