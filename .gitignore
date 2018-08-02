@@ -16,7 +16,7 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# SKY UX temp directory
+# SKY UX temp directories
 .skyuxtmp
 .skypageslocales
 

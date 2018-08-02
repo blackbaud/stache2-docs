@@ -55,6 +55,12 @@ export class StacheDemoContentService {
       summary: 'Provides a formatted inline snippet of code.'
     },
     {
+      name: 'Copy to clipboard',
+      route: '/content/clipboard',
+      icon: 'clipboard',
+      summary: 'Provides the ability to copy sections of content to the clipboard.'
+    },
+    {
       name: 'Hero',
       route: '/content/hero',
       icon: 'photo',
