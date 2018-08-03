@@ -5,7 +5,7 @@
 
   <stache-page-summary>
     <p>
-      The code block component allows you to format a block of text as a code snippet with syntax highlighting. You wrap <stache-code>stache-code-block</stache-code> tags around the code block. To format shorter code snippets that appear inline within a larger block of text, use <a routerLink="/content/code">the code component</a> instead.
+      The code block component allows you to format a block of text as a code snippet with syntax highlighting by wrapping <stache-code>stache-code-block</stache-code> tags around the code block. The code block component is equipped with copy-to-clipboard functionality. When users hover over the code block area, a copy-to-clipboard button appears, and the formatted code copies with the formatting intact. To format shorter code snippets within larger blocks of text, use <a routerLink="/content/code">the code component</a> instead.
     </p>
     <sky-alert alertType="warning">
       If a code block has text within <stache-code><</stache-code> and <stache-code>></stache-code> characters, then the component automatically appends a closing tag unless the code snippet is valid HTML. To prevent this, you must use "&#38;lt;" to escape <stache-code><</stache-code> and "&#38;gt;" to escape <stache-code>></stache-code>. For example, you must escape the <stache-code><</stache-code> and <stache-code>></stache-code> characters in the code snippet <stache-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</stache-code> or else the component automatically appends <stache-code>&lt;/Generic&gt;</stache-code> to the end: <stache-code escapeCharacters="true">public Task<Generic> MethodName()</stache-code>.
@@ -22,41 +22,38 @@
       </li>
       <li>
         <stache-code>languageType</stache-code> — <i>(Optional)</i> Indicates the language of the code sample. Supports <a href="http://prismjs.com/#languages-list">a variety of languages <i class="fa fa-external-link" aria-hidden="true"></i></a>. The default language is <stache-code>markup</stache-code>.
+        
+        <div class="code-block-supported-language-title sky-subsection-heading">
+          Supported languages
+        </div>
+        
+        <ul class="code-block-supported-language-list">
+          <li>ASP.NET (C#) — <stache-code>aspnet</stache-code></li>
+          <li>Bash — <stache-code>bash</stache-code></li>
+          <li>C# — <stache-code>csharp</stache-code></li>
+          <li>CSS — <stache-code>css</stache-code></li>
+          <li>Docker — <stache-code>docker</stache-code></li>
+          <li>F# — <stache-code>fsharp</stache-code></li>
+          <li>Git — <stache-code>git</stache-code></li>
+          <li>Handlebars — <stache-code>handlebars</stache-code></li>
+          <li>HTTP — <stache-code>http</stache-code></li>
+          <li>Java — <stache-code>java</stache-code></li>
+          <li>JavaScript — <stache-code>javascript</stache-code></li>
+          <li>Markdown — <stache-code>markdown</stache-code></li>
+          <li>Markup — <stache-code>markup</stache-code></li>
+          <li>PHP — <stache-code>php</stache-code></li>
+          <li>PowerShell — <stache-code>powershell</stache-code></li>
+          <li>Python — <stache-code>python</stache-code></li>
+          <li>Ruby — <stache-code>ruby</stache-code></li>
+          <li>Sass — <stache-code>sass</stache-code></li>
+          <li>Scss — <stache-code>scss</stache-code></li>
+          <li>SQL — <stache-code>sql</stache-code></li>
+          <li>Swift — <stache-code>swift</stache-code></li>
+          <li>TypeScript — <stache-code>typescript</stache-code></li>
+          <li>YAML — <stache-code>yaml</stache-code></li>
+        </ul>
       </li>
     </ul>
-
-  <sky-repeater expandMode="single">
-    <sky-repeater-item [isExpanded]="false">
-      <sky-repeater-item-title>Currently supported languages</sky-repeater-item-title>
-        <sky-repeater-item-content>
-          <ul>
-            <li>ASP.NET (C#)</li>
-            <li>Bash</li>
-            <li>C#</li>
-            <li>CSS</li>
-            <li>Docker</li>
-            <li>F#</li>
-            <li>Git</li>
-            <li>Handlebars</li>
-            <li>HTTP</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>Markdown</li>
-            <li>Markup</li>
-            <li>PHP</li>
-            <li>PowerShell</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Sass</li>
-            <li>Scss</li>
-            <li>SQL</li>
-            <li>Swift</li>
-            <li>TypeScript</li>
-            <li>YAML</li>
-          </ul>
-        </sky-repeater-item-content>
-    </sky-repeater-item>
-  </sky-repeater>
 
   <stache-page-anchor>
     Demo
