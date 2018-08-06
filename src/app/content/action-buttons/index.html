@@ -4,6 +4,7 @@
     <p>
       The action buttons component provides a clean, visual navigation pattern for linking to multiple documents using the
       <a href="https://developer.blackbaud.com/skyux2/components/action-button">SKY UX Action Button</a>.
+      <p><a href="https://developer.blackbaud.com/skyux2/components/action-button"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a></p>
     </p>
 
     <h3>
@@ -21,7 +22,9 @@
           <stache-code>routes</stache-code> — Specifies the properties for each action button in the list. Each button has the following
           properties:
         </p>
-
+        <sky-alert alertType="info">
+          This property binds data, so you must use brackets to evaluate the template expression: <stache-code>[routes]</stache-code>. Without the brackets, Angular treats the value as a string and initializes the target property with the string value instead of evaluating the data value.
+        </sky-alert>
         <ul>
           <li>
             <stache-code>name</stache-code> — The name of the button.
