@@ -5,14 +5,16 @@
   showBreadcrumbs="true">
 
   <stache-page-summary>
-    <stache-include
-      fileName="localization-required.html">
-    </stache-include>
     <p>
         The copy-to-clipboard component creates a button that allows users to copy content to the clipboard. To implement the component, you wrap text in an HTML element and specify an <stache-code>#identifier</stache-code> for that element. Then you place a <stache-code>stache-copy-to-clipboard</stache-code> element on the page and specify the content to copy by referencing its identifier in the <stache-code>copyTarget</stache-code> attribute. When users click the copy-to-clipboard button, the component copies the text to the user's clipboard with formatting intact. If necessary, you can specify different labels for before and after users click the button.
     </p>
     <sky-alert alertType="warning">
       Only HTML elements can use the <stache-code>#identifier</stache-code> notation. If you would like to copy the content of a non-HTML element, such as a Stache component, that element must be wrapped in a <stache-code>div</stache-code> or another valid HTML element.
+    </sky-alert>
+    <sky-alert alertType="warning">
+      <stache-include
+        fileName="localization-required.html">
+      </stache-include>
     </sky-alert>
   </stache-page-summary>
 
