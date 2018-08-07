@@ -3,12 +3,14 @@
   showBreadcrumbs="true">
 
   <stache-page-summary>
-    <stache-include
-      fileName="localization-required.html">
-    </stache-include>
     <p>
       The footer contains useful links and information for your site.
     </p>
+    <sky-alert alertType="warning">
+      <stache-include
+        fileName="localization-required.html">
+      </stache-include>
+    </sky-alert>
   </stache-page-summary>
 
   <h3>
@@ -34,7 +36,7 @@
   </ul>
 
   <p>
-    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>. To disable the footer on specific pages, add <stache-code>the showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/content/wrapper">stache wrapper</a>.
+    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>. To disable the footer on specific pages, add <stache-code>the showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/content/wrapper">Stache wrapper</a>.
   </p>
 
   <stache-page-anchor>
