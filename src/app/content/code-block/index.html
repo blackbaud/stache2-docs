@@ -4,6 +4,9 @@
   showBreadcrumbs="true">
 
   <stache-page-summary>
+    <stache-include
+      fileName="localization-required.html">
+    </stache-include>
     <p>
       The code block component allows you to format a block of text as a code snippet with syntax highlighting by wrapping <stache-code>stache-code-block</stache-code> tags around the code block. The code block component is equipped with copy-to-clipboard functionality. When users hover over the code block area, a copy-to-clipboard button appears, and the formatted code copies with the formatting intact. To format shorter code snippets within larger blocks of text, use <a routerLink="/content/code">the code component</a> instead.
     </p>

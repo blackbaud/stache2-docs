@@ -3,6 +3,9 @@
   showBreadcrumbs="true">
 
   <stache-page-summary>
+    <stache-include
+      fileName="localization-required.html">
+    </stache-include>
     <p>
       The footer contains useful links and information for your site.
     </p>
@@ -17,10 +20,6 @@
       <p>
         <stache-code>copyrightLabel</stache-code> — This flag allows you to include additional copyright information after the current date. The default text is <stache-code>Blackbaud, Inc. All rights reserved.</stache-code>
       </p>
-      <sky-alert
-      alertType="warning">
-        To use the default, your project must include a <stache-code>src/assets/locales/resources_en_US.json</stache-code> file.
-      </sky-alert>
     </li>
     <li>
       <p>

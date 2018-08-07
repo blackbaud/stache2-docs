@@ -103,6 +103,23 @@
   <p>
     Edit your VS Code settings for formatting pasted content. Select <b>Files</b>, <b>Preferences</b>, <b>Settings</b>, and in User Settings, add <stache-code>"editor.formatOnPaste": false</stache-code> to the list.
   </p>
+
+  <stache-page-anchor>
+    Text not loading correctly on components
+  </stache-page-anchor>
+  <h3>
+    Scenario
+  </h3>
+  <p>
+    Some components load without the correct text, instead displaying something like <stache-code>'stache_copy_to_clipboard_button'</stache-code>.
+  </p>
+  <h3>
+    Solution
+  </h3>
+  <stache-include
+    fileName="localization-required.html">
+  </stache-include>
+
   <stache-page-anchor>
     Check the Stache backlog
   </stache-page-anchor>
