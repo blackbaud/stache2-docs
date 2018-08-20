@@ -6,8 +6,13 @@
 
   <stache-page-summary>
     <p>
-      To create high quality technical documentation, {{ stache.jsonData.global.productNameShort }} uses these layouts, style, and elements.
+      To create high-quality technical documentation, {{ stache.jsonData.global.productNameShort }} uses these layouts, styles, and elements.
     </p>
+    <sky-alert alertType="warning">
+      <stache-include
+        fileName="localization-required.html">
+      </stache-include>
+    </sky-alert>
   </stache-page-summary>
 
   <stache-demo-content>
