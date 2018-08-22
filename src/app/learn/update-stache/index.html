@@ -4,10 +4,10 @@
   layout="container">
   <stache-tutorial>
     <stache-tutorial-heading>
-      Update {{ stache.jsonData.global.productNameShort }}
+      Update {{ stache.jsonData.global.productNameShort }} and SKY UX Dependencies
     </stache-tutorial-heading>
     <stache-tutorial-summary>
-      This tutorial provides step-by-step instructions to update your app to the latest version of {{ stache.jsonData.global.productNameShort }}.
+      This tutorial provides step-by-step instructions to update {{ stache.jsonData.global.productNameShort }} and SKY UX dependencies with the latest version.
     </stache-tutorial-summary>
 
     <stache-tutorial-step>
@@ -15,15 +15,20 @@
         Update the {{ stache.jsonData.global.productNameShort }} version
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
-        <p>
-          Open the <stache-code>package.json</stache-code> file in your project. Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
-        </p>
+        <ol>
+          <li>
+            Open the <stache-code>package.json</stache-code> file in your project. 
+          </li>
+          <li>
+            Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+          </li>
         <stache-code-block
           languageType="json">
             "dependencies": {
               "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}",
               ...
         </stache-code-block>
+        </ol>
         <sky-alert
           alertType="warning">
             Before you update, review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes.
@@ -38,10 +43,16 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Under the <stache-code>dependencies</stache-code> property in the <stache-code>package.json</stache-code> file, update <stache-code>@blackbaud/skyux</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux2/blob/master/CHANGELOG.md">SKY UX changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.</p>
-        <p>And under the <stache-code>devDependencies</stache-code> property, update <stache-code>@blackbaud/skyux-builder</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux-builder/blob/master/CHANGELOG.md">SKY UX Builder changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
-        </p>
-        <stache-include fileName="package-json-sample.html"></stache-include>
+           Stache is a component library for SKY UX, which means updating the SKY UX dependencies is also important.</p>
+        <ol>
+          <li>
+            Under the <stache-code>dependencies</stache-code> property in the <stache-code>package.json</stache-code> file, update <stache-code>@blackbaud/skyux</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux2/blob/master/CHANGELOG.md">SKY UX changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+          </li>
+          <li>
+            And under the <stache-code>devDependencies</stache-code> property, update <stache-code>@blackbaud/skyux-builder</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux-builder/blob/master/CHANGELOG.md">SKY UX Builder changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+            <stache-include fileName="package-json-sample.html"></stache-include>
+          </li>
+        </ol>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -50,6 +61,9 @@
         Specify plugins
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
+        <p>
+          The <stache-code>skyuxconfig.json</stache-code> file contains required, and optional, plugins that serve a specific purpose, most of which are needed to use certain Stache components.
+        </p>
         <p>
           Open the <stache-code>skyuxconfig.json</stache-code> file, and make sure it <a routerLink="/learn/plugins">lists the plugins that you need</a> in the <stache-code>plugins</stache-code> array.
         </p>
@@ -95,6 +109,9 @@
         Update node_modules
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
+        <p>
+          The node_modules folder contains your project's dependencies that are required to make it run and serve locally.
+        </p>
         <ol>
           <li>
             Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove outdated versions of {{ stache.jsonData.global.productNameShort }} and its plugins.
