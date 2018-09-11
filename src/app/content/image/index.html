@@ -38,6 +38,9 @@
       <li>
         <stache-code>imageAlt</stache-code> — The alt tag to describe the image for accessibility.
       </li>
+      <li>
+        <stache-code>caption</stache-code> — (<i>Optional</i>) Adds a caption below the image.
+      </li>
     </ul>
 
   </stache-page-summary>
@@ -48,6 +51,7 @@
 
   <div class="stache-demo-page-result">
     <stache-image
+      caption="Stache image component sample caption."
       imageAlt="This is an example hero."
       imageSource="~/assets/hero-sample-1.jpg">
     </stache-image>
@@ -64,6 +68,7 @@
         <stache-code-block
           languageType="markup">
          &lt;stache-image
+            caption="Stache image component sample caption."
             imageAlt="This is an example hero."
             imageSource="&#126;&#47;assets&#47;image-name.jpg"&gt;
           &lt;&#47;stache-image&gt;
