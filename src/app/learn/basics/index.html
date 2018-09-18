@@ -84,7 +84,7 @@
     </li>
     <li>
       <p>
-        Use the <stache-code>titleKey</stache-code> property to specify a label for a navigation item.
+        Use the <stache-code>name</stache-code> property to specify a label for a navigation item.
       </p>
       <p>
         If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.
@@ -99,15 +99,15 @@
       export class AppNavComponent {
         public nav = [
           {
-            titleKey: 'app_nav_home',
+            name: 'app_nav_home',
             path: '/'
           },
           {
-            titleKey: 'app_nav_about',
+            name: 'app_nav_about',
             path: '/about'
           },
           {
-            titleKey: 'Demo',
+            name: 'Demo',
             path: '/demo'
           }
         ];
