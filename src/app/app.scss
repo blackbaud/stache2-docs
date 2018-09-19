@@ -79,9 +79,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 250px;
+  max-height: 1700px;
   list-style: none;
-  
+
+  @media (max-width: 767px) {
+    max-height: none;
+  }
+
   li {
     padding: 5px 0;
   }
