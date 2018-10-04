@@ -1,0 +1,65 @@
+<stache pageTitle="Edit Button" navTitle="Edit button" #stache="">
+
+  <stache-page-summary>
+    <p>
+      The edit button facilitates contributions by adding a link to the repository on each page in your site. This feature is enabled globally, but you can opt out on individual pages.
+    </p>
+
+    <h3>
+      Edit button properties
+    </h3>
+
+    <ul>
+      <li>
+        <p>
+          <stache-code>showEditButton</stache-code> — This flag exists on the Stache wrapper and disables the edit button on individual pages.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      To enable the edit button, add <stache-code>editButton</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>:
+    </p>
+
+    <stache-code-block languageType="json">
+      ...
+      "appSettings": {{ '{' }}
+        "stache": {{ '{' }}
+          "editButton": {{ '{' }}
+            "url": "URL to your repository",
+            "text": "The text for your edit button. Defaults to 'Edit'"
+          }
+        }
+      }
+    </stache-code-block>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-edit-button></stache-edit-button>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="json">
+          ...
+          "appSettings": {{ '{' }}
+            "stache": {{ '{' }}
+              "editButton": {{ '{' }}
+                "url": "https://github.com/blackbaud/stache2-docs"
+              }
+            }
+          }
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

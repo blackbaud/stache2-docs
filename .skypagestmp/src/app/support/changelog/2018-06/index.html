@@ -1,0 +1,62 @@
+<stache pageTitle="June 2018" navTitle="June 2018" navOrder="70" showTableOfContents="true" #stache="">
+
+  <stache-page-summary>
+    Monitor this page to keep up with the latest changes and releases for {{ stache.jsonData?.global.productNameLong }}.
+  </stache-page-summary>
+
+  <stache-markdown>
+<stache-page-anchor>
+  2.9.0 (2018-06-28)
+</stache-page-anchor>
+<ul>
+<li>Style fixes. <a href="https://github.com/blackbaud/stache2/pull/489">#489</a><ul>
+<li>The sidebar now properly positions itself under the omnibar, dev bar, and elements above the stache-layout.</li>
+<li>The sidebar now adjusts its height and does not overlap the footer.</li>
+<li>The page layouts are now a max-width of 1600px.</li>
+</ul>
+</li>
+<li>Created the <stache-code>stache-footer</stache-code> component.<ul>
+<li>Added the footer component to layouts.</li>
+</ul>
+</li>
+<li>Fixed a bug with the affix not functioning properly in IE.</li>
+<li>Fixed a bug with the affix not calculating the heights properly when applied to a nested element with a relative parent.</li>
+</ul>
+
+<stache-page-anchor>
+  2.8.1 (2018-6-20)
+</stache-page-anchor>
+<ul>
+<li>Style bugfixes. <a href="https://github.com/blackbaud/stache2/pull/487">#487</a><ul>
+<li>Style bugfix with sidebar button overlapping scroll bar.</li>
+<li>Style bugfix with the container layout being off center.</li>
+<li>Style change tutorial pattern width.</li>
+<li>Style bugfix tutorial number z-index lowered.</li>
+<li>Style enhancement the <stache-code>sidebar-wrapper</stache-code> now adds a class to the <stache-code>stache-container</stache-code> component to always add padding for the sidebar.</li>
+</ul>
+</li>
+</ul>
+
+<stache-page-anchor>
+  2.8.0 (2018-6-19)
+</stache-page-anchor>
+<ul>
+<li>Refactored and restyled the sidebar layout. <a href="https://github.com/blackbaud/stache2/pull/475">#475</a><ul>
+<li>Created a <stache-code>stache-sidebar-wrapper</stache-code> component.</li>
+<li>Refactored the styles for the <stache-code>stache-container</stache-code> component.</li>
+<li>Removed use of the <stache-code>sky-container</stache-code> class.</li>
+<li>Made better use of the page real estate.</li>
+<li>Visually separated the nav from the page content as desired.</li>
+<li>Fixed a bug with jumping sidebar when switching between pages that contained a vertical scroll bar vs. no scroll bar.</li>
+<li>Fixed an issue with the sidebar not affixing in Internet Explorer.</li>
+<li>Fixed a bug where the <stache-code>isCurrent</stache-code> styles were not being applied to the current route.</li>
+<li>Collapsible sidebar made accessing the sidebar nav easier on mobile devices.</li>
+<li>Meet accessibility testing standards for keyboard and screen reader navigation.</li>
+<li>Updated the <stache-code>nav-component</stache-code> to make use of aria labels and attributes.</li>
+</ul>
+</li>
+<li>Fixed a bug where the sidebar header was not displaying properly when route&#39;s were passed into the sidebar manually. <a href="https://github.com/blackbaud/stache2/pull/474">#474</a></li>
+<li>Added an optional input to the <stache-code>stache-page-anchor</stache-code> component allowing users to specify an id for their anchors. <a href="https://github.com/blackbaud/stache2/pull/484">#484</a> - Thanks <a href="https://github.com/Blackbaud-LoriWeiss">@Blackbaud-LoriWeiss</a>!</li>
+</ul>
+</stache-markdown>
+</stache>

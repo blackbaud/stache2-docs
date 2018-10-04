@@ -1,0 +1,41 @@
+<stache pageTitle="May 2018" navTitle="May 2018" navOrder="80" showTableOfContents="true" #stache="">
+
+  <stache-page-summary>
+    Monitor this page to keep up with the latest changes and releases for {{ stache.jsonData?.global.productNameLong }}.
+  </stache-page-summary>
+
+  <stache-markdown>
+<stache-page-anchor>
+  2.7.2 (2018-5-15)
+</stache-page-anchor>
+<ul>
+<li>Updated StacheRouterLink to include browser context menu options on right-click and shift/ctrl/cmd+click functionality for opening new tabs/windows. Users should now use StacheRouterLink instead of Angular RouterLink. <a href="https://github.com/blackbaud/stache2/pull/458">#458</a></li>
+</ul>
+
+<stache-page-anchor>
+  2.7.1 (2018-5-11)
+</stache-page-anchor>
+<ul>
+<li>Fixed an issue with the anchor icon on stache-page-anchor&#39;s not displaying. <a href="https://github.com/blackbaud/stache2/pull/462">#462</a></li>
+</ul>
+
+<stache-page-anchor>
+  2.7.0 (2018-5-9)
+</stache-page-anchor>
+<ul>
+<li>StacheRouterLink bugfixes <a href="https://github.com/blackbaud/stache2/pull/452">#452</a><ul>
+<li>Fixed issues that stopped the page from navigating to a fragment on another page when the current page contained a fragment with the same name.</li>
+<li>Fixed issue where navigation would not occure if path was <stache-code>.</stache-code> and it contained a fragment.</li>
+</ul>
+</li>
+<li>Fixed spacing under stache-edit-button. <a href="https://github.com/blackbaud/stache2/pull/454">#454</a></li>
+<li>Updated functionality that set browser Page Title. <a href="https://github.com/blackbaud/stache2/pull/448">#448</a><ul>
+<li>Included navTitle and tutorialHeader as options for browser page title when pageTitle stache attribute is absent.</li>
+<li>Fixed issue where page title would display as <stache-code>- AppName</stache-code> when no title was provided.</li>
+</ul>
+</li>
+<li>Fixed an issue where multiple scrollbars would appear with sidebar. <a href="https://github.com/blackbaud/stache2/pull/456">#456</a></li>
+<li>Fixed an issue where if the route.path was an array, it would never match the currentPath. <a href="https://github.com/blackbaud/stache2/pull/456">#456</a></li>
+</ul>
+</stache-markdown>
+</stache>

@@ -1,0 +1,76 @@
+<stache navTitle="Getting Started" pageTitle="Welcome to Stache" navOrder="1" layout="container" showTableOfContents="true" #stache="">
+
+  <stache-page-summary>
+    Stache is a component library designed to work with SKY UX single-page applications (SPAs) for the purpose of creating elegant and helpful technical documentation websites. From this page, you'll learn what's required for set up, how to get Stache working with your SPA, and recommended next steps. Let's get started.
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Install prerequisites
+  </stache-page-anchor>
+
+    <p>
+      To prepare your machine for your new {{ stache.jsonData?.global.productNameShort }} documentation site, you need to install SKY UX's prerequisites.
+    </p>
+    <ol>
+      <li>
+        <p>
+          To load your local single-page application into SKY UX Host, you must install the skyux-ca.crt root certificate. Follow the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/1.-SSL-certification">SSL certification installation instructions <i class="fa fa-external-link" aria-hidden="true"></i></a> on the SKY UX website.
+        </p>
+      </li>
+      <li>
+        <p>
+          Complete the SKY UX <a href="https://developer.blackbaud.com/skyux/learn/get-started/prereqs/initial-setup">Initial setup instructions <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+        </p>
+      </li>
+
+      <sky-alert alertType="info">
+        Blackbaud staff must also ensure they have <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/Azure DevOps-access">access to Visual Studio Team Services (Azure DevOps) <i class="fa fa-external-link" aria-hidden="true"></i></a> and link their Azure DevOps credentials from the <a href="https://host.nxt.blackbaud.com/engsys-hub/scs/list">Self-contained systems <i class="fa fa-external-link" aria-hidden="true"></i></a> page.
+      </sky-alert>
+    </ol>
+
+  <stache-page-anchor>
+    Set up a Stache SPA
+  </stache-page-anchor>
+
+  <p>
+    Depending on your situation, you can set up a Stache site in one of these ways.
+  </p>
+
+  <stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
+  </stache-action-buttons>
+
+ <stache-page-anchor>
+    Learn about Git workflow and Azure DevOps
+ </stache-page-anchor>
+
+ <p>
+   The following Git and Azure DevOps links are available to Blackbaud staff only <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i>.
+ </p>
+
+  <stache-action-buttons [routes]="stache.jsonData.gitvsts" showSearch="false">
+  </stache-action-buttons>
+
+  <stache-page-anchor>
+    Learn how to update Stache
+  </stache-page-anchor>
+
+  <p>
+    As we add features and bug fixes to Stache and SKY UX, you will need to update your SPA.
+  </p>
+
+  <p>
+    Use our tutorial to learn <a routerLink="/learn/update-stache">how to update Stache</a>!
+  </p>
+
+ <stache-page-anchor>
+   Next steps
+ </stache-page-anchor>
+
+  <p>
+    Ready to extend your learning and see what Stache can do?
+  </p>
+
+  <stache-action-buttons [routes]="stache.jsonData.startnextsteps" showSearch="false">
+  </stache-action-buttons>
+
+</stache>

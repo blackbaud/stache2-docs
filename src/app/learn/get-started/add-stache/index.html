@@ -1,7 +1,7 @@
 <stache
   navTitle="Add Stache"
-  navOrder="4"
-  layout="container">
+  navOrder="30"
+  layout="sidebar">
   <stache-tutorial>
     <stache-tutorial-heading>
       Add {{ stache.jsonData.global.productNameShort }} to a SKY UX Application
@@ -41,7 +41,7 @@
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Update the Sky dependencies
+        Update the SKY UX dependencies
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
@@ -49,7 +49,7 @@
         </p>
 
         <sky-alert alertType="info">
-          Your updated <stache-code>package.json</stache-code> file with all {{ stache.jsonData.global.productNameShort }} and Sky dependencies should look as follows.
+          Your updated <stache-code>package.json</stache-code> file with all {{ stache.jsonData.global.productNameShort }} and SKY UX dependencies should look as follows.
         </sky-alert>
         <stache-include fileName="package-json-sample.html"></stache-include>
       </stache-tutorial-step-body>

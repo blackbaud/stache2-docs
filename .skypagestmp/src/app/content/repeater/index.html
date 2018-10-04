@@ -1,0 +1,128 @@
+<stache pageTitle="Repeater" #stache="">
+
+  <stache-page-summary>
+    <p><a href="https://developer.blackbaud.com/skyux2/components/repeater">This SKY UX component</a> creates a container to display information for a list of objects.</p>
+
+    <p><a href="https://developer.blackbaud.com/skyux2/components/repeater"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a></p>
+    <h3>Repeater properties</h3>
+    <ul>
+      <li><stache-code>expandMode</stache-code> — <em>(Optional)</em> Specifies a layout for the repeater list to indicate whether users can collapse and expand repeater items. Items in a collapsed state display titles only. The valid options are <stache-code>none</stache-code>, <stache-code>multiple</stache-code>, and <stache-code>single</stache-code>.</li>
+      <ul>
+          <li><stache-code>none</stache-code> — loads all repeater items in an expanded state and does not allow users to collapse them. This standard layout provides the quickest access to the details in the repeater items.</li>
+          <li><stache-code>multiple</stache-code> —  loads all repeater items in a collapsed state and allow users to expand and collapse them. This layout provides a more compact view but still allows users to expand as many repeater items as necessary.</li>
+          <li><stache-code>single</stache-code> —  loads all repeater items in a collapsed state and allow users to expand one item at a time. This layout provides the most compact view because users can only expand one repeater item at a time.</li>
+      </ul>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+<h3>Repeater 'single' expand</h3>
+  <sky-repeater expandMode="single">
+    <sky-repeater-item [isExpanded]="false">
+      <sky-repeater-item-title>Title</sky-repeater-item-title>
+      <sky-repeater-item-content>Content
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+
+    <sky-repeater-item [isExpanded]="false">
+      <sky-repeater-item-title>Title</sky-repeater-item-title>
+      <sky-repeater-item-content>Content
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+  </sky-repeater>
+
+<h3>Repeater 'multiple' expand </h3>
+  <sky-repeater expandMode="multiple">
+    <sky-repeater-item [isExpanded]="false">
+      <sky-repeater-item-title>Title</sky-repeater-item-title>
+      <sky-repeater-item-content>Content
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+
+    <sky-repeater-item [isExpanded]="false">
+      <sky-repeater-item-title>Title</sky-repeater-item-title>
+      <sky-repeater-item-content>Content
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+  </sky-repeater>
+
+<h3>Repeater 'none'</h3>
+  <sky-repeater expandMode="none">
+    <sky-repeater-item [isExpanded]="true">
+      <sky-repeater-item-title>Title</sky-repeater-item-title>
+      <sky-repeater-item-content>Content
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+
+    <sky-repeater-item [isExpanded]="true">
+      <sky-repeater-item-title>Title</sky-repeater-item-title>
+      <sky-repeater-item-content>Content
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+  </sky-repeater>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="single">
+        <stache-code-block languageType="markup">
+          &lt;sky-repeater expandMode="single">
+            &lt;sky-repeater-item [isExpanded]="false">
+              &lt;sky-repeater-item-title>Title&lt;/sky-repeater-item-title>
+              &lt;sky-repeater-item-content>Content
+              &lt;/sky-repeater-item-content>
+            &lt;/sky-repeater-item>
+
+            &lt;sky-repeater-item [isExpanded]="false">
+              &lt;sky-repeater-item-title>Title&lt;/sky-repeater-item-title>
+              &lt;sky-repeater-item-content>Content
+              &lt;/sky-repeater-item-content>
+            &lt;/sky-repeater-item>
+          &lt;/sky-repeater>
+        </stache-code-block>
+      </sky-tab>
+      <sky-tab tabHeading="multiple">
+        <stache-code-block languageType="markup">
+          &lt;sky-repeater expandMode="multiple">
+            &lt;sky-repeater-item [isExpanded]="false">
+              &lt;sky-repeater-item-title>Title&lt;/sky-repeater-item-title>
+              &lt;sky-repeater-item-content>Content
+              &lt;/sky-repeater-item-content>
+            &lt;/sky-repeater-item>
+
+            &lt;sky-repeater-item [isExpanded]="false">
+              &lt;sky-repeater-item-title>Title&lt;/sky-repeater-item-title>
+              &lt;sky-repeater-item-content>Content
+              &lt;/sky-repeater-item-content>
+            &lt;/sky-repeater-item>
+          &lt;/sky-repeater>
+        </stache-code-block>
+      </sky-tab>
+      <sky-tab tabHeading="none">
+        <stache-code-block languageType="markup">
+          &lt;sky-repeater expandMode="none">
+            &lt;sky-repeater-item [isExpanded]="true">
+              &lt;sky-repeater-item-title>Title&lt;/sky-repeater-item-title>
+              &lt;sky-repeater-item-content>Content
+              &lt;/sky-repeater-item-content>
+            &lt;/sky-repeater-item>
+
+            &lt;sky-repeater-item [isExpanded]="true">
+              &lt;sky-repeater-item-title>Title&lt;/sky-repeater-item-title>
+              &lt;sky-repeater-item-content>Content
+              &lt;/sky-repeater-item-content>
+            &lt;/sky-repeater-item>
+          &lt;/sky-repeater>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

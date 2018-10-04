@@ -28,11 +28,11 @@ export class SkyDefinitionListDemoComponent {
     },
     {
       label: 'app-nav',
-      value: 'Add your navigation items to the app-nav.component.html file.'
+      value: 'Add your navigation items to the app-nav.component.html file. Blackbaud staff, add your items to the skyuxconfig.json file.'
     },
     {
       label: 'assets',
-      value: 'This folder can contain reference files such as images and documents.'
+      value: 'This folder can contain reference files, such as images and documents.'
     },
     {
       label: 'stache',
@@ -49,6 +49,14 @@ export class SkyDefinitionListDemoComponent {
     {
       label: 'includes',
       value: 'This folder can contain snippets of content for reuse in multiple places.'
+    },
+    {
+      label: 'package.json',
+      value: 'This file is where you update the versions of SKY UX and Stache.'
+    },
+    {
+      label: 'skyuxconfig.json',
+      value: 'This file is where you configure Stache app settings, and where Blackbaud staff can set up the Omnibar.'
     }
   ];
 

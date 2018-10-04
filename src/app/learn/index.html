@@ -1,41 +1,31 @@
 <stache
   pageTitle="Learn"
-  layout="container">
+  layout="sidebar">
   <stache-page-summary>
     {{ stache.jsonData.global.productNameLong }} is a component library for SKY UX single-page applications (SPAs). The {{ stache.jsonData.global.productNameShort }} components facilitate the creation of consistent, coordinated technical documentation that features SKY UX-approved styles.
   </stache-page-summary>
 
   <br />
 
-  <sky-alert alertType="info">
-    <strong><i class="fa fa-cogs" aria-hidden="true"></i> Work in Progress! </strong> To better support technical documentation, we are continuing to add new features and components.
-  </sky-alert>
-
   <stache-action-buttons showSearch="false"
     [routes]="[
       {
-        name: 'Getting Started',
+        name: 'Getting started',
         path: '/learn/get-started',
-        icon: 'certificate',
+        icon: 'compass',
         summary: 'Ready for Stache? Learn how to set up a new Stache site or add Stache to your existing SKY UX SPA!'
       },
         {
         name: 'Basics',
         path: '/learn/basics',
-        icon: 'pencil-square-o',
+        icon: 'shapes',
         summary: 'Learn how Stache is organized and how to get started creating documentation. '
       },
       {
         name: 'Update Stache',
         path: '/learn/update-stache/',
-        icon: 'wrench',
+        icon: 'download',
         summary: 'Learn how to update your app to the latest version of Stache.'
-      },
-      {
-        name: 'Stache 2 Plugins',
-        path: '/learn/plugins/',
-        icon: 'puzzle-piece',
-        summary: 'Learn about the plugins Stache uses to expand the features of SKY UX Builder.'
       },
       {
         name: 'Migrate from Stache 1',
@@ -44,7 +34,13 @@
         summary: 'Do you want to migrate your site? Learn about the steps and considerations when moving to Stache 2.'
       },
       {
-        name: 'Blackbaud Procedures',
+        name: 'Stache plugins',
+        path: '/learn/plugins/',
+        icon: 'plug',
+        summary: 'Learn about the plugins Stache uses to expand the features of SKY UX Builder.'
+      },
+      {
+        name: 'Blackbaud staff topics',
         path: 'https://docs.blackbaud.com/stache-internal',
         icon: 'lock',
         summary: 'Blackbaud staff can find documentation specifically written for our internal needs.'

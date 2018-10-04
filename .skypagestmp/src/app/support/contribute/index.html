@@ -1,0 +1,28 @@
+<stache pageTitle="Contribute" layout="container" #stache="">
+
+  <stache-page-summary>
+    To enhance the creation of quality technical documentation, we highly encourage contributions from all {{ stache.jsonData?.global.productNameShort }} 2 users!
+  </stache-page-summary>
+
+  <stache-action-buttons showSearch="false" [routes]="[
+      {
+        name: 'Submit a Request or Issue',
+        path: 'https://github.com/blackbaud/stache2/issues',
+        icon: 'github',
+        summary: 'Request new features or file a bug in our GitHub repo.'
+      },
+      {
+        name: 'Component Library',
+        path: '/support/contribute/developer',
+        icon: 'wrench',
+        summary: 'We welcome contributions to the component library.'
+      },
+      {
+        name: 'Documentation',
+        path: 'https://github.com/blackbaud/stache2-docs',
+        icon: 'book',
+        summary: 'We welcome contributions to our documentation. Follow git best practices and submit a PR for edits. '
+      }
+    ]">
+  </stache-action-buttons>
+</stache>

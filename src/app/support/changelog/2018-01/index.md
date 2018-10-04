@@ -43,11 +43,11 @@ a jumping issue with long sidebars. [#334 <i class="fa fa-external-link" aria-hi
   </stache-page-anchor>
 
   <stache-markdown>
-- Added an [Edit in VSTS Stache 2 Site in your Browser <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/vsts-editor) tutorial. (Thank you, Tommy Vernieri!)
-- Added a [Branch Policies and Security in VSTS <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/vsts-repo-setup) tutorial.
+- Added an [Edit in Azure DevOps Stache Site in your Browser <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/Azure DevOps-editor) tutorial. (Thank you, Tommy Vernieri!)
+- Added a [Branch Policies and Security in Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/Azure DevOps-repo-setup) tutorial.
 - Added a [Clone and Set up a Stache SPA](/stache/learn/get-started/clone-install) tutorial.
 - Updated the [Getting Started](/stache/learn/get-started) page with additional help and links.
-- Added a new step on how to push your initial commit to the [Create a Stache 2 Documentation Site](/stache/learn/get-started/new-stache) tutorial.
+- Added a new step on how to push your initial commit to the [Create a Stache Documentation Site](/stache/learn/get-started/new-stache) tutorial.
 - Updated the [Contribute](/stache/support/contribute) documentation to include a [Developer Reference](/stache/support/contribute/developer) page for those who want to contribute to our component library.
 - Updated the [Basics](/stache/learn/basics) page to include more detailed information on how to update the navigation on your Stache SPA.
   </stache-markdown>

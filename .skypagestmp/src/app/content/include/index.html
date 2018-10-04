@@ -1,0 +1,70 @@
+<stache pageTitle="Include" #stache="">
+
+  <stache-page-summary>
+    <p>
+      The include component supports single source documentation. It allows you to store content in the <stache-code>src/stache/includes/</stache-code> directory and then reuse it throughout your documentation. This is useful if you have small chunks of content that you find yourself repeating in several places. You can use an include, update it in one place, and it'll change everywhere it's used.
+    </p>
+
+        <p>
+    Content you wish to include should be placed in the <stache-code>src/stache/includes/</stache-code> directory. For example:
+  </p>
+
+  <ul>
+    <li>
+      <i class="fa fa-folder"></i> src
+      <ul>
+        <li>
+          <i class="fa fa-folder"></i> stache
+          <ul>
+            <li>
+              <i class="fa fa-folder"></i> includes
+              <ul>
+                <li>
+                  <i class="fa fa-file"></i> example.html
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+<sky-alert alertType="info">
+    <b>Note: </b> Includes are for static content. For dynamic content, create a custom component instead.
+  </sky-alert>
+    <h3>
+      Include properties
+    </h3>
+
+    <ul>
+      <li>
+        <stache-code>fileName</stache-code> — The name of the file in your <stache-code>src/stache/includes/</stache-code> directory, including the extension.
+      </li>
+    </ul>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-include fileName="example.html"><h1>Include</h1>
+<sky-alert alertType="info">We are including content from the <stache-code>includes</stache-code> directory!</sky-alert>
+</stache-include>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab tabHeading="sample">
+        <stache-code-block languageType="markup">
+          &lt;stache-include fileName="example.html"&gt;
+          &lt;/stache-include&gt;
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

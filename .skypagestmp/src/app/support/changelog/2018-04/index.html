@@ -1,0 +1,35 @@
+<stache pageTitle="April 2018" navTitle="April 2018" navOrder="90" showTableOfContents="true" #stache="">
+
+  <stache-page-summary>
+    Monitor this page to keep up with the latest changes and releases for {{ stache.jsonData?.global.productNameLong }}.
+  </stache-page-summary>
+
+  <stache-markdown>
+<stache-page-anchor>
+  2.6.0 (2018-4-13)
+</stache-page-anchor>
+<ul>
+<li>Refactored Table of Contents and Page Anchor components. <a href="https://github.com/blackbaud/stache2/pull/441">#441</a> - Thanks <a href="https://github.com/Blackbaud-StacyCarlos">@Blackbaud-StacyCarlos</a>!<ul>
+<li>Fixed a bug where the TOC would not load links until the user scrolled.</li>
+<li>Refactored the page anchors to allow nested anchors from child components to still load in the TOC.</li>
+</ul>
+</li>
+<li>Fixed a bug that caused tutorial card headers to have too much space above the title when the Omnibar was present. <a href="https://github.com/blackbaud/stache2/pull/440">#440</a></li>
+</ul>
+
+<stache-page-anchor>
+  2.5.2 (2018-4-11)
+</stache-page-anchor>
+<ul>
+<li>Fixed a bug that caused the sidebar to jitter when it required a scroll bar while the main content did not. <a href="https://github.com/blackbaud/stache2/pull/438">#438</a></li>
+</ul>
+
+<stache-page-anchor>
+  2.5.1 (2018-4-2)
+</stache-page-anchor>
+<ul>
+<li>Fixed a bug that caused <stache-code>stache-code-block</stache-code> to render without new lines in IE11. <a href="https://github.com/blackbaud/stache2/pull/433">#433</a></li>
+<li>Fixed a bug that caused the window to scroll too far down on <stache-code>stache-page-anchors</stache-code> when omnibar was present without <stache-code>affix-top</stache-code> being called first. <a href="https://github.com/blackbaud/stache2/pull/431">#431</a></li>
+</ul>
+</stache-markdown>
+</stache>
