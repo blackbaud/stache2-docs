@@ -3,7 +3,7 @@
 
   <stache-page-summary>
     <p>
-      The footer contains useful links and information for your site.
+      The footer enables you to add useful links and information, like copyright information, to the bottom of your site.
     </p>
     <sky-alert alertType="warning">
       <stache-include
@@ -19,12 +19,12 @@
   <ul>
     <li>
       <p>
-        <stache-code>copyrightLabel</stache-code> — Specifies the text to display in the footer's copyright information. By default, the footer displays a © symbol and the current year followed by "Blackbaud, Inc. All rights reserved." This property allows you to replace the default text after the year with your own copyright text.
+        <stache-code>copyrightLabel</stache-code> — Specifies the text to display in the footer's copyright information. By default, the footer displays a © symbol and the current year followed by "Blackbaud, Inc. All rights reserved." This property enables you to replace the default text that appears after the year with your own copyright text.
       </p>
     </li>
     <li>
       <p>
-        <stache-code>nav</stache-code> — This flag contains an <stache-code>items</stache-code> array,  allowing you to include specific links in the footer..
+        <stache-code>nav</stache-code> — This flag contains an <stache-code>items</stache-code> array, enabling you to include specific links in the footer.
       </p>
     </li>
     <li>
@@ -35,7 +35,15 @@
   </ul>
 
   <p>
-    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>. To disable the footer on specific pages, add <stache-code>the showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/content/wrapper">Stache wrapper</a>.
+    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>"appSettings": "stache":</stache-code>. To disable the footer on a specific page, add the <stache-code>showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/content/wrapper">Stache wrapper</a>.
+  </p>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <p>
+    See the bottom of this page for a demo of the Footer.
   </p>
 
   <stache-page-anchor>
@@ -46,7 +54,6 @@
     <sky-tabset>
       <sky-tab tabHeading="sample">
         <stache-code-block languageType="json">
-          ...
           "app": {
             "title": "Blackbaud Stache Documentation"
           },

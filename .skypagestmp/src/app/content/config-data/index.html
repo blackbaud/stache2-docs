@@ -1,7 +1,7 @@
 <stache showTableOfContents="true" pageTitle="Configuration and Data" navTitle="Configuration and data" #stache="">
 
   <stache-page-summary>
-    Data and configuration are an important component for any documentation site. This section outlines how to make use of data in your documentation and how to properly configure your {{ stache.jsonData?.global.productNameShort }} site.
+    Global data and configuration settings are an important feature of your documentation site. This section outlines how to make use of data in your documentation and how to properly configure your {{ stache.jsonData?.global.productNameShort }} site.
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -9,13 +9,8 @@
   </stache-page-anchor>
 
   <p>
-    {{ stache.jsonData?.global.productNameShort }} can consume JSON data files and provide them to you for use in your {{ stache.jsonData?.global.productNameShort }} templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include.
+    {{ stache.jsonData?.global.productNameShort }} can consume JSON data files and provide them to you for use in your {{ stache.jsonData?.global.productNameShort }} templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include. For example, you can add a variable for your site name and use that variable anywhere you want the name to appear. If the name ever changes, you'd only have to edit once in the <stache-code>global.json</stache-code> file.
   </p>
-
-  <sky-alert alertType="info">
-    <b>Note: </b> To use the data, you need to add the <a routerLink="/learn/plugins/stache">{{ stache.jsonData?.global.productNameShort }}</a> plugin to the plugins array in <stache-code>skyuxconfig.json</stache-code>. See <a routerLink="/learn/plugins/">plugins</a> for more information.</sky-alert>
-  
-
   <p>
     Data you wish to consume should be placed in the <stache-code>src/stache/data/</stache-code> directory. For example:
   </p>
@@ -43,7 +38,7 @@
 
   <sky-alert alertType="warning">
     <b>Note: </b> Make sure to name your files with names that can be converted to valid object keys. Ex: <stache-code>data_file.json</stache-code> or <stache-code>dataFile.json</stache-code></sky-alert>
-  
+
 
 
   <p>

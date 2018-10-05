@@ -14,22 +14,27 @@
     <ul>
       <li>
         <p>
-          <stache-code>showEditButton</stache-code> — This flag exists on the Stache wrapper and disables the edit button on individual pages.
+          <stache-code>showEditButton</stache-code> — Add this flag to the Stache wrapper on a page to disable that page's edit button.
         </p>
       </li>
     </ul>
 
+    <h3>
+      Enable the edit button
+    </h3>
     <p>
-      To enable the edit button, add <stache-code>editButton</stache-code> to your <stache-code>skyuxconfig.json</stache-code> under <stache-code>appSettings: stache</stache-code>:
+      The edit button is not enabled by default.
+    </p>
+    <p>
+      To enable the edit button, add <stache-code>editButton</stache-code> to your <stache-code>skyuxconfig.json</stache-code> file under <stache-code>"appSettings": "stache":</stache-code>.
     </p>
 
     <stache-code-block languageType="json">
-      ...
       "appSettings": {
         "stache": {
           "editButton": {
             "url": "URL to your repository",
-            "text": "The text for your edit button. Defaults to 'Edit'"
+            "text": "The text for your edit button. The default is 'Edit'"
           }
         }
       }
@@ -52,7 +57,6 @@
     <sky-tabset>
       <sky-tab tabHeading="sample">
         <stache-code-block languageType="json">
-          ...
           "appSettings": {
             "stache": {
               "editButton": {

@@ -74,23 +74,28 @@
   padding-bottom: 50px;
 }
 
-.code-block-supported-language-title  {
-  padding: 10px 0;
-}
 
-.code-block-supported-language-list {
+.sky-definition-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 1700px;
+  max-height: 1300px;
   list-style: none;
 
-  @media (max-width: 767px) {
-    max-height: none;
+  @media (min-width: 992px) and (max-width: 1350px) {
+    max-height: 1900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
   }
 
-  li {
-    padding: 5px 0;
+  @media (max-width: 991px) {
+    max-height: none;
   }
+}
+
+.sky-definition-list-content {
+  padding-right: 40px;
 }
 

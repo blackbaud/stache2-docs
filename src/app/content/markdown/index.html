@@ -3,7 +3,7 @@
 
   <stache-page-summary>
     <p>
-      The Markdown component allows users to write Markdown in their HTML files. Within the <stache-code>stache-markdown</stache-code> tags, users can mix Markdown and HTML elements to create documentation with Markdown without losing out on {{ stache.jsonData.global.productNameLong }} features.
+      The Markdown component enables users to write Markdown in their HTML files. Within the <stache-code>stache-markdown</stache-code> tags, users can mix Markdown and HTML elements to create documentation with Markdown without losing out on {{ stache.jsonData.global.productNameLong }} features.
     </p>
 
     <h3>
@@ -12,39 +12,39 @@
     <ul>
       <li>
         <p>
-          Page anchors — The <stache-code>##</stache-code> syntax creates an <stache-code>h2</stache-code> heading with a <a routerLink="/content/page-anchor">Stache page anchor</a> around it and adds the heading to the table of contents.
+          Page anchors — The <stache-code>##</stache-code> syntax creates an <stache-code>h2</stache-code> heading with a <a routerLink="/content/page-anchor">Stache page anchor</a> around it, and adds the heading to the table of contents.
         </p>
-        <sky-alert alertType="info">
+        <p>
           To create a regular <stache-code>h2</stache-code>, simply use the HTML <stache-code escapeCharacters="true"><h2></stache-code> tags.
-        </sky-alert>
+        </p>
       </li>
       <li>
         <p>
           Code snippets — The <stache-code>`</stache-code> syntax creates a <a routerLink="/content/code">Stache code snippet</a>.
         </p>
-        <sky-alert alertType="info">
+        <p>
           To use the <stache-code>escapeCharacters</stache-code> attribute escape special characters, you must use the actual <stache-code>stache-code</stache-code> element.
-        </sky-alert>
+        </p>
       </li>
       <li>
         <p>
-          Code blocks — The <stache-code>```</stache-code> syntax creates a <a routerLink="/content/code-block">Stache code block</a>. You can specify a language directly after the opening <stache-code>```</stache-code>. For example, <stache-code>```js</stache-code> creates a <stache-code>stache-code-block</stache-code> element with the <stache-code>languageType</stache-code> attribute set to <stache-code>js</stache-code>.
+          Code blocks — The <stache-code>```</stache-code> syntax creates a <a routerLink="/content/code-block">Stache code block</a>. You can specify a language directly after the opening <stache-code>```</stache-code>. For example, <stache-code>```json</stache-code> creates a <stache-code>stache-code-block</stache-code> element with the <stache-code>languageType</stache-code> attribute set to <stache-code>json</stache-code>.
         </p>
       </li>
     </ul>
   </stache-page-summary>
 
 <h3>Best Practices</h3>
-<p>To ensure your content displays correctly, avoid using the following components within the Markdown tags.</p>
+<p>To ensure your content displays correctly, avoid using the following components within the <stache-code>stache-markdown</stache-code> tags.</p>
   <ul>
     <li>Cards</li>
     <li>Code block</li>
     <li>Grid</li>
-    <li>Include (The component renders except when the content includes Code block component.)</li>
+    <li>Includes (the component renders except when the content includes the code block component)</li>
     <li>Page summary</li>
     <li>Text expand</li>
   </ul>
-<p>We recommend you close the Markdown tag before using the components listed above to avoid issues.</p>  
+<p>We recommend you close the Markdown tag before using the components listed above to avoid issues. You can always add a new Markdown tag if you want to continue writing in Markdown after the Stache component.</p>
 
   <stache-page-anchor>
     Demo
