@@ -6,7 +6,7 @@
 
   <stache-page-summary>
     <p>
-      The Copy to clipboard component creates a button on your page that enables users to copy the content to their computer's clipboard.
+      The copy to clipboard component creates a button on your page that enables users to copy the content to their computer's clipboard.
     </p>
     <sky-alert alertType="warning">
       <stache-include
@@ -24,9 +24,9 @@
       <p>
         <stache-code>copyTarget</stache-code> — Specifies content to copy.
       </p>
-      <div class="sky-text-warning">
+      <p>
           This property binds data, so you must use brackets to evaluate the template expression: <stache-code>[copyTarget]</stache-code>. Without the brackets, Angular treats the value as a string and initializes the target property with the string value instead of evaluating the data value.
-      </div>
+      </p>
     </li>
     <li>
       <stache-code>buttonText</stache-code> — <i>(Optional)</i> Specifies a label for the copy to clipboard button.

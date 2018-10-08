@@ -11,9 +11,9 @@
         fileName="localization-required.html">
       </stache-include>
     </sky-alert>
-    <div class="sky-text-warning">
+    <p>
       If a code block has text within <stache-code><</stache-code> and <stache-code>></stache-code> characters, then the component automatically appends a closing tag unless the code snippet is valid HTML. To prevent this, you must use "&#38;lt;" to escape <stache-code><</stache-code> and "&#38;gt;" to escape <stache-code>></stache-code>. For example, you must escape the <stache-code><</stache-code> and <stache-code>></stache-code> characters in the code snippet <stache-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</stache-code> or else the component automatically appends <stache-code>&lt;/Generic&gt;</stache-code> to the end: <stache-code escapeCharacters="true">public Task<Generic> MethodName()</stache-code>.
-    </div>
+    </p>
   </stache-page-summary>
 
     <h3>
