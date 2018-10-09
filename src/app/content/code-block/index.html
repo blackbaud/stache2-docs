@@ -4,7 +4,7 @@
 
   <stache-page-summary>
     <p>
-      The code block component enables you to format a block of text as a code snippet with syntax highlighting. To create a code snippet, wrap <stache-code>stache-code-block</stache-code> tags around the code block. The code block also has a header that display the language type, if defined, and a copy button. To format shorter code snippets within larger blocks of text, we recommend you use the <a routerLink="/content/code">code component</a> instead.
+      The code block component enables you to format a block of text as a code snippet with syntax highlighting. To create a code snippet, wrap <stache-code>stache-code-block</stache-code> tags around the code block. The code block also has a header that displays a copy button and, if defined, the language type. To format shorter code snippets within larger blocks of text, we recommend you use the <a routerLink="/content/code">code component</a> instead.
     </p>
     <sky-alert alertType="warning">
       <stache-include
@@ -22,9 +22,7 @@
 
     <ul>
       <li>
-        <p>
-          <stache-code>code</stache-code> — <i>(Optional)</i> Passes a code sample into the component. This property binds data, so you can use brackets to evaluate the template expression: <stache-code>[code]</stache-code>. Without the brackets, Angular treats the value as a string and initializes the target property with the string value instead of evaluating the data value.
-        </p>
+        <stache-code>code</stache-code> — <i>(Optional)</i> Passes a code sample into the component. This property binds data, so you can use brackets to evaluate the template expression: <stache-code>[code]</stache-code>. Without the brackets, Angular treats the value as a string and initializes the target property with the string value instead of evaluating the data value.
       </li>
       <li>
         <stache-code>hideCopyToClipboard</stache-code> — <i>(Optional)</i> Indicates whether to hide the copy-to-clipboard button in the code-block header. The default is false.
@@ -38,7 +36,7 @@
       Supported languages
     </h3>
     <p>
-      Using the list below, see if your code snippet language is supported. The language is in the first column. The second column is the text you use for the <stache-code>languageType</stache-code> property. For example <stache-code>languageType="javascript"</stache-code>.
+      Using the list below, see if your code snippet language is supported. The languages supported appear in pairs. The first part lists the language and the second part displays the text you use for the <stache-code>languageType</stache-code> property. For example, if your code block is a JavaScript code snippet, use <stache-code>languageType="javascript"</stache-code>.
     </p>
     <language-type-list>
     </language-type-list>

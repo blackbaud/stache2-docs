@@ -28,7 +28,8 @@ export class SkyDefinitionListDemoComponent {
     },
     {
       label: 'app-nav',
-      value: 'Add your navigation items to the app-nav.component.html file. Blackbaud staff, add your items to the skyuxconfig.json file.'
+      // tslint:disable-next-line:max-line-length
+      value: 'Add your navigation items to the app-nav.component.html file. Blackbaud staff, add your items to the omnibar in the skyuxconfig.json file.'
     },
     {
       label: 'assets',
@@ -52,11 +53,11 @@ export class SkyDefinitionListDemoComponent {
     },
     {
       label: 'package.json',
-      value: 'This file is where you update the versions of SKY UX and Stache.'
+      value: 'This file is where you update the versions of Stache, SKY UX, and its dependencies.'
     },
     {
       label: 'skyuxconfig.json',
-      value: 'This file is where you configure Stache app settings, and where Blackbaud staff can set up the Omnibar.'
+      value: 'This file is where you configure Stache app settings, and where Blackbaud staff can set up the omnibar.'
     }
   ];
 

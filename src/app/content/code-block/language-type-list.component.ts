@@ -96,12 +96,12 @@ export class LanguageTypeListComponent {
       value: 'cpp'
     },
     {
-      label: 'CoffeeScript',
-      value: 'coffeescript'
-    },
-    {
       label: 'Clojure',
       value: 'clojure'
+    },
+    {
+      label: 'CoffeeScript',
+      value: 'coffeescript'
     },
     {
       label: 'Content-Security-Policy',
@@ -468,12 +468,12 @@ export class LanguageTypeListComponent {
       value: 'tsx'
     },
     {
-      label: 'Renpy',
-      value: 'renpy'
-    },
-    {
       label: 'Reason',
       value: 'reason'
+    },
+    {
+      label: 'Renpy',
+      value: 'renpy'
     },
     {
       label: 'reST (reStructuredText)',
@@ -548,12 +548,12 @@ export class LanguageTypeListComponent {
       value: 'tcl'
     },
     {
-      label: 'Textile',
-      value: 'textile'
-    },
-    {
       label: 'Template Toolkit 2',
       value: 'tt2'
+    },
+    {
+      label: 'Textile',
+      value: 'textile'
     },
     {
       label: 'Twig',

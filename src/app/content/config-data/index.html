@@ -4,7 +4,7 @@
   navTitle="Configuration and data">
 
   <stache-page-summary>
-    Data and configuration settings are an important feature of your documentation site. This section outlines how to make use of data in your documentation and how to properly configure your {{ stache.jsonData.global.productNameShort }}  site.
+    Data and configuration settings are an important feature of your documentation site. This section outlines how to make use of data in your documentation and how to properly configure your {{ stache.jsonData.global.productNameShort }} site.
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -58,7 +58,7 @@
     Build time parsing
   </h3>
   <p>
-    If you need your variable data to be parsed at build time instead of run time, such as inside a <a routerLink="content/code-block"><stache-code>stache-code-block</stache-code></a> or as an <stache-code>attribute value</stache-code>, you will need to add the <stache-code>@buildtime:</stache-code> flag to your variable binding:
+    If you need your variable data to be parsed at build time instead of run time, such as inside a <a routerLink="content/code-block"><stache-code>stache-code-block</stache-code></a> or as an attribute value, you will need to add the <stache-code>@buildtime:</stache-code> flag to your variable binding:
   </p>
   <h4>
     In a <stache-code>stache-code-block</stache-code>:
@@ -114,7 +114,7 @@
   </stache-page-anchor>
 
   <p>
-    App specific configuration exists in the <stache-code>skyuxconfig.json</stache-code> file at the root of your project. This file should only contain app specific settings that are required for the functionality of your site. For example, keys for Google Analytics or plugins. Any variables that you wish to use in your app content should be in <stache-code>global.json</stache-code> or a custom <stache-code>json</stache-code> file. The stache template provides a location under <stache-code>appSettings</stache-code> for {{ stache.jsonData.global.productNameShort }} specific settings.
+    App-specific configuration exists in the <stache-code>skyuxconfig.json</stache-code> file at the root of your project. This file should only contain app-specific settings that are required for the functionality of your site. For example, keys for Google Analytics or plugins. Any variables that you wish to use in your app content should be in <stache-code>global.json</stache-code> or a custom <stache-code>json</stache-code> file. The stache template provides a location under <stache-code>appSettings</stache-code> for {{ stache.jsonData.global.productNameShort }}-specific settings.
   </p>
 
   <stache-code-block

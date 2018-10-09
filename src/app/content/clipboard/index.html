@@ -40,10 +40,6 @@
     Add copy to clipboard to a page
   </h3>
 
-  <p>
-    Only HTML elements can use the <stache-code>#identifier</stache-code> notation. If you would like to copy the content of a non-HTML element, such as a Stache component, that element must be wrapped in a <stache-code>div</stache-code> or another valid HTML element.
-  </p>
-
   <ol>
     <li>
       <p>
@@ -57,11 +53,11 @@
     </li>
     <li>
       <p>
-        Then, place a <stache-code>stache-copy-to-clipboard</stache-code> element on the page and specify the content to copy by referencing its identifier in the <stache-code>copyTarget</stache-code> attribute. <b>Example:</b> <stache-code escapeCharacters="true"><stache-copy-to-clipboard [copyTarget]="awesomesauce"></stache-copy-to-clipboard></stache-code>
+        Place a <stache-code>stache-copy-to-clipboard</stache-code> element on the page and specify the content to copy by referencing its <stache-code escapeCharacters="true">#identifier</stache-code> in the <stache-code>copyTarget</stache-code> attribute. <b>Example:</b> <stache-code escapeCharacters="true"><stache-copy-to-clipboard [copyTarget]="awesomesauce"></stache-copy-to-clipboard></stache-code>
       </p>
     </li>
     <li>
-      When a user clicks the copy-to-clipboard button, the component copies the text to the user's clipboard with formatting intact. To help users know that the copy button worked, you can specify different labels for before and after the users click the button.
+      When a user clicks the copy to clipboard button, the component copies the text to the user's clipboard with formatting intact. To help users know that the copy button worked, you can specify different labels for before and after the users click the button.
     </li>
   </ol>
 
