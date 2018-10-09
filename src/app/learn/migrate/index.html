@@ -1,17 +1,13 @@
 <stache
   pageTitle="Migrate Stache"
-  navOrder="2"
+  navOrder="40"
   layout="sidebar"
   showTableOfContents="true">
 
   <stache-page-summary>
     <p>
-      If you have a <a href="http://stache.docs.blackbaudhosting.com/">Stache 1</a> static documentation website, you can follow these simple steps to migrate to a Stache single-page applications (SPA).
+      If you have a <a href="http://stache.docs.blackbaudhosting.com/">Stache 1</a> static documentation website, you can follow these simple steps to migrate to a Stache single-page applications (SPA). Are you curious about why Stache is a great idea for you and your team? Learn more about <a routerLink="/support/why-stache">Why Stache?</a>
     </p>
-    <p>
-      Are you curious about why migrating is a great idea for you and your team? Learn more about <a routerLink="/support/why-stache">Why Stache?</a>
-    </p>
-
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -52,7 +48,7 @@
       When you set up your top-level navigation, do you want to improve the order or organization? Now is the time to think about any changes you'd like to make to your site before you copy and paste content.
     </li>
     <li>
-      Also, in Stache 2 when you set up your top-level navigation, keep in mind that top-level items with dropdowns are no longer clickable. If your Stache 1 includes top-level items with dropdowns that are clickable, you need to adjust your content and navigation accordingly.
+      Also, in Stache when you set up your top-level navigation, keep in mind that top-level items with dropdowns are no longer clickable. If your Stache 1 includes top-level items with dropdowns that are clickable, you need to adjust your content and navigation accordingly.
     </li>
     <li>
       <p>
@@ -77,7 +73,7 @@
           </ul>
       </ul>
       <p>
-        Stache 2 image files location:
+        Stache image files location:
       </p>
       <ul>
         <li>
@@ -126,7 +122,7 @@
     If you have Markdown on your Stache 1 site, inside your Stache wrapper tags, we recommend you insert the <a routerLink="/content/markdown">Stache markdown component</a>.
   </p>
   <sky-alert alertType="info">
-    When you copy and paste, if you have additional tabs or spaces, the Stache markdown component may interpret that as a code block. If your page is a giant code block, we recommend you review the spacing and tabs for the content you copied over.
+    When you copy and paste, if you have indentation, additional tabs, or extra spaces, the Stache markdown component may interpret that as a code block. If your page is a giant code block, we recommend you review the indentation, spacing, and tabs for the content you copied over.
   </sky-alert>
   <h3>
     Custom CSS
@@ -162,7 +158,7 @@
     While most HTML and Markdown copies as is to the new site, you will want to scan your content for specific references to Bootstrap, SKY UX 1, or custom JavaScript.
   </p>
   <p>
-    For example, if you had a <stache-code escapeCharacters="true">&lt;bb-alert bb-alert-type="info"&gt;</stache-code> in Stache 1, when you copy and paste, that will cause an error and your page won't load. In SKY UX 2, alerts are referenced as <stache-code escapeCharacters="true">&lt;sky-alert alertType="info"&gt;</stache-code>.
+    For example, if you had a <stache-code escapeCharacters="true">&lt;bb-alert bb-alert-type="info"&gt;</stache-code> in Stache 1, when you copy and paste, that will cause an error and your page won't load. In SKY UX 2, <a href="https://developer.blackbaud.com/skyux/components/alert">alerts <i class="fa fa-external-link" aria-hidden="true"></i></a> are referenced as <stache-code escapeCharacters="true">&lt;sky-alert alertType="info"&gt;</stache-code>.
   </p>
   <p>
     Most features in Stache 1 are available in Stache 2, just with a different implementation that's compatible with Angular. We recommend you familiarize yourself with the options on the <a routerLink="/content">Content page</a>. The items (components, utilities, directives, etc) on this page enable you to enhance your content in a similar way as you did on Stache 1.

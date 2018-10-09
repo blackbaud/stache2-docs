@@ -1,13 +1,15 @@
 <stache
   navTitle="Update Stache"
-  navOrder="3"
-  layout="container">
+  navOrder="30"
+  layout="sidebar">
   <stache-tutorial>
     <stache-tutorial-heading>
       Update {{ stache.jsonData.global.productNameShort }}
     </stache-tutorial-heading>
     <stache-tutorial-summary>
-      This tutorial provides step-by-step instructions to update {{ stache.jsonData.global.productNameShort }} and SKY UX dependencies with the latest versions.
+      <p>
+        Interested in getting the latest <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">Stache features <i class="fa fa-external-link" aria-hidden="true"></i></a>? This tutorial provides step-by-step instructions on how to update {{ stache.jsonData.global.productNameShort }}, SKY UX, and its dependencies with the latest versions.
+      </p>
     </stache-tutorial-summary>
 
     <stache-tutorial-step>
@@ -17,10 +19,10 @@
       <stache-tutorial-step-body>
         <ol>
           <li>
-            Open the <stache-code>package.json</stache-code> file in your project's root directory. 
+            Open the <stache-code>package.json</stache-code> file in your project's root directory.
           </li>
           <li>
-            Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+            Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>. Before you update, we recommend you review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes.
           </li>
         <stache-code-block
           languageType="json">
@@ -29,10 +31,7 @@
               ...
         </stache-code-block>
         </ol>
-        <sky-alert
-          alertType="info">
-            Before you update, review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes.
-        </sky-alert>
+
 
       </stache-tutorial-step-body>
     </stache-tutorial-step>
@@ -49,13 +48,16 @@
             Under the <stache-code>dependencies</stache-code> property in the <stache-code>package.json</stache-code> file, update <stache-code>@blackbaud/skyux</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux2/blob/master/CHANGELOG.md">SKY UX changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
           </li>
           <li>
-            Under the <stache-code>devDependencies</stache-code> property, update <stache-code>@blackbaud/skyux-builder</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux-builder/blob/master/CHANGELOG.md">SKY UX Builder changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+            <p>
+              Under the <stache-code>devDependencies</stache-code> property, update <stache-code>@blackbaud/skyux-builder</stache-code> to the latest version in the <a href="https://github.com/blackbaud/skyux-builder/blob/master/CHANGELOG.md">SKY UX Builder changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+            </p>
             <stache-include fileName="package-json-sample.html"></stache-include>
           </li>
         </ol>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
+<!--
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
         Specify plugins
@@ -99,21 +101,21 @@
         <stache-include fileName="app-extras-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
-
+-->
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
         Update node_modules
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          The <stache-code>node_modules</stache-code> folder contains the dependencies that are required to run and serve your project locally.
+          The <stache-code>node_modules</stache-code> folder contains the dependencies that are required to run and serve your project locally. To update them, you must delete the folder and re-add it to your project.
         </p>
         <ol>
           <li>
-            Delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove outdated versions of {{ stache.jsonData.global.productNameShort }} and its plugins.
+            In VS Code, File Explorer (Windows), or Finder (Mac), delete the <stache-code>node_modules/@blackbaud/</stache-code> folder for your project to remove outdated versions of {{ stache.jsonData.global.productNameShort }}, SKY UX, and its dependencies.
           </li>
           <li>
-            From the command prompt, run <stache-code>npm install</stache-code> to re-install {{ stache.jsonData.global.productNameShort }} and its dependencies.
+            From command prompt or terminal, enter <stache-code>npm install</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac)  to re-install SKY UX, {{ stache.jsonData.global.productNameShort }}, and its dependencies.
           </li>
         </ol>
       </stache-tutorial-step-body>
@@ -125,7 +127,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          As with any major update, existing components or implementations may change. Please review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes that may require changes in how you use {{ stache.jsonData.global.productNameShort }} components.
+          As with any major update, existing components or implementations may change. Please review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes that may require additional changes in how you use {{ stache.jsonData.global.productNameShort }} components.
         </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>

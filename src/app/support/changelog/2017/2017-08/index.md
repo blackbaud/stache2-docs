@@ -20,7 +20,7 @@
       <a href="https://github.com/blackbaud/stache2/pull/297">#297 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Fixed a bug causing Stache 2 sites without the
+      Fixed a bug causing Stache sites without the
       <stache-code>name</stache-code> property set in
       <stache-code>skyuxconfig</stache-code> to show as
       <stache-code>unknown</stache-code> in analytics.

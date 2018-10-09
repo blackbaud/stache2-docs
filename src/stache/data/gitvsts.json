@@ -3,18 +3,18 @@
     "name": "Learn Git workflow",
     "path": "https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/git-workflow",
     "icon": "git",
-    "summary": "New to Git? Learn how to use Git process for updating your repo. The Engineering System has adopted Git as a standard version control for VSTS and GitHub."
+    "summary": "New to Git? Learn how to use Git process for updating your repo. The Engineering System has adopted Git as a standard version control for Azure DevOps and GitHub."
   },
   {
-    "name": "Edit in VSTS",
-    "path": "https://docs.blackbaud.com/stache-internal/vsts-editor/",
+    "name": "Edit in Azure DevOps",
+    "path": "https://docs.blackbaud.com/stache-internal/Azure DevOps-editor/",
     "icon": "pencil-square-o",
-    "summary": "Do you have a small edit? Learn how to use VSTS to make your change without leaving your web browser."
+    "summary": "Do you have a small edit? Learn how to use Azure DevOps to make your change without leaving your web browser."
   },
   {
-    "name": "Edit VSTS repo settings",
-    "path": "https://docs.blackbaud.com/stache-internal/vsts-repo-setup",
+    "name": "Edit Azure DevOps repo settings",
+    "path": "https://docs.blackbaud.com/stache-internal/Azure DevOps-repo-setup",
     "icon": "shield",
-    "summary": "VSTS Git Repos are set up with standard policies and security. If necessary, learn how to edit them for your Stache SPA."
+    "summary": "Azure DevOps Git Repos are set up with standard policies and security. If necessary, learn how to edit them for your Stache SPA."
   }
 ]

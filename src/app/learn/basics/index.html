@@ -1,6 +1,6 @@
 <stache
   pageTitle="Basics"
-  navOrder="2"
+  navOrder="20"
   layout="sidebar"
   showTableOfContents="true">
 
@@ -37,13 +37,13 @@
   </p>
 
   <stache-code-block>
-    <stache pageTitle="My Sample Page">
+    <stache pageTitle="My Sample Page" navTitle="Sample" navOrder="1" showTableOfContents="true">
       // Your content here.
     </stache>
   </stache-code-block>
 
   <p>
-    <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-primary">Learn More</button></a>
+    <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-default">Learn More</button></a>
   </p>
 
   <stache-page-anchor>
@@ -51,10 +51,10 @@
   </stache-page-anchor>
 
   <p>
-    To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template allows you to display a navigation bar at the top of pages.
+    To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template enables you to display a navigation bar at the top of pages.
   </p>
   <sky-alert alertType="info">
-    For <strong>internal Blackbaud SPAs</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. However, it is for Blackbaud staff use only. To learn how to set up top-level navigation with the omnibar, see step 4 of the <a href="https://docs.blackbaud.com/stache-internal/new-bb-stache">Create a Blackbaud Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
+    For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the <a href="https://docs.blackbaud.com/stache-internal/new-bb-stache">Create a Blackbaud Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
   </sky-alert>
 
   <h3>
@@ -65,8 +65,11 @@
     To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
   </p>
 
-<stache-code-block languageType="js">
+<stache-code-block>
 &lt;app-nav&gt;&lt;/app-nav&gt;
+<stache pageTitle="My Sample Page" navTitle="Sample" navOrder="1" showTableOfContents="true">
+  // Your content here.
+</stache>
 </stache-code-block>
 
 <h3>
@@ -74,7 +77,7 @@
 </h3>
 
 <p>
-  To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA. To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">create a page tutorial <i class="fa fa-external-link" aria-hidden="true"></i></a> on the SKY UX website.
+  To display entries in the navigation bar, you must manually configure the top-level navigation for your SPA. To use localization strings for the top-level navigation items, see the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/basics/edit-project#create-a-page">SKY UX Create a page tutorial <i class="fa fa-external-link" aria-hidden="true"></i></a>.
   </p>
   <ol>
     <li>
@@ -132,7 +135,7 @@ img &#123;
   <p>
     After the <stache-code>app.scss</stache-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file and insert this line of code at the beginning of the file.
   </p>
-  <stache-code-block>require('style-loader!./app.scss');</stache-code-block>
+  <stache-code-block languageType="typescript">require('style-loader!./app.scss');</stache-code-block>
 
   <stache-page-anchor>
     Command line
@@ -149,28 +152,28 @@ img &#123;
   </p>
 
   <stache-page-anchor>
-    VSTS for Blackbaud staff
+    Azure DevOps for Blackbaud staff
   </stache-page-anchor>
 
   <p>
-    Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">VSTS <i class="fa fa-external-link" aria-hidden="true"></i></a>. VSTS has pull requests just like GitHub. However, there are three key differences to know about.
+    Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are three key differences to know about.
   </p>
   <ol>
     <li>
-      When you create a pull request (PR),  please remove <stache-code>[Products]\Products Team</stache-code> from the reviewers or edit the branch policies. <br />If you have VSTS permission, from your repo's Branches page, hover over the branch row, select the "...", and then select Branch policies. On this page you can set many branch settings, including who to automatically include on code reviews. <br /> If you don't have permission, speak to your repo creator/owner.
+      When you create a pull request (PR),  please remove <stache-code>[Products]\Products Team</stache-code> from the reviewers or edit the branch policies. <br />If you have Azure DevOps permission, from your repo's Branches page, hover over the branch row, select the "...", and then select Branch policies. On this page you can set many branch settings, including who to automatically include on code reviews. <br /> If you don't have permission, speak to your repo creator/owner.
     </li>
     <li>
       Each time you create a PR, or make a change to your pull request, it kicks off a build. The build takes a few minutes to complete and tests to make sure there aren't any problems with your code before it merges.
     </li>
     <li>
-      The PR build is one part of the PR approval process. Most VSTS repos also require you to get at least one code review approval.
+      The PR build is one part of the PR approval process. Most Azure DevOps repos also require you to get at least one code review approval.
     </li>
   </ol>
   <p>
     Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.
   </p>
   <p>
-    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in VSTS lets you make quick changes without leaving the browser. To learn how to make changes with the VSTS web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/vsts-editor/">Edit a VSTS Stache 2 Site in Your Browser tutorial <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a>.
+    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in Azure DevOps lets you make quick changes without leaving the browser. To learn how to make changes with the Azure DevOps web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/Azure DevOps-editor/">Edit an Azure DevOps Stache Site in Your Browser tutorial <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a>.
   </p>
 
   <stache-page-anchor>
@@ -227,8 +230,8 @@ img &#123;
   <p>
     Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
   </p>
-  <sky-alert alertType="info">
-    If you are a Blackbaud staff member and have your omnibar set up, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
+  <sky-alert alertType="warning">
+    If you are a Blackbaud staff member and have the omnibar set up in your <stache-code>skyuxconfig.json</stache-code> file, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
   </sky-alert>
 
 <stache-code-block>

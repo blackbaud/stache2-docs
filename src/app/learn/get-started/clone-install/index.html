@@ -1,7 +1,7 @@
 <stache
-  navTitle="Clone and Install Stache Locally"
-  navOrder="1"
-  layout="container">
+  navTitle="Clone and install Stache locally"
+  navOrder="20"
+  layout="sidebar">
 
   <stache-tutorial>
     <stache-tutorial-heading>
@@ -23,7 +23,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          If your repo is in VSTS, skip to step 2.
+          If your repo is in Azure DevOps, skip to step 2.
         </p>
         <ol>
           <li>
@@ -36,7 +36,7 @@
             <stache-image
               imageAlt="GitHub clone button"
               imageSource="~/assets/github_clone.png"
-              class="stache-image-border">
+              class="image-border">
             </stache-image>
           </li>
           <li>
@@ -57,21 +57,21 @@
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
-        Clone the Git repo from VSTS
+        Clone the Git repo from Azure DevOps
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <ol>
           <li>
           <p>
-            From <a href="https://blackbaud.visualstudio.com/Products/_git/">VSTS Git <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a>, select the repository dropdown and then select <strong>All repositories</strong>. To search for your repo, use the search field. Most Stache SPAs start with <stache-code>skyux-spa</stache-code>.
+            From <a href="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps Git <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a>, select the repository dropdown. To search for your repo, use the search field. Most Stache SPAs start with <stache-code>skyux-spa</stache-code>.
           </p>
               <div class="retina-screenshot">
                 <stache-image
-                  imageSource="~/assets/vsts_git_search.jpg" class="stache-image-border">
+                  imageSource="~/assets/vsts_git_search.jpg" class="image-border">
                 </stache-image>
               </div>
           <p>
-            If you're not sure about the VSTS repo name, ask the person who set up the Stache SPA for you.
+            If you're not sure about the Azure DevOps repo name, ask the person who set up the Stache SPA for you.
           </p>
           </li>
           <li>
@@ -80,7 +80,7 @@
             </p>
             <div class="retina-screenshot">
               <stache-image
-                imageSource="~/assets/vsts_git_clone.jpg" class="stache-image-border">
+                imageSource="~/assets/vsts_git_clone.jpg" class="image-border">
               </stache-image>
             </div>
           </li>
@@ -90,7 +90,7 @@
             </p>
             <div class="retina-screenshot">
               <stache-image
-                imageSource="~/assets/vsts_git_copy.jpg"class="stache-image-border">
+                imageSource="~/assets/vsts_git_copy.jpg"class="image-border">
               </stache-image>
             </div>
           </li>
@@ -112,10 +112,10 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          After the repo clones, change your directory to the new repo folder. For example, enter <stache-code>cd skyux-spa-engineering-system-docs</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
+          After the repo clones, change your directory to the new repo folder. For example, enter <stache-code>cd skyux-spa-stache-spa</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
         </p>
         <p>
-          To be able to serve locally, you need to install the SKY UX dependencies. In the command prompt, enter <stache-code>npm install</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
+          To be able to serve locally, you need to install the SKY UX and Stache dependencies. In the command prompt, enter <stache-code>npm install</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
         </p>
         <p>
           This will take a few minutes. After it completes, you can test the new install by serving locally. Enter <stache-code>skyux serve</stache-code>. When it finishes preparing to serve, a browser will open to a local development instance of your Stache SPA.

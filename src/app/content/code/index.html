@@ -16,9 +16,9 @@
       <p>
         <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <stache-code escapeCharacters="true">{</stache-code> and <stache-code escapeCharacters="true">\</stache-code>. Escaping these characters renders them as text instead of code. Defaults to <stache-code>false</stache-code>.
       </p>
-      <sky-alert alertType="warning">
-        If a code snippet has text within <stache-code><</stache-code> and <stache-code>></stache-code> characters and you set <stache-code>escapeCharacters="true"</stache-code>, then the component automatically appends a closing tag unless the code snippet is valid HTML. To prevent this, you must use "&#38;lt;" to escape <stache-code><</stache-code> and "&#38;gt;" to escape <stache-code>></stache-code>. For example, you must escape the <stache-code><</stache-code> and <stache-code>></stache-code> characters in the code snippet <stache-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</stache-code> or else the component automatically appends <stache-code>&lt;/Generic&gt;</stache-code> to the end: <stache-code escapeCharacters="true">public Task<Generic> MethodName()</stache-code>.
-      </sky-alert>
+      <p>
+        If a code snippet has text within <stache-code><</stache-code> and <stache-code>></stache-code> characters and you set <stache-code>escapeCharacters="true"</stache-code>, then the component automatically appends a closing tag. To prevent this, you must use "&#38;lt;" to escape <stache-code><</stache-code> and "&#38;gt;" to escape <stache-code>></stache-code>. For example, you must escape the <stache-code><</stache-code> and <stache-code>></stache-code> characters in the code snippet <stache-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</stache-code> or else the component automatically appends <stache-code>&lt;/Generic&gt;</stache-code> to the end: <stache-code escapeCharacters="true">public Task&lt;Generic> MethodName()&lt;/Generic></stache-code>.
+      </p>
     </li>
   </ul>
 

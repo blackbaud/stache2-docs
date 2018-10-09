@@ -1,7 +1,7 @@
 <stache
   navTitle="New Stache"
-  navOrder="1"
-  layout="container">
+  navOrder="10"
+  layout="sidebar">
 
   <stache-tutorial>
     <stache-tutorial-heading>
@@ -55,7 +55,7 @@
           </li>
           <li>
             <p>
-              In the second prompt, enter the location of your repo.
+              In the second prompt, enter the location of your remote repo. For example, you can enter the location of your GitHub repo.
             </p>
           </li>
           <p>
@@ -127,7 +127,7 @@
             Enter <stache-code>git push origin initial-commit</stache-code>.
           </li>
           <li>
-            Navigate to your repo.
+            Navigate to your remote repo.
           </li>
           <li>
             Create a pull request into the <stache-code>master</stache-code> branch. For GitHub repos, you can create the pull request from the Code or Pull Requests tabs.
@@ -152,7 +152,7 @@
         <ul>
           <li>
             <p>
-              <a routerLink="/learn/basics">{{ stache.jsonData.global.productNameShort }} basics</a>
+              <a routerLink="/learn/basics">Basics</a>
             </p>
           </li>
           <li>
