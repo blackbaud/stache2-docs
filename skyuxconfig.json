@@ -14,7 +14,11 @@
         "url": "https://github.com/blackbaud/stache2-docs"
       },
       "searchConfig": {
-        "is_internal": false
+        "is_internal": false,
+        "site_names": [
+          "stache",
+          "stache-internal"
+        ]
       },
       "footer": { }
     }
@@ -57,7 +61,7 @@
                 },
                 {
                   "title": "Blackbaud staff topics",
-                  "url": "https://docs.blackbaud.com/stache-internal"
+                  "url": "https://docs.blackbaud.com/stache-internal/staff"
                 }
               ]
             },
