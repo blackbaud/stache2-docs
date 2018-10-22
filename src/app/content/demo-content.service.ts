@@ -172,7 +172,7 @@ export class StacheDemoContentService {
       name: 'Search',
       route: '/content/search',
       icon: 'search',
-      summary: `Enables search capabilities for site content.`
+      summary: `Enables search capabilities for Blackbaud Stache sites.`
     },
     {
       name: 'Navigation',

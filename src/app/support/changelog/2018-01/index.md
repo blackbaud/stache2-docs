@@ -43,8 +43,8 @@ a jumping issue with long sidebars. [#334 <i class="fa fa-external-link" aria-hi
   </stache-page-anchor>
 
   <stache-markdown>
-- Added an [Edit in Azure DevOps Stache Site in your Browser <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/Azure DevOps-editor) tutorial. (Thank you, Tommy Vernieri!)
-- Added a [Branch Policies and Security in Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/Azure DevOps-repo-setup) tutorial.
+- Added an [Edit Stache online <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/staff/vsts-editor) tutorial. (Thank you, Tommy Vernieri!)
+- Added a [Branch Policies & Security in Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.blackbaud.com/stache-internal/staff/vsts-repo-setup) tutorial.
 - Added a [Clone and Set up a Stache SPA](/stache/learn/get-started/clone-install) tutorial.
 - Updated the [Getting Started](/stache/learn/get-started) page with additional help and links.
 - Added a new step on how to push your initial commit to the [Create a Stache Documentation Site](/stache/learn/get-started/new-stache) tutorial.

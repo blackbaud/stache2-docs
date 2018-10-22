@@ -7,7 +7,7 @@
   },
   {
     "name": "Blackbaud Staff create a new Stache SPA",
-    "path": "https://docs.blackbaud.com/stache-internal/new-bb-stache",
+    "path": "https://docs.blackbaud.com/stache-internal/staff/new-bb-stache",
     "icon": "bolt",
     "summary": "Blackbaud Staff should follow the Blackbaud version for a new Stache SPA."
   },
