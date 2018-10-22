@@ -16,8 +16,7 @@
       "searchConfig": {
         "is_internal": false,
         "site_names": [
-          "stache",
-          "stache-internal"
+          "stache"
         ]
       },
       "footer": { }
