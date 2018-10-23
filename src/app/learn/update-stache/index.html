@@ -12,6 +12,33 @@
       </p>
     </stache-tutorial-summary>
 
+    <stache-tutorial-step showNumber="false">
+      <stache-tutorial-step-heading>
+        Update Stache command
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        <p>
+          If your Stache version is on <stache-code>2.13.0</stache-code> or higher, you can run a command to quickly update your Stache, SKY UX, SKY UX Builder, and Whitelist plugin (if applicable) versions for you. If you aren't on version <stache-code>2.13.0</stache-code> or higher, follow the instructions below to update, and then for future updates you can use the update command.
+        </p>
+        <p>
+          From the terminal in Visual Studio code or a command prompt, enter:
+        </p>
+        <stache-code-block>
+          skyux stache-update
+        </stache-code-block>
+
+        <p>
+          The command updates your versions, deletes your node-modules folder, and runs <stache-code>npm install</stache-code> for you. When it completes, you're all set to get back to creating stellar content.
+        </p>
+
+        <sky-alert alertType="info">
+          If you'd rather manually update your Stache site, follow the steps below.
+        </sky-alert>
+      </stache-tutorial-step-body>
+
+
+    </stache-tutorial-step>
+
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
         Update the {{ stache.jsonData.global.productNameShort }} version
