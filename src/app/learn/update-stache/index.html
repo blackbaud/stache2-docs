@@ -8,7 +8,10 @@
     </stache-tutorial-heading>
     <stache-tutorial-summary>
       <p>
-        Interested in getting the latest <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">Stache features <i class="fa fa-external-link" aria-hidden="true"></i></a>? This tutorial provides step-by-step instructions on how to update {{ stache.jsonData.global.productNameShort }}, SKY UX, and its dependencies with the latest versions.
+        This tutorial provides step-by-step instructions on how to update {{ stache.jsonData.global.productNameShort }}, SKY UX, and its dependencies with the latest versions.
+      </p>
+      <p>
+        Before you update, we recommend you familiarize yourself with the changes and new features to Stache in our <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md"> changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>. Some updates may require additional changes in how you use {{ stache.jsonData.global.productNameShort }} components.
       </p>
     </stache-tutorial-summary>
 
@@ -18,24 +21,26 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          If your Stache version is on <stache-code>2.13.0</stache-code> or higher, you can run a command to quickly update your Stache, SKY UX, SKY UX Builder, and Whitelist plugin (if applicable) versions for you. If you aren't on version <stache-code>2.13.0</stache-code> or higher, follow the instructions below to update, and then for future updates you can use the update command.
+          Starting with Stache version <stache-code>2.13.0</stache-code>, the <stache-code>skyux stache-update</stache-code> command automates the process to update your Stache site. To update from a version prior to <stache-code>2.13.0</stache-code>, follow the <a stacheRouterLink="." fragment="update-the-stache-version">step-by-step instructions below</a> in this tutorial.
         </p>
         <p>
-          From the terminal in Visual Studio code or a command prompt, enter:
+          After you are on version <stache-code>2.13.0</stache-code>, update your Stache site from the Visual Studio Code terminal or a command prompt by running:
         </p>
         <stache-code-block>
           skyux stache-update
         </stache-code-block>
 
         <p>
-          The command updates your versions, deletes your node-modules folder, and runs <stache-code>npm install</stache-code> for you. When it completes, you're all set to get back to creating stellar content.
+          The command updates the versions of Stache, SKY UX, SKY UX Builder, and the Whitelist plugin (if applicable), deletes your <stache-code>node-modules</stache-code> folder, and runs <stache-code>npm install</stache-code> for you. After it finishes, you are all set to create more stellar content.
         </p>
+
+        <sky-alert alertType="info">
+          If you prefer to continue manually updating your Stache site, you can still <a stacheRouterLink="." fragment="update-the-stache-version">follow the step-by-step instructions</a> below (even after you update to <stache-code>2.13.0</stache-code>).
+        </sky-alert>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
-    <sky-alert alertType="info">
-      If you'd rather manually update your Stache site, follow the steps below.
-    </sky-alert>
+
 
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
@@ -142,18 +147,10 @@
           <li>
             From command prompt or terminal, enter <stache-code>npm install</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac)  to re-install SKY UX, {{ stache.jsonData.global.productNameShort }}, and its dependencies.
           </li>
+          <li>
+            After <stache-code>npm install</stache-code> finishes, you can return to working on content for your Stache site.
+          </li>
         </ol>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
-
-    <stache-tutorial-step>
-      <stache-tutorial-step-heading>
-        Update components
-      </stache-tutorial-step-heading>
-      <stache-tutorial-step-body>
-        <p>
-          As with any major update, existing components or implementations may change. Please review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes that may require additional changes in how you use {{ stache.jsonData.global.productNameShort }} components.
-        </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
   </stache-tutorial>
