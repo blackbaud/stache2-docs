@@ -16,7 +16,8 @@
       "searchConfig": {
         "is_internal": false,
         "site_names": [
-          "stache"
+          "stache",
+          "stache-internal"
         ]
       },
       "footer": { }
@@ -29,7 +30,7 @@
       "services": [
         {
           "title": "Stache Docs",
-          "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
+          "searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest/stache",
           "items": [
             {
               "title": "Home",
