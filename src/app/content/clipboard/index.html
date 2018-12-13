@@ -6,13 +6,14 @@
 
   <stache-page-summary>
     <p>
-      The copy to clipboard component creates a button on your page that enables users to copy the content to their computer's clipboard.
+      <a href="https://developer.blackbaud.com/skyux2/components/repeater"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
     <sky-alert alertType="warning">
-      <stache-include
-        fileName="localization-required.html">
-      </stache-include>
+      The <stache-code>stache-clipboard</stache-code> component is <strong>deprecated</strong> as of Stache v2.15.0 and may be unavailable in Stache v3.0.0.
     </sky-alert>
+    <p>
+      The copy to clipboard component creates a button on your page that enables users to copy the content to their computer's clipboard.
+    </p>
   </stache-page-summary>
 
   <h3>
@@ -36,6 +37,52 @@
     </li>
   </ul>
 
+  <sky-repeater expandMode="single">
+    <sky-repeater-item [isExpanded]="false">
+      <sky-repeater-item-title>
+        <h3>
+          Adding the Module for non-Stache SPAs
+        </h3>
+      </sky-repeater-item-title>
+      <sky-repeater-item-content>
+        <p>
+          If your SPA uses Stache this module is installed and added for you. To use this module without Stache users need to install and declare it as a dependency of their project.
+        </p>
+        <ul>
+          <li>
+            <p>
+              Install the package as part of your SPAs dependencies.
+            </p>
+            <sky-code-block>
+              npm install @blackbaud/skyux-lib-clipboard --save
+            </sky-code-block>
+          </li>
+          <li>
+            <p>
+              Add the module to your <strong>app-extras.module.ts</strong> file.
+            </p>
+            <sky-code-block hideCopyToClipboard="true">
+                import { SkyClipboardModule } from '@blackbaud/skyux-lib-clipboard';
+
+                @NgModule({
+                  imports: [
+                    SkyClipboardModule
+                  ],
+                  exports: [
+                    SkyClipboardModule
+                  ],
+                  providers: [
+                  ],
+                  entryComponents: []
+                })
+                export class AppExtrasModule { }
+            </sky-code-block>
+          </li>
+        </ul>
+      </sky-repeater-item-content>
+    </sky-repeater-item>
+  </sky-repeater>
+
   <h3>
     Add copy to clipboard to a page
   </h3>
@@ -53,7 +100,7 @@
     </li>
     <li>
       <p>
-        Place a <stache-code>stache-copy-to-clipboard</stache-code> element on the page and specify the content to copy by referencing its <stache-code escapeCharacters="true">#identifier</stache-code> in the <stache-code>copyTarget</stache-code> attribute. <b>Example:</b> <stache-code escapeCharacters="true"><stache-copy-to-clipboard [copyTarget]="awesomesauce"></stache-copy-to-clipboard></stache-code>
+        Place a <stache-code>sky-copy-to-clipboard</stache-code> element on the page and specify the content to copy by referencing its <stache-code escapeCharacters="true">#identifier</stache-code> in the <stache-code>copyTarget</stache-code> attribute. <b>Example:</b> <stache-code escapeCharacters="true"><sky-copy-to-clipboard [copyTarget]="awesomesauce"></sky-copy-to-clipboard></stache-code>
       </p>
     </li>
     <li>
@@ -75,7 +122,7 @@
         Text within a div element to copy to the clipboard!
       </p>
     </div>
-    <stache-copy-to-clipboard buttonText="Copy" buttonClickedText="Copied!" [copyTarget]="divReference"></stache-copy-to-clipboard>
+    <sky-copy-to-clipboard buttonText="Copy" buttonClickedText="Copied!" [copyTarget]="divReference"></sky-copy-to-clipboard>
 
     <div style="padding-top: 30px;">
       <b>Paste Here:</b><br/>
@@ -92,6 +139,21 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
+        <sky-code-block
+          languageType="markup">
+          &lt;div #divReference&gt;
+            &lt;h3>
+              Ctrl + C
+            &lt;/h3>
+            &lt;p>
+              Text within a div element to copy to the clipboard!
+            &lt;/p>
+        &lt;/div&gt;
+        <sky-copy-to-clipboard buttonText="Copy" buttonClickedText="Copied!" [copyTarget]="divReference"></sky-copy-to-clipboard>
+        </sky-code-block>
+      </sky-tab>
+      <sky-tab
+        tabHeading="deprecated sample">
         <stache-code-block
           languageType="markup">
           &lt;div #divReference&gt;
