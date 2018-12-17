@@ -3,6 +3,34 @@
 
   <stache-page-summary>
     <p>
+      <a href="https://developer.blackbaud.com/skyux/components/fluid-grid"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+    </p>
+    <sky-alert alertType="warning">
+    The <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> components are <strong>deprecated</strong> in Stache version 2.15.0 and higher, and may be unavailable starting in Stache version 3.0.0.
+    </sky-alert>
+
+    <p>
+      We recommend you update your <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> components to the SKY UX fluid grid with <stache-code>sky-row</stache-code> and <stache-code>sky-column</stache-code> components.
+    </p>
+    <p>
+      To learn how to add SKY UX fluid grids to your Stache SPAs, use the SKY UX <a stacheRouterLink="https://developer.blackbaud.com/skyux/components/fluid-grid">fluid grid documentation</a>.
+    </p>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Deprecated Stache grid documentation
+  </stache-page-anchor>
+
+  <p>
+    If your site uses <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code>, review the documentation below. However, this component is deprecated and may not be available after version 2.15. We recommend using the fluid grid component to avoid issues.
+  </p>
+
+  <stache-hide-from-search>
+  <sky-repeater expandMode="multiple">
+  <sky-repeater-item [isExpanded]="false">
+    <sky-repeater-item-title>Stache grid reference documentation</sky-repeater-item-title>
+    <sky-repeater-item-content>
+    <p>
       The grid components provide a 12 column layout grid for organizing content for all device sizes. This enables you to lay out content in columns that know how to be responsive based on screen size. For example, you can have content that has 3 columns across on a large screen, but collapses into a single column on a small (ex. mobile) screen. The grid component is not recommended as a table replacement.
     </p>
     <p>
@@ -35,7 +63,6 @@
       </li>
     </ul>
     <p>To handle behavior for multiple screen sizes, you can combine more than one size for each column. For example: <stache-code>&lt;stache-column screenSmall="8" screenMedium="9" screenLarge="10"&gt;</stache-code>. This is helpful if you want to more carefully control the breakpoints.</p>
-  </stache-page-summary>
 
   <stache-page-anchor>
     Demo
@@ -393,4 +420,6 @@
       </sky-tab>
     </sky-tabset>
   </div>
+  </sky-repeater-item-content>
+  </stache-hide-from-search>
 </stache>
