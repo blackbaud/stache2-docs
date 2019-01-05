@@ -34,6 +34,9 @@
     <li>
       <stache-code>languageType</stache-code> — <i>(Optional)</i> Indicates the language of the code sample. The language type is used to highlight the syntax in your code sample and appears in the header. The default language is <stache-code>markup</stache-code>.
     </li>
+    <li>
+      <stache-code>hideHeader</stache-code> — <i>(Optional)</i> Indicates whether to hide the header portion of the code block. The default is false, though if no languageType is declared and the hideCopyToClipboard is set to True, the header will be hidden.
+    </li>
   </ul>
 
   <h3>
@@ -123,6 +126,15 @@
         console.log('jQuery is ready!');
       });
     </sky-code-block>
+
+    <sky-code-block
+      languageType="JSON"
+      hideHeader="true">
+      Code block with the header hidden.
+      {
+        "demo": "demo content"
+      }
+    </sky-code-block>
   </div>
 
   <stache-page-anchor>
@@ -140,6 +152,15 @@
             $(document).ready(() => {
               console.log('jQuery is ready!');
             });
+          </sky-code-block>
+
+          <sky-code-block
+            languageType="JSON"
+            hideHeader="true">
+            Code block with the header hidden.
+            {
+              "demo": "demo content"
+            }
           </sky-code-block>
         </sky-code-block>
       </sky-tab>
