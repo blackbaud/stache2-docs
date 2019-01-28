@@ -4,7 +4,7 @@
   navTitle="Configuration and data">
 
   <stache-page-summary>
-    Data and configuration settings are an important feature of your documentation site. This section outlines how to make use of data in your documentation and how to properly configure your {{ stache.jsonData.global.productNameShort }} site.
+    Data and configuration settings are an important feature of your documentation site. This section outlines how to use data in your documentation and how to properly configure your {{ stache.jsonData.global.productNameShort }} site.
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -12,11 +12,11 @@
   </stache-page-anchor>
 
   <p>
-    {{ stache.jsonData.global.productNameShort }} can consume JSON data files and provide them to you for use in your {{ stache.jsonData.global.productNameShort }} templates and components. There is a default <stache-code>global.json</stache-code> file that you can use for any variable data you wish to include. For example, you can add a variable for your site name and use that variable anywhere you want the name to appear. If the name ever changes, you'd only have to edit the <stache-code>global.json</stache-code> file.
+    {{ stache.jsonData.global.productNameShort }} can consume JSON data files and provide them for use in {{ stache.jsonData.global.productNameShort }} templates and components. You can use the default <stache-code>global.json</stache-code> file for to include variable data. For example, you can add a variable for your site name and use that variable anywhere the name appears. If the name ever changes, you only have to edit the <stache-code>global.json</stache-code> file.
   </p>
 
   <p>
-    Data you wish to consume should be placed in the <stache-code>src/stache/data/</stache-code> directory. For example:
+    Place data that you wish to consume in the <stache-code>src/stache/data/</stache-code> directory. For example:
   </p>
 
   <ul>
@@ -41,12 +41,12 @@
   </ul>
 
   <sky-alert alertType="warning">
-    <b>Note: </b> Make sure to name your files with names that can be converted to valid object keys. Ex: <stache-code>data_file.json</stache-code> or <stache-code>dataFile.json</stache-code></sky-alert>
+    Make sure your filenames can be converted to valid object keys. For example: <stache-code>data_file.json</stache-code> or <stache-code>dataFile.json</stache-code>.</sky-alert>
   </sky-alert>
 
 
   <p>
-    We can then use that data in a template like so:
+    You can then use that data in a template like so:
   </p>
 
   <sky-code-block
@@ -58,7 +58,7 @@
     Build time parsing
   </h3>
   <p>
-    If you need your variable data to be parsed at build time instead of run time, such as inside a <a routerLink="content/code-block"><stache-code>sky-code-block</stache-code></a> or as an attribute value, you will need to add the <stache-code>@buildtime:</stache-code> flag to your variable binding:
+    To parse your variable data at build time instead of run time, such as inside a <a routerLink="content/code-block"><stache-code>sky-code-block</stache-code></a> or as an attribute value, you need to add the <stache-code>@buildtime:</stache-code> flag to your variable binding.
   </p>
   <h4>
     In a <stache-code>sky-code-block</stache-code>:
@@ -80,10 +80,10 @@
   </sky-code-block>
 
   <stache-page-anchor>
-    Using data in a component
+    Data in a component
   </stache-page-anchor>
   <p>
-    If you want to use the data in a component, you can do so with the <stache-code>StacheJsonDataService</stache-code> by adding it to your component.
+    To use the data in a component, you can add the <stache-code>StacheJsonDataService</stache-code> to your component.
   </p>
 
   <sky-code-block
@@ -116,7 +116,7 @@
   </h3>
 
   <p>
-    The data service provides several methods for accessing the JSON data within components.
+    The <stache-code>StacheJsonDataService</stache-code> provides several methods to access JSON data within components.
   </p>
   <p>
     <strong>Example file structure</strong>
@@ -126,10 +126,10 @@
       <i class="fa fa-folder"></i> data
       <ul>
         <li>
-          <i class="fa fa-folder"></i> example.json
+          <i class="fa fa-file"></i> example.json
           <ul>
             <li>
-              <i class="fa fa-folder"></i> nested.json
+              <i class="fa fa-file"></i> nested.json
               <ul>
                 <li>
                   <p>
@@ -162,7 +162,7 @@
   <ul>
     <li>
       <p>
-        <stache-code>getAll()</stache-code> &mdash; returns all data in the {{ stache.jsonData.global.productNameShort }} JSON data.
+        <stache-code>getAll()</stache-code> &mdash; Returns all data in the {{ stache.jsonData.global.productNameShort }} JSON data.
       </p>
       <sky-code-block hideCopyToClipboard="true">
         this.dataService.getAll();
@@ -170,7 +170,7 @@
     </li>
     <li>
       <p>
-        <stache-code>getByName(name: string)</stache-code> &mdash; returns the {{ stache.jsonData.global.productNameShort }} JSON data matching the name provided. Expects a string <stache-code>name</stache-code> for the data being retrieved. To retrieve nested data from the JSON structure, each name must be separated by a <stache-code>.</stache-code>.
+        <stache-code>getByName(name: string)</stache-code> &mdash; Returns the {{ stache.jsonData.global.productNameShort }} JSON data that matches the name provided. Expects a string <stache-code>name</stache-code> for the data to retrieve. To retrieve nested data from the JSON structure, separate each name with a <stache-code>.</stache-code>.
       </p>
       <sky-code-block hideCopyToClipboard="true">
         this.dataService.getByName('example');
@@ -182,7 +182,7 @@
     </li>
     <li>
       <p>
-        <stache-code>getNestedData(keys: string[])</stache-code> &mdash; returns the {{ stache.jsonData.global.productNameShort }} JSON data matching the keys provided. Expects an array of strings <stache-code>keys</stache-code> for the data being retrieved.
+        <stache-code>getNestedData(keys: string[])</stache-code> &mdash; Returns the {{ stache.jsonData.global.productNameShort }} JSON data that matches the keys provided. Expects a string array of <stache-code>keys</stache-code> for the data to retrieve.
       </p>
       <sky-code-block hideCopyToClipboard="true">
         this.dataService.getNestedData(['example', 'nested', 'secondNested']);
@@ -197,7 +197,7 @@
   </stache-page-anchor>
 
   <p>
-    App-specific configuration exists in the <stache-code>skyuxconfig.json</stache-code> file at the root of your project. This file should only contain app-specific settings that are required for the functionality of your site. For example, keys for Google Analytics or plugins. Any variables that you wish to use in your app content should be in <stache-code>global.json</stache-code> or a custom <stache-code>json</stache-code> file. The stache template provides a location under <stache-code>appSettings</stache-code> for {{ stache.jsonData.global.productNameShort }}-specific settings.
+    App-specific configuration exists in the <stache-code>skyuxconfig.json</stache-code> file at the root of your project. This file should only contain app-specific settings that are required for the functionality of your site. For example, keys for Google Analytics or plugins. To use variables in your app content, place them in <stache-code>global.json</stache-code> or a custom <stache-code>json</stache-code> file. The {{ stache.jsonData.global.productNameShort }} template provides a location under <stache-code>appSettings</stache-code> for {{ stache.jsonData.global.productNameShort }}-specific settings.
   </p>
 
   <sky-code-block
