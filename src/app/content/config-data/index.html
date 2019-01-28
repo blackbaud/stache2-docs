@@ -46,7 +46,7 @@
 
 
   <p>
-    You can then use that data in a template like so:
+    You can then use that data in a template:
   </p>
 
   <sky-code-block
@@ -66,7 +66,7 @@
 
   <sky-code-block
     languageType="markup">
-     {&#123; @buildtime:stache.jsonData.global.productNameShort }} will render {{ @buildtime:stache.jsonData.global.productNameShort }}.
+     {&#123; @buildtime:stache.jsonData.global.productNameShort }} will render.
 
     {{ stache.jsonData.global.productNameShort }} will not.
   </sky-code-block>
@@ -83,7 +83,7 @@
     Data in a component
   </stache-page-anchor>
   <p>
-    To use data in a component, add the <stache-code>StacheJsonDataService</stache-code> to your component.
+    To use data in a component, add the <stache-code>StacheJsonDataService</stache-code> to the component.
   </p>
 
   <sky-code-block
@@ -126,10 +126,10 @@
       <i class="fa fa-folder"></i> data
       <ul>
         <li>
-          <i class="fa fa-file"></i> example.json
+          <i class="fa fa-folder"></i> example
           <ul>
             <li>
-              <i class="fa fa-file"></i> nested.json
+              <i class="fa fa-folder"></i> nested
               <ul>
                 <li>
                   <p>
