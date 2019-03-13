@@ -1,0 +1,10 @@
+::ng-deep
+.sky-definition-list {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+::ng-deep
+.sky-definition-list-content {
+  padding-right: 40px;
+}

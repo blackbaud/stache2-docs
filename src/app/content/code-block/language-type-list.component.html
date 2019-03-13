@@ -1,13 +1,14 @@
 <div class="language-list">
-  <sky-definition-list  labelWidth="175px">
-    <sky-definition-list-content
-      *ngFor="let item of languageType">
-      <sky-definition-list-label>
-        {{item.label}}
-      </sky-definition-list-label>
-      <sky-definition-list-value>
-        <stache-code>{{item.value}}</stache-code>
-      </sky-definition-list-value>
-    </sky-definition-list-content>
-  </sky-definition-list>
+  <span>
+    <sky-definition-list labelWidth="175px" *ngFor="let column of languageColumns">
+      <sky-definition-list-content *ngFor="let item of column">
+        <sky-definition-list-label>
+          {{item.label}}
+        </sky-definition-list-label>
+        <sky-definition-list-value>
+          <stache-code>{{item.value}}</stache-code>
+        </sky-definition-list-value>
+      </sky-definition-list-content>
+    </sky-definition-list>
+  </span>
 </div>

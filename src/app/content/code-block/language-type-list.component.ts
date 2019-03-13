@@ -612,4 +612,16 @@ export class LanguageTypeListComponent {
       value: 'yam'
     }
   ];
+
+  public languageColumns: any[] = [];
+
+  constructor() {
+    const columnCount = 2;
+    const columnLength = Math.ceil(this.languageType.length / columnCount);
+    let columnStart = 0;
+    for (let i = 0; i < columnCount; i ++) {
+      this.languageColumns.push(this.languageType.slice(columnStart, columnStart + columnLength));
+      columnStart = columnStart + columnLength;
+    }
+  }
 }
