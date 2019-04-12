@@ -40,6 +40,10 @@
               "title": "Learn",
               "items": [
                 {
+                  "title": "Overview",
+                  "route": "/learn/overview"
+                },
+                {
                   "title": "Getting started",
                   "route": "/learn/get-started"
                 },
@@ -52,22 +56,18 @@
                   "route": "/learn/update-stache"
                 },
                 {
-                  "title": "Migrate Stache",
-                  "route": "/learn/migrate"
-                },
-                {
                   "title": "Plugins",
                   "route": "/learn/plugins"
                 },
                 {
-                  "title": "Blackbaud staff topics",
-                  "url": "https://docs.blackbaud.com/stache-internal/staff"
+                  "title": "Go live",
+                  "route": "/learn/golive"
                 }
               ]
             },
             {
               "title": "Components",
-              "route": "/content"
+              "route": "/components"
             },
             {
               "title": "Support",
@@ -87,10 +87,6 @@
                 {
                   "title": "Troubleshooting",
                   "route": "/support/troubleshoot"
-                },
-                {
-                  "title": "Why Stache?",
-                  "route": "/support/why-stache"
                 }
               ]
             }
@@ -98,6 +94,9 @@
         }
       ]
     }
+  },
+  "redirects": {
+    "content": "components"
   }
 }
 

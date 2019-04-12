@@ -2,7 +2,8 @@
   "productNameLong": "Stache",
   "productNameShort": "Stache",
   "demoVariable": "demo variable data",
-  "stacheVersion": "^2.13.0",
+  "stacheVersion": "^2.46.1",
   "skyUXVersion": "^2.27.2",
-  "builderVersion": "^1.26.0"
+  "builderVersion": "^1.33.1",
+  "emailVersion": "~1.0.10"
 }
