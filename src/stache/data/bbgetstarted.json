@@ -3,7 +3,7 @@
     "name": "Create a new Stache SPA",
     "path": "https://docs.blackbaud.com/stache-internal/staff/new-bb-stache",
     "icon": "bolt",
-    "summary": "Blackbaud staff should follow the Blackbaud version for a new Stache SPA."
+    "summary": "Blackbaud RDO staff should follow the Blackbaud version for a new Stache SPA."
   },
   {
     "name": "Migrate from Stache 1",

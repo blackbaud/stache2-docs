@@ -6,7 +6,7 @@
     "summary": "Learn how Stache is organized and how to get started creating content for your site."
   },
   {
-    "name": "Content",
+    "name": "Components",
     "path": "/components",
     "icon": "birthday-cake",
     "summary": "After you learn the basics, review the different elements and components that can style your technical documentation."

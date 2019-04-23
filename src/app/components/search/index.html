@@ -1,11 +1,247 @@
 <stache
-  pageTitle="Search">
+  pageTitle="Search" navTitle="Search" showTableOfContents="true">
+
+
+
+<stache-page-summary>
+  <p>
+    This component is for Blackbaud staff only.
+  </p>
+    <p *stacheInternal>
+      The Stache Search Query Service leverages the Blackbaud omnibar's search capabilities to search for content within Blackbaud Stache sites. To search across all search-enabled Stache sites, use <a href="https://docs.blackbaud.com">docs.blackbaud.com</a>.
+    </p>
+  </stache-page-summary>
+<stache-hide-from-search>
+<div *stacheInternal>
+  <stache-page-anchor>
+    Set up
+  </stache-page-anchor>
+
+  <h3>
+    Determine your search endpoint
+  </h3>
 
   <p>
-    Stache includes a search feature that enables users to quickly find content within a site, a group of sites, or across all search-enabled Stache sites.</p>
-  </p>
-  <p>
-    This feature is for Blackbaud Staff use only. <a href="https://docs.blackbaud.com/stache-internal/staff/search"><button type="button" class="sky-btn sky-btn-link-inline">Learn more <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></button></a>.
+    The Stache Search Query Service provides two primary endpoints: <stache-code>suggest</stache-code> and <stache-code>search</stache-code>.  The <stache-code>search</stache-code> endpoint enforces a strict word and character match between search text and values on a Stache site. The <stache-code>suggest</stache-code> endpoint is far more flexible and returns partial matches. For example, when search text includes multiple words, the search returns matches for each word.
   </p>
 
+  <p>
+    In the example below, each search endpoint returns different results.
+  </p>
+  <stache-code-block hideCopyToClipboard="true">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Repudiandae impedit doloremque libero laborum aliquid temporibus,
+    laboriosam cum expedita, inventore pariatur tenetur magnam,
+    facilis molestias ducimus blanditiis?
+    Veritatis a aliquid eveniet!
+  </stache-code-block>
+
+  <p>
+    If a user searches for "labor" with the <stache-code>search</stache-code> endpoint, the search does not return results because there is not an exact match.
+  </p>
+
+  <p>
+    If a user searches for "labor" with the <stache-code>suggest</stache-code> endpoint, the search returns two results because the text includes two partial matches: "laborum" and "laboriosam".
+  </p>
+
+  <p>
+    Therefore, we suggest you consider which endpoint is best for you when you configure your search settings. It is our recommendation that you use the <stache-code>suggest</stache-code> endpoint, unless you require more strict matching.
+  </p>
+
+  <h3>Configure your search settings</h3>
+  <p>
+    To configure search, open the <stache-code>skyuxconfig.json</stache-code> file and edit the <stache-code>omnibar</stache-code> configuration option's <stache-code>searchUrl</stache-code> setting. The <stache-code>searchUrl</stache-code> setting adds the search field to the omnibar.
+  </p>
+
+  <h4>Recommended setting – </h4>
+  <p>
+    We recommend you use <stache-code>suggest-internal</stache-code> and set the <stache-code>searchUrl</stache-code> to <stache-code escapeCharacters="true">"searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest-internal/&lt;Site Name}",</stache-code>.
+  </p>
+
+  <h4>Alternative setting –</h4>
+  <p>
+    To use the <stache-code>search</stache-code> endpoint, set the <stache-code>searchUrl</stache-code>to <stache-code>https://stache-search-query.sky.blackbaud.com/search-internal/&lt;site-name&gt;</stache-code>.
+  </p>
+
+  <h4>Site name setting –</h4>
+  <p>
+    Replace <stache-code>&lt;site-name&gt;</stache-code> with the site name that appears after <stache-code>https://docs.blackbaud.com</stache-code> or <stache-code>https://host.nxt.blackbaud.com</stache-code> in your SPA’s URL. You can also find the site name in your build definition in Azure as the <stache-code>SPAId</stache-code> variable.
+  </p>
+
+  <sky-alert alertType="info">For public-facing sites, remove <stache-code>-internal</stache-code> from your search endpoint.</sky-alert>
+
+  <h3>
+    Internal vs. external sites
+  </h3>
+  <p>
+    Stache sites are configured to be internal-only by default. This means that you must log in as a Blackbaud employee with your Blackbaud email address to see the search results for your site. This prevents public-facing sites such as SKY UX and Stache from searching your site and displaying content to an inappropriate audience. If you require that your Stache site be available to a general public audience without authentication, see the <a stacheRouterLink="/learn/golive">Go live</a> instructions.
+  </p>
+
+  <stache-page-anchor>Sample set-up</stache-page-anchor>
+
+  <p>
+    As a reference, here's what a <stache-code>skyuxconfig.json</stache-code> file would look like with search enabled for an internal site.
+  </p>
+
+  <stache-code-block languageType="json">
+    "omnibar": {
+      "experimental": true,
+      "nav": {
+        "services": [
+          {
+            "title": "Stache 2 Example",
+            "searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest-internal/stache-example",
+            "items": [
+              {
+                "title": "Home",
+                "route": "/"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  </stache-code-block>
+
+  <stache-page-anchor>
+    Additional configuration options
+  </stache-page-anchor>
+
+  <p>
+    To configure variables for the search commands, open the <stache-code>skyuxconfig.json</stache-code> file and add <stache-code>searchConfig</stache-code> beneath <stache-code>stache</stache-code> under the file's <stache-code>appSettings</stache-code>.
+  </p>
+
+  <p>
+    The example below displays the default configuration after you enable search for your site. To override a setting, modify the variables defined below.
+  </p>
+
+  <stache-code-block languageType="json">
+    "appSettings": {
+      "stache": {
+        "searchConfig": {
+          "allowSiteToBeSearched": true,
+          "is_globally_searchable": true,
+          "is_internal": true,
+          "site_names": [
+            "cool-mustaches-docs",
+            "fancy-mustaches-docs"
+          ]
+        }
+      }
+    }
+  </stache-code-block>
+
+  <h3>
+    <stache-code>allowSiteToBeSearched</stache-code>
+  </h3>
+
+  <p>
+     This setting determines whether or not a site is searchable. The default value is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the value turns off search for your site and prevents the site from being scraped and publishing results.
+  </p>
+
+  <h3>
+    <stache-code>is_globally_searchable</stache-code>
+  </h3>
+
+  <p>
+    This setting determines whether the site is included on the global search page. The default value is <stache-code>true</stache-code>. When set to <stache-code>false,</stache-code> your site content appears only when searched for by site name and does not appear on the <a href="https://docs.blackbaud.com/">global docs search</a> page.
+  </p>
+
+  <h3>
+    <stache-code>is_internal</stache-code>
+  </h3>
+
+  <p>
+    This setting indicates whether a Stache site is internal or external (meaning anyone can access the site without logging in). The default value is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the site's search content displays for non-Blackbaud employees.
+  </p>
+
+  <sky-alert alertType="info">
+    By default, Stache sites are configured for internal Blackbaud employee users only. Unless your site needs to be public, we recommend using the internal only configuration.
+  </sky-alert>
+
+  <h3>
+    <stache-code>site_names</stache-code>
+  </h3>
+
+  <p>
+    This setting determines which Stache sites are included in the search results. The default setting includes only the site you are viewing. When you add other site names to the array, the content from the additional sites becomes searchable. For example, for the Engineering System site, we include the <stache-code>engineering-system-docs</stache-code> Stache site, but also many related Stache sites that are linked to from the Engineering System documentation.
+  </p>
+  <p>
+    To add site names, find the site's URL and use the part the appears after <stache-code>https://docs.blackbaud.com/skyux-spa-</stache-code>.
+  </p>
+
+
+  <stache-page-anchor>
+    Update search for public site
+  </stache-page-anchor>
+
+  <p>
+    Open the <stache-code>skyuxconfig.json</stache-code> file, remove <stache-code>-internal</stache-code> from your search endpoint, and update the <stache-code>appSettings</stache-code> option to <stache-code>"is_internal": false</stache-code>. If your public site includes internal sites in the <stache-code>site_names</stache-code> setting, the search results only include internal sites when a user is logged in with BBID.
+  </p>
+
+  <stache-code-block languageType="json">
+    "appSettings": {
+      "stache": {
+        "searchConfig": {
+          "is_internal": false
+        }
+      }
+    }
+  </stache-code-block>
+
+  <stache-page-anchor>
+    Hide sections and pages from search
+  </stache-page-anchor>
+
+  <p>
+    When search is enabled, the e2e build phase of the VSTS pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <stache-code>stache-hide-from-search</stache-code> element. To exclude an entire page, wrap all of the markup, including the <stache-code>stache</stache-code> tag, in a <stache-code>stache-hide-from-search</stache-code> element.
+  </p>
+
+  <stache-code-block
+    languageType="markup">
+    <stache-hide-from-search>
+      <p>
+        This content will not appear in the search results.
+      </p>
+    </stache-hide-from-search>
+
+    <p>
+      This content will appear in the search results.
+    </p>
+  </stache-code-block>
+
+  <stache-page-anchor>
+    Analytics
+  </stache-page-anchor>
+
+  <p>
+    The Stache Search Query Service uses Mixpanel to track search events. To access this information for your Stache site, <a stacheRouterLink="https://developer.blackbaud.com/stache/support">contact the Stache team</a> to be added to the Mixpanel project.
+  </p>
+  <p>
+    The Mixpanel search event contains the following properties to sort and filter on.
+  </p>
+  <ul>
+    <li>
+      <stache-code>Action</stache-code> — Indicates the action performed. The <stache-code>search</stache-code> endpoint uses "run," and the <stache-code>suggest</stache-code> endpoint uses "suggest."
+    </li>
+    <li>
+      <stache-code>InternalRequest</stache-code> — Indicates whether the search request came from a user authenticated with BBID.
+    </li>
+    <li>
+      <stache-code>SearchText</stache-code> — Indicates the text entered in the query.
+    </li>
+    <li>
+      <stache-code>SiteNames</stache-code> — Indicates the array of sites included in the search request.
+    </li>
+  </ul>
+  <stache-code-block hideCopyToClipboard="true">
+    "Search Event": {
+      "Action": "run",
+      "InternalRequest": false,
+      "SearchText": "Foo",
+      "SiteNames": ["stache", "sky-ux"]
+    }
+  </stache-code-block>
+</div>
+</stache-hide-from-search>
 </stache>

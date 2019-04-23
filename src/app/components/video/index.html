@@ -40,14 +40,14 @@
       <h4>
         O365
       </h4>
-      <sky-alert alertType="info">Blackbaud staff can host videos used on Stache sites by uploading the videos to the <a href="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&p=c&chid=9006bebc-4c88-4c22-b5f0-159f455957fe&s=0&t=pfb">O365 Stache channel</a>. If you can't access the page, request access through a Service Now ticket.</sky-alert>
+      <sky-alert alertType="info" *stacheInternal>Blackbaud staff can host videos used on Stache sites by uploading the videos to the <a href="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&p=c&chid=9006bebc-4c88-4c22-b5f0-159f455957fe&s=0&t=pfb">O365 Stache channel</a>. If you can't access the page, request access through a Service Now ticket.</sky-alert>
 
       <p>
         When you copy the source URL from an O365 video, copy the entire source URL and not just a portion. If you use a portion, you may receive a "This video is private" or "This video isn't available" error on your page. The URL to copy should look similar to this:
       </p>
       <stache-code-block>
         <stache-video
-          videoSource="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=fedcfc02%2Dd545%2D4155%2D973a%2Dd09a1fa6e003&amp;vId=d2977531%2D1ce0%2D45c7%2D9b15%2D112f6cabe5f9&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true">
+          videoSource="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=fedcfc02%2Dd545%2D4155%2D973a%2Dd09a1fa6e003&amp;vId=63c1f86b%2De4d2%2D4c3b%2D862b%2D0f9adafbb0c8&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true">
         </stache-video>
       </stache-code-block>
     </li>
@@ -59,7 +59,7 @@
 
   <div class="stache-demo-page-result">
     <stache-video
-      videoSource="https://player.vimeo.com/video/121445495?title=0&portrait=0&byline=0">
+      videoSource="https://www.youtube.com/embed/2KQfUntZrt8">
     </stache-video>
   </div>
 
@@ -74,7 +74,7 @@
         <stache-code-block
           languageType="markup">
           <stache-video
-            videoSource="https://player.vimeo.com/video/121445495?title=0&portrait=0&byline=0">
+            videoSource="https://www.youtube.com/embed/2KQfUntZrt8">
           </stache-video>
         </stache-code-block>
       </sky-tab>

@@ -1,8 +1,10 @@
 @import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
 @import url("https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css");
 
+$app-font-size-large: 18px;
+
 .highlight-columns {
-  .stache-column {
+  .sky-column {
     background-color: lighten(#23c6c8, 30%);
     border: 1px solid lighten(#23c6c8, 15%);
     overflow-wrap: break-word;
@@ -15,6 +17,10 @@
 .text-center {
     align-items: center;
     text-align: center;
+}
+
+.lead {
+  font-size: $app-font-size-large;
 }
 
 .image-border {

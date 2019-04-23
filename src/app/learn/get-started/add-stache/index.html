@@ -18,12 +18,14 @@
         <stache-code-block>
           npm install --save @blackbaud/stache
         </stache-code-block>
-        <p>
-          If you are a Blackbaud staff member and plan to use the Blackbaud Identity Service authentication, install the email whitelist plugin.
+        <p *stacheInternal>
+          If you plan to use the Blackbaud Identity Service authentication, install the email whitelist plugin.
         </p>
-        <stache-code-block>
-          npm install --save @blackbaud/skyux-builder-plugin-auth-email-whitelist
-        </stache-code-block>
+        <div *stacheInternal>
+          <stache-code-block >
+            npm install --save @blackbaud/skyux-builder-plugin-auth-email-whitelist
+          </stache-code-block>
+        </div>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
@@ -78,6 +80,15 @@
         <stache-include
           fileName="folder-structure-example.html">
         </stache-include>
+      </stache-tutorial-step-body>
+    </stache-tutorial-step>
+
+    <stache-tutorial-step>
+      <stache-tutorial-step-heading>
+        Add documentation
+      </stache-tutorial-step-heading>
+      <stache-tutorial-step-body>
+        Your SKY UX SPA is now set up to use Stache.
       </stache-tutorial-step-body>
     </stache-tutorial-step>
   </stache-tutorial>

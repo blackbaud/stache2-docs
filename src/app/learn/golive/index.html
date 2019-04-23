@@ -7,7 +7,7 @@
 
 <stache-page-summary>
     <p>
-      When a Stache site is configured for public use, the site is no longer restricted to authenticated users and can be accessed by anyone. Before you publish your site, review our recommendations for a successful launch.
+      When a Stache site is configured for public use, <span *stacheInternal>(meaning the site is no longer restricted to Blackbaud authenticated users)</span> it can be accessed by anyone. Before you publish your site, review our recommendations <span *stacheInternal>and requirements </span>for a successful launch.
     </p>
     <stache-internal>
       <sky-alert alertType="danger">
@@ -21,19 +21,19 @@
   </stache-page-anchor>
 
   <p>
-    <i class="far fa-check-square"></i> <b>Peer review</b> –
+    <i class="far fa-check-square"></i> <b>Peer review</b> – Before you release your new SPA, it's a best practice to have your team all check the site to ensure that navigation and links work, no obvious errors in content, and that nothing is broken or missing. You don't get another chance at a "first impression" for your website.
   </p>
   <p *stacheInternal>
     <i class="far fa-check-square"></i> <b>Strategic Content Development (SCD) review</b> – If you are publishing a Blackbaud Stache site to the public, you must have a member of the SCD team review the site. To request a content review, post the request in the <a href="https://blackbaud.slack.com/messages/stache-general"><i class="fa fa-slack" aria-hidden="true"></i>stache-general</a> Slack channel.
   </p>
   <p *stacheInternal>
-    <i class="far fa-check-square"></i> <b>Remove Blackbaud authentication</b> –
-  </p>
-  <p *stacheInternal>
-    <i class="far fa-check-square"></i> <b>Update search settings</b> –
+    <i class="far fa-check-square"></i> <b>Update search settings</b> – In order for your search to work, when you switch your site from internal only to public, you need to adjust your <a stacheRouterLink="." fragment="update-search-settings">configuration settings for search</a>.
   </p>
     <p>
-    <i class="far fa-check-square"></i> <b>Protect your master branch</b> –
+    <i class="far fa-check-square"></i> <b>Protect your master branch</b> – To prevent unreviewed content from merging into your production branch, and therefore deployable to your hosted SPA, we recommend you <a stacheRouterLink="." fragment="protect-your-master-branch">review and set policies</a> for your "master" branch.
+  </p>
+    <p *stacheInternal>
+    <i class="far fa-check-square"></i> <b>Remove Blackbaud authentication</b> – This will be the last task you perform after your site is reviewed and you adjust your search settings. This <a stacheRouterLink="." fragment="remove-blackbaud-authentication">takes off the requirement</a> that users must have a valid Blackbaud email address to access your site.
   </p>
 
   <stache-internal>
@@ -121,6 +121,28 @@
   <h3>
     GitHub
   </h3>
+
+  <p>
+    For your GitHub repository, you can update your repo's settings to protect your production branch (and therefore hosted SPA) from unreviewed content becoming live.
+  </p>
+
+  <ol>
+    <li>
+      From your repo, select <b>Settings</b>.
+    </li>
+    <li>
+      In the left navigation, select <b>Branches</b>.
+    </li>
+    <li>
+      First, you'll want to tell GitHub which branch is considered your "base" or "master" branch. Depending on your naming conventions, this could be anything you choose. You'll just want to pick the one which is your "production" branch, the one that is "deployable" to where you host your SPA.
+    </li>
+    <li>
+      Then, select the settings that will help you protect your "master" branch. We recomemnd you at least set a minimum number of required reviewers so that people can't approve their own pull requests.
+    </li>
+    <li>
+      When complete, select <b>Save changes</b>.
+    </li>
+  </ol>
 
   <h3>
     Azure DevOps

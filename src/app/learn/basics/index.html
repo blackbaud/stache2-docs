@@ -51,7 +51,7 @@
   </stache-page-anchor>
   <stache-internal>
     <sky-alert alertType="info">
-      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
+      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
     </sky-alert>
   </stache-internal>
   <p>
@@ -159,7 +159,7 @@ img &#123;
   </stache-page-anchor>
 
   <p>
-    Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are a few key differences to know about.
+    Unless you are working locally, all new Blackbaud RDO staff SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are a few key differences to know about.
   </p>
   <ol>
     <li>
@@ -173,8 +173,26 @@ img &#123;
     Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.
   </p>
   <p>
-    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in Azure DevOps lets you make quick changes without leaving the browser. To learn how to make changes with the Azure DevOps web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/staff/vsts-editor/">Edit Stache online <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
+    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in Azure DevOps lets you make quick changes without leaving the browser. To learn how to make changes with the Azure DevOps web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/staff/vsts-editor/">Edit Stache online</a> tutorial.
   </p>
+  <h3>
+    Branch Policies and Security
+  </h3>
+  <p>
+    Also. these Stache SPAs in Azure DevOps are set up with standard policies and security. Learn <a stacheRouterLink="https://docs.blackbaud.com/stache-internal/staff/vsts-repo-setup">how to edit these policies</a> for your documentation sites.
+  </p>
+  <p>Standard policies for a pull request into the master branch include:</p>
+  <ul>
+    <li>
+      Pull request approval by at least 1 reviewer
+    </li>
+    <li>
+      Successful pull request build
+    </li>
+    <li>
+      Person who created the SPA is configured as a "required" reviewer
+    </li>
+  </ul>
 </stache-internal>
 
   <stache-page-anchor>

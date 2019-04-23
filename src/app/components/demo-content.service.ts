@@ -185,6 +185,12 @@ export class StacheDemoContentService {
       route: '/components/footer',
       icon: 'window-minimize',
       summary: 'Specifies settings for a footer in your layout.'
+    },
+    {
+      name: 'Search',
+      route: '/components/search',
+      icon: 'search',
+      summary: `A component for Blackbaud staff only, it enables search capabilities for Stache sites.`
     }
   ];
 
