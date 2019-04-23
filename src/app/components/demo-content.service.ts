@@ -190,7 +190,7 @@ export class StacheDemoContentService {
       name: 'Search',
       route: '/components/search',
       icon: 'search',
-      summary: `A component for Blackbaud staff only, it enables search capabilities for Stache sites.`
+      summary: 'Enables search capabilities for Stache. For Blackbaud use only.'
     }
   ];
 
