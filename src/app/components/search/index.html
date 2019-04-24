@@ -22,7 +22,7 @@
   </h3>
 
   <p>
-    The Stache Search Query Service provides two primary endpoints: <stache-code>suggest</stache-code> and <stache-code>search</stache-code>. The <stache-code>search</stache-code> endpoint enforces a strict word and character match between search text and values on a Stache site. The <stache-code>suggest</stache-code> endpoint is far more flexible and returns partial matches. For example, when search text includes multiple words, the search returns matches for each word.
+    The Stache Search Query Service provides two primary endpoints: <stache-code>suggest</stache-code> and <stache-code>search</stache-code>. The <stache-code>search</stache-code> endpoint enforces a strict word and character match between search text and values on a Stache site. The <stache-code>suggest</stache-code> endpoint is more flexible and returns partial matches. For example, when search text includes multiple words, the search returns matches for each word.
   </p>
 
   <p>
@@ -37,15 +37,15 @@
   </stache-code-block>
 
   <p>
-    If a user searches for "labor" with the <stache-code>search</stache-code> endpoint, the search does not return results because there is not an exact match.
+    If users search for "labor" with the <stache-code>search</stache-code> endpoint, the search does not return results because there is not an exact match.
   </p>
 
   <p>
-    If a user searches for "labor" with the <stache-code>suggest</stache-code> endpoint, the search returns two results because the text includes two partial matches: "laborum" and "laboriosam".
+    If users search for "labor" with the <stache-code>suggest</stache-code> endpoint, the search returns two results because the text includes two partial matches: "laborum" and "laboriosam".
   </p>
 
   <p>
-    Therefore, we suggest you consider which endpoint is best for you when you configure your search settings. It is our recommendation that you use the <stache-code>suggest</stache-code> endpoint, unless you require more strict matching.
+    We recommend you consider which endpoint is best for you when you configure your search settings. It is our recommendation that you use the <stache-code>suggest</stache-code> endpoint, unless you require more strict matching.
   </p>
 
   <h3>Configure your search settings</h3>
@@ -53,22 +53,27 @@
     To configure search, open the <stache-code>skyuxconfig.json</stache-code> file and edit the <stache-code>omnibar</stache-code> configuration option's <stache-code>searchUrl</stache-code> setting. The <stache-code>searchUrl</stache-code> setting adds the search field to the omnibar.
   </p>
 
-  <h4>Recommended setting – </h4>
+  <h4>Recommended setting</h4>
   <p>
-    We recommend you use <stache-code>suggest-internal</stache-code> and set the <stache-code>searchUrl</stache-code> to <stache-code escapeCharacters="true">"searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest-internal/&lt;Site Name}",</stache-code>.
+    We recommend you use <stache-code>suggest-internal</stache-code> and set <stache-code>searchUrl</stache-code> to <stache-code escapeCharacters="true">"searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest-internal/&lt;Site Name}",</stache-code>.
   </p>
 
-  <h4>Alternative setting –</h4>
+  <h4>Alternative setting</h4>
   <p>
-    To use the <stache-code>search</stache-code> endpoint, set the <stache-code>searchUrl</stache-code>to <stache-code>https://stache-search-query.sky.blackbaud.com/search-internal/&lt;site-name&gt;</stache-code>.
+    To use the <stache-code>search</stache-code> endpoint, set <stache-code>searchUrl</stache-code>to <stache-code>https://stache-search-query.sky.blackbaud.com/search-internal/&lt;site-name&gt;</stache-code>.
   </p>
 
-  <h4>Site name setting –</h4>
+  <h4>Site name setting</h4>
   <p>
     Replace <stache-code>&lt;site-name&gt;</stache-code> with the site name that appears after <stache-code>https://docs.blackbaud.com</stache-code> or <stache-code>https://host.nxt.blackbaud.com</stache-code> in your SPA’s URL. You can also find the site name in your build definition in Azure as the <stache-code>SPAId</stache-code> variable.
   </p>
 
-  <sky-alert alertType="info">For public-facing sites, remove <stache-code>-internal</stache-code> from your search endpoint.</sky-alert>
+  <h4>
+    Non-authenticated sites
+  </h4>
+  <p>
+    For public-facing sites, remove <stache-code>-internal</stache-code> from your search endpoint.
+  </p>
 
   <h3>
     Internal vs. external sites
@@ -77,12 +82,14 @@
     Stache sites are configured to be internal-only by default. This means that you must log in as a Blackbaud employee with your Blackbaud email address to see the search results for your site. This prevents public-facing sites such as SKY UX and Stache from searching your site and displaying content to an inappropriate audience. If you require that your Stache site be available to a general public audience without authentication, see the <a stacheRouterLink="/learn/golive">Go live</a> instructions.
   </p>
 
-  <stache-page-anchor>Sample set-up</stache-page-anchor>
+  <stache-page-anchor>Sample setup</stache-page-anchor>
 
   <p>
-    As a reference, here's what a <stache-code>skyuxconfig.json</stache-code> file would look like with search enabled for an internal site.
+    As a reference, here's how a <stache-code>skyuxconfig.json</stache-code> file looks with search enabled for an internal site.
   </p>
-
+  <h3>
+    Setup with Blackbaud authentication
+  </h3>
   <stache-code-block languageType="json">
     "omnibar": {
       "experimental": true,
@@ -103,12 +110,35 @@
     }
   </stache-code-block>
 
+  <h3>
+    Setup without Blackbaud authentication
+  </h3>
+  <stache-code-block languageType="json">
+    "omnibar": {
+      "experimental": true,
+      "nav": {
+        "services": [
+          {
+            "title": "Stache 2 Example",
+            "searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest/stache-example",
+            "items": [
+              {
+                "title": "Home",
+                "route": "/"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  </stache-code-block>
+
   <stache-page-anchor>
     Additional configuration options
   </stache-page-anchor>
 
   <p>
-    To configure variables for the search commands, open the <stache-code>skyuxconfig.json</stache-code> file and add <stache-code>searchConfig</stache-code> beneath <stache-code>stache</stache-code> under the file's <stache-code>appSettings</stache-code>.
+    To configure variables for the search commands, open the <stache-code>skyuxconfig.json</stache-code> file and add <stache-code>searchConfig</stache-code> beneath <stache-code>stache</stache-code> under <stache-code>appSettings</stache-code>.
   </p>
 
   <p>
@@ -136,7 +166,7 @@
   </h3>
 
   <p>
-     This setting determines whether or not a site is searchable. The default value is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the value turns off search for your site and prevents the site from being scraped and publishing results.
+     This setting determines whether a site is searchable. The default value is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the property turns off search for your site and prevents the site from being scraped and publishing results.
   </p>
 
   <h3>
@@ -144,7 +174,7 @@
   </h3>
 
   <p>
-    This setting determines whether the site is included on the global search page. The default value is <stache-code>true</stache-code>. When set to <stache-code>false,</stache-code> your site content appears only when searched for by site name and does not appear on the <a href="https://docs.blackbaud.com/">global docs search</a> page.
+    This setting determines whether the site is included on the global search page. The default is <stache-code>true</stache-code>. When set to <stache-code>false,</stache-code> your site content appears only when searched for by site name and does not appear on the <a href="https://docs.blackbaud.com/">global docs search</a> page.
   </p>
 
   <h3>
@@ -152,11 +182,11 @@
   </h3>
 
   <p>
-    This setting indicates whether a Stache site is internal or external (meaning anyone can access the site without logging in). The default value is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the site's search content displays for non-Blackbaud employees.
+    This setting indicates whether a Stache site is internal. The default is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the site's search content displays for non-Blackbaud employees.
   </p>
 
   <sky-alert alertType="info">
-    By default, Stache sites are configured for internal Blackbaud employee users only. Unless your site needs to be public, we recommend using the internal only configuration.
+    By default, Stache sites are configured for internal Blackbaud employee users only. Unless your site needs to be public, we recommend using the internal-only configuration.
   </sky-alert>
 
   <h3>
@@ -164,7 +194,7 @@
   </h3>
 
   <p>
-    This setting determines which Stache sites are included in the search results. The default setting includes only the site you are viewing. When you add other site names to the array, the content from the additional sites becomes searchable. For example, for the Engineering System site, we include the <stache-code>engineering-system-docs</stache-code> Stache site, but also many related Stache sites that are linked to from the Engineering System documentation.
+    This setting determines the Stache sites to include in the search results. The default setting includes only the site you are viewing. When you add other site names to the array, the content from the additional sites becomes searchable. For example, the Engineering System site includes the <stache-code>engineering-system-docs</stache-code> Stache site and many related Stache sites that are linked to from the Engineering System documentation.
   </p>
   <p>
     To add site names, find the site's URL and use the part the appears after <stache-code>https://docs.blackbaud.com/skyux-spa-</stache-code>.
