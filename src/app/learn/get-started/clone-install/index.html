@@ -9,7 +9,7 @@
     </stache-tutorial-heading>
     <stache-tutorial-summary>
       <p>
-        This tutorial provides step-by-step instructions on how to clone and set up an existing Stache SPA on your computer.
+        This tutorial provides step-by-step instructions on how to clone and set up an existing Stache SPA on your computer using either GitHub or Azure DevOps. If you use a different repository, your steps are likely to be similar, but will need adjustments.
       </p>
     </stache-tutorial-summary>
 
@@ -63,7 +63,10 @@
         <ol>
           <li>
           <p>
-            From <a href="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps Git <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a>, select the repository dropdown. To search for your repo, use the search field. Most Stache SPAs start with <stache-code>skyux-spa</stache-code>.
+            From Azure DevOps, select the repository dropdown. To search for your repo, use the search field.
+          </p>
+          <p *stacheInternal>
+            All SKY UX SPAs, including Stache SPAs, in <a href="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps</a> start with <stache-code>skyux-spa</stache-code>.
           </p>
               <div class="retina-screenshot">
                 <stache-image
@@ -112,7 +115,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          After the repo clones, change your directory to the new repo folder. For example, enter <stache-code>cd skyux-spa-stache-spa</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
+          After the repo clones, change your directory to the new repo folder. For example, enter <stache-code>cd skyux-spa-cool-docs</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
         </p>
         <p>
           To be able to serve locally, you need to install the SKY UX and Stache dependencies. In the command prompt, enter <stache-code>npm install</stache-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).

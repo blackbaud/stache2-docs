@@ -1,9 +1,9 @@
 <stache
   navTitle="Getting Started"
   pageTitle="Welcome to Stache"
-  navOrder="10"
+  navOrder="20"
   layout="sidebar"
-  showTableOfContents="true">
+  showTableOfContents="false">
 
   <stache-page-summary>
     Stache is a component library designed to work with SKY UX single-page applications (SPAs) for the purpose of creating elegant and helpful technical documentation websites. From this page, you'll learn what's required for set up, how to get Stache working with your SPA, and recommended next steps. Let's get started.
@@ -27,11 +27,24 @@
           Complete the SKY UX <a href="https://developer.blackbaud.com/skyux/learn/get-started/prereqs/initial-setup">Initial setup instructions <i class="fa fa-external-link" aria-hidden="true"></i></a>.
         </p>
       </li>
-
+    <stache-internal>
       <sky-alert alertType="info">
-        Blackbaud staff must also ensure they have <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">access to Visual Studio Team Services (Azure DevOps) <i class="fa fa-external-link" aria-hidden="true"></i></a> and link their Azure DevOps credentials from the <a href="https://host.nxt.blackbaud.com/engsys-hub/scs/list">Self-contained systems <i class="fa fa-external-link" aria-hidden="true"></i></a> page.
+        Blackbaud RDO staff must also ensure they have <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">access to Visual Studio Team Services (Azure DevOps) <i class="fa fa-external-link" aria-hidden="true"></i></a> and link their Azure DevOps credentials from the <a href="https://host.nxt.blackbaud.com/engsys-hub/scs/list">Self-contained systems <i class="fa fa-external-link" aria-hidden="true"></i></a> page.
       </sky-alert>
+    </stache-internal>
     </ol>
+
+  <stache-internal>
+    <stache-page-anchor>
+      Set up a Stache SPA for Blackbaud RDO staff
+    </stache-page-anchor>
+    <p>
+      We provided specific documentation for Blackbaud RDO staff, because you have additional features when setting up a new Stache SPA. We provide you a template and set you up with an Azure DevOps Git repo with a build and release pipeline! If you are a Blackbaud staff member but don't have access to the RDO Azure DevOps instance, then follow the <a stacheRouterLink="." fragment="set-up-a-stache-spa">Set up a Stache SPA</a> steps below.
+    </p>
+
+      <stache-action-buttons [routes]="stache.jsonData.bbgetstarted" showSearch="false">
+  </stache-action-buttons>
+  </stache-internal>
 
   <stache-page-anchor>
     Set up a Stache SPA
@@ -44,16 +57,15 @@
   <stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
   </stache-action-buttons>
 
+<stache-internal>
  <stache-page-anchor>
     Learn about Git workflow and Azure DevOps
  </stache-page-anchor>
 
- <p>
-   The following Git and Azure DevOps links are available to Blackbaud staff only <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i>.
- </p>
-
   <stache-action-buttons [routes]="stache.jsonData.gitvsts" showSearch="false">
   </stache-action-buttons>
+
+</stache-internal>
 
   <stache-page-anchor>
     Learn how to update Stache

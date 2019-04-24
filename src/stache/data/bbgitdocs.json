@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Edit locally",
+    "path": "https://docs.blackbaud.com/stache-internal/staff/git-workflow/vscode-terminal",
+    "icon": "desktop",
+    "summary": "Learn the Git workflow process when editing a Stache site locally."
+  },
+  {
+    "name": "Edit online",
+    "path": "https://docs.blackbaud.com/stache-internal/staff/git-workflow/vs-online",
+    "icon": "windows",
+    "summary": "Learn the Git workflow process when editing a Stache site on Azure DevOps."
+  },
+  {
+    "name": "Basic Git merging",
+    "path": "https://docs.blackbaud.com/stache-internal/staff/git-workflow/branch-merging",
+    "icon": "code-branch",
+    "summary": "Learn how to merge the latest changes from another branch into your branch."
+  },
+  {
+    "name": "Git commands",
+    "path": "https://docs.blackbaud.com/stache-internal/staff/git-workflow/git-commands",
+    "icon": "git-square",
+    "summary": "New to Git? Use this page to learn some helpful Git commands."
+  }
+]
