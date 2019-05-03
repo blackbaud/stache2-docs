@@ -14,11 +14,11 @@
   "author": "Blackbaud",
   "license": "MIT",
   "dependencies": {
-    "@blackbaud/skyux": "2.46.1",
-    "@blackbaud/stache": "2.17.0"
+    "@blackbaud/skyux": "2.48.3",
+    "@blackbaud/stache": "2.18.0"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder": "1.33.1"
+    "@blackbaud/skyux-builder": "1.34.1"
   },
   "repository": {
     "type": "git",
