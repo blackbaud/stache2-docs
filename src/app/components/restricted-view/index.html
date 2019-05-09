@@ -87,37 +87,39 @@
   </stache-page-anchor>
 
   <div class="stache-demo-code">
-    <h4>
-      Component example
-    </h4>
-    <p>
-      This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
-    </p>
-    <div>
+    <sky-code-block>
+      <h4>
+        Component example
+      </h4>
+      <p>
+        This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
+      </p>
+      <div>
+        <p>
+          This is the second paragraph.
+        </p>
+        <p>
+          This is the third paragraph.
+        </p>
+      </div>
+      <p>
+        This is the fourth paragraph.
+      </p>
+      <h4>
+        Directive example
+      </h4>
+      <p>
+        This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
+      </p>
       <p>
         This is the second paragraph.
       </p>
       <p>
         This is the third paragraph.
       </p>
-    </div>
-    <p>
-      This is the fourth paragraph.
-    </p>
-    <h4>
-      Directive example
-    </h4>
-    <p>
-      This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
-    </p>
-    <p>
-      This is the second paragraph.
-    </p>
-    <p>
-      This is the third paragraph.
-    </p>
-    <p>
-      This is the fourth paragraph.
-    </p>
+      <p>
+        This is the fourth paragraph.
+      </p>
+    </sky-code-block>
   </div>
 </stache>
