@@ -17,12 +17,6 @@
     text-align: center;
 }
 
-.image-border {
-  .stache-image-object {
-    border: 1px solid #cdcfd2;
-  }
-}
-
 .retina-screenshot {
   max-width: 65%;
   height: auto;
@@ -50,7 +44,7 @@
 
 #hero-over-ride {
   /deep/
-  .stache-hero {
+  .sky-hero {
     @media (min-width: 992px) {
       background-position-y: -150px;
     }

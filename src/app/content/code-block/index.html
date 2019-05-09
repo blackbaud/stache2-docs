@@ -9,7 +9,7 @@
       <a href="https://github.com/blackbaud/skyux-lib-code-block"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
     <sky-alert alertType="warning">
-      The <stache-code>stache-code-block</stache-code> component is <strong>deprecated</strong> in Stache version 2.15.0 and higher, and may be unavailable starting in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
+      The <stache-code>stache-code-block</stache-code> component is <strong>deprecated</strong> in Stache version 2.15.0 and higher, and is unavailable starting in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
     </sky-alert>
     <p>
       The code block component enables you to format a block of text as a code snippet with syntax highlighting. To create a code snippet, wrap <stache-code>sky-code-block</stache-code> tags around the code block. The code block also has a header that displays a copy button and, if defined, the language type. To format shorter code snippets within larger blocks of text, we recommend you use the <a routerLink="/content/code">code component</a> instead.
@@ -94,10 +94,7 @@
             ],
             exports: [
               SkyCodeBlockModule
-            ],
-            providers: [
-            ],
-            entryComponents: []
+            ]
           })
           export class AppExtrasModule { }
       </sky-code-block>
@@ -170,15 +167,15 @@
       </sky-tab>
       <sky-tab
         tabHeading="deprecated sample">
-        <stache-code-block
+        <sky-code-block
           languageType="javascript">
-          <stache-code-block
+          <sky-code-block
             languageType="javascript">
             $(document).ready(() => {
               console.log('jQuery is ready!');
             });
-          </stache-code-block>
-        </stache-code-block>
+          </sky-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

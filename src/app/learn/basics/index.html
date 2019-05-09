@@ -36,11 +36,11 @@
     {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <stache-code>stache</stache-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <stache-code>pageTitle</stache-code>, <stache-code>navTitle</stache-code>, and <stache-code>navOrder</stache-code>.
   </p>
 
-  <stache-code-block>
+  <sky-code-block>
     <stache pageTitle="My Sample Page" navTitle="Sample" navOrder="1" showTableOfContents="true">
       // Your content here.
     </stache>
-  </stache-code-block>
+  </sky-code-block>
 
   <p>
     <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-default">Learn More</button></a>
@@ -65,12 +65,12 @@
     To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
   </p>
 
-<stache-code-block>
+<sky-code-block>
 &lt;app-nav&gt;&lt;/app-nav&gt;
 <stache pageTitle="My Sample Page" navTitle="Sample" navOrder="1" showTableOfContents="true">
   // Your content here.
 </stache>
-</stache-code-block>
+</sky-code-block>
 
 <h3>
   Set up navigation bar
@@ -98,7 +98,7 @@
         Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.
       </p>
     </li>
-    <stache-code-block languageType="typescript">
+    <sky-code-block languageType="typescript">
       export class AppNavComponent {
         public nav = [
           {
@@ -115,7 +115,7 @@
           }
         ];
       }
-  </stache-code-block>
+  </sky-code-block>
 </ol>
 
   <stache-page-anchor>
@@ -125,17 +125,17 @@
   <p>
     In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
   </p>
-  <stache-code-block languageType="scss">
+  <sky-code-block languageType="scss">
   &#47;&#47;CSS
 
 img &#123;
   border&#58; 1px solid &#35;cccccc&#59;
 &#125;
-  </stache-code-block>
+  </sky-code-block>
   <p>
     After the <stache-code>app.scss</stache-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file and insert this line of code at the beginning of the file.
   </p>
-  <stache-code-block languageType="typescript">require('style-loader!./app.scss');</stache-code-block>
+  <sky-code-block languageType="typescript">require('style-loader!./app.scss');</sky-code-block>
 
   <stache-page-anchor>
     Command line
@@ -233,7 +233,7 @@ img &#123;
     If you are a Blackbaud staff member and have the omnibar set up in your <stache-code>skyuxconfig.json</stache-code> file, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
   </sky-alert>
 
-<stache-code-block>
+<sky-code-block>
 &lt;app-nav&gt;
 &lt;/app-nav&gt;
 
@@ -250,13 +250,13 @@ img &#123;
     Section One
   &lt;/stache-page-anchor&gt;
 
-&lt;stache-image imageSource="~/assets​/hero-sample-1.jpg"&gt;
-&lt;/stache-image&gt;
+&lt;sky-image imageSource="~/assets​/hero-sample-1.jpg"&gt;
+&lt;/sky-image&gt;
 
 &lt;p>&lt;a stacheRouterLink="/support/changelog"&gt;Good stuff can be found in our Changelog.&lt;/a&gt;&lt;/p&gt;
 
 &lt;/stache&gt;
-</stache-code-block>
+</sky-code-block>
 
   <stache-page-anchor>
     Next steps

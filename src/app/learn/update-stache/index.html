@@ -26,9 +26,9 @@
         <p>
           After you are on version <stache-code>2.13.0</stache-code>, update your Stache site from the Visual Studio Code terminal or a command prompt by running:
         </p>
-        <stache-code-block>
+        <sky-code-block>
           skyux stache-update
-        </stache-code-block>
+        </sky-code-block>
 
         <p>
           The command updates the versions of Stache, SKY UX, SKY UX Builder, and the Whitelist plugin (if applicable), deletes your <stache-code>node-modules</stache-code> folder, and runs <stache-code>npm install</stache-code> for you. After it finishes, you are all set to create more stellar content.
@@ -54,12 +54,12 @@
           <li>
             Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>. Before you update, we recommend you review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes.
           </li>
-        <stache-code-block
+        <sky-code-block
           languageType="json">
             "dependencies": {
               "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}",
               ...
-        </stache-code-block>
+        </sky-code-block>
         </ol>
 
 

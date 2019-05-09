@@ -60,10 +60,10 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab tabHeading="sample">
-        <stache-code-block languageType="markup">
+        <sky-code-block languageType="markup">
           <stache-action-buttons [routes]="stache.jsonData.uniquefilename" showSearch="false">
           </stache-action-buttons>
-        </stache-code-block>
+        </sky-code-block>
         <p>When you use this on your site, you'll change the
           <stache-code>uniquefilename</stache-code> part to the name of your file.</p>
       </sky-tab>
@@ -92,7 +92,7 @@
           </li>
         </ul>
         <p>Then, copy and paste the following code into the file and update with your action button information.</p>
-        <stache-code-block languageType="json">
+        <sky-code-block languageType="json">
         [
           {
             "name": "Rock",
@@ -113,7 +113,7 @@
             "summary": "Write the description with a positive verb about what the user can do on the next page. "
           }
         ]
-        </stache-code-block>
+        </sky-code-block>
         <sky-alert alertType="info">
           <strong>Tip:</strong> Provide a comma between each item. However, do not use a comma after the last item's
           <stache-code>}</stache-code>.</sky-alert>
