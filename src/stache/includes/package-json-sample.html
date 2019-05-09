@@ -1,7 +1,7 @@
 <sky-code-block languageType="json">
   "dependencies": {
     "@blackbaud/skyux": "{{ @buildtime:stache.jsonData.global.skyUXVersion }}",
-    "@blackbaud/skyux-builder-plugin-auth-email-whitelist": "~1.0.10",
+    "@blackbaud/skyux-builder-plugin-auth-email-whitelist": "{{ @buildtime:stache.jsonData.global.emailVersion }},
     "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}"
   },
   "devDependencies": {

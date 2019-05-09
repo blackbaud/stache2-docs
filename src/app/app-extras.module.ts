@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { StacheModule } from '@blackbaud/stache';
 
-import { StacheDemoContentService } from './content/demo-content.service';
+import { StacheDemoContentService } from './components/demo-content.service';
 
 import {
   SkyHeroModule,

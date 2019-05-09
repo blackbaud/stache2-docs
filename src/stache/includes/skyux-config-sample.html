@@ -1,6 +1,8 @@
-<p>
-  Setup without authentication:
-</p>
+<stache-internal>
+  <p>
+    Setup <b>without</b> Blackbaud authentication:
+  </p>
+</stache-internal>
 <sky-code-block languageType="json">
   {
     "mode": "easy",
@@ -18,25 +20,26 @@
     }
   }
 </sky-code-block>
-<p>
-  Blackbaud setup with authentication:
-</p>
-<sky-code-block languageType="json">
-  {
-    "mode": "easy",
-    "compileMode": "aot",
-    "auth": true,
-    "plugins": [
-      "@blackbaud/skyux-builder-plugin-stache",
-      "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
-    ],
-    "app": {
-      "title": "your_project_title"
-    },
-    "appSettings": {
-      "stache": {
+<stache-internal>
+  <p>
+    Setup <b>with</b> Blackbaud authentication:
+  </p>
+  <sky-code-block languageType="json">
+    {
+      "mode": "easy",
+      "compileMode": "aot",
+      "auth": true,
+      "plugins": [
+        "@blackbaud/skyux-builder-plugin-stache",
+        "@blackbaud/skyux-builder-plugin-auth-email-whitelist"
+      ],
+      "app": {
+        "title": "your_project_title"
+      },
+      "appSettings": {
+        "stache": {
+        }
       }
     }
-  }
-</sky-code-block>
-
+  </sky-code-block>
+</stache-internal>

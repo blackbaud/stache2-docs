@@ -11,9 +11,8 @@
       <p>
         This tutorial provides step-by-step instructions on how to create a new SKY UX single-page application (SPA) with the {{ stache.jsonData.global.productNameLong }} component library.
       </p>
-
-      <p>
-        <mark>Blackbaud staff</mark>, follow the Blackbaud version of the <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
+      <p *stacheInternal>
+        <mark>Blackbaud RDO staff</mark>, follow the Blackbaud version of the <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
       </p>
     </stache-tutorial-summary>
 
@@ -46,7 +45,7 @@
             <p>For example, if you have Windows OS and save all your Git repos to <stache-code>C:\Git\</stache-code>, enter <stache-code>cd C:\Git\</stache-code>. </p>
           </li>
           <li>
-            <p>Enter <stache-code>skyux new --template stache</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).</p>
+            <p>Enter <stache-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).</p>
           </li>
           <li>
             <p>
@@ -65,7 +64,7 @@
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
-    <stache-tutorial-step>
+    <stache-tutorial-step *stacheInternal>
       <stache-tutorial-step-heading>
         Verify authentication for your application
       </stache-tutorial-step-heading>
@@ -74,7 +73,7 @@
           After you create your application and deploy to your hosted location, it is potentially available on the public Internet. Be careful to not allow anonymous users access to protected assets, such as user data or internal systems.
         </p>
         <sky-alert alertType="warning">
-          If you are a Blackbaud staff member who did not follow the <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">directions for internal Stache SPAs <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a>, we recommend you turn on authentication.
+          If you are a Blackbaud staff member who did not follow the <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">directions for internal Stache SPAs</a>, we recommend you turn on authentication.
         </sky-alert>
         <ol>
           <li>
@@ -113,7 +112,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-        When you run <stache-code>skyux new --template stache</stache-code> to create your local SPA, the SKY UX CLI creates an <stache-code>initial commit</stache-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
+        When you run <stache-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</stache-code> to create your local SPA, the SKY UX CLI creates an <stache-code>initial commit</stache-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
         </p>
         <p>Let's walk through how to add, commit, push, and merge this branch to <stache-code>master</stache-code>.</p>
         <ol>
@@ -162,7 +161,7 @@
           </li>
           <li>
             <p>
-              <a routerLink="/content/">{{ stache.jsonData.global.productNameShort }} Components</a> – for ways to enhance your documentation beyond basic paragraphs and headers</a>
+              <a routerLink="/components/">{{ stache.jsonData.global.productNameShort }} Components</a> – for ways to enhance your documentation beyond basic paragraphs and headers</a>
             </p>
           </li>
           <li>

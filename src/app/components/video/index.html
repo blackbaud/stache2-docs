@@ -1,0 +1,137 @@
+<stache
+  pageTitle="Video"
+  showTableOfContents="true">
+
+  <stache-page-summary>
+    <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+
+    <sky-alert alertType="warning">
+      The <stache-code>stache-video</stache-code> component is <strong>deprecated</strong> in Stache version 2.18.0 and higher, and is unavailable starting in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
+    </sky-alert>
+
+    <p>
+      The video component provides a responsive embed for video.
+    </p>
+  </stache-page-summary>
+
+  <h3>
+    Video properties
+  </h3>
+
+  <ul>
+    <li>
+      <p>
+        <stache-code>videoSource</stache-code> — The url for the video.
+      </p>
+      <h4>
+        YouTube
+      </h4>
+      <p>
+        To find the <a href="http://www.youtube.com">YouTube <i class="fa fa-external-link" aria-hidden="true"></i></a> URL to use as a video source, grab the source URL from the embed code. From a video's page on Youtube, select <strong>Share</strong> and then the <strong>Embed</strong> tab. Copy the <stache-code>src=""</stache-code> URL to use with the video component.
+      </p>
+      <sky-image
+        showBorder="true"
+        imageSource="~/assets/youtube-video.png">
+      </sky-image>
+      <h4>
+        Vimeo
+      </h4>
+      <p>
+        To find the <a href="http://www.vimeo.com">Vimeo <i class="fa fa-external-link" aria-hidden="true"></i></a> URL to use as the video source, grab the source URL from the embed code. From a video's page on Vimeo, select the share button and then copy the embed code. Vimeo does not enable you to select a portion. Paste the code into a text editor and copy the portion of the URL you need, starting with <stache-code>src=""</stache-code>.
+      </p>
+      <sky-image
+        showBorder="true"
+        imageSource="~/assets/vimeo-video.png">
+      </sky-image>
+      <h4>
+        O365
+      </h4>
+      <sky-alert alertType="info" *stacheInternal>Blackbaud staff can host videos used on Stache sites by uploading the videos to the <a href="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&p=c&chid=9006bebc-4c88-4c22-b5f0-159f455957fe&s=0&t=pfb">O365 Stache channel</a>. If you can't access the page, request access through a Service Now ticket.</sky-alert>
+
+      <p>
+        When you copy the source URL from an O365 video, copy the entire source URL and not just a portion. If you use a portion, you may receive a "This video is private" or "This video isn't available" error on your page. The URL to copy should look similar to this:
+      </p>
+      <sky-code-block>
+        <sky-video
+          videoSource="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=fedcfc02%2Dd545%2D4155%2D973a%2Dd09a1fa6e003&amp;vId=63c1f86b%2De4d2%2D4c3b%2D862b%2D0f9adafbb0c8&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true">
+        </sky-video>
+      </sky-code-block>
+    </li>
+  </ul>
+
+  <stache-page-anchor>
+      Stache SPAs
+    </stache-page-anchor>
+    <p>To enable more flexibility with the video component, we contributed it to SKY UX as a standalone module. This requires only a few small changes for Stache SPAs.</p>
+    <ul>
+      <li>
+        Update your version of Stache to 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
+      </li>
+      <li>
+        Update your <stache-code>stache-video</stache-code> components to <stache-code>sky-video</stache-code> components.
+      </li>
+    </ul>
+
+    <stache-page-anchor>
+      Non-Stache SPAs
+    </stache-page-anchor>
+    <p>
+      If your SPA uses Stache version 3.0.0 or higher, this module is installed and added for you. However, non-Stache users can use this module without Stache. Learn how to set up this module as a dependency in your SKY UX SPA project.
+    </p>
+    <ol>
+      <li>
+        <p>
+          Install the package and plugin as part of your SPAs dependencies.
+        </p>
+        <sky-code-block>
+          npm install @blackbaud/skyux-lib-media --save
+        </sky-code-block>
+      </li>
+      <li>
+        <p>
+          Add the module to your <strong>app-extras.module.ts</strong> file.
+        </p>
+        <sky-code-block hideCopyToClipboard="true">
+            import { SkyVideoModule } from '@blackbaud/skyux-lib-media';
+
+            @NgModule({
+              imports: [
+                SkyVideoModule
+              ],
+              exports: [
+                SkyVideoModule
+              ]
+            })
+            export class AppExtrasModule { }
+        </sky-code-block>
+      </li>
+    </ol>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <sky-video
+      videoSource="https://www.youtube.com/embed/2KQfUntZrt8">
+    </sky-video>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <sky-code-block
+          languageType="markup">
+          <sky-video
+            videoSource="https://www.youtube.com/embed/2KQfUntZrt8">
+          </sky-video>
+        </sky-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

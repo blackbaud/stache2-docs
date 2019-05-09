@@ -1,7 +1,9 @@
 <stache
   navTitle="Update Stache"
-  navOrder="30"
-  layout="sidebar">
+  navOrder="40"
+  layout="sidebar"
+  showTableOfContents="true">
+
   <stache-tutorial>
     <stache-tutorial-heading>
       Update {{ stache.jsonData.global.productNameShort }}
@@ -31,7 +33,7 @@
         </sky-code-block>
 
         <p>
-          The command updates the versions of Stache, SKY UX, SKY UX Builder, and the Whitelist plugin (if applicable), deletes your <stache-code>node-modules</stache-code> folder, and runs <stache-code>npm install</stache-code> for you. After it finishes, you are all set to create more stellar content.
+          The command updates the versions of Stache, SKY UX, and SKY UX Builder, deletes your <stache-code>node-modules</stache-code> folder, and runs <stache-code>npm install</stache-code> for you. <span *stacheInternal>If you have the Whitelist plugin, the whitelist plugin version will also update.</span> After it finishes, you are all set to create more stellar content.
         </p>
 
         <sky-alert alertType="info">
@@ -87,51 +89,6 @@
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 
-<!--
-    <stache-tutorial-step>
-      <stache-tutorial-step-heading>
-        Specify plugins
-      </stache-tutorial-step-heading>
-      <stache-tutorial-step-body>
-        <p>
-          The <stache-code>skyuxconfig.json</stache-code> file in your project's root directory contains plugins to expand on existing SKY UX Builder functionality and create new functionality. Stache requires specific plugins to use certain Stache components.
-        </p>
-        <p>
-          Open the <stache-code>skyuxconfig.json</stache-code> file, and make sure it <a routerLink="/learn/plugins">lists the plugins that you need</a> in the <stache-code>plugins</stache-code> array.
-        </p>
-        <ul>
-          <li>
-            <p>
-              The required <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin bundles all other plugins that {{ stache.jsonData.global.productNameShort }} requires.
-            </p>
-          </li>
-          <li>
-            <p>
-              The optional <stache-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</stache-code> plugin allows you to enable Blackbaud authentication for internal sites so that you can restrict access to internal users only.
-            </p>
-          </li>
-        </ul>
-        <stache-include fileName="skyux-config-sample.html"></stache-include>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
-
-    <stache-tutorial-step>
-      <stache-tutorial-step-heading>
-        Register {{ stache.jsonData.global.productNameShort }} module
-      </stache-tutorial-step-heading>
-      <stache-tutorial-step-body>
-        <p>
-          Open the <stache-code>src/app/app-extras.module.ts</stache-code> file, and make sure it imports <stache-code>StacheModule</stache-code>.
-        </p>
-        <sky-alert
-          alertType="info">
-          Prior to {{ stache.jsonData.global.productNameShort }} 2.0.0-beta.9, it was also necessary to declare <stache-code>StacheConfigService</stache-code> as a provider. This is no longer required.
-        </sky-alert>
-
-        <stache-include fileName="app-extras-sample.html"></stache-include>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
--->
     <stache-tutorial-step>
       <stache-tutorial-step-heading>
         Update node_modules

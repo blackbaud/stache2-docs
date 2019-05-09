@@ -1,6 +1,6 @@
 <stache
   pageTitle="Basics"
-  navOrder="20"
+  navOrder="30"
   layout="sidebar"
   showTableOfContents="true">
 
@@ -30,7 +30,7 @@
   </stache-page-anchor>
 
   <p>
-    The <a routerLink="/content/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag.
+    The <a routerLink="/components/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag. <span *stacheInternal>If your SPA is using the omnibar instead of <stache-code>app-nav</stache-code>, this should be the very first tag on the page. </span>
   </p>
   <p>
     {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <stache-code>stache</stache-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <stache-code>pageTitle</stache-code>, <stache-code>navTitle</stache-code>, and <stache-code>navOrder</stache-code>.
@@ -43,19 +43,21 @@
   </sky-code-block>
 
   <p>
-    <a routerLink="/content/wrapper"><button type="button" class="sky-btn sky-btn-default">Learn More</button></a>
+    <a routerLink="/components/wrapper"><button type="button" class="sky-btn sky-btn-default">Learn More</button></a>
   </p>
 
   <stache-page-anchor>
     Application navigation
   </stache-page-anchor>
-
+  <stache-internal>
+    <sky-alert alertType="info">
+      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
+    </sky-alert>
+  </stache-internal>
   <p>
     To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template enables you to display a navigation bar at the top of pages.
   </p>
-  <sky-alert alertType="info">
-    For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
-  </sky-alert>
+
 
   <h3>
     Display navigation bar
@@ -151,12 +153,13 @@ img &#123;
     On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install <a stacheRouterLink="." fragment="git">Git</a>, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code> because it causes a conflict that prevents the install from completing.
   </p>
 
-  <stache-page-anchor>
-    Azure DevOps for Blackbaud staff
+<stache-internal>
+  <stache-page-anchor *stacheInternal>
+    Azure DevOps
   </stache-page-anchor>
 
   <p>
-    Unless you are working locally, all new SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are a few key differences to know about.
+    Unless you are working locally, all new Blackbaud RDO staff SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are a few key differences to know about.
   </p>
   <ol>
     <li>
@@ -170,8 +173,27 @@ img &#123;
     Because of these differences, each change to your repo will take, at minimum, a few minutes to release to your live SPA.
   </p>
   <p>
-    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in Azure DevOps lets you make quick changes without leaving the browser. To learn how to make changes with the Azure DevOps web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/staff/vsts-editor/">Edit Stache online <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> tutorial.
+    You can use tools such as VS Code to work with a local clone of your Stache site, but the web-based editor in Azure DevOps lets you make quick changes without leaving the browser. To learn how to make changes with the Azure DevOps web-based editor, see the <a href="https://docs.blackbaud.com/stache-internal/staff/vsts-editor/">Edit Stache online</a> tutorial.
   </p>
+  <h3>
+    Branch Policies and Security
+  </h3>
+  <p>
+    Stache SPAs in Azure DevOps are set up with standard policies and security. Learn <a stacheRouterLink="https://docs.blackbaud.com/stache-internal/staff/vsts-repo-setup">how to edit these policies</a> for your documentation sites.
+  </p>
+  <p>Standard policies for a pull request into the master branch include:</p>
+  <ul>
+    <li>
+      Pull request approval by at least 1 reviewer
+    </li>
+    <li>
+      Successful pull request build
+    </li>
+    <li>
+      Person who created the SPA is configured as a "required" reviewer
+    </li>
+  </ul>
+</stache-internal>
 
   <stache-page-anchor>
     Git
@@ -179,12 +201,31 @@ img &#123;
   <p>
     Stache uses Git as our methodology for managing source control in our repositories. Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. The best part is, because it is so widely used, one Google search can turn up a lot of helpful documentation.
   </p>
+
+  <stache-internal>
+    <h3>New to Git?</h3>
   <p>
-    However, are you a Blackbaud staff member who's new to Git? We created some documentation about Git, including Git workflow tutorials, to help you learn how Blackbaud uses it for Stache.
+    Are you new to Git? We created some documentation about Git, including Git workflow tutorials, to help you learn how to use it with Stache.
   </p>
-  <p>
-    Review our <a stacheRouterLink="https://docs.blackbaud.com/stache-internal/staff/git-workflow">Blackbaud Git documentation <i class="fa fa-lock" aria-hidden="true" title="Blackbaud staff only"></i></a> for Stache users.
-  </p>
+  <stache-action-buttons [routes]="stache.jsonData.bbgitdocs" showSearch="false">
+  </stache-action-buttons>
+
+  </stache-internal>
+
+  <stache-internal>
+    <stache-page-anchor  *stacheInternal>
+      Edit Stache online
+    </stache-page-anchor>
+    <p>
+      For small edits to a single {{ stache.jsonData.global.productNameShort }} page, you can quickly can use the Edit button on a Stache page to make the change in Azure DevOps without ever leaving the web browser.
+    </p>
+    <p>
+      <a href="https://docs.blackbaud.com/stache-internal/staff/vsts-editor"><button type="button"  class="sky-btn sky-btn-primary">Learn how</button></a>
+    </p>
+    <p>
+      Looking to make several changes to your Stache site in Azure DevOps? See our <a stacheRouterLink="https://docs.blackbaud.com/stache-internal/staff/git-workflow/vs-online">Edit Online Using Git Workfow</a> tutorial.
+    </p>
+  </stache-internal>
 
   <stache-page-anchor>
     Tools
@@ -229,10 +270,11 @@ img &#123;
   <p>
     Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
   </p>
-  <sky-alert alertType="warning">
-    If you are a Blackbaud staff member and have the omnibar set up in your <stache-code>skyuxconfig.json</stache-code> file, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
-  </sky-alert>
-
+  <stache-internal>
+    <sky-alert alertType="warning">
+      If you are a Blackbaud staff member and have the omnibar set up in your <stache-code>skyuxconfig.json</stache-code> file, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
+    </sky-alert>
+  </stache-internal>
 <sky-code-block>
 &lt;app-nav&gt;
 &lt;/app-nav&gt;
@@ -265,8 +307,11 @@ img &#123;
   <p>
     Now that you've learned some basics about {{ stache.jsonData.global.productNameLong }}, you're ready to dive in!
   </p>
+  <h3>
+    Components
+  </h3>
   <p>
-    To learn how to improve your documentation with layouts, style, and elements see the <a routerLink="/content/">Content page</a>.
+    To improve your documentation with layouts, style, and elements see the <a routerLink="/components/">Components page</a>. Components enable you to enhance your basic headers and paragraphs with features that were designed for technical documentation.
   </p>
 
 </stache>

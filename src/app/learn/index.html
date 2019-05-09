@@ -10,6 +10,12 @@
   <stache-action-buttons showSearch="false"
     [routes]="[
       {
+        name: 'Overview',
+        path: '/learn/overview',
+        icon: 'info-circle',
+        summary: 'Interested in what Stache is and how it can help you?'
+      },
+      {
         name: 'Getting started',
         path: '/learn/get-started',
         icon: 'compass',
@@ -28,22 +34,16 @@
         summary: 'Learn how to update your app to the latest version of Stache.'
       },
       {
-        name: 'Migrate from Stache 1',
-        path: '/learn/migrate',
-        icon: 'suitcase',
-        summary: 'Do you want to migrate your site? Learn about the steps and considerations when moving to Stache 2.'
-      },
-      {
         name: 'Stache plugins',
         path: '/learn/plugins/',
         icon: 'plug',
         summary: 'Learn about the plugins Stache uses to expand the features of SKY UX.'
       },
       {
-        name: 'Blackbaud staff topics',
-        path: 'https://docs.blackbaud.com/stache-internal/staff',
-        icon: 'lock',
-        summary: 'Blackbaud staff can find documentation specifically written for our internal needs.'
+        name:  'Go live',
+        path: '/learn/golive',
+        icon: 'rocket',
+        summary: 'Before you publish your site, review our recommendations to ensure a successful launch.'
       }
     ]">
   </stache-action-buttons>

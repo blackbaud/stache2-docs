@@ -1,0 +1,51 @@
+<stache
+  pageTitle="Table of Contents"
+  navTitle="Table of contents"
+  showTableOfContents="true">
+
+  <stache-page-summary>
+    <p>
+      The table of contents enables you to navigate quickly within a page using page anchors. It also serves as an overview of the page contents. This component, combined with the back to top and <a routerLink="/components/page-anchor">page anchors</a>, creates a quick and effortless way to navigate long form content.
+    </p>
+    <p>To use the table of contents on your page, enable it on the <stache-code>stache</stache-code> tag.</p>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <p>
+    See the <a stacheRouterLink="/learn/basics">Basics</a> page for a demo of the table of contents component.
+  </p>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <sky-code-block
+          languageType="markup">
+        <stache
+          pageTitle="My Sample Page"
+          showTableOfContents="true">
+          <stache-page-anchor>
+            Section One
+          </stache-page-anchor>
+
+          // Some content
+
+          <stache-page-anchor>
+            Section Two
+          </stache-page-anchor>
+
+          // More content
+
+        </stache>
+        </sky-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

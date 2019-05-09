@@ -1,0 +1,56 @@
+<stache
+  pageTitle="Page Anchor"
+  navTitle="Page anchor"
+  showTableOfContents="true">
+
+  <stache-page-summary>
+    <p>
+      The page anchor component constructs the <a routerLink="/components/table-of-contents/">table of contents</a> and creates an anchor to specific sections on a page. It also formats as a natural section header.
+    </p>
+  </stache-page-summary>
+
+
+  <h3>
+    Page anchor properties
+  </h3>
+
+  <ul>
+    <li>
+      <stache-code>anchorId</stache-code> — <i>(Optional)</i> Enables you to specify a custom ID attribute. The default anchor ID is created with the words in the page anchor separated by dashes.
+    </li>
+  </ul>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <stache-page-anchor>
+      Anchor #1
+    </stache-page-anchor>
+    <stache-page-anchor anchorId="second-anchor">
+      Anchor #2
+    </stache-page-anchor>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <sky-code-block
+          languageType="markup">
+          <stache-page-anchor>
+            Anchor #1
+          </stache-page-anchor>
+          <stache-page-anchor anchorId="second-anchor">
+            Anchor #2
+          </stache-page-anchor>
+        </sky-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>
