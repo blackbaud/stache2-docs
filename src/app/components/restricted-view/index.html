@@ -1,0 +1,123 @@
+<stache
+  pageTitle="Restricted View Library"
+  navTitle="Restricted view"
+  showTableOfContents="true">
+
+  <stache-page-summary>
+    <p>
+      The Restricted View Library makes content visible to internal Blackbaud users and hides it from other users. This library is for internal Blackbaud use only.
+    </p>
+
+    <p>
+      The Restricted View Library includes both a component and directive allows to configure content. The library enables you to to create a more targeted user experience in Blackbaud documentation by only showing content that applies to a user.
+    </p>
+  </stache-page-summary>
+
+  <stache-page-anchor>
+    Installation
+  </stache-page-anchor>
+  <p>
+    To use the Restricted View Library library, you must install <stache-code>SkyRestrictedViewModule</stache-code> as a dependency to your project. In the command prompt, run the following command from your SPA's root directory:
+  </p>
+  <sky-code-block>
+    npm install @blackbaud/skyux-lib-restricted-view --save --save-exact
+  </sky-code-block>
+  <p>
+    After installation, you need to make any exports from <stache-code>SkyRestrictedViewModule</stache-code> available to your SPA by adding the module to the <stache-code>exports</stache-code> section of your SPA's main module. If you are using the SKY UX SDK, add <stache-code>SkyRestrictedViewModule</stache-code> as an export in your <stache-code>app-sky.module.ts</stache-code> file.
+  </p>
+
+  <h3>
+    Library items
+  </h3>
+
+  <ul>
+    <li>
+      <p>
+        <stache-code>sky-restricted-view</stache-code> — The <stache-code>sky-restricted-view</stache-code> component wraps restricted content and hides it. The component hides any content within the tags from users who are nto logged in with BBID.
+      </p>
+    </li>
+    <li>
+      <p>
+        <stache-code>skyRestrictedView</stache-code> — The <stache-code>skyRestrictedView</stache-code> directive is placed as an attribute on restricted elements and hides the content within those elements. The directive hides any content within the elements from users who are nto logged in with BBID.
+      </p>
+    </li>
+  </ul>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <h4>
+      Component example
+    </h4>
+    <p>
+      This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
+    </p>
+    <div>
+      <p>
+        This is the second paragraph.
+      </p>
+      <p>
+        This is the third paragraph.
+      </p>
+    </div>
+    <p>
+      This is the fourth paragraph.
+    </p>
+    <h4>
+      Directive example
+    </h4>
+    <p>
+      This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
+    </p>
+    <p>
+      This is the second paragraph.
+    </p>
+    <p>
+      This is the third paragraph.
+    </p>
+    <p>
+      This is the fourth paragraph.
+    </p>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <h4>
+      Component example
+    </h4>
+    <p>
+      This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
+    </p>
+    <div>
+      <p>
+        This is the second paragraph.
+      </p>
+      <p>
+        This is the third paragraph.
+      </p>
+    </div>
+    <p>
+      This is the fourth paragraph.
+    </p>
+    <h4>
+      Directive example
+    </h4>
+    <p>
+      This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
+    </p>
+    <p>
+      This is the second paragraph.
+    </p>
+    <p>
+      This is the third paragraph.
+    </p>
+    <p>
+      This is the fourth paragraph.
+    </p>
+  </div>
+</stache>
