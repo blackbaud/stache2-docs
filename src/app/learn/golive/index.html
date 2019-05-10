@@ -9,11 +9,11 @@
     <p>
       When a Stache site is configured for public use, <span *stacheInternal>(meaning the site is no longer restricted to Blackbaud authenticated users)</span> it can be accessed by anyone. Before you publish your site, review our recommendations <span *stacheInternal>and requirements </span>for a successful launch.
     </p>
-    <stache-internal>
+    <sky-restricted-view>
       <sky-alert alertType="danger">
         Failure to adhere to the recommendations and guidelines could result in your site's removal.
       </sky-alert>
-    </stache-internal>
+    </sky-restricted-view>
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -36,7 +36,7 @@
     <i class="far fa-check-square"></i> <b>Remove Blackbaud authentication</b> – This will be the last task you perform after your site is reviewed and you adjust your search settings. This <a stacheRouterLink="." fragment="remove-blackbaud-authentication">removes the requirement</a> that users must have a valid Blackbaud email address to access your site.
   </p>
 
-  <stache-internal>
+  <sky-restricted-view>
   <stache-page-anchor *stacheInternal>
     Remove Blackbaud authentication
   </stache-page-anchor>
@@ -52,12 +52,12 @@
     Remove <stache-code>"@blackbaud/skyux-builder-plugin-auth-email-whitelist"</stache-code> from the plugins and set <stache-code>"auth":</stache-code> to <stache-code>false</stache-code>.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
       "auth": false,
       "plugins": [
         "@blackbaud/skyux-builder-plugin-stache"
       ],
-  </stache-code-block>
+  </sky-code-block>
 
   <h3>
     package.json file
@@ -67,12 +67,12 @@
     Remove the <stache-code>"@blackbaud/skyux-builder-plugin-auth-email-whitelist": "{{ @buildtime:stache.jsonData.global.emailVersion }}",</stache-code> from the dependencies.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
       "dependencies": {
         "@blackbaud/skyux": "{{ @buildtime:stache.jsonData.global.skyUXVersion }},
-        "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}"
+        "@blackbaud/skyux-lib-stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}"
       },
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor *stacheInternal>Update search settings</stache-page-anchor>
 
@@ -88,7 +88,7 @@
     <b>Optionally</b>, when a site is set to public, depending on who the site is for, we recommend removing the site from the global search. For example, if your site is mainly for customers and not Blackbaud Staff, remove it from the global search. The global search is used on the <a href="https://docs.blackbaud.com">RDO Engineering landing page</a>. We want to ensure the search there is most helpful for Blackbaud Staff!
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "appSettings": {
     "stache": {
       "searchConfig": {
@@ -107,8 +107,8 @@
             "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
             "items": [
 
-  </stache-code-block>
-  </stache-internal>
+  </sky-code-block>
+  </sky-restricted-view>
 
   <stache-page-anchor>
     Protect your master branch

@@ -54,12 +54,12 @@
             Open the <stache-code>package.json</stache-code> file in your project's root directory.
           </li>
           <li>
-            Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>. Before you update, we recommend you review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes.
+            Under the <stache-code>dependencies</stache-code> property, update <stache-code>@blackbaud/skyux-lib-stache</stache-code> to the latest version in the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">{{ stache.jsonData.global.productNameShort }} changelog <i class="fa fa-external-link" aria-hidden="true"></i></a>. Before you update, we recommend you review the <a href="https://github.com/blackbaud/stache2/blob/master/CHANGELOG.md">changelog <i class="fa fa-external-link" aria-hidden="true"></i></a> for breaking changes.
           </li>
         <sky-code-block
           languageType="json">
             "dependencies": {
-              "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}",
+              "@blackbaud/skyux-lib-stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}",
               ...
         </sky-code-block>
         </ol>

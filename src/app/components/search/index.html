@@ -28,13 +28,13 @@
   <p>
     In the example below, each search endpoint returns different results.
   </p>
-  <stache-code-block hideCopyToClipboard="true">
+  <sky-code-block hideCopyToClipboard="true">
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Repudiandae impedit doloremque libero laborum aliquid temporibus,
     laboriosam cum expedita, inventore pariatur tenetur magnam,
     facilis molestias ducimus blanditiis?
     Veritatis a aliquid eveniet!
-  </stache-code-block>
+  </sky-code-block>
 
   <p>
     If users search for "labor" with the <stache-code>search</stache-code> endpoint, the search does not return results because there is not an exact match.
@@ -90,7 +90,7 @@
   <h3>
     Setup with Blackbaud authentication
   </h3>
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "omnibar": {
       "experimental": true,
       "nav": {
@@ -108,12 +108,12 @@
         ]
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <h3>
     Setup without Blackbaud authentication
   </h3>
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "omnibar": {
       "experimental": true,
       "nav": {
@@ -131,7 +131,7 @@
         ]
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor>
     Additional configuration options
@@ -145,7 +145,7 @@
     The example below displays the default configuration after you enable search for your site. To override a setting, modify the variables defined below.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "appSettings": {
       "stache": {
         "searchConfig": {
@@ -159,7 +159,7 @@
         }
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <h3>
     <stache-code>allowSiteToBeSearched</stache-code>
@@ -209,7 +209,7 @@
     Open the <stache-code>skyuxconfig.json</stache-code> file, remove <stache-code>-internal</stache-code> from your search endpoint, and update the <stache-code>appSettings</stache-code> option to <stache-code>"is_internal": false</stache-code>. If your public site includes internal sites in the <stache-code>site_names</stache-code> setting, the search results only include internal sites when a user is logged in with BBID.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "appSettings": {
       "stache": {
         "searchConfig": {
@@ -217,7 +217,7 @@
         }
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor>
     Hide sections and pages from search
@@ -227,7 +227,7 @@
     When search is enabled, the e2e build phase of the VSTS pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <stache-code>stache-hide-from-search</stache-code> element. To exclude an entire page, wrap all of the markup, including the <stache-code>stache</stache-code> tag, in a <stache-code>stache-hide-from-search</stache-code> element.
   </p>
 
-  <stache-code-block
+  <sky-code-block
     languageType="markup">
     <stache-hide-from-search>
       <p>
@@ -238,7 +238,7 @@
     <p>
       This content will appear in the search results.
     </p>
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor>
     Analytics
@@ -264,14 +264,14 @@
       <stache-code>SiteNames</stache-code> — Indicates the array of sites included in the search request.
     </li>
   </ul>
-  <stache-code-block hideCopyToClipboard="true">
+  <sky-code-block hideCopyToClipboard="true">
     "Search Event": {
       "Action": "run",
       "InternalRequest": false,
       "SearchText": "Foo",
       "SiteNames": ["stache", "sky-ux"]
     }
-  </stache-code-block>
+  </sky-code-block>
 </div>
 </stache-hide-from-search>
 </stache>

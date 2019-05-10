@@ -49,11 +49,11 @@
   <stache-page-anchor>
     Application navigation
   </stache-page-anchor>
-  <stache-internal>
+  <sky-restricted-view>
     <sky-alert alertType="info">
       For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
     </sky-alert>
-  </stache-internal>
+  </sky-restricted-view>
   <p>
     To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template enables you to display a navigation bar at the top of pages.
   </p>
@@ -153,7 +153,7 @@ img &#123;
     On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install <a stacheRouterLink="." fragment="git">Git</a>, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code> because it causes a conflict that prevents the install from completing.
   </p>
 
-<stache-internal>
+<sky-restricted-view>
   <stache-page-anchor *stacheInternal>
     Azure DevOps
   </stache-page-anchor>
@@ -193,7 +193,7 @@ img &#123;
       Person who created the SPA is configured as a "required" reviewer
     </li>
   </ul>
-</stache-internal>
+</sky-restricted-view>
 
   <stache-page-anchor>
     Git
@@ -202,7 +202,7 @@ img &#123;
     Stache uses Git as our methodology for managing source control in our repositories. Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. The best part is, because it is so widely used, one Google search can turn up a lot of helpful documentation.
   </p>
 
-  <stache-internal>
+  <sky-restricted-view>
     <h3>New to Git?</h3>
   <p>
     Are you new to Git? We created some documentation about Git, including Git workflow tutorials, to help you learn how to use it with Stache.
@@ -210,9 +210,9 @@ img &#123;
   <stache-action-buttons [routes]="stache.jsonData.bbgitdocs" showSearch="false">
   </stache-action-buttons>
 
-  </stache-internal>
+  </sky-restricted-view>
 
-  <stache-internal>
+  <sky-restricted-view>
     <stache-page-anchor  *stacheInternal>
       Edit Stache online
     </stache-page-anchor>
@@ -225,7 +225,7 @@ img &#123;
     <p>
       Looking to make several changes to your Stache site in Azure DevOps? See our <a stacheRouterLink="https://docs.blackbaud.com/stache-internal/staff/git-workflow/vs-online">Edit Online Using Git Workfow</a> tutorial.
     </p>
-  </stache-internal>
+  </sky-restricted-view>
 
   <stache-page-anchor>
     Tools
@@ -270,11 +270,11 @@ img &#123;
   <p>
     Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
   </p>
-  <stache-internal>
+  <sky-restricted-view>
     <sky-alert alertType="warning">
       If you are a Blackbaud staff member and have the omnibar set up in your <stache-code>skyuxconfig.json</stache-code> file, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
     </sky-alert>
-  </stache-internal>
+  </sky-restricted-view>
 <sky-code-block>
 &lt;app-nav&gt;
 &lt;/app-nav&gt;

@@ -2,26 +2,22 @@ require('style-loader!./app.scss');
 
 import { NgModule } from '@angular/core';
 
-import { StacheModule } from '@blackbaud/stache';
-
 import { StacheDemoContentService } from './components/demo-content.service';
 
-import {
-  SkyHeroModule,
-  SkyImageModule,
-  SkyVideoModule
-} from '@blackbaud/skyux-lib-media';
-
 // Specify entry components, module-level providers, etc. here.
+import {
+  AppSkyModule
+} from './app-sky.module';
+
+import {
+  AppStacheModule
+} from './app-stache.module';
+
 @NgModule({
-  imports: [
-    StacheModule
-  ],
+  imports: [],
   exports: [
-    SkyHeroModule,
-    SkyImageModule,
-    SkyVideoModule,
-    StacheModule
+    AppSkyModule,
+    AppStacheModule
   ],
   providers: [
     StacheDemoContentService
