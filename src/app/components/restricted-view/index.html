@@ -94,14 +94,14 @@
       <p>
         This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
       </p>
-      <div>
+      <sky-restricted-view>
         <p>
           This is the second paragraph.
         </p>
         <p>
           This is the third paragraph.
         </p>
-      </div>
+      </sky-restricted-view>
       <p>
         This is the fourth paragraph.
       </p>
@@ -111,10 +111,10 @@
       <p>
         This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
       </p>
-      <p>
+      <p skyRestrictedView>
         This is the second paragraph.
       </p>
-      <p>
+      <p skyRestrictedView>
         This is the third paragraph.
       </p>
       <p>
