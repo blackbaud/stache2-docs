@@ -1,0 +1,414 @@
+<stache
+  pageTitle="Grid">
+
+  <stache-page-summary>
+    <p>
+      This <a href="https://developer.blackbaud.com/skyux/components/fluid-grid">SKY UX component</a> provides a responsive 12-column layout to organize content for all device sizes.
+    </p>
+    <p>
+      <a href="https://developer.blackbaud.com/skyux/components/fluid-grid"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+    </p>
+    <sky-alert alertType="warning">
+    The <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> components are <strong>deprecated</strong> in Stache version 2.15.0 and higher, and may be unavailable starting in Stache version 3.0.0. We recommend you update your <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> to the SKY UX fluid grid with <stache-code>sky-row</stache-code> and <stache-code>sky-column</stache-code> tags.
+    </sky-alert>
+  </stache-page-summary>
+
+    <p>
+      The grid component provides a 12 column layout grid for organizing content for all device sizes. This enables you to lay out content in columns that know how to be responsive based on screen size. For example, you can have content that has 3 columns across on a large screen, but collapses into a single column on a small (ex. mobile) screen. The grid component is not recommended as a table replacement.
+    </p>
+    <p>
+      The grid consists of <stache-code>sky-fluid-grid</stache-code>, <stache-code>sky-row</stache-code>, and <stache-code>sky-column</stache-code> tags. Every column must be contained in a row. We recommend you use this component to arrange content to maximize the width of a page, but be flexible for different screen sizes.
+    </p>
+
+    <h3>
+      Sky row properties
+    </h3>
+
+    <ul>
+      <li>
+        <stache-code>reverseColumnOrder</stache-code> — <i>(Optional)</i> Reverses the display order for the columns when set to <stache-code>true</stache-code>. Default is false.
+      </li>
+    </ul>
+
+    <h3>
+      Sky column properties
+    </h3>
+
+    <ul>
+      <li>
+        <stache-code>screenXSmall</stache-code> — The number of columns (1-12) for an extra small screen (less than 768px).
+      </li>
+      <li>
+        <stache-code>screenSmall</stache-code> — The number of columns (1-12) for a small screen (768 - 991px).
+      </li>
+      <li>
+        <stache-code>screenMedium</stache-code> — The number of columns (1-12) for a medium screen (992 - 1199px).
+      </li>
+      <li>
+        <stache-code>screenLarge</stache-code> — The number of columns (1-12) for a large screen (greater than 1200px).
+      </li>
+    </ul>
+    <p>To handle behavior for multiple screen sizes, you can combine more than one size for each column. For example: <stache-code>&lt;sky-column screenSmall="8" screenMedium="9" screenLarge="10"&gt;</stache-code>. This is helpful if you want to more carefully control the breakpoints.</p>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result highlight-columns">
+    <sky-fluid-grid>
+      <sky-row>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="3">
+          small="3"
+        </sky-column>
+        <sky-column screenSmall="3">
+          small="3"
+        </sky-column>
+        <sky-column screenSmall="3">
+          small="3"
+        </sky-column>
+        <sky-column screenSmall="3">
+          small="3"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="4">
+          small="4"
+        </sky-column>
+        <sky-column screenSmall="4">
+          small="4"
+        </sky-column>
+        <sky-column screenSmall="4">
+          small="4"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="5">
+          small="5"
+        </sky-column>
+        <sky-column screenSmall="7">
+          small="7"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="6">
+          small="6"
+        </sky-column>
+        <sky-column screenSmall="6">
+          small="6"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="8">
+          small="8"
+        </sky-column>
+        <sky-column screenSmall="4">
+          small="4"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="9">
+          small="9"
+        </sky-column>
+        <sky-column screenSmall="3">
+          small="3"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="10">
+          small="10"
+        </sky-column>
+        <sky-column screenSmall="2">
+          small="2"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column screenSmall="11">
+          small="11"
+        </sky-column>
+        <sky-column screenSmall="1">
+          small="1"
+        </sky-column>
+      </sky-row>
+
+      <sky-row>
+        <sky-column
+          screenSmall="8"
+          screenMedium="9"
+          screenLarge="10">
+          small="8" medium="9" large="10"
+        </sky-column>
+        <sky-column
+          screenSmall="4"
+          screenMedium="3"
+          screenLarge="2">
+          small="4" medium="3" large="2"
+        </sky-column>
+      </sky-row>
+    </sky-fluid-grid>
+
+    <h4>
+      Reversing column order:
+    </h4>
+    <sky-fluid-grid>
+      <sky-row reverseColumnOrder="true">
+        <sky-column screenSmall="9">
+          First column
+        </sky-column>
+        <sky-column screenSmall="3">
+          Second column
+        </sky-column>
+      </sky-row>
+    </sky-fluid-grid>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-tabset>
+      <sky-tab
+        tabHeading="sample">
+        <stache-code-block
+          languageType="markup">
+          <sky-fluid-grid>
+            <sky-row>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="3">
+                screenSmall="3"
+              </sky-column>
+              <sky-column screenSmall="3">
+                screenSmall="3"
+              </sky-column>
+              <sky-column screenSmall="3">
+                screenSmall="3"
+              </sky-column>
+              <sky-column screenSmall="3">
+                screenSmall="3"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="4">
+                screenSmall="4"
+              </sky-column>
+              <sky-column screenSmall="4">
+                screenSmall="4"
+              </sky-column>
+              <sky-column screenSmall="4">
+                screenSmall="4"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="5">
+                screenSmall="5"
+              </sky-column>
+              <sky-column screenSmall="7">
+                screenSmall="7"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="6">
+                screenSmall="6"
+              </sky-column>
+              <sky-column screenSmall="6">
+                screenSmall="6"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="8">
+                screenSmall="8"
+              </sky-column>
+              <sky-column screenSmall="4">
+                screenSmall="4"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="9">
+                screenSmall="9"
+              </sky-column>
+              <sky-column screenSmall="3">
+                screenSmall="3"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="10">
+                screenSmall="10"
+              </sky-column>
+              <sky-column screenSmall="2">
+                screenSmall="2"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column screenSmall="11">
+                screenSmall="11"
+              </sky-column>
+              <sky-column screenSmall="1">
+                screenSmall="1"
+              </sky-column>
+            </sky-row>
+
+            <sky-row>
+              <sky-column
+                screenSmall="8"
+                screenMedium="9"
+                screenLarge="10">
+                screenSmall="8" screenMedium="9" screenLarge="10"
+              </sky-column>
+              <sky-column
+                screenSmall="4"
+                screenMedium="3"
+                screenLarge="2">
+                screenSmall="4" screenMedium="3" screenLarge="2"
+              </sky-column>
+            </sky-row>
+
+            <h4>Reversing column order:</h4>
+
+            <sky-row
+              reverseColumnOrder="true">
+              <sky-column screenSmall="9">
+                First column
+              </sky-column>
+              <sky-column screenSmall="3">
+                Second column
+              </sky-column>
+            </sky-row>
+          </sky-fluid-grid>
+        </stache-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
+</stache>

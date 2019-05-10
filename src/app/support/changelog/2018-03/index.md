@@ -32,8 +32,8 @@
 - Added a locked icon <i class="fa fa-lock" aria-hidden="true"></i>, to show links that are restricted to Blackbaud staff only.
 - Updated the [home page](/stache/) to show Blackbaud staff specific benefits.
 - Based on feedback, we made improvements to the [Getting Started](/stache/learn/get-started) documentation. To better guide Blackbaud staff with Stache SPAs, we also included an improvement to the SKY UX App Management Portal. (Thank you, SKY UX Team!)
-- Added a [Why Stache?](/stache/support/why-stache) page to better explain the details of Stache, including what it is, the benefits, the features, and when to use what.
-- Moved documentation (layouts, links, and navigation) from the Basics page to the [Content](/stache/content) page.
+- Added a [Why Stache?](/stache/learn/overview) page to better explain the details of Stache, including what it is, the benefits, the features, and when to use what.
+- Moved documentation (layouts, links, and navigation) from the Basics page to the [Content](/stache/components) page.
 - For Blackbaud staff, we created a new Stache SPA (stache-internal) to provide *internal to Blackbaud only* documentation. This enables us to provide very specific information for you, without "mucking up" documentation that's applicable to all users. As part of this, we created a centralized location for <a href="https://docs.blackbaud.com/stache-internal/staff/search" title="Blackbaud staff only">Stache Search Service <i class="fa fa-lock" aria-hidden="true"></i></a> documentation. This means it's now available to find in the <a href="https://docs.blackbaud.com/stache-internal/staff/search" title="Blackbaud staff only">global Stache search <i class="fa fa-lock" aria-hidden="true"></i></a>
   </stache-markdown>
 </stache>

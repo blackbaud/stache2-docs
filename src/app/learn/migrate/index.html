@@ -1,12 +1,13 @@
 <stache
   pageTitle="Migrate Stache"
-  navOrder="40"
   layout="sidebar"
-  showTableOfContents="true">
+  showTableOfContents="true"
+  showInNav="false"
+  *stacheInternal>
 
   <stache-page-summary>
     <p>
-      If you have a <a href="http://stache.docs.blackbaudhosting.com/">Stache 1</a> static documentation website, you can follow these simple steps to migrate to a Stache single-page applications (SPA). Are you curious about why Stache is a great idea for you and your team? Learn more about <a routerLink="/support/why-stache">Why Stache?</a>
+      If you have a <a href="http://stache.docs.blackbaudhosting.com/">Stache 1</a> static documentation website, you can follow these simple steps to migrate to a Stache single-page applications (SPA). Are you curious about why Stache is a great idea for you and your team? Learn more about <a routerLink="/learn/overview">Why Stache?</a>
     </p>
   </stache-page-summary>
 
@@ -107,7 +108,7 @@
     ---
   </stache-code-block>
   <p>
-    The somewhat equivalent in Stache 2 is the Stache <a routerLink="/content/wrapper">wrapper component</a>.
+    The somewhat equivalent in Stache 2 is the Stache <a routerLink="/components/wrapper">wrapper component</a>.
   </p>
   <p>
     When you copy and paste content to your new site, <strong>DO NOT</strong> copy the YAML front matter. Instead, create a new page (a single index.html file per folder under src > app), insert the Stache wrapper, and then ensure that your copy and paste content lives within the Stache wrapper tags.
@@ -119,7 +120,7 @@
     Markdown
   </h3>
   <p>
-    If you have Markdown on your Stache 1 site, inside your Stache wrapper tags, we recommend you insert the <a routerLink="/content/markdown">Stache markdown component</a>.
+    If you have Markdown on your Stache 1 site, inside your Stache wrapper tags, we recommend you insert the <a routerLink="/components/markdown">Stache markdown component</a>.
   </p>
   <sky-alert alertType="info">
     When you copy and paste, if you have indentation, additional tabs, or extra spaces, the Stache markdown component may interpret that as a code block. If your page is a giant code block, we recommend you review the indentation, spacing, and tabs for the content you copied over.
@@ -133,21 +134,21 @@
     Panels layout conversion
   </h3>
   <p>
-    In Stache 2, the only layout that automatically inserts sibling and children into the navigation is the <a routerLink="/content/layouts">sidebar layout</a>.
+    In Stache 2, the only layout that automatically inserts sibling and children into the navigation is the <a routerLink="/components/layouts">sidebar layout</a>.
   </p>
-  <p>The design equivalent in Stache 2 to the <stache-code>layout: layout-panels</stache-code>, is the use of the <stache-code>layout="container"</stache-code> on the Stache wrapper and the use of the <a routerLink="/content/action-buttons">action buttons component</a>.</p>
+  <p>The design equivalent in Stache 2 to the <stache-code>layout: layout-panels</stache-code>, is the use of the <stache-code>layout="container"</stache-code> on the Stache wrapper and the use of the <a routerLink="/components/action-buttons">action buttons component</a>.</p>
 
   <h3>
     Page titles
   </h3>
 
-  <p>In Stache 1, a page often started with a <stache-code>&lt;H1&gt;</stache-code> or <stache-code># Page Title</stache-code>. In Stache 2, we recommend you set that on the <a routerLink="/content/wrapper">Stache wrapper component</a>.</p>
+  <p>In Stache 1, a page often started with a <stache-code>&lt;H1&gt;</stache-code> or <stache-code># Page Title</stache-code>. In Stache 2, we recommend you set that on the <a routerLink="/components/wrapper">Stache wrapper component</a>.</p>
 
   <h3>
     Images
   </h3>
   <p>
-    In Stache 2, you can insert images with HTML. However, to insert an image, we recommend you use Markdown or the Stache <a routerLink="/content/image">image component</a>. This ensures that your images have a responsive container, so that they render well on any device. When you use Markdown to add an image, we automatically map that to the Stache image component.
+    In Stache 2, you can insert images with HTML. However, to insert an image, we recommend you use Markdown or the Stache <a routerLink="/components/image">image component</a>. This ensures that your images have a responsive container, so that they render well on any device. When you use Markdown to add an image, we automatically map that to the Stache image component.
   </p>
 
   <stache-page-anchor>
@@ -161,7 +162,7 @@
     For example, if you had a <stache-code escapeCharacters="true">&lt;bb-alert bb-alert-type="info"&gt;</stache-code> in Stache 1, when you copy and paste, that will cause an error and your page won't load. In SKY UX 2, <a href="https://developer.blackbaud.com/skyux/components/alert">alerts <i class="fa fa-external-link" aria-hidden="true"></i></a> are referenced as <stache-code escapeCharacters="true">&lt;sky-alert alertType="info"&gt;</stache-code>.
   </p>
   <p>
-    Most features in Stache 1 are available in Stache 2, just with a different implementation that's compatible with Angular. We recommend you familiarize yourself with the options on the <a routerLink="/content">Content page</a>. The items (components, utilities, directives, etc) on this page enable you to enhance your content in a similar way as you did on Stache 1.
+    Most features in Stache 1 are available in Stache 2, just with a different implementation that's compatible with Angular. We recommend you familiarize yourself with the options on the <a routerLink="/components">Content page</a>. The items (components, utilities, directives, etc) on this page enable you to enhance your content in a similar way as you did on Stache 1.
   </p>
 
   <h3>
