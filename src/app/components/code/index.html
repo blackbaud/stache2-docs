@@ -3,7 +3,7 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <stache-code>stache-code</stache-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
+    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>stache-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
     </p>
   </stache-page-summary>
 
@@ -15,10 +15,10 @@
   <ul>
     <li>
       <p>
-        <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <stache-code escapeCharacters="true">{</stache-code> and <stache-code escapeCharacters="true">\</stache-code>. Escaping these characters renders them as text instead of code. Defaults to <stache-code>false</stache-code>.
+        <sky-code>escapeCharacters</sky-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <sky-code escapeCharacters="true">{</sky-code> and <sky-code escapeCharacters="true">\</sky-code>. Escaping these characters renders them as text instead of code. Defaults to <sky-code>false</sky-code>.
       </p>
       <p>
-        If a code snippet has text within <stache-code><</stache-code> and <stache-code>></stache-code> characters and you set <stache-code>escapeCharacters="true"</stache-code>, then the component automatically appends a closing tag. To prevent this, you must use "&#38;lt;" to escape <stache-code><</stache-code> and "&#38;gt;" to escape <stache-code>></stache-code>. For example, you must escape the <stache-code><</stache-code> and <stache-code>></stache-code> characters in the code snippet <stache-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</stache-code> or else the component automatically appends <stache-code>&lt;/Generic&gt;</stache-code> to the end: <stache-code escapeCharacters="true">public Task&lt;Generic> MethodName()&lt;/Generic></stache-code>.
+        If a code snippet has text within <sky-code><</sky-code> and <sky-code>></sky-code> characters and you set <sky-code>escapeCharacters="true"</sky-code>, then the component automatically appends a closing tag. To prevent this, you must use "&#38;lt;" to escape <sky-code><</sky-code> and "&#38;gt;" to escape <sky-code>></sky-code>. For example, you must escape the <sky-code><</sky-code> and <sky-code>></sky-code> characters in the code snippet <sky-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</sky-code> or else the component automatically appends <sky-code>&lt;/Generic&gt;</sky-code> to the end: <sky-code escapeCharacters="true">public Task&lt;Generic> MethodName()&lt;/Generic></sky-code>.
       </p>
     </li>
   </ul>
@@ -29,19 +29,19 @@
 
   <div class="stache-demo-page-result">
     <p>
-      The component formats code snippets such as <stache-code>stache-code</stache-code>.
+      The component formats code snippets such as <sky-code>stache-code</sky-code>.
     </p>
     <p>
-      <stache-code>escapeCharacters="true"</stache-code> renders special characters as text.
+      <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.
     </p>
     <p>
-      Example: "<stache-code escapeCharacters="true"><span>span tag content</span></stache-code>."
+      Example: "<sky-code escapeCharacters="true"><span>span tag content</span></sky-code>."
     </p>
     <p>
       Otherwise, the component renders special characters as code.
     </p>
     <p>
-      Example: "<stache-code><span>span tag content</span></stache-code>."
+      Example: "<sky-code><span>span tag content</span></sky-code>."
     </p>
   </div>
 
@@ -53,24 +53,24 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
           <p>
-            The component formats code snippets such as <stache-code>stache-code</stache-code>.
+            The component formats code snippets such as <sky-code>stache-code</sky-code>.
           </p>
           <p>
-            <stache-code>escapeCharacters="true"</stache-code> renders special characters as text.
+            <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.
           </p>
           <p>
-            For example: "<stache-code escapeCharacters="true"><span>span tag content</span></stache-code>."
+            For example: "<sky-code escapeCharacters="true"><span>span tag content</span></sky-code>."
           </p>
           <p>
             Otherwise, the component renders special characters as code.
           </p>
           <p>
-            For example: "<stache-code><span>span tag content</span></stache-code>."
+            For example: "<sky-code><span>span tag content</span></sky-code>."
           </p>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

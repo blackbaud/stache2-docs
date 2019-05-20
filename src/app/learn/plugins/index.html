@@ -10,10 +10,10 @@
   </stache-page-summary>
 
     <p>
-      All the plugins that {{ stache.jsonData.global.productNameShort }} requires are bundled into the <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin.
+      All the plugins that {{ stache.jsonData.global.productNameShort }} requires are bundled into the <sky-code>@blackbaud/skyux-builder-plugin-stache</sky-code> plugin.
     </p>
     <sky-alert>
-      If you create a project with the <stache-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</stache-code> command, plugins are added for you. If you <a routerLink="/learn/update-stache">upgrade to a newer version of Stache</a>, make sure all required plugins are installed.
+      If you create a project with the <sky-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</sky-code> command, plugins are added for you. If you <a routerLink="/learn/update-stache">upgrade to a newer version of Stache</a>, make sure all required plugins are installed.
     </sky-alert>
 
   <stache-page-anchor>
@@ -21,14 +21,14 @@
   </stache-page-anchor>
 
   <p>
-    For Stache sites, the required <stache-code>@blackbaud/skyux-builder-plugin-stache</stache-code> plugin bundles all other plugins that {{ stache.jsonData.global.productNameShort }} requires.
+    For Stache sites, the required <sky-code>@blackbaud/skyux-builder-plugin-stache</sky-code> plugin bundles all other plugins that {{ stache.jsonData.global.productNameShort }} requires.
   </p>
-  <stache-code-block
+  <sky-code-block
     languageType="markup">
     "@blackbaud/skyux-builder-plugin-stache"
-  </stache-code-block>
+  </sky-code-block>
 
-  <stache-internal>
+  <sky-restricted-view>
   <stache-page-anchor *stacheInternal>
     Optional plugin
   </stache-page-anchor>
@@ -36,25 +36,25 @@
     Email whitelist plugin
   </h3>
   <p>
-    The optional <stache-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</stache-code> plugin allows you to enable Blackbaud authentication for internal sites. This restricts access to a SKYUX SPA to users with valid Blackbaud email addresses only.
+    The optional <sky-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</sky-code> plugin allows you to enable Blackbaud authentication for internal sites. This restricts access to a SKYUX SPA to users with valid Blackbaud email addresses only.
   </p>
-  <stache-code-block
+  <sky-code-block
     languageType="markup">
     @blackbaud/skyux-builder-plugin-auth-email-whitelist
-  </stache-code-block>
+  </sky-code-block>
   <p>
     <a href="https://github.com/blackbaud/skyux-builder-plugin-auth-email-whitelist">
       <button type="button" class="sky-btn sky-btn-primary"><i class="fa fa-github"></i> GitHub repository</button>
     </a>
   </p>
-  </stache-internal>
+  </sky-restricted-view>
 
   <stache-page-anchor>
     Add plugins to your project
   </stache-page-anchor>
 
   <p>
-    After you update the <stache-code>package.json</stache-code> file to install the latest version of Stache, you need to add required plugins to the <stache-code>plugins</stache-code> array in the <stache-code>skyuxconfig.json</stache-code> file.
+    After you update the <sky-code>package.json</sky-code> file to install the latest version of Stache, you need to add required plugins to the <sky-code>plugins</sky-code> array in the <sky-code>skyuxconfig.json</sky-code> file.
   </p>
   <stache-include fileName="skyux-config-sample.html"></stache-include>
 

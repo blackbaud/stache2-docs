@@ -4,7 +4,7 @@
 
   <stache-page-summary>
     <p>
-      The image component provides a responsive container to display an image. To display images on your {{ stache.jsonData.global.productNameShort }} site, add them to the <stache-code>src/assets</stache-code> directory in the source folder.
+      The image component provides a responsive container to display an image. To display images on your {{ stache.jsonData.global.productNameShort }} site, add them to the <sky-code>src/assets</sky-code> directory in the source folder.
     </p>
     <ul>
       <li>
@@ -25,7 +25,7 @@
       If your Stache site requires a lot of image files, we recommend you organize the images into subfolders by page name.
     </p>
     <p>
-      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <stache-code>~/assets&#x200B;/</stache-code> prefix in order for SKY UX to register it as a static asset and render it.
+      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <sky-code>~/assets&#x200B;/</sky-code> prefix in order for SKY UX to register it as a static asset and render it.
     </p>
 
     <h3>
@@ -34,13 +34,13 @@
 
     <ul>
       <li>
-        <stache-code>imageSource</stache-code> — The path to the image to render.
+        <sky-code>imageSource</sky-code> — The path to the image to render.
       </li>
       <li>
-        <stache-code>imageAlt</stache-code> — The alt tag to describe the image for accessibility.
+        <sky-code>imageAlt</sky-code> — The alt tag to describe the image for accessibility.
       </li>
       <li>
-        <stache-code>caption</stache-code> — (<i>Optional</i>) Adds a caption below the image.
+        <sky-code>caption</sky-code> — (<i>Optional</i>) Adds a caption below the image.
       </li>
     </ul>
 
@@ -51,11 +51,11 @@
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <stache-image
+    <sky-image
       caption="Let's hit the open road together!"
       imageAlt="This is an example hero."
       imageSource="~/assets/hero-sample-1.jpg">
-    </stache-image>
+    </sky-image>
   </div>
 
   <stache-page-anchor>
@@ -66,14 +66,14 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
          &lt;stache-image
             caption="Let's hit the open road together!"
             imageAlt="This is an example hero."
             imageSource="&#126;&#47;assets&#47;image-name.jpg"&gt;
           &lt;&#47;stache-image&gt;
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

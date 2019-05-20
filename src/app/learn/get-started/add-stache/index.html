@@ -15,16 +15,16 @@
         Install dependencies
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
-        <stache-code-block>
+        <sky-code-block>
           npm install --save @blackbaud/stache
-        </stache-code-block>
+        </sky-code-block>
         <p *stacheInternal>
           If you plan to use the Blackbaud Identity Service authentication, install the email whitelist plugin.
         </p>
         <div *stacheInternal>
-          <stache-code-block >
+          <sky-code-block >
             npm install --save @blackbaud/skyux-builder-plugin-auth-email-whitelist
-          </stache-code-block>
+          </sky-code-block>
         </div>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
@@ -35,7 +35,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>app-extras.module.ts</stache-code> file in your project. Import and export <stache-code>StacheModule</stache-code> to make {{ stache.jsonData.global.productNameShort }} components available throughout the project.
+          Open the <sky-code>app-extras.module.ts</sky-code> file in your project. Import and export <sky-code>StacheModule</sky-code> to make {{ stache.jsonData.global.productNameShort }} components available throughout the project.
         </p>
         <stache-include fileName="app-extras-sample.html"></stache-include>
       </stache-tutorial-step-body>
@@ -47,11 +47,11 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>package.json</stache-code> file in your project. Update <stache-code>@blackbaud/skyux</stache-code> under <stache-code>dependencies</stache-code> and <stache-code>@blackbaud/skyux-builder</stache-code> under the <stache-code>devDependencies</stache-code> property to install the latest versions of each.
+          Open the <sky-code>package.json</sky-code> file in your project. Update <sky-code>@blackbaud/skyux</sky-code> under <sky-code>dependencies</sky-code> and <sky-code>@blackbaud/skyux-builder</sky-code> under the <sky-code>devDependencies</sky-code> property to install the latest versions of each.
         </p>
 
         <sky-alert alertType="info">
-          Your updated <stache-code>package.json</stache-code> file with all {{ stache.jsonData.global.productNameShort }} and SKY UX dependencies should look as follows.
+          Your updated <sky-code>package.json</sky-code> file with all {{ stache.jsonData.global.productNameShort }} and SKY UX dependencies should look as follows.
         </sky-alert>
         <stache-include fileName="package-json-sample.html"></stache-include>
       </stache-tutorial-step-body>
@@ -63,7 +63,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <stache-code>skyuxconfig.json</stache-code> file in your project. Add the required {{ stache.jsonData.global.productNameShort }} plugins to the <stache-code>plugins</stache-code> array.
+          Open the <sky-code>skyuxconfig.json</sky-code> file in your project. Add the required {{ stache.jsonData.global.productNameShort }} plugins to the <sky-code>plugins</sky-code> array.
         </p>
         <stache-include fileName="skyux-config-sample.html"></stache-include>
       </stache-tutorial-step-body>
@@ -75,7 +75,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-            Stache requires adding a few specific folders to your projects structure. Open the <stache-code>src</stache-code> folder in your project and create a <stache-code>stache/</stache-code> folder. Inside the stache folder, create two sub folders <stache-code>includes</stache-code> and <stache-code>data</stache-code>. The resulting project folder structure should resemble the following:
+            Stache requires adding a few specific folders to your projects structure. Open the <sky-code>src</sky-code> folder in your project and create a <sky-code>stache/</sky-code> folder. Inside the stache folder, create two sub folders <sky-code>includes</sky-code> and <sky-code>data</sky-code>. The resulting project folder structure should resemble the following:
         </p>
         <stache-include
           fileName="folder-structure-example.html">

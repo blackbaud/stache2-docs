@@ -37,19 +37,19 @@
               Open command prompt (Windows) or Terminal (Mac).
             </p>
             <sky-alert alertType="danger">
-              For Windows users, do not use Git Bash. There's a known timeout issue when you run <stache-code>skyux new</stache-code>. The install may not complete. Use the Windows command prompt instead.
+              For Windows users, do not use Git Bash. There's a known timeout issue when you run <sky-code>skyux new</sky-code>. The install may not complete. Use the Windows command prompt instead.
             </sky-alert>
           </li>
           <li>
             <p>From the command line, change the directory to the folder you chose in step 1.</p>
-            <p>For example, if you have Windows OS and save all your Git repos to <stache-code>C:\Git\</stache-code>, enter <stache-code>cd C:\Git\</stache-code>. </p>
+            <p>For example, if you have Windows OS and save all your Git repos to <sky-code>C:\Git\</sky-code>, enter <sky-code>cd C:\Git\</sky-code>. </p>
           </li>
           <li>
-            <p>Enter <stache-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</stache-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).</p>
+            <p>Enter <sky-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</sky-code>. Press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).</p>
           </li>
           <li>
             <p>
-              In the first prompt, enter the name of your site in lowercase and no spaces. You can separate words with a <stache-code>-</stache-code>. For example: <stache-code>cool-mustaches</stache-code>. The SKY UX CLI creates a folder with this name and prefixes it with "skyux-spa."
+              In the first prompt, enter the name of your site in lowercase and no spaces. You can separate words with a <sky-code>-</sky-code>. For example: <sky-code>cool-mustaches</sky-code>. The SKY UX CLI creates a folder with this name and prefixes it with "skyux-spa."
             </p>
           </li>
           <li>
@@ -83,12 +83,12 @@
           </li>
           <li>
             <p>
-              Open <stache-code>skyuxconfig.json</stache-code> file in your preferred text editor.
+              Open <sky-code>skyuxconfig.json</sky-code> file in your preferred text editor.
             </p>
           </li>
           <li>
             <p>
-              Find <stache-code>"auth": false</stache-code> as seen below and confirm the accuracy of the value.
+              Find <sky-code>"auth": false</sky-code> as seen below and confirm the accuracy of the value.
             </p>
           </li>
         </ol>
@@ -101,7 +101,7 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          To serve your site locally, from the command line change the directory into your new Stache site folder. For example <stache-code>cd skyux-spa-cool-mustaches</stache-code>. Then, enter <stache-code>skyux serve</stache-code>. A new browser window opens to your documentation site.
+          To serve your site locally, from the command line change the directory into your new Stache site folder. For example <sky-code>cd skyux-spa-cool-mustaches</sky-code>. Then, enter <sky-code>skyux serve</sky-code>. A new browser window opens to your documentation site.
         </p>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
@@ -112,24 +112,24 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-        When you run <stache-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</stache-code> to create your local SPA, the SKY UX CLI creates an <stache-code>initial commit</stache-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
+        When you run <sky-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</sky-code> to create your local SPA, the SKY UX CLI creates an <sky-code>initial commit</sky-code> branch and adds a variety of files and folders from the Stache template. These template files implement default settings and general best practices for your site.
         </p>
-        <p>Let's walk through how to add, commit, push, and merge this branch to <stache-code>master</stache-code>.</p>
+        <p>Let's walk through how to add, commit, push, and merge this branch to <sky-code>master</sky-code>.</p>
         <ol>
           <li>
-            From command prompt or Terminal within your project, enter <stache-code>git add --all</stache-code>.
+            From command prompt or Terminal within your project, enter <sky-code>git add --all</sky-code>.
           </li>
           <li>
-            Then, enter <stache-code>git commit -m "initial commit"</stache-code>.
+            Then, enter <sky-code>git commit -m "initial commit"</sky-code>.
           </li>
           <li>
-            Enter <stache-code>git push origin initial-commit</stache-code>.
+            Enter <sky-code>git push origin initial-commit</sky-code>.
           </li>
           <li>
             Navigate to your remote repo.
           </li>
           <li>
-            Create a pull request into the <stache-code>master</stache-code> branch. For GitHub repos, you can create the pull request from the Code or Pull Requests tabs.
+            Create a pull request into the <sky-code>master</sky-code> branch. For GitHub repos, you can create the pull request from the Code or Pull Requests tabs.
           </li>
           <li>
             <p>
