@@ -30,7 +30,7 @@
   </stache-page-anchor>
 
   <p>
-    The <a routerLink="/components/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <sky-code>app-nav</sky-code> tag. <span *stacheInternal>If your SPA is using the omnibar instead of <sky-code>app-nav</sky-code>, this should be the very first tag on the page. </span>
+    The <a routerLink="/components/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <sky-code>app-nav</sky-code> tag. <span *skyRestrictedView>If your SPA is using the omnibar instead of <sky-code>app-nav</sky-code>, this should be the very first tag on the page. </span>
   </p>
   <p>
     {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <sky-code>stache</sky-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <sky-code>pageTitle</sky-code>, <sky-code>navTitle</sky-code>, and <sky-code>navOrder</sky-code>.
@@ -154,7 +154,7 @@ img &#123;
   </p>
 
 <sky-restricted-view>
-  <stache-page-anchor *stacheInternal>
+  <stache-page-anchor *skyRestrictedView>
     Azure DevOps
   </stache-page-anchor>
 
@@ -213,7 +213,7 @@ img &#123;
   </sky-restricted-view>
 
   <sky-restricted-view>
-    <stache-page-anchor  *stacheInternal>
+    <stache-page-anchor  *skyRestrictedView>
       Edit Stache online
     </stache-page-anchor>
     <p>

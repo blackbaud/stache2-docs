@@ -3,7 +3,10 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>stache-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
+    <sky-alert alertType="warning">
+      The <sky-code>stache-code</sky-code> component is <strong>deprecated</strong> in Stache version 3.0.0 and higher, and is unavailable in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
+    </sky-alert>
+    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>sky-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
     </p>
   </stache-page-summary>
 
@@ -24,12 +27,74 @@
   </ul>
 
   <stache-page-anchor>
+      Stache SPAs
+    </stache-page-anchor>
+    <p>To enable more flexibility with the code component, we contributed it to SKY UX as a standalone module. This requires only a few small changes for Stache SPAs.</p>
+    <ul>
+      <li>
+        Update your version of Stache to 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
+      </li>
+    </ul>
+
+    <stache-page-anchor>
+      Non-Stache SPAs
+    </stache-page-anchor>
+      <ol>
+        <li>
+          <p>
+            Install the package and plugin as part of your SPAs dependencies.
+          </p>
+          <sky-code-block>
+            npm install @blackbaud/skyux-lib-code-block --save
+          </sky-code-block>
+
+          <sky-code-block>
+            npm install @blackbaud/skyux-builder-plugin-code-block --save
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the module to your <strong>app-extras.module.ts</strong> file.
+          </p>
+          <sky-code-block hideCopyToClipboard="true">
+              import { SkyCodeModule } from '@blackbaud/skyux-lib-code-block';
+
+              @NgModule({
+                exports: [
+                  SkyCodeModule
+                ]
+              })
+              export class AppExtrasModule { }
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the plugin to your <strong>skyuxconfig.json</strong> file.
+          </p>
+          <sky-alert
+            alertType="warning">
+            in order to use the code component with markdown, inside a stache include, or make use of global/json data, the plugin must to be loaded <strong>after</strong> the <sky-code>skyux-builder-plugin-stache</sky-code> plugin.
+          </sky-alert>
+          <sky-code-block>
+            {
+              "name": "stache",
+              "mode": "easy",
+              "compileMode": "aot",
+              "plugins": [
+                "@blackbaud/skyux-builder-plugin-code-block"
+              ],
+            }
+          </sky-code-block>
+        </li>
+      </ol>
+
+  <stache-page-anchor>
     Demo
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
     <p>
-      The component formats code snippets such as <sky-code>stache-code</sky-code>.
+      The component formats code snippets such as <sky-code>sky-code</sky-code>.
     </p>
     <p>
       <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.
@@ -56,7 +121,7 @@
         <sky-code-block
           languageType="markup">
           <p>
-            The component formats code snippets such as <sky-code>stache-code</sky-code>.
+            The component formats code snippets such as <sky-code>sky-code</sky-code>.
           </p>
           <p>
             <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.

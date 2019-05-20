@@ -16,12 +16,12 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <sky-code-block>
-          npm install --save @blackbaud/stache
+          npm install --save @blackbaud/skyux-lib-stache
         </sky-code-block>
-        <p *stacheInternal>
+        <p *skyRestrictedView>
           If you plan to use the Blackbaud Identity Service authentication, install the email whitelist plugin.
         </p>
-        <div *stacheInternal>
+        <div *skyRestrictedView>
           <sky-code-block >
             npm install --save @blackbaud/skyux-builder-plugin-auth-email-whitelist
           </sky-code-block>
@@ -35,25 +35,9 @@
       </stache-tutorial-step-heading>
       <stache-tutorial-step-body>
         <p>
-          Open the <sky-code>app-extras.module.ts</sky-code> file in your project. Import and export <sky-code>StacheModule</sky-code> to make {{ stache.jsonData.global.productNameShort }} components available throughout the project.
+          Open the <sky-code>app-extras.module.ts</sky-code> file in your project. Export <sky-code>StacheModule</sky-code> to make {{ stache.jsonData.global.productNameShort }} components available throughout the project.
         </p>
         <stache-include fileName="app-extras-sample.html"></stache-include>
-      </stache-tutorial-step-body>
-    </stache-tutorial-step>
-
-    <stache-tutorial-step>
-      <stache-tutorial-step-heading>
-        Update the SKY UX dependencies
-      </stache-tutorial-step-heading>
-      <stache-tutorial-step-body>
-        <p>
-          Open the <sky-code>package.json</sky-code> file in your project. Update <sky-code>@blackbaud/skyux</sky-code> under <sky-code>dependencies</sky-code> and <sky-code>@blackbaud/skyux-builder</sky-code> under the <sky-code>devDependencies</sky-code> property to install the latest versions of each.
-        </p>
-
-        <sky-alert alertType="info">
-          Your updated <sky-code>package.json</sky-code> file with all {{ stache.jsonData.global.productNameShort }} and SKY UX dependencies should look as follows.
-        </sky-alert>
-        <stache-include fileName="package-json-sample.html"></stache-include>
       </stache-tutorial-step-body>
     </stache-tutorial-step>
 

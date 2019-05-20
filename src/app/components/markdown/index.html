@@ -15,10 +15,16 @@
         Page anchors — The <sky-code>##</sky-code> syntax creates an <sky-code>h2</sky-code> heading with a <a routerLink="/components/page-anchor">Stache page anchor</a> around it, and adds the heading to the table of contents. To create a regular <sky-code>h2</sky-code>, simply use the HTML <sky-code escapeCharacters="true"><h2></sky-code> tags.
       </li>
       <li>
-        Code snippets — The <sky-code>`</sky-code> syntax creates a <a routerLink="/components/code">Stache code snippet</a>. To use the <sky-code>escapeCharacters</sky-code> attribute escape special characters, you must use the actual <sky-code>stache-code</sky-code> element.
+        <sky-alert>
+          This requires the <a stacheRouterLink="/componnets/code">Sky code module</a> to be installed and exported by your app-extras module.
+        </sky-alert>
+        Code snippets — The <sky-code>`</sky-code> syntax creates a <a routerLink="/components/code">Stache code snippet</a>. To use the <sky-code>escapeCharacters</sky-code> attribute escape special characters, you must use the actual <sky-code>sky-code</sky-code> element.
       </li>
       <li>
-        Code blocks — The <sky-code>```</sky-code> syntax creates a <a routerLink="/components/code-block">Stache code block</a>. You can specify a language directly after the opening <sky-code>```</sky-code>. For example, <sky-code>```json</sky-code> creates a <sky-code>stache-code-block</sky-code> element with the <sky-code>languageType</sky-code> attribute set to <sky-code>json</sky-code>.
+        <sky-alert>
+          This requires the <a stacheRouterLink="/componnets/code-block">Sky code block module</a> to be installed and exported by your app-extras module.
+        </sky-alert>
+        Code blocks — The <sky-code>```</sky-code> syntax creates a <a routerLink="/components/code-block">sky code block</a>. You can specify a language directly after the opening <sky-code>```</sky-code>. For example, <sky-code>```json</sky-code> creates a <sky-code>sky-code-block</sky-code> element with the <sky-code>languageType</sky-code> attribute set to <sky-code>json</sky-code>.
       </li>
     </ul>
   </stache-page-summary>
