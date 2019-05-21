@@ -3,15 +3,12 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
-
       <sky-alert alertType="warning">
-        The <sky-code>stache-image</sky-code> component is <strong>deprecated</strong> in Stache version 2.18.0 and higher, and is unavailable starting in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
+        The <sky-code>stache-image</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 2.18.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
       </sky-alert>
     <p>
       The image component provides a responsive container to display an image. To display images on your SPA, add them to the <sky-code>src/assets</sky-code> directory in the source folder.
     </p>
-
     <ul>
       <li>
         <i class="fa fa-folder"></i> src
@@ -27,6 +24,9 @@
         </ul>
       </li>
     </ul>
+    <p>
+      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+    </p>
     <p>
       If your site requires a lot of image files, we recommend you organize the images into subfolders by page name.
     </p>
@@ -44,11 +44,7 @@
         <sky-code>imageSource</sky-code> — The path to the image to render.
       </li>
       <li>
-        <sky-code>imageAlt</sky-code> — The alt tag to describe the image for accessibility.
-        <sky-alert
-          [alertType]="warning">
-          To meet accessibility requirements, this field should be filled in. For more information on image accessibility reference the <a stacheRouterLink="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94">W3 docs</a>.
-        </sky-alert>
+          <sky-code>imageAlt</sky-code> — The alt tag to describe the image for accessibility. To meet accessibility requirements, this field should be filled in. For more information on image accessibility reference the <a stacheRouterLink="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94">W3 docs</a>.
       </li>
       <li>
         <sky-code>caption</sky-code> — (<i>Optional</i>) Adds a caption below the image.
@@ -61,26 +57,20 @@
       </li>
     </ul>
 
-  <stache-page-anchor>
-    Stache SPAs
-  </stache-page-anchor>
-  <p>To enable more flexibility with the image component, we contributed it to SKY UX as a standalone module. This requires only a few small changes for Stache SPAs.</p>
-  <ul>
-    <li>
-      Update your version of Stache to 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
-    </li>
-  </ul>
 
   <stache-page-anchor>
-    Non-Stache SPAs
+    Installation
   </stache-page-anchor>
     <p>
-      If your SPA uses Stache version 3.0.0 or higher, this module is installed and added for you. However, non-Stache users can use this module without Stache. Learn how to set up this module as a dependency in your SKY UX SPA project.
+      SPAs can use this as a standalone module. Learn how to set up this module as a dependency in your project.
+    </p>
+    <p>
+      <b class="sky-text-info">Note:</b> Most Stache SKY UX SPAs will already have this module installed for you. You can confirm by seeing if <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
     </p>
     <ol>
       <li>
         <p>
-          Install the package and plugin as part of your SPAs dependencies.
+          To install the package and plugin as part of your SPAs dependencies, in the command prompt, run the following command from your SPA's root directory.
         </p>
         <sky-code-block>
           npm install @blackbaud/skyux-lib-media --save
@@ -118,14 +108,14 @@
     </sky-image>
 
     <sky-image
-      caption="successful output"
+      caption="Follow the open road!"
       captionType="success"
       imageAlt="This is a success output"
       imageSource="~/assets/hero-sample-1.jpg">
     </sky-image>
 
     <sky-image
-      caption="Do not click on this"
+      caption="The open road is a very dangerous place."
       captionType="danger"
       imageAlt="Do not click on danger buttons"
       imageSource="~/assets/hero-sample-1.jpg">
@@ -151,27 +141,27 @@
           &lt;sky-image
             caption="Let's hit the open road together!"
             imageAlt="This is an example hero."
-            imageSource="~/assets/hero-sample-1.jpg"&gt;
+            imageSource="~/assets&#x200B;/hero-sample-1.jpg"&gt;
           &lt;/sky-image&gt;
 
           &lt;sky-image
-            caption="successful output"
+            caption="Follow the open road!"
             captionType="success"
             imageAlt="This is a success output"
-            imageSource="~/assets/hero-sample-1.jpg"&gt;
+            imageSource="~/assets&#x200B;/hero-sample-1.jpg"&gt;
           &lt;/sky-image&gt;
 
           &lt;sky-image
-            caption="Do not click on this"
+            caption="The open road is a very dangerous place."
             captionType="danger"
             imageAlt="Do not click on danger buttons"
-            imageSource="~/assets/hero-sample-1.jpg"&gt;
+            imageSource="~/assets&#x200B;/hero-sample-1.jpg"&gt;
           &lt;/sky-image&gt;
 
           &lt;sky-image
             showBorder="true"
             imageAlt="demo border image"
-            imageSource="~/assets/hero-sample-1.jpg"&gt;
+            imageSource="~/assets&#x200B;/hero-sample-1.jpg"&gt;
           &lt;/sky-image&gt;
         </sky-code-block>
       </sky-tab>

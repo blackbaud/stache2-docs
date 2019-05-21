@@ -4,7 +4,7 @@
 
   <stache-page-summary>
     <sky-alert alertType="warning">
-      The <sky-code>stache-code</sky-code> component is <strong>deprecated</strong> in Stache version 3.0.0 and higher, and is unavailable in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
+      The <sky-code>stache-code</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 3.0.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
     </sky-alert>
     <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>sky-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
     </p>
@@ -26,23 +26,19 @@
     </li>
   </ul>
 
-  <stache-page-anchor>
-      Stache SPAs
-    </stache-page-anchor>
-    <p>To enable more flexibility with the code component, we contributed it to SKY UX as a standalone module. This requires only a few small changes for Stache SPAs.</p>
-    <ul>
-      <li>
-        Update your version of Stache to 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
-      </li>
-    </ul>
-
     <stache-page-anchor>
-      Non-Stache SPAs
+      Installation
     </stache-page-anchor>
+    <p>
+      SPAs can use this as a standalone module. Learn how to set up this module as a dependency in your project.
+    </p>
+    <p>
+      <b class="sky-text-info">Note:</b> Most Stache SKY UX SPAs will already have this module installed for you. You can confirm by seeing if <sky-code>@blackbaud/skyux-lib-code-block</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+    </p>
       <ol>
         <li>
           <p>
-            Install the package and plugin as part of your SPAs dependencies.
+            To install the package and plugin as part of your SPAs dependencies, in the command prompt, run the following command from your SPA's root directory.
           </p>
           <sky-code-block>
             npm install @blackbaud/skyux-lib-code-block --save
@@ -73,7 +69,7 @@
           </p>
           <sky-alert
             alertType="warning">
-            in order to use the code component with markdown, inside a stache include, or make use of global/json data, the plugin must to be loaded <strong>after</strong> the <sky-code>skyux-builder-plugin-stache</sky-code> plugin.
+            In order to use the code block inside the markdown component, inside a stache include, or make use of global/json data, the plugin must to be loaded <strong>after</strong> the <sky-code>skyux-builder-plugin-stache</sky-code> plugin.
           </sky-alert>
           <sky-code-block>
             {
@@ -81,6 +77,7 @@
               "mode": "easy",
               "compileMode": "aot",
               "plugins": [
+                "@blackbaud/skyux-builder-plugin-stache",
                 "@blackbaud/skyux-builder-plugin-code-block"
               ],
             }

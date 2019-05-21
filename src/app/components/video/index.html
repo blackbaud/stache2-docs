@@ -3,14 +3,14 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
-
     <sky-alert alertType="warning">
-      The <sky-code>stache-video</sky-code> component is <strong>deprecated</strong> in Stache version 2.18.0 and higher, and is unavailable starting in Stache version 3.0.0. For Stache SPAs, <a stacheRouterLink="." fragment="stache-spas">learn more below</a> about the change.
+      The <sky-code>stache-video</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 2.18.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
     </sky-alert>
-
     <p>
       The video component provides a responsive embed for video.
+    </p>
+    <p>
+      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
   </stache-page-summary>
 
@@ -59,27 +59,20 @@
     </li>
   </ul>
 
-  <stache-page-anchor>
-      Stache SPAs
-    </stache-page-anchor>
-    <p>To enable more flexibility with the video component, we contributed it to SKY UX as a standalone module. This requires only a few small changes for Stache SPAs.</p>
-    <ul>
-      <li>
-        Update your version of Stache to 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
-      </li>
-    </ul>
-
     <stache-page-anchor>
-      Non-Stache SPAs
+      Installation
     </stache-page-anchor>
     <p>
-     Non-Stache users can use this module without Stache. Learn how to set up this module as a dependency in your SKY UX SPA project.
-    </p>
+        SPAs can use this as a standalone module. Learn how to set up this module as a dependency in your project.
+      </p>
+      <p>
+        <b class="sky-text-info">Note:</b> Most Stache SKY UX SPAs will already have this module installed for you. You can confirm by seeing if <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+      </p>
     <ol>
       <li>
         <p>
-          Install the package and plugin as part of your SPAs dependencies.
-        </p>
+            To install the package and plugin as part of your SPAs dependencies, in the command prompt, run the following command from your SPA's root directory.
+          </p>
         <sky-code-block>
           npm install @blackbaud/skyux-lib-media --save
         </sky-code-block>
