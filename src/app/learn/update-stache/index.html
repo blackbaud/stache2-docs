@@ -17,7 +17,7 @@
       One-time preparation tasks
     </h3>
 
-    <h4>Install Node 10</h4>
+    <h4>Install Node version 10 or higher</h4>
 
     <p>
         SKY UX 3 SPA development requires Node 10.  Ensure that Node 10 is installed, and if you use <a href="https://github.com/creationix/nvm">Node Version Manager</a> (nvm) or <a href="https://github.com/coreybutler/nvm-windows">Node Version Manager for Windows</a>, ensure Node 10 is used for your SPA by running the following command in your SPA's directory:
@@ -34,7 +34,7 @@
       </h4>
 
       <p>
-        First, uninstall the current CLI.  Please note, the new CLI is still backwards compatible with the old version.
+        First, uninstall the current CLI.  Please note that the new CLI is backwards compatible with the old version.
       </p>
 
       <sky-code-block>
@@ -42,7 +42,7 @@
       </sky-code-block>
 
       <p>
-        Next, install the latest version of the SKY UX SDK CLI:
+        Next, install the latest version of the SKY UX CLI:
       </p>
 
       <sky-code-block>
@@ -58,13 +58,19 @@
 
   <ul>
     <li>
-      <sky-code>stache-code-block</sky-code> is now <sky-code>sky-code-block</sky-code>
-    </li>
-    <li>
       <sky-code>stache-code</sky-code> is now <sky-code>sky-code</sky-code>
     </li>
     <li>
-      <sky-code>stache-image</sky-code> is now <sky-code>sky-image</sky-code>
+      <sky-code>stache-code-block</sky-code> is now <sky-code>sky-code-block</sky-code>
+    </li>
+    <li>
+      <sky-code>stache-column</sky-code> is now <sky-code>sky-column</sky-code>
+    </li>
+    <li>
+      <sky-code>stache-copy-to-clipboard</sky-code> is now <sky-code>sky-copy-to-clipboard</sky-code>
+    </li>
+    <li>
+      <sky-code>stache-grid</sky-code> is now <sky-code>sky-grid</sky-code>
     </li>
     <li>
       <sky-code>stache-hero</sky-code> is now <sky-code>sky-hero</sky-code>
@@ -76,16 +82,13 @@
       <sky-code>stache-hero-subheading</sky-code> is now <sky-code>sky-hero-subheading</sky-code>
     </li>
     <li>
-      <sky-code>stache-video</sky-code> is now <sky-code>sky-video</sky-code>
-    </li>
-    <li>
-      <sky-code>stache-grid</sky-code> is now <sky-code>sky-grid</sky-code>
+      <sky-code>stache-image</sky-code> is now <sky-code>sky-image</sky-code>
     </li>
     <li>
       <sky-code>stache-row</sky-code> is now <sky-code>sky-row</sky-code>
     </li>
     <li>
-      <sky-code>stache-column</sky-code> is now <sky-code>sky-column</sky-code>
+      <sky-code>stache-video</sky-code> is now <sky-code>sky-video</sky-code>
     </li>
   </ul>
 
@@ -100,14 +103,14 @@
   </h3>
 
   <p>
-    If you work locally, once the migration pull request has been approved and merged to <sky-code>master</sky-code> branch, you need to complete a few tasks. We recommend you do this immediately so you don't forget later.
+    If you work locally, you need to complete a few tasks once the migration pull request has been approved and merged to <sky-code>master</sky-code> branch. We recommend you do this immediately so you don't forget later.
   </p>
   <ul>
     <li>
-      Open the SPA in VS Code. From the command prompt, run <sky-code>git checkout master</sky-code>, and then <sky-code>git pull</sky-code>.
+      Open the SPA in VS Code. From the command prompt, run <sky-code>git checkout master</sky-code> and then <sky-code>git pull</sky-code>.
     </li>
     <li>
-      Once the latest has been pulled down, run <sky-code>skyux install</sky-code>. This will delete the <sky-code>node_modules</sky-code> folder for you and install the latest files that enables you to serve your site locally.
+      Once you pull the latest, run <sky-code>skyux install</sky-code>. This deletes the <sky-code>node_modules</sky-code> folder for you and installs the latest files that enable you to serve your site locally.
     </li>
     <li>
       To test that everything installed successfully, run <sky-code>skyux serve</sky-code>.

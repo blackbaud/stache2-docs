@@ -7,7 +7,7 @@
         The <sky-code>stache-image</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 2.18.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
       </sky-alert>
     <p>
-      The image component provides a responsive container to display an image. To display images on your SPA, add them to the <sky-code>src/assets</sky-code> directory in the source folder.
+      The image component provides a responsive container to display an image. To display images in your SPA, add them to the <sky-code>src/assets</sky-code> directory in the source folder.
     </p>
     <ul>
       <li>
@@ -28,10 +28,10 @@
       <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
     <p>
-      If your site requires a lot of image files, we recommend you organize the images into subfolders by page name.
+      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <sky-code>~/assets&#x200B;/</sky-code> prefix in order for SKY UX to register it as a static asset and render it.
     </p>
     <p>
-      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <sky-code>~/assets&#x200B;/</sky-code> prefix in order for SKY UX to register it as a static asset and render it.
+      If your site requires a lot of image files, we recommend you organize the images into subfolders by page name.
     </p>
   </stache-page-summary>
 
@@ -41,16 +41,16 @@
 
     <ul>
       <li>
-        <sky-code>imageSource</sky-code> — The path to the image to render.
-      </li>
-      <li>
-          <sky-code>imageAlt</sky-code> — The alt tag to describe the image for accessibility. To meet accessibility requirements, this field should be filled in. For more information on image accessibility reference the <a stacheRouterLink="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94">W3 docs</a>.
-      </li>
-      <li>
         <sky-code>caption</sky-code> — (<i>Optional</i>) Adds a caption below the image.
       </li>
       <li>
-        <sky-code>captionType</sky-code> — (<i>Optional</i>) Specifies a style for the image caption and divider bar. The valid options are <sky-code>default</sky-code>, <sky-code>success</sky-code>, <sky-code>info</sky-code>, <sky-code>warning</sky-code>, and <sky-code>danger</sky-code>. (Default: default)
+        <sky-code>captionType</sky-code> — (<i>Optional</i>) Specifies a style for the caption and divider bar. The valid options are <sky-code>default</sky-code>, <sky-code>success</sky-code>, <sky-code>info</sky-code>, <sky-code>warning</sky-code>, and <sky-code>danger</sky-code>. (Default: default)
+      </li>
+      <li>
+        <sky-code>imageAlt</sky-code> — The alt tag to describe the image for accessibility. To meet accessibility requirements, this field should be filled in. For more information on image accessibility reference the <a stacheRouterLink="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94">W3 docs</a>.
+    </li>
+      <li>
+        <sky-code>imageSource</sky-code> — The path to the image to render.
       </li>
       <li>
         <sky-code>showBorder</sky-code> — (<i>Optional</i>) Boolean option for displaying a border around the image. (Default: false);
@@ -62,15 +62,15 @@
     Installation
   </stache-page-anchor>
     <p>
-      SPAs can use this as a standalone module. Learn how to set up this module as a dependency in your project.
+      SPAs can use this as a standalone module by setting it up as a dependency.
     </p>
     <p>
-      <b class="sky-text-info">Note:</b> Most Stache SKY UX SPAs will already have this module installed for you. You can confirm by seeing if <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+      <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
     </p>
     <ol>
       <li>
         <p>
-          To install the package and plugin as part of your SPAs dependencies, in the command prompt, run the following command from your SPA's root directory.
+          To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
         </p>
         <sky-code-block>
           npm install @blackbaud/skyux-lib-media --save
