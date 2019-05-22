@@ -3,14 +3,19 @@
   showTableOfContents="true">
 
   <stache-page-summary>
+    <sky-alert alertType="warning">
+      The <sky-code>stache-hero</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 2.18.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
+    </sky-alert>
+
     <p>
       The hero component adds a hero with a background image, title, and subheading information to your {{ stache.jsonData.global.productNameShort }} page.
     </p>
+    <p><b class="sky-text-info">Note:</b> Use this component <b>outside</b> of the <sky-code>stache</sky-code> tag.
+    </p>
+    <p>
+      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+    </p>
 
-    <sky-alert
-      alertType="info">
-      You need to use this component <b>outside</b> of the <sky-code>stache</sky-code> tag.
-    </sky-alert>
 
     <h3>
       Hero properties
@@ -26,24 +31,62 @@
         Set this to the name of your image, prepended with
         <sky-code>~/assets&#x200B;/</sky-code>, e.g.: <sky-code>~/assets&#x200B;/foo.jpg</sky-code>.  All images and other static assets should be stored in the <sky-code>src/assets</sky-code> directory.
       </li>
-          <ul>
-    <li>
-      <i class="fa fa-folder"></i> src
       <ul>
         <li>
-          <i class="fa fa-folder"></i> assets
+          <i class="fa fa-folder"></i> src
           <ul>
             <li>
-              <i class="fa fa-file-image-o"></i> hero.jpg
+              <i class="fa fa-folder"></i> assets
+              <ul>
+                <li>
+                  <i class="fa fa-file-image-o"></i> hero.jpg
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
       </ul>
-    </li>
-  </ul>
     </ul>
-
   </stache-page-summary>
+
+
+    <stache-page-anchor>
+      Installation
+    </stache-page-anchor>
+      <p>
+        SPAs can use this as a standalone module by setting it up as a dependency.
+      </p>
+      <p>
+        <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+      </p>
+      <ol>
+        <li>
+          <p>
+            To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
+          </p>
+          <sky-code-block>
+            npm install @blackbaud/skyux-lib-media --save
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the module to your <strong>app-extras.module.ts</strong> file.
+          </p>
+          <sky-code-block hideCopyToClipboard="true">
+              import { SkyHeroModule } from '@blackbaud/skyux-lib-media';
+
+              @NgModule({
+                imports: [
+                  SkyHeroModule
+                ],
+                exports: [
+                  SkyHeroModule
+                ]
+              })
+              export class AppExtrasModule { }
+          </sky-code-block>
+        </li>
+      </ol>
 
   <stache-page-anchor>
     Demo

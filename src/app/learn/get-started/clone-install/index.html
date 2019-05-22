@@ -36,7 +36,7 @@
             <sky-image
               imageAlt="GitHub clone button"
               imageSource="~/assets/github_clone.png"
-              class="image-border">
+              showBorder="true">
             </sky-image>
           </li>
           <li>
@@ -65,12 +65,12 @@
           <p>
             From Azure DevOps, select the repository dropdown. To search for your repo, use the search field.
           </p>
-          <p *stacheInternal>
+          <p *skyRestrictedView>
             All SKY UX SPAs, including Stache SPAs, in <a href="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps</a> start with <sky-code>skyux-spa</sky-code>.
           </p>
               <div class="retina-screenshot">
                 <sky-image
-                  imageSource="~/assets/vsts_git_search.jpg" class="image-border">
+                  imageSource="~/assets/vsts_git_search.jpg" showBorder="true">
                 </sky-image>
               </div>
           <p>
@@ -83,7 +83,7 @@
             </p>
             <div class="retina-screenshot">
               <sky-image
-                imageSource="~/assets/vsts_git_clone.jpg" class="image-border">
+                imageSource="~/assets/vsts_git_clone.jpg" showBorder="true">
               </sky-image>
             </div>
           </li>
@@ -93,7 +93,7 @@
             </p>
             <div class="retina-screenshot">
               <sky-image
-                imageSource="~/assets/vsts_git_copy.jpg"class="image-border">
+                imageSource="~/assets/vsts_git_copy.jpg" showBorder="true">
               </sky-image>
             </div>
           </li>
@@ -118,7 +118,7 @@
           After the repo clones, change your directory to the new repo folder. For example, enter <sky-code>cd skyux-spa-cool-docs</sky-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
         </p>
         <p>
-          To be able to serve locally, you need to install the SKY UX and Stache dependencies. In the command prompt, enter <sky-code>npm install</sky-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
+          To be able to serve locally, you need to install the SKY UX and Stache dependencies. In the command prompt, enter <sky-code>skyux install</sky-code> and press <kbd>Enter</kbd> (Windows) or <kbd>return</kbd> (Mac).
         </p>
         <p>
           This will take a few minutes. After it completes, you can test the new install by serving locally. Enter <sky-code>skyux serve</sky-code>. When it finishes preparing to serve, a browser will open to a local development instance of your Stache SPA.

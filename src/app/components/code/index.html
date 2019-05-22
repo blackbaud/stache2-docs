@@ -3,7 +3,10 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>stache-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
+    <sky-alert alertType="warning">
+      The <sky-code>stache-code</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 3.0.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
+    </sky-alert>
+    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>sky-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
     </p>
   </stache-page-summary>
 
@@ -23,13 +26,72 @@
     </li>
   </ul>
 
+    <stache-page-anchor>
+      Installation
+    </stache-page-anchor>
+    <p>
+      SPAs can use this as a standalone module by setting it up as a dependency.
+    </p>
+    <p>
+      <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-code-block</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+    </p>
+      <ol>
+        <li>
+          <p>
+            To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
+          </p>
+          <sky-code-block>
+            npm install @blackbaud/skyux-lib-code-block --save
+          </sky-code-block>
+
+          <sky-code-block>
+            npm install @blackbaud/skyux-builder-plugin-code-block --save
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the module to your <strong>app-extras.module.ts</strong> file.
+          </p>
+          <sky-code-block hideCopyToClipboard="true">
+              import { SkyCodeModule } from '@blackbaud/skyux-lib-code-block';
+
+              @NgModule({
+                exports: [
+                  SkyCodeModule
+                ]
+              })
+              export class AppExtrasModule { }
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the plugin to your <strong>skyuxconfig.json</strong> file.
+          </p>
+          <sky-alert
+            alertType="warning">
+            To use the code  in markdown components, Stache include files, or global/json data, you must load the <sky-code>skyux-builder-plugin-code-block</sky-code> <strong> plugin after</strong> the <sky-code>skyux-builder-plugin-stache</sky-code> plugin.
+          </sky-alert>
+          <sky-code-block>
+            {
+              "name": "stache",
+              "mode": "easy",
+              "compileMode": "aot",
+              "plugins": [
+                "@blackbaud/skyux-builder-plugin-stache",
+                "@blackbaud/skyux-builder-plugin-code-block"
+              ],
+            }
+          </sky-code-block>
+        </li>
+      </ol>
+
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
     <p>
-      The component formats code snippets such as <sky-code>stache-code</sky-code>.
+      The component formats code snippets such as <sky-code>sky-code</sky-code>.
     </p>
     <p>
       <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.
@@ -56,7 +118,7 @@
         <sky-code-block
           languageType="markup">
           <p>
-            The component formats code snippets such as <sky-code>stache-code</sky-code>.
+            The component formats code snippets such as <sky-code>sky-code</sky-code>.
           </p>
           <p>
             <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.

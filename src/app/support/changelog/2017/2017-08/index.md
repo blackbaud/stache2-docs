@@ -10,20 +10,20 @@
   <ul>
     <li>
       Added support for SKY UX Builder
-      <stache-code>1.0.0-rc.17</stache-code> and SKY UX
-      <stache-code>2.0.0-rc.12</stache-code>.
+      <sky-code>1.0.0-rc.17</sky-code> and SKY UX
+      <sky-code>2.0.0-rc.12</sky-code>.
       <a href="https://github.com/blackbaud/stache2/pull/299">#299 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Added
-      <stache-code>stache-blockquote</stache-code> component.
+      <sky-code>stache-blockquote</sky-code> component.
       <a href="https://github.com/blackbaud/stache2/pull/297">#297 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Fixed a bug causing Stache sites without the
-      <stache-code>name</stache-code> property set in
-      <stache-code>skyuxconfig</stache-code> to show as
-      <stache-code>unknown</stache-code> in analytics.
+      <sky-code>name</sky-code> property set in
+      <sky-code>skyuxconfig</sky-code> to show as
+      <sky-code>unknown</sky-code> in analytics.
       <a href="https://github.com/blackbaud/stache2/pull/298">#298 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
   </ul>
@@ -34,31 +34,31 @@
   <ul>
     <li>
       Added support for
-      <stache-code>stache-code-block</stache-code> in
-      <stache-code>stache-include</stache-code> to contain
-      <stache-code>{{ '{' }}</stache-code> and
-      <stache-code>}</stache-code>.
+      <sky-code>stache-code-block</sky-code> in
+      <sky-code>stache-include</sky-code> to contain
+      <sky-code>{{ '{' }}</sky-code> and
+      <sky-code>}</sky-code>.
       <a href="https://github.com/blackbaud/skyux-builder-plugin-stache/pull/13">#13 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Updated
-      <stache-code>navOrder</stache-code> to allow nav order to be set on only one item.
+      <sky-code>navOrder</sky-code> to allow nav order to be set on only one item.
       <a href="https://github.com/blackbaud/stache2/pull/288">#288 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Limited support for
-      <stache-code>navOrder</stache-code> values to
+      <sky-code>navOrder</sky-code> values to
       <a href="https://www.mathsisfun.com/definitions/counting-number.html">Counting Numbers</a>.
       <a href="https://github.com/blackbaud/stache2/pull/288">#288 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Added support for SKY UX Builder
-      <stache-code>1.0.0-rc.15</stache-code>.
+      <sky-code>1.0.0-rc.15</sky-code>.
       <a href="https://github.com/blackbaud/stache2/pull/288">#288 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Added support for SKY UX
-      <stache-code>2.0.0-rc.10</stache-code>.
+      <sky-code>2.0.0-rc.10</sky-code>.
       <a href="https://github.com/blackbaud/stache2/pull/2887">#287 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
   </ul>

@@ -13,7 +13,7 @@
   <ul>
     <li>
       <p>When you were running
-        <sky-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</sky-code> or
+        <sky-code>skyux new</sky-code> or
         <sky-code>npm install</sky-code>, did the install time out?</p>
     </li>
     <li>
@@ -28,11 +28,8 @@
     Solution
   </h3>
   <p>
-    You may want to re-run
-    <sky-code>npm install</sky-code>. Before you do that, we recommend you delete your entire
-    <sky-code>node_modules</sky-code> folder. In the command line for the Stache site folder, enter
-    <sky-code>npm cache clear</sky-code>. When that completes, enter
-    <sky-code>npm install</sky-code>.
+    You may want to run <sky-code>skyux install</sky-code> this will delete your entire
+    <sky-code>node_modules</sky-code> folder, the <sky-code>package-lock.json</sky-code> file, clear your cache and run <sky-code>npm install</sky-code> for you.
   </p>
 
   <stache-page-anchor>
@@ -78,7 +75,7 @@
       Did you reference an image that wasn't added to your assets folder?
     </li>
     <li>
-      Did you misspell a component? For example, if you reference <sky-code>stace-code</sky-code> instead of <sky-code>stache-code</sky-code>, your SPA will try to find that misspelled component and fail.
+      Did you misspell a component? For example, if you reference <sky-code>sk-code</sky-code> instead of <sky-code>sky-code</sky-code>, your SPA will try to find that misspelled component and fail.
     </li>
   </ul>
 
