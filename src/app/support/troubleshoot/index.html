@@ -13,26 +13,23 @@
   <ul>
     <li>
       <p>When you were running
-        <stache-code>skyux new --template https://github.com/blackbaud/skyux-template-stache.git</stache-code> or
-        <stache-code>npm install</stache-code>, did the install time out?</p>
+        <sky-code>skyux new</sky-code> or
+        <sky-code>npm install</sky-code>, did the install time out?</p>
     </li>
     <li>
       <p>Are you having a problem serving your site locally?</p>
     </li>
     <li>
       <p>Did you update the dependencies in the
-        <stache-code>package.json</stache-code> file?</p>
+        <sky-code>package.json</sky-code> file?</p>
     </li>
   </ul>
   <h3>
     Solution
   </h3>
   <p>
-    You may want to re-run
-    <stache-code>npm install</stache-code>. Before you do that, we recommend you delete your entire
-    <stache-code>node_modules</stache-code> folder. In the command line for the Stache site folder, enter
-    <stache-code>npm cache clear</stache-code>. When that completes, enter
-    <stache-code>npm install</stache-code>.
+    You may want to run <sky-code>skyux install</sky-code> this will delete your entire
+    <sky-code>node_modules</sky-code> folder, the <sky-code>package-lock.json</sky-code> file, clear your cache and run <sky-code>npm install</sky-code> for you.
   </p>
 
   <stache-page-anchor>
@@ -43,7 +40,7 @@
   </h3>
   <p>
     When you run
-    <stache-code>skyux serve</stache-code>, does a browser window open to your "in-dev" site, but all you see is a bouncing green ball
+    <sky-code>skyux serve</sky-code>, does a browser window open to your "in-dev" site, but all you see is a bouncing green ball
     and the page doesn't load?
   </p>
 
@@ -60,25 +57,25 @@
   <ul>
     <li>
       Did you provide an opening tag, like
-      <stache-code escapeCharacters="true">&lt;stache-page-anchor&gt;</stache-code> but not the closing one like
-      <stache-code escapeCharacters="true">&lt;/stache-page-anchor&gt;</stache-code>?
+      <sky-code escapeCharacters="true">&lt;stache-page-anchor&gt;</sky-code> but not the closing one like
+      <sky-code escapeCharacters="true">&lt;/stache-page-anchor&gt;</sky-code>?
     </li>
     <li>
       Check your JSON files for errors. These can include unnecessary commas, missing commas, unncessary spaces, unncessary tabs,
       missing characters (
-      <stache-code escapeCharacters="true">{</stache-code>,
-      <stache-code escapeCharacters="true">[</stache-code>,
-      <stache-code escapeCharacters="true">}</stache-code>,
-      <stache-code escapeCharacters="true">]</stache-code>, etc), and improper formatting.
+      <sky-code escapeCharacters="true">{</sky-code>,
+      <sky-code escapeCharacters="true">[</sky-code>,
+      <sky-code escapeCharacters="true">}</sky-code>,
+      <sky-code escapeCharacters="true">]</sky-code>, etc), and improper formatting.
     </li>
     <li>
-      Did you use punctionation, like a <stache-code>-</stache-code>, when you reference json files from a page? For example, when you use the action buttons component, don't use punctuation (ex. dashes) in your unique filename.
+      Did you use punctionation, like a <sky-code>-</sky-code>, when you reference json files from a page? For example, when you use the action buttons component, don't use punctuation (ex. dashes) in your unique filename.
     </li>
     <li>
       Did you reference an image that wasn't added to your assets folder?
     </li>
     <li>
-      Did you misspell a component? For example, if you reference <stache-code>stace-code</stache-code> instead of <stache-code>stache-code</stache-code>, your SPA will try to find that misspelled component and fail.
+      Did you misspell a component? For example, if you reference <sky-code>sk-code</sky-code> instead of <sky-code>sky-code</sky-code>, your SPA will try to find that misspelled component and fail.
     </li>
   </ul>
 
@@ -101,7 +98,7 @@
     Solution
   </h3>
   <p>
-    Edit your VS Code settings for formatting pasted content. Select <b>Files</b>, <b>Preferences</b>, <b>Settings</b>, and in User Settings, add <stache-code>"editor.formatOnPaste": false</stache-code> to the list.
+    Edit your VS Code settings for formatting pasted content. Select <b>Files</b>, <b>Preferences</b>, <b>Settings</b>, and in User Settings, add <sky-code>"editor.formatOnPaste": false</sky-code> to the list.
   </p>
 
   <stache-page-anchor>
@@ -111,7 +108,7 @@
     Scenario
   </h3>
   <p>
-    Some components load without the correct text and display something like <stache-code>'stache_copy_to_clipboard_button'</stache-code> instead.
+    Some components load without the correct text and display something like <sky-code>'stache_copy_to_clipboard_button'</sky-code> instead.
   </p>
   <h3>
     Solution

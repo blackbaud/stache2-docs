@@ -17,31 +17,31 @@
   </stache-page-anchor>
   <ul>
     <li>
-      Converted <stache-code>StachePageAnchorComponent</stache-code> to an anchor tag, to allow users to open the link in a new window. <a href="https://github.com/blackbaud/stache2/pull/277">#277 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Converted <sky-code>StachePageAnchorComponent</sky-code> to an anchor tag, to allow users to open the link in a new window. <a href="https://github.com/blackbaud/stache2/pull/277">#277 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Added search form to <stache-code>StacheActionButtonsComponent</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/270">#270 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Added search form to <sky-code>StacheActionButtonsComponent</sky-code>. <a href="https://github.com/blackbaud/stache2/pull/270">#270 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Removed custom bundling commands, relying on SKY UX Builder's new <stache-code>skyux build-public-library</stache-code> command. <a href="https://github.com/blackbaud/stache2/pull/234">#234 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Removed custom bundling commands, relying on SKY UX Builder's new <sky-code>skyux build-public-library</sky-code> command. <a href="https://github.com/blackbaud/stache2/pull/234">#234 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Added support for external URLs in <stache-code>StacheActionButtonsComponent</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/262">#262 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Added support for external URLs in <sky-code>StacheActionButtonsComponent</sky-code>. <a href="https://github.com/blackbaud/stache2/pull/262">#262 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Added ability to include property bindings in <stache-code>StacheTableOfContentsComponent</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/261">#261 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Added ability to include property bindings in <sky-code>StacheTableOfContentsComponent</sky-code>. <a href="https://github.com/blackbaud/stache2/pull/261">#261 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Added support for SKY UX <stache-code>2.0.0-rc.9</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/278">#278 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Added support for SKY UX <sky-code>2.0.0-rc.9</sky-code>. <a href="https://github.com/blackbaud/stache2/pull/278">#278 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Added support for SKY UX Builder <stache-code>1.0.0-rc.12</stache-code>.
+      Added support for SKY UX Builder <sky-code>1.0.0-rc.12</sky-code>.
     </li>
     <li>
       Updated version of Node.JS due to security implications. <a href="https://github.com/blackbaud/stache2/pull/264">#264 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Fixed <stache-code>StacheAffixComponent</stache-code> sizing issues on smaller screens. <a href="https://github.com/blackbaud/stache2/pull/279">#279 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Fixed <sky-code>StacheAffixComponent</sky-code> sizing issues on smaller screens. <a href="https://github.com/blackbaud/stache2/pull/279">#279 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       General cleanup and refactoring of existing code.
@@ -58,10 +58,10 @@
   </stache-page-anchor>
   <ul>
     <li>
-      Added navOrder to <stache-code>stache tag</stache-code>, to allow ordering of sidebar routes.
+      Added navOrder to <sky-code>stache tag</sky-code>, to allow ordering of sidebar routes.
     </li>
     <li>
-      Added more language options for <stache-code>StacheCodeBlockComponent</stache-code>
+      Added more language options for <sky-code>StacheCodeBlockComponent</sky-code>
     </li>
     <li>
       Added support for SKY UX 2.0.0-rc.4

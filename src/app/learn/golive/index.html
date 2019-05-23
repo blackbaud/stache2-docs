@@ -7,13 +7,13 @@
 
 <stache-page-summary>
     <p>
-      When a Stache site is configured for public use, <span *stacheInternal>(meaning the site is no longer restricted to Blackbaud authenticated users)</span> it can be accessed by anyone. Before you publish your site, review our recommendations <span *stacheInternal>and requirements </span>for a successful launch.
+      When a Stache site is configured for public use, <span *skyRestrictedView>(meaning the site is no longer restricted to Blackbaud authenticated users)</span> it can be accessed by anyone. Before you publish your site, review our recommendations <span *skyRestrictedView>and requirements </span>for a successful launch.
     </p>
-    <stache-internal>
+    <sky-restricted-view>
       <sky-alert alertType="danger">
         Failure to adhere to the recommendations and guidelines could result in your site's removal.
       </sky-alert>
-    </stache-internal>
+    </sky-restricted-view>
   </stache-page-summary>
 
   <stache-page-anchor>
@@ -23,21 +23,21 @@
   <p>
     <i class="far fa-check-square"></i> <b>Peer review</b> – Before you release your new SPA, it's a best practice to have your team all check the site to ensure that navigation and links work, no obvious errors in content, and that nothing is broken or missing. You don't get another chance at a "first impression" for your website.
   </p>
-  <p *stacheInternal>
+  <p *skyRestrictedView>
     <i class="far fa-check-square"></i> <b>Strategic Content Development (SCD) review</b> – If you are publishing a Blackbaud Stache site to the public, you must have a member of the SCD team review the site. To request a content review, post the request in the <a href="https://blackbaud.slack.com/messages/stache-general"><i class="fa fa-slack" aria-hidden="true"></i>stache-general</a> Slack channel.
   </p>
-  <p *stacheInternal>
+  <p *skyRestrictedView>
     <i class="far fa-check-square"></i> <b>Update search settings</b> – In order for your search to work, when you switch your site from internal only to public, you need to adjust your <a stacheRouterLink="." fragment="update-search-settings">configuration settings for search</a>.
   </p>
     <p>
     <i class="far fa-check-square"></i> <b>Protect your master branch</b> – To prevent unreviewed content from merging into your production branch, and therefore deployable to your hosted SPA, we recommend you <a stacheRouterLink="." fragment="protect-your-master-branch">review and set policies</a> for your "master" branch.
   </p>
-    <p *stacheInternal>
+    <p *skyRestrictedView>
     <i class="far fa-check-square"></i> <b>Remove Blackbaud authentication</b> – This will be the last task you perform after your site is reviewed and you adjust your search settings. This <a stacheRouterLink="." fragment="remove-blackbaud-authentication">removes the requirement</a> that users must have a valid Blackbaud email address to access your site.
   </p>
 
-  <stache-internal>
-  <stache-page-anchor *stacheInternal>
+  <sky-restricted-view>
+  <stache-page-anchor *skyRestrictedView>
     Remove Blackbaud authentication
   </stache-page-anchor>
   <p>
@@ -49,46 +49,45 @@
   </h3>
 
   <p>
-    Remove <stache-code>"@blackbaud/skyux-builder-plugin-auth-email-whitelist"</stache-code> from the plugins and set <stache-code>"auth":</stache-code> to <stache-code>false</stache-code>.
+    Remove <sky-code>"@blackbaud/skyux-builder-plugin-auth-email-whitelist"</sky-code> from the plugins and set <sky-code>"auth":</sky-code> to <sky-code>false</sky-code>.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
       "auth": false,
       "plugins": [
         "@blackbaud/skyux-builder-plugin-stache"
       ],
-  </stache-code-block>
+  </sky-code-block>
 
   <h3>
     package.json file
   </h3>
 
   <p>
-    Remove the <stache-code>"@blackbaud/skyux-builder-plugin-auth-email-whitelist": "{{ @buildtime:stache.jsonData.global.emailVersion }}",</stache-code> from the dependencies.
+    Remove the <sky-code>"@blackbaud/skyux-builder-plugin-auth-email-whitelist": "{{ @buildtime:stache.jsonData.global.emailVersion }}",</sky-code> from the dependencies.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
       "dependencies": {
-        "@blackbaud/skyux": "{{ @buildtime:stache.jsonData.global.skyUXVersion }},
-        "@blackbaud/stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}"
+        "@blackbaud/skyux-lib-stache": "{{ @buildtime:stache.jsonData.global.stacheVersion }}"
       },
-  </stache-code-block>
+  </sky-code-block>
 
-  <stache-page-anchor *stacheInternal>Update search settings</stache-page-anchor>
+  <stache-page-anchor *skyRestrictedView>Update search settings</stache-page-anchor>
 
   <p>
     To enable search to work when you make your site public, you need to update two settings in the skyuxconfig.json file. Optionally, we also recommend updating a third.
   </p>
 
   <p>
-    Modify the Omnibar nav service <stache-code>searchUrl</stache-code> setting so that the URL no longer contains <stache-code>-internal</stache-code> and set the Stache app setting to <stache-code>"is_internal": false</stache-code>.
+    Modify the Omnibar nav service <sky-code>searchUrl</sky-code> setting so that the URL no longer contains <sky-code>-internal</sky-code> and set the Stache app setting to <sky-code>"is_internal": false</sky-code>.
   </p>
 
   <p>
     <b>Optionally</b>, when a site is set to public, depending on who the site is for, we recommend removing the site from the global search. For example, if your site is mainly for customers and not Blackbaud Staff, remove it from the global search. The global search is used on the <a href="https://docs.blackbaud.com">RDO Engineering landing page</a>. We want to ensure the search there is most helpful for Blackbaud Staff!
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "appSettings": {
     "stache": {
       "searchConfig": {
@@ -107,8 +106,8 @@
             "searchUrl": "https://stache-search-query.sky.blackbaud.com/search/stache",
             "items": [
 
-  </stache-code-block>
-  </stache-internal>
+  </sky-code-block>
+  </sky-restricted-view>
 
   <stache-page-anchor>
     Protect your master branch

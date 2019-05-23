@@ -4,7 +4,7 @@
 
   <stache-page-summary>
     <p>
-      The Markdown component enables users to write Markdown in their HTML files. Within the <stache-code>stache-markdown</stache-code> tags, users can mix Markdown and HTML elements to create documentation with Markdown without losing out on {{ stache.jsonData.global.productNameLong }} features.
+      The Markdown component enables users to write Markdown in their HTML files. Within the <sky-code>stache-markdown</sky-code> tags, users can mix Markdown and HTML elements to create documentation with Markdown without losing out on {{ stache.jsonData.global.productNameLong }} features.
     </p>
 
     <h3>
@@ -12,19 +12,22 @@
     </h3>
     <ul>
       <li>
-        Page anchors — The <stache-code>##</stache-code> syntax creates an <stache-code>h2</stache-code> heading with a <a routerLink="/components/page-anchor">Stache page anchor</a> around it, and adds the heading to the table of contents. To create a regular <stache-code>h2</stache-code>, simply use the HTML <stache-code escapeCharacters="true"><h2></stache-code> tags.
+        Page anchors — The <sky-code>##</sky-code> syntax creates an <sky-code>h2</sky-code> heading with a <a routerLink="/components/page-anchor">Stache page anchor</a> around it, and adds the heading to the table of contents. To create a regular <sky-code>h2</sky-code>, simply use the HTML <sky-code escapeCharacters="true"><h2></sky-code> tags.
       </li>
       <li>
-        Code snippets — The <stache-code>`</stache-code> syntax creates a <a routerLink="/components/code">Stache code snippet</a>. To use the <stache-code>escapeCharacters</stache-code> attribute escape special characters, you must use the actual <stache-code>stache-code</stache-code> element.
+        Code snippets — The <sky-code>`</sky-code> syntax creates a <a routerLink="/components/code">code snippet</a>. To use the <sky-code>escapeCharacters</sky-code> attribute escape special characters, you must use the actual <sky-code>sky-code</sky-code> element.
       </li>
       <li>
-        Code blocks — The <stache-code>```</stache-code> syntax creates a <a routerLink="/components/code-block">Stache code block</a>. You can specify a language directly after the opening <stache-code>```</stache-code>. For example, <stache-code>```json</stache-code> creates a <stache-code>stache-code-block</stache-code> element with the <stache-code>languageType</stache-code> attribute set to <stache-code>json</stache-code>.
+        Code blocks — The <sky-code>```</sky-code> syntax creates a <a routerLink="/components/code-block">code block</a>. You can specify a language directly after the opening <sky-code>```</sky-code>. For example, <sky-code>```json</sky-code> creates a <sky-code>sky-code-block</sky-code> element with the <sky-code>languageType</sky-code> attribute set to <sky-code>json</sky-code>.
       </li>
     </ul>
+    <p class="sky-text-warning">
+      <b>Warning</b>: To use code snippets and code blocks, install and export the <sky-code>SkyCodeBlockModule</sky-code> in the app-extras module. To learn how, see the <a routerLink="/components/code">code</a> and <a routerLink="/components/code-block">code block</a> component pages.
+    </p>
   </stache-page-summary>
 
 <h3>Best Practices</h3>
-<p>To ensure your content displays correctly, avoid using the following components within the <stache-code>stache-markdown</stache-code> tags.</p>
+<p>To ensure your content displays correctly, avoid using the following components within the <sky-code>stache-markdown</sky-code> tags.</p>
   <ul>
     <li>Cards</li>
     <li>Code block</li>
@@ -49,7 +52,7 @@
 </stache-blockquote>
 #### Dear Reluctant engineer faced with an enormous amount of work,
 
-*We heard you, and we are here to help! With the <stache-code escapeCharacters="true"><stache-markdown></stache-code> tags, we can save you time copying over all that Markdown!*
+*We heard you, and we are here to help! With the <sky-code escapeCharacters="true"><stache-markdown></sky-code> tags, we can save you time copying over all that Markdown!*
 
 <stache-blockquote
   author="Doesn’t want to tell his team that they have to give up Markdown">
@@ -77,7 +80,7 @@ function doesSupportMarkdown() {
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab tabHeading="sample">
-        <stache-code-block languageType="markup">
+        <sky-code-block languageType="markup">
 &#60;stache-markdown&#62;
   ### Stache now supports Markdown!
 
@@ -87,7 +90,7 @@ function doesSupportMarkdown() {
 
   #### Dear Reluctant engineer faced with an enormous amount of work,
 
-  *We heard you, and we are here to help! With the <stache-code escapeCharacters="true"><stache-markdown></stache-code> tags, we can save you time copying over all that Markdown!*
+  *We heard you, and we are here to help! With the <sky-code escapeCharacters="true"><stache-markdown></sky-code> tags, we can save you time copying over all that Markdown!*
 
   <stache-blockquote author="Doesn’t want to tell his team that they have to give up markdown">
     I would love to migrate our Stache site to stache v2, but I think something that really works for our team is the simple Markdown experience. From my understanding, Stache 2 does not have baked-in support for Markdown.
@@ -105,7 +108,7 @@ function doesSupportMarkdown() {
 }
   ```
 &#60;&#47;stache-markdown&#62;
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>
