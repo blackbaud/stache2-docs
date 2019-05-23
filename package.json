@@ -58,6 +58,7 @@
     "@pact-foundation/pact": "7.4.0",
     "@pact-foundation/pact-web": "7.4.0",
     "@skyux-sdk/builder": "3.6.6",
+    "@skyux-sdk/e2e": "3.1.2",
     "@skyux-sdk/pact": "3.2.0",
     "@skyux-sdk/testing": "3.1.0",
     "@types/core-js": "2.5.0",
