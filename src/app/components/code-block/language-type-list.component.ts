@@ -12,6 +12,10 @@ export class LanguageTypeListComponent {
       value: 'abap'
     },
     {
+      label: 'Augmented Backus–Naur form',
+      value: 'abnf'
+    },
+    {
       label: 'ActionScript',
       value: 'actionscript'
     },
@@ -76,6 +80,10 @@ export class LanguageTypeListComponent {
       value: 'bison'
     },
     {
+      label: 'Backus–Naur form',
+      value: 'bnf'
+    },
+    {
       label: 'Bro',
       value: 'bro'
     },
@@ -96,12 +104,20 @@ export class LanguageTypeListComponent {
       value: 'cpp'
     },
     {
+      label: 'CIL',
+      value: 'cil'
+    },
+    {
       label: 'Clojure',
       value: 'clojure'
     },
     {
       label: 'CoffeeScript',
       value: 'coffeescript'
+    },
+    {
+      label: 'CMake',
+      value: 'cmake'
     },
     {
       label: 'Content-Security-Policy',
@@ -140,8 +156,16 @@ export class LanguageTypeListComponent {
       value: 'docker'
     },
     {
+      label: 'Extended Backus-Naur form',
+      value: 'ebnf'
+    },
+    {
       label: 'Eiffel',
       value: 'eiffel'
+    },
+    {
+      label: 'EJS',
+      value: 'ejs'
     },
     {
       label: 'Elixir',
@@ -170,6 +194,10 @@ export class LanguageTypeListComponent {
     {
       label: 'Fortran',
       value: 'fortran'
+    },
+    {
+      label: 'G-code',
+      value: 'gcode'
     },
     {
       label: 'GameMaker Language',
@@ -220,6 +248,10 @@ export class LanguageTypeListComponent {
       value: 'haxe'
     },
     {
+      label: 'HCL',
+      value: 'hcl'
+    },
+    {
       label: 'HTTP',
       value: 'http'
     },
@@ -260,6 +292,18 @@ export class LanguageTypeListComponent {
       value: 'java'
     },
     {
+      label: 'JavaDoc',
+      value: 'javadoc'
+    },
+    {
+      label: 'JavaDoc-like',
+      value: 'javadoclike'
+    },
+    {
+      label: 'Java stack trace',
+      value: 'javastacktrace'
+    },
+    {
       label: 'JavaScript',
       value: 'javascript'
     },
@@ -268,8 +312,24 @@ export class LanguageTypeListComponent {
       value: 'jolie'
     },
     {
+      label: 'JSDoc',
+      value: 'jsdoc'
+    },
+    {
+      label: 'JS Extras',
+      value: 'js-extras'
+    },
+    {
       label: 'JSON',
       value: 'json'
+    },
+    {
+      label: 'JSONP',
+      value: 'jsonp'
+    },
+    {
+      label: 'JSON5',
+      value: 'json5'
     },
     {
       label: 'Julia',
@@ -344,6 +404,10 @@ export class LanguageTypeListComponent {
       value: 'monkey'
     },
     {
+      label: 'N1QL',
+      value: 'n1ql'
+    },
+    {
       label: 'N4JS',
       value: 'n4js'
     },
@@ -402,6 +466,10 @@ export class LanguageTypeListComponent {
     {
       label: 'PHP',
       value: 'php'
+    },
+    {
+      label: 'PHPDoc',
+      value: 'phpdoc'
     },
     {
       label: 'PHP Extras',
@@ -470,6 +538,10 @@ export class LanguageTypeListComponent {
     {
       label: 'Reason',
       value: 'reason'
+    },
+    {
+      label: 'Regex',
+      value: 'regex'
     },
     {
       label: 'Renpy',
@@ -556,12 +628,32 @@ export class LanguageTypeListComponent {
       value: 'textile'
     },
     {
+      label: 'TOML',
+      value: 'toml'
+    },
+    {
       label: 'Twig',
       value: 'twig'
     },
     {
       label: 'TypeScript',
       value: 'typescript'
+    },
+    {
+      label: 'T4 Text Templates (C#)',
+      value: 't4-cs'
+    },
+    {
+      label: 'T4 Text Templates (VB)',
+      value: 't4-vb'
+    },
+    {
+      label: 'T4 Templating',
+      value: 't4-templating'
+    },
+    {
+      label: 'Vala',
+      value: 'vala'
     },
     {
       label: 'VB.Net',
@@ -609,7 +701,7 @@ export class LanguageTypeListComponent {
     },
     {
       label: 'YAML',
-      value: 'yam'
+      value: 'yaml'
     }
   ];
 

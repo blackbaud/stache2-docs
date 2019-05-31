@@ -6,8 +6,8 @@
   <ul>
     <li>
       Added the
-      <stache-code>escapeCharacters</stache-code> attribute to the
-      <stache-code>stache-code</stache-code> component.
+      <sky-code>escapeCharacters</sky-code> attribute to the
+      <sky-code>stache-code</sky-code> component.
       <a href="https://github.com/blackbaud/skyux-builder-plugin-stache/pull/25">#25 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
   </ul>

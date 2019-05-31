@@ -30,17 +30,17 @@
   </stache-page-anchor>
 
   <p>
-    The <a routerLink="/components/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <stache-code>app-nav</stache-code> tag. <span *stacheInternal>If your SPA is using the omnibar instead of <stache-code>app-nav</stache-code>, this should be the very first tag on the page. </span>
+    The <a routerLink="/components/wrapper"> {{ stache.jsonData.global.productNameShort }} wrapper</a> is the primary element in a {{ stache.jsonData.global.productNameShort }} project. It contains most of the other {{ stache.jsonData.global.productNameShort }} tags and content. Most page-level configuration is handled by the {{ stache.jsonData.global.productNameShort }} wrapper, including layouts and navigation. Typically, this is the first tag to add to any {{ stache.jsonData.global.productNameShort }} page after the <sky-code>app-nav</sky-code> tag. <span *skyRestrictedView>If your SPA is using the omnibar instead of <sky-code>app-nav</sky-code>, this should be the very first tag on the page. </span>
   </p>
   <p>
-    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <stache-code>stache</stache-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <stache-code>pageTitle</stache-code>, <stache-code>navTitle</stache-code>, and <stache-code>navOrder</stache-code>.
+    {{ stache.jsonData.global.productNameShort }} takes a prescriptive approach to configuration. Most properties on the <sky-code>stache</sky-code> tag have defaults, so you rarely need to set them yourself. The main exceptions are the <sky-code>pageTitle</sky-code>, <sky-code>navTitle</sky-code>, and <sky-code>navOrder</sky-code>.
   </p>
 
-  <stache-code-block>
+  <sky-code-block>
     <stache pageTitle="My Sample Page" navTitle="Sample" navOrder="1" showTableOfContents="true">
       // Your content here.
     </stache>
-  </stache-code-block>
+  </sky-code-block>
 
   <p>
     <a routerLink="/components/wrapper"><button type="button" class="sky-btn sky-btn-default">Learn More</button></a>
@@ -49,13 +49,13 @@
   <stache-page-anchor>
     Application navigation
   </stache-page-anchor>
-  <stache-internal>
+  <sky-restricted-view>
     <sky-alert alertType="info">
-      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <stache-code>app-nav</stache-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
+      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <sky-code>app-nav</sky-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
     </sky-alert>
-  </stache-internal>
+  </sky-restricted-view>
   <p>
-    To provide top-level navigation within your app, you can use the <stache-code>app-nav</stache-code> component. This shared component from the SKY UX default template enables you to display a navigation bar at the top of pages.
+    To provide top-level navigation within your app, you can use the <sky-code>app-nav</sky-code> component. This shared component from the SKY UX default template enables you to display a navigation bar at the top of pages.
   </p>
 
 
@@ -64,15 +64,15 @@
   </h3>
 
   <p>
-    To display a navigation bar at the top of a page, place the <stache-code>app-nav</stache-code> tags at the start of the page's <stache-code>index.html</stache-code> file. To include the navigation bar throughout your SPA, start every page with the <stache-code>app-nav</stache-code> tags.
+    To display a navigation bar at the top of a page, place the <sky-code>app-nav</sky-code> tags at the start of the page's <sky-code>index.html</sky-code> file. To include the navigation bar throughout your SPA, start every page with the <sky-code>app-nav</sky-code> tags.
   </p>
 
-<stache-code-block>
+<sky-code-block>
 &lt;app-nav&gt;&lt;/app-nav&gt;
 <stache pageTitle="My Sample Page" navTitle="Sample" navOrder="1" showTableOfContents="true">
   // Your content here.
 </stache>
-</stache-code-block>
+</sky-code-block>
 
 <h3>
   Set up navigation bar
@@ -84,23 +84,23 @@
   <ol>
     <li>
       <p>
-        In the <stache-code>src/app/shared</stache-code> folder, open the <stache-code>app-nav.component.ts</stache-code> file. You need entries in the <stache-code>AppNavComponent</stache-code> class for each top-level navigation item.
+        In the <sky-code>src/app/shared</sky-code> folder, open the <sky-code>app-nav.component.ts</sky-code> file. You need entries in the <sky-code>AppNavComponent</sky-code> class for each top-level navigation item.
       </p>
     </li>
     <li>
       <p>
-        Use the <stache-code>name</stache-code> property to specify a label for a navigation item.
+        Use the <sky-code>name</sky-code> property to specify a label for a navigation item.
       </p>
       <p>
-        If you specify a localization string from <stache-code>resources_en_US.json</stache-code>, the navigation bar displays the <stache-code>message</stache-code> value from that localization string.
+        If you specify a localization string from <sky-code>resources_en_US.json</sky-code>, the navigation bar displays the <sky-code>message</sky-code> value from that localization string.
       </p>
     </li>
     <li>
       <p>
-        Use the <stache-code>path</stache-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <stache-code>index.html</stache-code> file in that folder.
+        Use the <sky-code>path</sky-code> property to specify where to direct users when they click a navigation item. When you specify the path to a folder in your SPA, the navigation bar opens the <sky-code>index.html</sky-code> file in that folder.
       </p>
     </li>
-    <stache-code-block languageType="typescript">
+    <sky-code-block languageType="typescript">
       export class AppNavComponent {
         public nav = [
           {
@@ -117,7 +117,7 @@
           }
         ];
       }
-  </stache-code-block>
+  </sky-code-block>
 </ol>
 
   <stache-page-anchor>
@@ -125,19 +125,19 @@
   </stache-page-anchor>
 
   <p>
-    In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <stache-code>app.scss</stache-code> and place it in the <stache-code>src/app</stache-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
+    In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <sky-code>app.scss</sky-code> and place it in the <sky-code>src/app</sky-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
   </p>
-  <stache-code-block languageType="scss">
+  <sky-code-block languageType="scss">
   &#47;&#47;CSS
 
 img &#123;
   border&#58; 1px solid &#35;cccccc&#59;
 &#125;
-  </stache-code-block>
+  </sky-code-block>
   <p>
-    After the <stache-code>app.scss</stache-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <stache-code>src/app</stache-code> folder, open the <stache-code>app-extras.module.ts</stache-code> file and insert this line of code at the beginning of the file.
+    After the <sky-code>app.scss</sky-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <sky-code>src/app</sky-code> folder, open the <sky-code>app-extras.module.ts</sky-code> file and insert this line of code at the beginning of the file.
   </p>
-  <stache-code-block languageType="typescript">require('style-loader!./app.scss');</stache-code-block>
+  <sky-code-block languageType="typescript">require('style-loader!./app.scss');</sky-code-block>
 
   <stache-page-anchor>
     Command line
@@ -150,11 +150,11 @@ img &#123;
     On a Mac, use Terminal.
   </p>
   <p>
-    On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install <a stacheRouterLink="." fragment="git">Git</a>, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <stache-code escapeCharacters="true">skyux new --template {template-url}</stache-code> because it causes a conflict that prevents the install from completing.
+    On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install <a stacheRouterLink="." fragment="git">Git</a>, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <sky-code escapeCharacters="true">skyux new</sky-code> because it causes a conflict that prevents the install from completing.
   </p>
 
-<stache-internal>
-  <stache-page-anchor *stacheInternal>
+<sky-restricted-view>
+  <stache-page-anchor *skyRestrictedView>
     Azure DevOps
   </stache-page-anchor>
 
@@ -193,7 +193,7 @@ img &#123;
       Person who created the SPA is configured as a "required" reviewer
     </li>
   </ul>
-</stache-internal>
+</sky-restricted-view>
 
   <stache-page-anchor>
     Git
@@ -202,7 +202,7 @@ img &#123;
     Stache uses Git as our methodology for managing source control in our repositories. Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. The best part is, because it is so widely used, one Google search can turn up a lot of helpful documentation.
   </p>
 
-  <stache-internal>
+  <sky-restricted-view>
     <h3>New to Git?</h3>
   <p>
     Are you new to Git? We created some documentation about Git, including Git workflow tutorials, to help you learn how to use it with Stache.
@@ -210,10 +210,10 @@ img &#123;
   <stache-action-buttons [routes]="stache.jsonData.bbgitdocs" showSearch="false">
   </stache-action-buttons>
 
-  </stache-internal>
+  </sky-restricted-view>
 
-  <stache-internal>
-    <stache-page-anchor  *stacheInternal>
+  <sky-restricted-view>
+    <stache-page-anchor  *skyRestrictedView>
       Edit Stache online
     </stache-page-anchor>
     <p>
@@ -225,7 +225,7 @@ img &#123;
     <p>
       Looking to make several changes to your Stache site in Azure DevOps? See our <a stacheRouterLink="https://docs.blackbaud.com/stache-internal/staff/git-workflow/vs-online">Edit Online Using Git Workfow</a> tutorial.
     </p>
-  </stache-internal>
+  </sky-restricted-view>
 
   <stache-page-anchor>
     Tools
@@ -268,14 +268,14 @@ img &#123;
   </stache-page-anchor>
 
   <p>
-    Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <stache-code>src/app/</stache-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <stache-code>index.html</stache-code> and paste the code below. After you save, type <stache-code>skyux serve</stache-code> to see your app, and your new page, locally.
+    Are you curious what a page would look like in {{ stache.jsonData.global.productNameShort }}? Here's a sample page you can copy and paste into your application. In  <sky-code>src/app/</sky-code> create a new folder with a short name. The folder name is part of the page's URL, so keep it brief and friendly. Then, create a file named <sky-code>index.html</sky-code> and paste the code below. After you save, type <sky-code>skyux serve</sky-code> to see your app, and your new page, locally.
   </p>
-  <stache-internal>
+  <sky-restricted-view>
   <sky-alert alertType="warning">
-    If you are a Blackbaud staff member and have the omnibar set up in your <stache-code>skyuxconfig.json</stache-code> file, don't include <stache-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</stache-code> when you copy and paste.
+    If you are a Blackbaud staff member and have the omnibar set up in your <sky-code>skyuxconfig.json</sky-code> file, don't include <sky-code escapeCharacters="true">&lt;app-nav&gt; &lt;/app-nav&gt;</sky-code> when you copy and paste.
   </sky-alert>
-  </stache-internal>
-<stache-code-block>
+  </sky-restricted-view>
+<sky-code-block>
 &lt;app-nav&gt;
 &lt;/app-nav&gt;
 
@@ -298,7 +298,7 @@ img &#123;
 &lt;p>&lt;a stacheRouterLink="/support/changelog"&gt;Good stuff can be found in our Changelog.&lt;/a&gt;&lt;/p&gt;
 
 &lt;/stache&gt;
-</stache-code-block>
+</sky-code-block>
 
   <stache-page-anchor>
     Next steps

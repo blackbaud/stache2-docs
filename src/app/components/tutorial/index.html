@@ -13,8 +13,8 @@
 
     <ul>
       <li>
-       <p><stache-code>showNumber</stache-code> — boolean value (true/false) to count and show the number of the step. Defaults to true.</p>
-        <p>For example, if you want an unnumbered step, such as an introduction, you can create a card outside of the tutorials automatic numbering with <stache-code>showNumber="false"</stache-code>.</p>
+       <p><sky-code>showNumber</sky-code> — boolean value (true/false) to count and show the number of the step. Defaults to true.</p>
+        <p>For example, if you want an unnumbered step, such as an introduction, you can create a card outside of the tutorials automatic numbering with <sky-code>showNumber="false"</sky-code>.</p>
 
       </li>
     </ul>
@@ -84,7 +84,7 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
                <stache-tutorial>
       <stache-tutorial-heading>
@@ -135,18 +135,18 @@
         </stache-tutorial-step-body>
       </stache-tutorial-step>
     </stache-tutorial>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
 
       <sky-tab
         tabHeading="title and summary">
         <p>
-          The <stache-code>stache-tutorial</stache-code> tag is a wrapper that holds the rest of the information (heading, summary, and steps) for the tutorial on your page.
+          The <sky-code>stache-tutorial</sky-code> tag is a wrapper that holds the rest of the information (heading, summary, and steps) for the tutorial on your page.
         </p>
 
         <p>Before you get to your steps, we recommend you provide a tutorial title and summary of what the user should expect to learn.</p>
 
-          <stache-code-block
+          <sky-code-block
             languageType="markup">
             <stache-tutorial>
 
@@ -159,16 +159,16 @@
               </stache-tutorial-summary>
 
             </stache-tutorial>
-          </stache-code-block>
+          </sky-code-block>
       </sky-tab>
 
       <sky-tab
         tabHeading="step">
         <p>
-          The <stache-code>stache-tutorial-step</stache-code> tag is used for each step in your tutorial.  It has the optional property <stache-code>showNumber</stache-code>.  This allows you to decide if you want your tutorial step to have a number associated with it (defaults to true).
+          The <sky-code>stache-tutorial-step</sky-code> tag is used for each step in your tutorial.  It has the optional property <sky-code>showNumber</sky-code>.  This allows you to decide if you want your tutorial step to have a number associated with it (defaults to true).
          </p>
 
-          <stache-code-block
+          <sky-code-block
             languageType="markup">
 
             <stache-tutorial-step
@@ -183,7 +183,7 @@
               </stache-tutorial-step-body>
 
             </stache-tutorial-step>
-          </stache-code-block>
+          </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

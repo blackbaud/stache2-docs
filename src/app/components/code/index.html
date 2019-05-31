@@ -3,7 +3,10 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <stache-code>stache-code</stache-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
+    <sky-alert alertType="warning">
+      The <sky-code>stache-code</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 3.0.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
+    </sky-alert>
+    <p>The code component allows you to format text as a code snippet within a larger block of text. Within the block of text, you wrap <sky-code>sky-code</sky-code> tags around the code snippet. To format longer code snippets that stand alone as separate blocks of text, use <a routerLink="/components/code-block">the code block component</a> instead.
     </p>
   </stache-page-summary>
 
@@ -15,13 +18,72 @@
   <ul>
     <li>
       <p>
-        <stache-code>escapeCharacters</stache-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <stache-code escapeCharacters="true">{</stache-code> and <stache-code escapeCharacters="true">\</stache-code>. Escaping these characters renders them as text instead of code. Defaults to <stache-code>false</stache-code>.
+        <sky-code>escapeCharacters</sky-code> — <i>(Optional)</i> Indicates whether to escape special characters such as <sky-code escapeCharacters="true">{</sky-code> and <sky-code escapeCharacters="true">\</sky-code>. Escaping these characters renders them as text instead of code. Defaults to <sky-code>false</sky-code>.
       </p>
       <p>
-        If a code snippet has text within <stache-code><</stache-code> and <stache-code>></stache-code> characters and you set <stache-code>escapeCharacters="true"</stache-code>, then the component automatically appends a closing tag. To prevent this, you must use "&#38;lt;" to escape <stache-code><</stache-code> and "&#38;gt;" to escape <stache-code>></stache-code>. For example, you must escape the <stache-code><</stache-code> and <stache-code>></stache-code> characters in the code snippet <stache-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</stache-code> or else the component automatically appends <stache-code>&lt;/Generic&gt;</stache-code> to the end: <stache-code escapeCharacters="true">public Task&lt;Generic> MethodName()&lt;/Generic></stache-code>.
+        If a code snippet has text within <sky-code><</sky-code> and <sky-code>></sky-code> characters and you set <sky-code>escapeCharacters="true"</sky-code>, then the component automatically appends a closing tag. To prevent this, you must use "&#38;lt;" to escape <sky-code><</sky-code> and "&#38;gt;" to escape <sky-code>></sky-code>. For example, you must escape the <sky-code><</sky-code> and <sky-code>></sky-code> characters in the code snippet <sky-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</sky-code> or else the component automatically appends <sky-code>&lt;/Generic&gt;</sky-code> to the end: <sky-code escapeCharacters="true">public Task&lt;Generic> MethodName()&lt;/Generic></sky-code>.
       </p>
     </li>
   </ul>
+
+    <stache-page-anchor>
+      Installation
+    </stache-page-anchor>
+    <p>
+      SPAs can use this as a standalone module by setting it up as a dependency.
+    </p>
+    <p>
+      <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-code-block</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+    </p>
+      <ol>
+        <li>
+          <p>
+            To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
+          </p>
+          <sky-code-block>
+            npm install @blackbaud/skyux-lib-code-block --save --save-exact
+          </sky-code-block>
+
+          <sky-code-block>
+            npm install @blackbaud/skyux-builder-plugin-code-block --save --save-exact
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the module to your <strong>app-extras.module.ts</strong> file.
+          </p>
+          <sky-code-block hideCopyToClipboard="true">
+              import { SkyCodeModule } from '@blackbaud/skyux-lib-code-block';
+
+              @NgModule({
+                exports: [
+                  SkyCodeModule
+                ]
+              })
+              export class AppExtrasModule { }
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the plugin to your <strong>skyuxconfig.json</strong> file.
+          </p>
+          <sky-alert
+            alertType="warning">
+            To use the code  in markdown components, Stache include files, or global/json data, you must load the <sky-code>skyux-builder-plugin-code-block</sky-code> <strong> plugin after</strong> the <sky-code>skyux-builder-plugin-stache</sky-code> plugin.
+          </sky-alert>
+          <sky-code-block>
+            {
+              "name": "stache",
+              "mode": "easy",
+              "compileMode": "aot",
+              "plugins": [
+                "@blackbaud/skyux-builder-plugin-stache",
+                "@blackbaud/skyux-builder-plugin-code-block"
+              ],
+            }
+          </sky-code-block>
+        </li>
+      </ol>
 
   <stache-page-anchor>
     Demo
@@ -29,19 +91,19 @@
 
   <div class="stache-demo-page-result">
     <p>
-      The component formats code snippets such as <stache-code>stache-code</stache-code>.
+      The component formats code snippets such as <sky-code>sky-code</sky-code>.
     </p>
     <p>
-      <stache-code>escapeCharacters="true"</stache-code> renders special characters as text.
+      <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.
     </p>
     <p>
-      Example: "<stache-code escapeCharacters="true"><span>span tag content</span></stache-code>."
+      Example: "<sky-code escapeCharacters="true"><span>span tag content</span></sky-code>."
     </p>
     <p>
       Otherwise, the component renders special characters as code.
     </p>
     <p>
-      Example: "<stache-code><span>span tag content</span></stache-code>."
+      Example: "<sky-code><span>span tag content</span></sky-code>."
     </p>
   </div>
 
@@ -53,24 +115,24 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
           <p>
-            The component formats code snippets such as <stache-code>stache-code</stache-code>.
+            The component formats code snippets such as <sky-code>sky-code</sky-code>.
           </p>
           <p>
-            <stache-code>escapeCharacters="true"</stache-code> renders special characters as text.
+            <sky-code>escapeCharacters="true"</sky-code> renders special characters as text.
           </p>
           <p>
-            For example: "<stache-code escapeCharacters="true"><span>span tag content</span></stache-code>."
+            For example: "<sky-code escapeCharacters="true"><span>span tag content</span></sky-code>."
           </p>
           <p>
             Otherwise, the component renders special characters as code.
           </p>
           <p>
-            For example: "<stache-code><span>span tag content</span></stache-code>."
+            For example: "<sky-code><span>span tag content</span></sky-code>."
           </p>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

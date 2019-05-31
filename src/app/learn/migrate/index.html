@@ -3,7 +3,7 @@
   layout="sidebar"
   showTableOfContents="true"
   showInNav="false"
-  *stacheInternal>
+  *skyRestrictedView>
 
   <stache-page-summary>
     <p>
@@ -101,12 +101,12 @@
   <p>
     In Stache 1, you could set page layout, page name, and more in the YAML front matter.
   </p>
-  <stache-code-block>
+  <sky-code-block>
     ---
     title: YAML front matter
     description: A very simple way to add structured data to a page.
     ---
-  </stache-code-block>
+  </sky-code-block>
   <p>
     The somewhat equivalent in Stache 2 is the Stache <a routerLink="/components/wrapper">wrapper component</a>.
   </p>
@@ -136,13 +136,13 @@
   <p>
     In Stache 2, the only layout that automatically inserts sibling and children into the navigation is the <a routerLink="/components/layouts">sidebar layout</a>.
   </p>
-  <p>The design equivalent in Stache 2 to the <stache-code>layout: layout-panels</stache-code>, is the use of the <stache-code>layout="container"</stache-code> on the Stache wrapper and the use of the <a routerLink="/components/action-buttons">action buttons component</a>.</p>
+  <p>The design equivalent in Stache 2 to the <sky-code>layout: layout-panels</sky-code>, is the use of the <sky-code>layout="container"</sky-code> on the Stache wrapper and the use of the <a routerLink="/components/action-buttons">action buttons component</a>.</p>
 
   <h3>
     Page titles
   </h3>
 
-  <p>In Stache 1, a page often started with a <stache-code>&lt;H1&gt;</stache-code> or <stache-code># Page Title</stache-code>. In Stache 2, we recommend you set that on the <a routerLink="/components/wrapper">Stache wrapper component</a>.</p>
+  <p>In Stache 1, a page often started with a <sky-code>&lt;H1&gt;</sky-code> or <sky-code># Page Title</sky-code>. In Stache 2, we recommend you set that on the <a routerLink="/components/wrapper">Stache wrapper component</a>.</p>
 
   <h3>
     Images
@@ -159,7 +159,7 @@
     While most HTML and Markdown copies as is to the new site, you will want to scan your content for specific references to Bootstrap, SKY UX 1, or custom JavaScript.
   </p>
   <p>
-    For example, if you had a <stache-code escapeCharacters="true">&lt;bb-alert bb-alert-type="info"&gt;</stache-code> in Stache 1, when you copy and paste, that will cause an error and your page won't load. In SKY UX 2, <a href="https://developer.blackbaud.com/skyux/components/alert">alerts <i class="fa fa-external-link" aria-hidden="true"></i></a> are referenced as <stache-code escapeCharacters="true">&lt;sky-alert alertType="info"&gt;</stache-code>.
+    For example, if you had a <sky-code escapeCharacters="true">&lt;bb-alert bb-alert-type="info"&gt;</sky-code> in Stache 1, when you copy and paste, that will cause an error and your page won't load. In SKY UX 2, <a href="https://developer.blackbaud.com/skyux/components/alert">alerts <i class="fa fa-external-link" aria-hidden="true"></i></a> are referenced as <sky-code escapeCharacters="true">&lt;sky-alert alertType="info"&gt;</sky-code>.
   </p>
   <p>
     Most features in Stache 1 are available in Stache 2, just with a different implementation that's compatible with Angular. We recommend you familiarize yourself with the options on the <a routerLink="/components">Content page</a>. The items (components, utilities, directives, etc) on this page enable you to enhance your content in a similar way as you did on Stache 1.

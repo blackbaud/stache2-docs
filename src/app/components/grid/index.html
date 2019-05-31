@@ -1,5 +1,6 @@
 <stache
-  pageTitle="Grid">
+  pageTitle="Grid"
+  showTableOfContents="true">
 
   <stache-page-summary>
     <p>
@@ -9,7 +10,7 @@
       <a href="https://developer.blackbaud.com/skyux/components/fluid-grid"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
     <sky-alert alertType="warning">
-    The <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> components are <strong>deprecated</strong> in Stache version 2.15.0 and higher, and may be unavailable starting in Stache version 3.0.0. We recommend you update your <stache-code>stache-row</stache-code> and <stache-code>stache-column</stache-code> to the SKY UX fluid grid with <stache-code>sky-row</stache-code> and <stache-code>sky-column</stache-code> tags.
+    The <sky-code>stache-row</sky-code> and <sky-code>stache-column</sky-code> components are <strong>deprecated</strong> in Stache version 2.15.0 and higher, and may be unavailable starting in Stache version 3.0.0. We recommend you update your <sky-code>stache-row</sky-code> and <sky-code>stache-column</sky-code> to the SKY UX fluid grid with <sky-code>sky-row</sky-code> and <sky-code>sky-column</sky-code> tags.
     </sky-alert>
   </stache-page-summary>
 
@@ -17,7 +18,7 @@
       The grid component provides a 12 column layout grid for organizing content for all device sizes. This enables you to lay out content in columns that know how to be responsive based on screen size. For example, you can have content that has 3 columns across on a large screen, but collapses into a single column on a small (ex. mobile) screen. The grid component is not recommended as a table replacement.
     </p>
     <p>
-      The grid consists of <stache-code>sky-fluid-grid</stache-code>, <stache-code>sky-row</stache-code>, and <stache-code>sky-column</stache-code> tags. Every column must be contained in a row. We recommend you use this component to arrange content to maximize the width of a page, but be flexible for different screen sizes.
+      The grid consists of <sky-code>sky-fluid-grid</sky-code>, <sky-code>sky-row</sky-code>, and <sky-code>sky-column</sky-code> tags. Every column must be contained in a row. We recommend you use this component to arrange content to maximize the width of a page, but be flexible for different screen sizes.
     </p>
 
     <h3>
@@ -26,7 +27,7 @@
 
     <ul>
       <li>
-        <stache-code>reverseColumnOrder</stache-code> — <i>(Optional)</i> Reverses the display order for the columns when set to <stache-code>true</stache-code>. Default is false.
+        <sky-code>reverseColumnOrder</sky-code> — <i>(Optional)</i> Reverses the display order for the columns when set to <sky-code>true</sky-code>. Default is false.
       </li>
     </ul>
 
@@ -36,19 +37,19 @@
 
     <ul>
       <li>
-        <stache-code>screenXSmall</stache-code> — The number of columns (1-12) for an extra small screen (less than 768px).
+        <sky-code>screenXSmall</sky-code> — The number of columns (1-12) for an extra small screen (less than 768px).
       </li>
       <li>
-        <stache-code>screenSmall</stache-code> — The number of columns (1-12) for a small screen (768 - 991px).
+        <sky-code>screenSmall</sky-code> — The number of columns (1-12) for a small screen (768 - 991px).
       </li>
       <li>
-        <stache-code>screenMedium</stache-code> — The number of columns (1-12) for a medium screen (992 - 1199px).
+        <sky-code>screenMedium</sky-code> — The number of columns (1-12) for a medium screen (992 - 1199px).
       </li>
       <li>
-        <stache-code>screenLarge</stache-code> — The number of columns (1-12) for a large screen (greater than 1200px).
+        <sky-code>screenLarge</sky-code> — The number of columns (1-12) for a large screen (greater than 1200px).
       </li>
     </ul>
-    <p>To handle behavior for multiple screen sizes, you can combine more than one size for each column. For example: <stache-code>&lt;sky-column screenSmall="8" screenMedium="9" screenLarge="10"&gt;</stache-code>. This is helpful if you want to more carefully control the breakpoints.</p>
+    <p>To handle behavior for multiple screen sizes, you can combine more than one size for each column. For example: <sky-code>&lt;sky-column screenSmall="8" screenMedium="9" screenLarge="10"&gt;</sky-code>. This is helpful if you want to more carefully control the breakpoints.</p>
 
   <stache-page-anchor>
     Demo
@@ -236,7 +237,7 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
           <sky-fluid-grid>
             <sky-row>
@@ -407,7 +408,7 @@
               </sky-column>
             </sky-row>
           </sky-fluid-grid>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>
