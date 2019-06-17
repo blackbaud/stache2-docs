@@ -7,25 +7,12 @@
     <p>
       The Restricted View Library makes content visible to internal Blackbaud users and hides it from other users. This library is for internal Blackbaud use only.
     </p>
-
-    <p>
-      The Restricted View Library includes both a component and directive allows to configure content. The library enables you to to create a more targeted user experience in Blackbaud documentation by only showing content that applies to a user.
+    <p *skyRestrictedView>
+      The Restricted View Library includes a component and directive that both allow you to configure content. The library enables you to create a more targeted user experience in Blackbaud documentation by only showing content that applies to users.
     </p>
   </stache-page-summary>
 
-  <stache-page-anchor>
-    Installation
-  </stache-page-anchor>
-  <p>
-    To use the Restricted View Library library, you must install <stache-code>SkyRestrictedViewModule</stache-code> as a dependency to your project. In the command prompt, run the following command from your SPA's root directory:
-  </p>
-  <sky-code-block>
-    npm install @blackbaud/skyux-lib-restricted-view --save --save-exact
-  </sky-code-block>
-  <p>
-    After installation, you need to make any exports from <stache-code>SkyRestrictedViewModule</stache-code> available to your SPA by adding the module to the <stache-code>exports</stache-code> section of your SPA's main module. If you are using the SKY UX SDK, add <stache-code>SkyRestrictedViewModule</stache-code> as an export in your <stache-code>app-sky.module.ts</stache-code> file.
-  </p>
-
+<stache-hide-from-search>
   <h3>
     Library items
   </h3>
@@ -33,15 +20,29 @@
   <ul>
     <li>
       <p>
-        <stache-code>sky-restricted-view</stache-code> — The <stache-code>sky-restricted-view</stache-code> component wraps restricted content and hides it. The component hides any content within the tags from users who are nto logged in with BBID.
+        <sky-code>sky-restricted-view</sky-code> — The <sky-code>sky-restricted-view</sky-code> component wraps restricted content. The component hides any content within the tags from users who are not logged in with BBID.
       </p>
     </li>
     <li>
       <p>
-        <stache-code>skyRestrictedView</stache-code> — The <stache-code>skyRestrictedView</stache-code> directive is placed as an attribute on restricted elements and hides the content within those elements. The directive hides any content within the elements from users who are nto logged in with BBID.
+        <sky-code>skyRestrictedView</sky-code> — The <sky-code>skyRestrictedView</sky-code> directive is placed as an attribute on restricted elements. The directive hides any content within the elements from users who are not logged in with BBID.
       </p>
     </li>
   </ul>
+
+<sky-restricted-view>
+  <stache-page-anchor>
+    Installation
+  </stache-page-anchor>
+  <p>
+    To use exports from the Restricted View Library library, you must install <sky-code>SkyRestrictedViewModule</sky-code> as a dependency to your project. In the command prompt, run the following command from your SPA's root directory:
+  </p>
+  <sky-code-block>
+    npm install --save --save-exact @blackbaud/skyux-lib-restricted-view
+  </sky-code-block>
+  <p>
+    After installation, you need to make any exports from <sky-code>SkyRestrictedViewModule</sky-code> available to your SPA by adding the module to the <sky-code>exports</sky-code> section of your SPA's main module. If you are using the SKY UX SDK, add <sky-code>SkyRestrictedViewModule</sky-code> as an export in your <sky-code>app-sky.module.ts</sky-code> file.
+  </p>
 
   <stache-page-anchor>
     Demo
@@ -52,16 +53,8 @@
       Component example
     </h4>
     <p>
-      This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
+      This is the first of four paragraphs. A <sky-code>sky-restricted-view</sky-code> component wraps the second and third paragraphs to demonstrate how the component hides restricted content from users who are not logged in with BBID. 
     </p>
-    <div>
-      <p>
-        This is the second paragraph.
-      </p>
-      <p>
-        This is the third paragraph.
-      </p>
-    </div>
     <p>
       This is the fourth paragraph.
     </p>
@@ -69,13 +62,7 @@
       Directive example
     </h4>
     <p>
-      This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
-    </p>
-    <p>
-      This is the second paragraph.
-    </p>
-    <p>
-      This is the third paragraph.
+      This is the first of four paragraphs. A <sky-code>*skyRestrictedView</sky-code> attribute is placed on the second and third paragraphs to demonstrate how the directive hides restricted content from users who are not logged in with BBID. 
     </p>
     <p>
       This is the fourth paragraph.
@@ -92,7 +79,7 @@
         Component example
       </h4>
       <p>
-        This demo section includes 4 paragraphs, but a <stache-code>sky-restricted-view</stache-code> component wraps the second and third paragraphs so that only users who log in with BBID can view them. 
+        This is the first of four paragraphs. A <sky-code>sky-restricted-view</sky-code> component wraps the second and third paragraphs to demonstrate how the component hides restricted content from users who are not logged in with BBID. 
       </p>
       <sky-restricted-view>
         <p>
@@ -109,12 +96,12 @@
         Directive example
       </h4>
       <p>
-        This demo section includes 4 paragraphs, but a <stache-code>skyRestrictedView</stache-code> attribute on the second and third paragraphs only allows users who log in with BBID to view them. 
+        This is the first of four paragraphs. A <sky-code>*skyRestrictedView</sky-code> attribute is placed on the second and third paragraphs to demonstrate how the directive hides restricted content from users who are not logged in with BBID. 
       </p>
-      <p skyRestrictedView>
+      <p *skyRestrictedView>
         This is the second paragraph.
       </p>
-      <p skyRestrictedView>
+      <p *skyRestrictedView>
         This is the third paragraph.
       </p>
       <p>
@@ -122,4 +109,7 @@
       </p>
     </sky-code-block>
   </div>
+</sky-restricted-view>
+</stache-hide-from-search>
+
 </stache>
