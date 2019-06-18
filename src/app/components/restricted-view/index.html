@@ -5,13 +5,17 @@
 
   <stache-page-summary>
     <p>
-      The Restricted View Library makes content visible to internal Blackbaud users and hides it from other users. This library is for internal Blackbaud use only.
+      The Restricted View Library is for internal Blackbaud use only. It facilitates a more targeted user experience in Blackbaud documentation by only displaying content that applies to users.
     </p>
     <p *skyRestrictedView>
-      The Restricted View Library includes a component and directive that both allow you to configure content. The library enables you to create a more targeted user experience in Blackbaud documentation by only showing content that applies to users.
+      The Restricted View Library provides a component and directive that configure content to make it visible to internal Blackbaud users only and to hide it from all other users.
     </p>
+    <sky-alert alertType="warning" *skyRestrictedView>
+      Keep in mind that the Restricted View Library is designed to effectively target content for Blackbaud and non-Blackbaud audiences. It is not a secure way to hide content and should not be used to hide sensitive information.
+    </sky-alert>
   </stache-page-summary>
 
+<sky-restricted-view>
 <stache-hide-from-search>
   <h3>
     Library items
@@ -20,17 +24,16 @@
   <ul>
     <li>
       <p>
-        <sky-code>sky-restricted-view</sky-code> — The <sky-code>sky-restricted-view</sky-code> component wraps restricted content. The component hides any content within the tags from users who are not logged in with BBID.
+        <sky-code>sky-restricted-view</sky-code> — The <sky-code>sky-restricted-view</sky-code> component wraps restricted content. Within the elements that it it wraps, the component hides all content from users who are not logged in with BBID.
       </p>
     </li>
     <li>
       <p>
-        <sky-code>skyRestrictedView</sky-code> — The <sky-code>skyRestrictedView</sky-code> directive is placed as an attribute on restricted elements. The directive hides any content within the elements from users who are not logged in with BBID.
+        <sky-code>*skyRestrictedView</sky-code> — The <sky-code>*skyRestrictedView</sky-code> directive is placed as an attribute on a restricted element. It hides any content within that element from users who are not logged in with BBID.
       </p>
     </li>
   </ul>
 
-<sky-restricted-view>
   <stache-page-anchor>
     Installation
   </stache-page-anchor>
@@ -53,19 +56,19 @@
       Component example
     </h4>
     <p>
-      This is the first of four paragraphs. A <sky-code>sky-restricted-view</sky-code> component wraps the second and third paragraphs to demonstrate how the component hides restricted content from users who are not logged in with BBID. 
+      This demo visualizes how non-Blackbaud users would view a series of four paragraphs when a restricted view component wraps the second and third paragraphs. The component hides the second and third paragraphs the from users who are not logged in with BBID. 
     </p>
     <p>
-      This is the fourth paragraph.
+      This is the fourth paragraph. In the code below, you can see how the <sky-code>sky-restricted-view</sky-code> element wraps the <sky-code>p</sky-code> tags for the second and third paragraphs.
     </p>
     <h4>
       Directive example
     </h4>
     <p>
-      This is the first of four paragraphs. A <sky-code>*skyRestrictedView</sky-code> attribute is placed on the second and third paragraphs to demonstrate how the directive hides restricted content from users who are not logged in with BBID. 
+      This demo visualizes how non-Blackbaud users would view a series of four paragraphs when restricted view attributes are placed on the second and third paragraphs. The directive hides the second and third paragraphs the from users who are not logged in with BBID. 
     </p>
     <p>
-      This is the fourth paragraph.
+      This is the fourth paragraph. In the code below, you can see how the <sky-code>*skyRestrictedView</sky-code> attribute is placed on the <sky-code>p</sky-code> tags for the second and third paragraphs.
     </p>
   </div>
 
@@ -79,7 +82,7 @@
         Component example
       </h4>
       <p>
-        This is the first of four paragraphs. A <sky-code>sky-restricted-view</sky-code> component wraps the second and third paragraphs to demonstrate how the component hides restricted content from users who are not logged in with BBID. 
+        This demo visualizes how non-Blackbaud users would view a series of four paragraphs when a restricted view component wraps the second and third paragraphs. The component hides the second and third paragraphs the from users who are not logged in with BBID. 
       </p>
       <sky-restricted-view>
         <p>
@@ -90,13 +93,13 @@
         </p>
       </sky-restricted-view>
       <p>
-        This is the fourth paragraph.
+        This is the fourth paragraph. In the code below, you can see how the <sky-code>sky-restricted-view</sky-code> component wraps the <sky-code>p</sky-code> tags for the second and third paragraphs.
       </p>
       <h4>
         Directive example
       </h4>
       <p>
-        This is the first of four paragraphs. A <sky-code>*skyRestrictedView</sky-code> attribute is placed on the second and third paragraphs to demonstrate how the directive hides restricted content from users who are not logged in with BBID. 
+        This demo visualizes how non-Blackbaud users would view a series of four paragraphs when restricted view attributes are placed on the second and third paragraphs. The directive hides the second and third paragraphs the from users who are not logged in with BBID. 
       </p>
       <p *skyRestrictedView>
         This is the second paragraph.
@@ -105,7 +108,7 @@
         This is the third paragraph.
       </p>
       <p>
-        This is the fourth paragraph.
+        This is the fourth paragraph. In the code below, you can see how the <sky-code>*skyRestrictedView</sky-code> attribute is placed on the <sky-code>p</sky-code> tags for the second and third paragraphs.
       </p>
     </sky-code-block>
   </div>
