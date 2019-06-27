@@ -47,6 +47,26 @@
         </li>
       </ul>
     </ul>
+
+    <h3>
+      Hero heading properties
+    </h3>
+
+    <ul>
+      <li>
+        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero heading. This property accepts <sky-code>string</sky-code> values. (Default: '#fff')
+      </li>
+    </ul>
+
+    <h3>
+      Hero subheading properties
+    </h3>
+
+    <ul>
+      <li>
+        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero subheading. This property accepts <sky-code>string</sky-code> values. (Default: '#fff')
+      </li>
+    </ul>
   </stache-page-summary>
 
 
@@ -96,10 +116,12 @@
     <sky-hero
       overlayOpacity="0.4"
       backgroundImageUrl="~/assets/hero-sample-1.jpg">
-      <sky-hero-heading>
+      <sky-hero-heading
+        heroTextColor="#efefef">
         Demo Hero
       </sky-hero-heading>
-      <sky-hero-subheading>
+      <sky-hero-subheading
+        heroTextColor="#efefef">
         Hero demo subheading information.
       </sky-hero-subheading>
     </sky-hero>
@@ -117,10 +139,12 @@
         <sky-hero
           overlayOpacity="0.4"
           backgroundImageUrl="~/assets&#x200B;/image-name.jpg">
-          <sky-hero-heading>
+          <sky-hero-heading
+            heroTextColor="#efefef">
             Demo Hero
           </sky-hero-heading>
-          <sky-hero-subheading>
+          <sky-hero-subheading
+            heroTextColor="#efefef">
             Hero demo subheading information.
           </sky-hero-subheading>
         </sky-hero>
