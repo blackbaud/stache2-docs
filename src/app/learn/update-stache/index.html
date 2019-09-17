@@ -5,6 +5,40 @@
   layout="sidebar"
   showTableOfContents="true">
 
+
+
+<stache-page-anchor>
+  Update to latest version
+</stache-page-anchor>
+
+<p >
+  When you want to add the newest features to your Stache SPA<span *skyRestrictedView> (after you  migrate to version 3.0.0)</span>, use these instructions for how to update your SPA to the latest versions.
+</p>
+
+  <h3>
+    Install SKY UX Builder migration plugin
+  </h3>
+
+  <sky-code-block>
+    npm i -g @skyux-sdk/builder-plugin-migrate
+  </sky-code-block>
+
+  <h3>
+    Run the upgrade command
+  </h3>
+
+  <sky-code-block>
+    skyux upgrade
+  </sky-code-block>
+
+  <h3>
+    Update files locally with latest versions
+  </h3>
+
+  <sky-code-block>
+    skyux install
+  </sky-code-block>
+
   <div *skyRestrictedView>
     <stache-page-anchor>
       Stache and SKY UX 3 migration
@@ -55,7 +89,11 @@
     <p>
       In the update from Stache version 2.18.0 to 3.0.0, many components were deprecated and replaced by SKY equivalents. In Stache version 3.0.0 and higher, the following components were replaced for you. Review these items so you can start using the new component going forward!
     </p>
-
+<sky-image
+  caption="Let's hit the open road together!"
+  imageAlt="This is an example hero."
+  imageSource="~/assets/hero-sample-1.jpg">
+</sky-image>
   <ul>
     <li>
       <sky-code>stache-code</sky-code> is now <sky-code>sky-code</sky-code>
@@ -120,30 +158,5 @@
     If you run into issues, you can review the <a stacheRouterLink="https://developer.blackbaud.com/skyux-migration-guide/">SKY UX Migration guide</a> or message us in the <a href="https://blackbaud.slack.com/messages/C1R3XB8GZ" title="Blackbaud staff only"> #stache-general</a> Slack channel.
   </p>
 </div>
-
-<stache-page-anchor>
-  Update to latest version
-</stache-page-anchor>
-
-<p >
-  When you want to add the newest features to your Stache SPA<span *skyRestrictedView> (after you  migrate to version 3.0.0)</span>, use these instructions for how to update your SPA to the latest versions.
-</p>
-
-<h3>
-  Install SKY UX Builder migration plugin
-</h3>
-
-  <sky-code-block>
-    npm i -g @skyux-sdk/builder-plugin-migrate
-  </sky-code-block>
-
-  <h3>
-    Run the upgrade command
-  </h3>
-
-  <sky-code-block>
-    skyux upgrade
-  </sky-code-block>
-
 
 </stache>
