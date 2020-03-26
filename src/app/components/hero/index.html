@@ -3,18 +3,17 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    <sky-alert alertType="warning">
-      The <sky-code>stache-hero</sky-code> component was contributed to SKY UX as a standalone module and is <strong>deprecated</strong> in Stache version 2.18.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
-    </sky-alert>
-
-    <p>
-      The hero component adds a hero with a background image, title, and subheading information to your {{ stache.jsonData.global.productNameShort }} page.
-    </p>
-    <p><b class="sky-text-info">Note:</b> Use this component <b>outside</b> of the <sky-code>stache</sky-code> tag.
-    </p>
     <p>
       <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
+    <p>
+      The SKY UX hero component adds a hero with a background image, title, and subheading information to your {{ stache.jsonData.global.productNameShort }} page. Typically, heros are added to your home page.
+    </p>
+    <sky-alert alertType="info">
+      Use this component <b>outside</b> of the <sky-code>stache</sky-code> tag.
+    </sky-alert>
+  </stache-page-summary>
+
 
 
     <h3>
@@ -54,7 +53,7 @@
 
     <ul>
       <li>
-        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero heading. This property accepts <sky-code>string</sky-code> values. (Default: '#fff')
+        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero heading. This property accepts <sky-code>string</sky-code> values. (Default: <sky-code>#fff</sky-code>)
       </li>
     </ul>
 
@@ -64,10 +63,10 @@
 
     <ul>
       <li>
-        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero subheading. This property accepts <sky-code>string</sky-code> values. (Default: '#fff')
+        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero subheading. This property accepts <sky-code>string</sky-code> values. (Default: <sky-code>#fff</sky-code>)
       </li>
     </ul>
-  </stache-page-summary>
+
 
 
     <stache-page-anchor>
