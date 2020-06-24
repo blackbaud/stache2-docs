@@ -125,7 +125,7 @@
   </stache-page-anchor>
 
   <p>
-    In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <sky-code>app.scss</sky-code> and place it in the <sky-code>src/app</sky-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
+    In {{ stache.jsonData.global.productNameLong }}, you can add custom CSS (or SCSS) through SCSS files.  We recommend you create a file named <sky-code>app-styles.scss</sky-code> and place it in the <sky-code>src/app</sky-code> folder. For those who don't know SCSS, you can use CSS inside an SCSS file. For example:
   </p>
   <sky-code-block languageType="scss">
   &#47;&#47;CSS
@@ -135,9 +135,16 @@ img &#123;
 &#125;
   </sky-code-block>
   <p>
-    After the <sky-code>app.scss</sky-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <sky-code>src/app</sky-code> folder, open the <sky-code>app-extras.module.ts</sky-code> file and insert this line of code at the beginning of the file.
+    After the <sky-code>app.scss</sky-code> file is in place, you need to tell {{ stache.jsonData.global.productNameLong }} where to find your custom CSS. From the <sky-code>src/app</sky-code> folder, open the <sky-code>skyuxconfig.json</sky-code> file. Under the <sky-code>app</sky-code> section, add the <sky-code>styles</sky-code> property to reference your new SCSS file.
   </p>
-  <sky-code-block languageType="typescript">require('style-loader!./app.scss');</sky-code-block>
+  <sky-code-block languageType="json">
+    "app": {
+      "title": "My Stache Site",
+      "styles": [
+        "src/app/app-styles.scss"
+      ]
+    }
+  </sky-code-block>
 
   <stache-page-anchor>
     Command line
