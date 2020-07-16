@@ -9,7 +9,9 @@
   ],
   "app": {
     "title": "Blackbaud Stache Documentation",
-    "styles": []
+    "styles": [
+      "src/app/app.scss"
+    ]
   },
   "appSettings": {
     "stache": {
