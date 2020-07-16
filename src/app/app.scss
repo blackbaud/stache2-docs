@@ -55,7 +55,7 @@ $app-font-size-large: 18px;
 }
 
 #hero-over-ride {
-  /deep/
+  ::ng-deep
   .stache-hero {
     @media (min-width: 992px) {
       background-position-y: -150px;
