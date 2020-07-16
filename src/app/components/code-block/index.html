@@ -6,18 +6,15 @@
 
   <stache-page-summary>
     <p>
-      <a href="https://github.com/blackbaud/skyux-lib-code-block"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+      <a href="https://developer.blackbaud.com/skyux/components/code-block"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
-    <sky-alert alertType="warning">
-      The <sky-code>stache-code-block</sky-code> component was <a href="https://developer.blackbaud.com/skyux/components/code-block">contributed to SKY UX as a standalone module</a> and is <strong>deprecated</strong> in Stache version 2.15.0 and higher. To automatically update your site to use the new component, update Stache to version 3.0.0 or higher. Learn how with the <a stacheRouterLink="/learn/update-stache">Update Stache</a> documentation.
-    </sky-alert>
     <p>
-      The code block component enables you to format a block of text as a code snippet with syntax highlighting. To create a code snippet, wrap <sky-code>sky-code-block</sky-code> tags around the code block. The code block also has a header that displays a copy button and, if defined, the language type. To format shorter code snippets within larger blocks of text, we recommend you use the <a stacheRouterLink="/components/code">code component</a> instead.
+      The <a href="https://developer.blackbaud.com/skyux/components/code-block">SKY UX code block component</a> enables you to format a block of text as a code snippet with syntax highlighting. To create a code snippet, wrap <sky-code>sky-code-block</sky-code> tags around the code block. The code block also has a header that displays a copy button and, if defined, the language type. To format shorter code snippets within larger blocks of text, we recommend you use the <a stacheRouterLink="/components/code">code component</a> instead.
     </p>
 
-    <p>
-      If a code block has text within <sky-code><</sky-code> and <sky-code>></sky-code> characters, then the component automatically appends a closing tag unless the code snippet is valid HTML. To prevent this, you must use "&#38;lt;" to escape <sky-code><</sky-code> and "&#38;gt;" to escape <sky-code>></sky-code>. For example, you must escape the <sky-code><</sky-code> and <sky-code>></sky-code> characters in the code snippet <sky-code escapeCharacters="true">public Task&lt;Generic&gt; MethodName()</sky-code> or else the component automatically appends <sky-code>&lt;/Generic&gt;</sky-code> to the end: <sky-code escapeCharacters="true">public Task<Generic> MethodName()</sky-code>.
-    </p>
+    <sky-alert alertType="info">
+      If a code block has text within <sky-code><</sky-code> and <sky-code>></sky-code> characters, then the component automatically appends a closing tag unless the code snippet is valid HTML. To prevent this, you must use <sky-code>&#38;lt;</sky-code> to escape <sky-code><</sky-code> and <sky-code>&#38;gt;</sky-code> to escape <sky-code>></sky-code>.
+    </sky-alert>
   </stache-page-summary>
 
   <h3>
@@ -26,28 +23,18 @@
 
   <ul>
     <li>
-      <sky-code>code</sky-code> — <i>(Optional)</i> Passes a code sample into the component. This property binds data, so you can use brackets to evaluate the template expression: <sky-code>[code]</sky-code>. Without the brackets, Angular treats the value as a string and initializes the target property with the string value instead of evaluating the data value.
+      <sky-code>hideCopyToClipboard</sky-code> — <i>(Optional)</i> Indicates whether to hide the copy to clipboard button in the code block header. The default is <sky-code>false</sky-code>.
     </li>
     <li>
-      <sky-code>hideCopyToClipboard</sky-code> — <i>(Optional)</i> Indicates whether to hide the copy-to-clipboard button in the code-block header. The default is false.
+      <sky-code>languageType</sky-code> — <i>(Optional)</i> Indicates the language of the code sample. The language type is used to highlight the syntax in your code sample and appears in the header. The default language is <sky-code>markup</sky-code>. For a list of languages you can use, see the <a stacheRouterLink="https://developer.blackbaud.com/skyux/components/code-block" fragment="supported-languages">Supported languages</a> list.
     </li>
     <li>
-      <sky-code>languageType</sky-code> — <i>(Optional)</i> Indicates the language of the code sample. The language type is used to highlight the syntax in your code sample and appears in the header. The default language is <sky-code>markup</sky-code>.
+      <sky-code>hideHeader</sky-code> — <i>(Optional)</i> Indicates whether to hide the header portion of the code block. If the <sky-code>languageType</sky-code> is not declared and <sky-code>hideCopyToClipboard</sky-code> is set to <sky-code>true</sky-code>, the header is hidden. The default is <sky-code>false</sky-code>.
     </li>
     <li>
-      <sky-code>hideHeader</sky-code> — <i>(Optional)</i> Indicates whether to hide the header portion of the code block. If the languageType is not declared and hideCopyToClipboard is set to true, the header is hidden. The default is false.
+      <sky-code>fileName</sky-code> – <i>(Optional)</i> Adds a filename to the code block header.
     </li>
   </ul>
-
-  <h3>
-    Supported languages
-  </h3>
-  <p>
-    Using the list below, see if your code snippet language is supported. The languages supported appear in pairs. The first part lists the language and the second part displays the text you use for the <sky-code>languageType</sky-code> property. For example, if your code block is a JavaScript code snippet, use <sky-code>languageType="javascript"</sky-code>.
-  </p>
-
-  <language-type-list>
-  </language-type-list>
 
 
 <stache-page-anchor>
