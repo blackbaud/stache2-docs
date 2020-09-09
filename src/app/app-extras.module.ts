@@ -1,5 +1,3 @@
-require('style-loader!./app.scss');
-
 import { NgModule } from '@angular/core';
 
 import { StacheModule } from '@blackbaud/skyux-lib-stache';

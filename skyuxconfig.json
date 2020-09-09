@@ -10,7 +10,7 @@
   "app": {
     "title": "Blackbaud Stache Documentation",
     "styles": [
-      "@skyux/theme/css/sky.css"
+      "src/app/app.scss"
     ]
   },
   "appSettings": {
@@ -30,7 +30,6 @@
   },
   "auth": false,
   "omnibar": {
-    "experimental": true,
     "nav": {
       "services": [
         {
@@ -102,5 +101,10 @@
   },
   "redirects": {
     "content": "components"
+  },
+  "host": {
+    "frameOptions": {
+      "none": true
+    }
   }
 }
