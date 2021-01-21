@@ -25,17 +25,17 @@
   <ul>
     <li>
       <p>
-        <sky-code>sky-restricted-view</sky-code> — The <sky-code>sky-restricted-view</sky-code> component wraps restricted content. Within the elements that it it wraps, the component hides all content from users who are not logged in with BBID.
+        <sky-code>sky-restricted-view</sky-code> — The <sky-code>sky-restricted-view</sky-code> component wraps restricted content. Within the elements that it it wraps, the component hides all content from users unless they are Blackbaud users who logged in with Blackbaud ID.
       </p>
     </li>
     <li>
       <p>
-        <sky-code>*skyRestrictedView</sky-code> — The <sky-code>*skyRestrictedView</sky-code> directive is placed as an attribute on a restricted element. It hides any content within that element from users who are not logged in with BBID.
+        <sky-code>*skyRestrictedView</sky-code> — The <sky-code>*skyRestrictedView</sky-code> directive is placed as an attribute on a restricted element. It hides any content within that element unless users are Blackbaud users who logged in with Blackbaud ID.
       </p>
     </li>
     <li>
       <p>
-        <sky-code>sky-restricted-content-alert</sky-code> — The <sky-code>sky-restricted-content-alert</sky-code> component displays an <a routerLink="/components/alerts">alert</a> that instructs users to log in to see information that is available only to Blackbaud employees. The alert appears in place of hidden content only when users who are not logged in with BBID previously viewed the content while logged in with BBID.
+        <sky-code>sky-restricted-content-alert</sky-code> — The <sky-code>sky-restricted-content-alert</sky-code> component displays an <a routerLink="/components/alerts">alert</a> that instructs Blackbaud users to log in to see information that is available only to Blackbaud employees. The alert only appears when Blackbaud users who previously viewed the content return but are no longer logged in with Blackbaud ID.
       </p>
     </li>
   </ul>
