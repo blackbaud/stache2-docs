@@ -13,6 +13,7 @@
     <sky-alert alertType="warning" *skyRestrictedView>
      The Restricted View Library is designed to effectively target content for Blackbaud and non-Blackbaud audiences. It is not a secure way to hide content and should not be used to hide sensitive information.
     </sky-alert>
+    <sky-restricted-content-alert></sky-restricted-content-alert>
   </stache-page-summary>
 
 <sky-restricted-view>
@@ -30,6 +31,11 @@
     <li>
       <p>
         <sky-code>*skyRestrictedView</sky-code> — The <sky-code>*skyRestrictedView</sky-code> directive is placed as an attribute on a restricted element. It hides any content within that element from users who are not logged in with BBID.
+      </p>
+    </li>
+    <li>
+      <p>
+        <sky-code>sky-restricted-content-alert</sky-code> — The <sky-code>sky-restricted-content-alert</sky-code> component displays an <a routerLink="/components/alerts">alert</a> that instructs users to log in to see information that is available only to Blackbaud employees. The alert appears in place of hidden content only when users who are not logged in with BBID previously viewed the content while logged in with BBID.
       </p>
     </li>
   </ul>
@@ -92,6 +98,7 @@
           This is the third paragraph.
         </p>
       </sky-restricted-view>
+      <sky-restricted-content-alert></sky-restricted-content-alert>
       <p>
         This is the fourth paragraph. In the code below, you can see how the <sky-code>sky-restricted-view</sky-code> component wraps the <sky-code>p</sky-code> tags for the second and third paragraphs.
       </p>
@@ -107,6 +114,7 @@
       <p *skyRestrictedView>
         This is the third paragraph.
       </p>
+      <sky-restricted-content-alert></sky-restricted-content-alert>
       <p>
         This is the fourth paragraph. In the code below, you can see how the <sky-code>*skyRestrictedView</sky-code> attribute is placed on the <sky-code>p</sky-code> tags for the second and third paragraphs.
       </p>
