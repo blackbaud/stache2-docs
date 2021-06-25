@@ -28,6 +28,7 @@ import {
 } from '@skyux/indicators';
 
 import {
+  SkyActionButtonModule,
   SkyDefinitionListModule,
   SkyFluidGridModule,
   SkyTextExpandModule,
@@ -49,6 +50,7 @@ import {
 
 @NgModule({
   exports: [
+    SkyActionButtonModule,
     SkyAlertModule,
     SkyCardModule,
     SkyClipboardModule,

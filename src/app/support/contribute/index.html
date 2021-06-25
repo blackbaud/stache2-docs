@@ -1,5 +1,5 @@
 <stache
-  pageTitle="Feedback and Contributions"
+  pageTitle="Feedback and contributions"
   navTitle="Feedback"
   layout="sidebar">
 
@@ -7,27 +7,45 @@
     To enhance the creation of quality technical documentation, we highly encourage feedback and contributions from all {{ stache.jsonData.global.productNameShort }} users!
   </stache-page-summary>
 
-  <stache-action-buttons
-    showSearch="false"
-    [routes]="[
-      {
-        name: 'Submit a Request or Issue',
-        path: 'https://github.com/blackbaud/skyux-lib-stache/issues',
-        icon: 'github',
-        summary: 'Request new features or file a bug in our GitHub repo.'
-      },
-      {
-        name: 'Component Library',
-        path: '/support/contribute/developer',
-        icon: 'wrench',
-        summary: 'We welcome contributions to the component library.'
-      },
-      {
-        name: 'Documentation',
-        path: 'https://github.com/blackbaud/stache2-docs',
-        icon: 'book',
-        summary: 'We welcome contributions to our documentation. Follow Git best practices and submit a PR for edits.'
-      }
-    ]">
-  </stache-action-buttons>
+  <sky-action-button-container alignItems="left">
+    <sky-action-button
+      [permalink]="{ url: 'https://github.com/blackbaud/skyux-lib-stache/issues' }">
+      <sky-action-button-icon
+        iconType="github">
+      </sky-action-button-icon>
+      <sky-action-button-header>
+        Submit a request or issue
+      </sky-action-button-header>
+      <sky-action-button-details>
+        Request new features or file an issue in our GitHub repo.
+      </sky-action-button-details>
+    </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ route: { commands: ['/support/contribute/developer'] } }">
+        <sky-action-button-icon
+          iconType="wrench">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Component library
+        </sky-action-button-header>
+        <sky-action-button-details>
+          We welcome contributions to the component library.
+        </sky-action-button-details>
+      </sky-action-button>
+
+    <sky-action-button
+      [permalink]="{ url: 'https://github.com/blackbaud/stache2-docs' }">
+      <sky-action-button-icon
+        iconType="book">
+      </sky-action-button-icon>
+      <sky-action-button-header>
+        Documentation
+      </sky-action-button-header>
+      <sky-action-button-details>
+        We welcome contributions to our documentation. Follow Git best practices and submit a PR for edits.
+      </sky-action-button-details>
+    </sky-action-button>
+  </sky-action-button-container>
+
 </stache>

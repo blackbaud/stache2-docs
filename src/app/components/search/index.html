@@ -225,7 +225,7 @@
   </stache-page-anchor>
 
   <p>
-    When search is enabled, the e2e build phase of the VSTS pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <sky-code>stache-hide-from-search</sky-code> element. To exclude an entire page, wrap all of the markup, including the <sky-code>stache</sky-code> tag, in a <sky-code>stache-hide-from-search</sky-code> element.
+    When search is enabled, the e2e build phase of the Azure DevOps pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <sky-code>stache-hide-from-search</sky-code> component. To exclude an entire page, wrap all of the markup, including the <sky-code>stache</sky-code> tag, in a <sky-code>stache-hide-from-search</sky-code> component.
   </p>
 
   <sky-code-block
@@ -274,5 +274,40 @@
     }
   </sky-code-block>
 </div>
+
+<stache-page-anchor>
+  Adding search to non-Stache SKY UX SPAs
+</stache-page-anchor>
+<p>
+  In limited cases, we've seen tooling and documentation combined in a non-Stache SKY UX SPA. In these instances, we've heard that people would like these pages to show up in the omnibar Stache search.
+</p>
+<p>
+  The search service does require Stache. So here are some recommended steps for adding a SPA's pages to the search.
+</p>
+<ol>
+  <li>
+    <a stacheRouterLink="/learn/get-started/add-stache">Add Stache to your SKY UX SPA</a>.
+  </li>
+  <li>
+    Add the <a stacheRouterLink="/components/wrapper"><sky-code>&lt;stache></sky-code> wrapper</a> to your page. We recommend you set the <sky-code>layout="container"</sky-code> and <sky-code>showBreadcrumbs="false"</sky-code>.
+  </li>
+  <li>
+    If you have tokens or sensitive information on the page, wrap that section in the <sky-code>&lt;stache-hide-from-search></sky-code> component.
+  </li>
+  <li>
+    If you have test specs, you may need to adjust them for the search.
+  </li>
+  <li>
+    Run <sky-code>skyux serve</sky-code> to ensure that the pages still appear correctly.
+  </li>
+  <li>
+    If everything is working and looking good, create a pull request to merge your branch changes into the master branch.
+  </li>
+</ol>
+
+<p>
+  After you complete these steps and merge this branch to master, the new pages will be scraped by the search and available to query. Unfortunately, the scraping doesn't occur until release so you won't be able to test this locally first.
+</p>
+<p>One additional item to consider... if you don't want to have Stache on a tooling page, reconsider how you set up your site. Can you add Stache to a different documentation only page? Or, can you check how discoverable this page is? There may be other ways to get the content you need to show up in search if a particular page isn't well suited towards adding Stache.</p>
 </stache-hide-from-search>
 </stache>

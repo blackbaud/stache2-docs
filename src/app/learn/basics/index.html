@@ -49,9 +49,10 @@
   <stache-page-anchor>
     Application navigation
   </stache-page-anchor>
+  <sky-restricted-content-alert></sky-restricted-content-alert>
   <sky-restricted-view>
     <sky-alert alertType="info">
-      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <sky-code>app-nav</sky-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud staff <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
+      For SPAs created by <strong>Blackbaud staff</strong>, we recommend the omnibar instead of the <sky-code>app-nav</sky-code> component. To learn how to set up top-level navigation with the omnibar, see step 4 of the Blackbaud RDO <a href="https://docs.blackbaud.com/stache-internal/staff/new-bb-stache">Create a New Stache SPA</a> tutorial.
     </sky-alert>
   </sky-restricted-view>
   <p>
@@ -159,14 +160,14 @@ img &#123;
   <p>
     On a PC, type <strong>cmd</strong> in the search box to access the command line. After you install <a stacheRouterLink="." fragment="git">Git</a>, you can right-click in any folder and select <strong>Git Bash Here</strong> to access a command line. However, do not use Git Bash when you run <sky-code escapeCharacters="true">skyux new</sky-code> because it causes a conflict that prevents the install from completing.
   </p>
-
+<sky-restricted-content-alert></sky-restricted-content-alert>
 <sky-restricted-view>
   <stache-page-anchor *skyRestrictedView>
     Azure DevOps
   </stache-page-anchor>
 
   <p>
-    Unless you are working locally, all new Blackbaud RDO staff SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are a few key differences to know about.
+    Unless you are working locally, all new Blackbaud RDO SPAs are set up as <a href="https://en.wikipedia.org/wiki/Git">Git <i class="fa fa-external-link" aria-hidden="true"></i></a> repos in <a hef="https://blackbaud.visualstudio.com/Products/_git/">Azure DevOps <i class="fa fa-external-link" aria-hidden="true"></i></a>. Azure DevOps has pull requests just like GitHub. However, there are a few key differences to know about.
   </p>
   <ol>
     <li>
@@ -211,12 +212,63 @@ img &#123;
 
   <sky-restricted-view>
     <h3>New to Git?</h3>
-  <p>
-    Are you new to Git? We created some documentation about Git, including Git workflow tutorials, to help you learn how to use it with Stache.
-  </p>
-  <stache-action-buttons [routes]="stache.jsonData.bbgitdocs" showSearch="false">
-  </stache-action-buttons>
+    <p>
+      Are you new to Git? We created some documentation about Git, including Git workflow tutorials, to help you learn how to use it with Stache.
+    </p>
 
+    <sky-action-button-container alignItems="left">
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/git-workflow/vscode-terminal' }">
+        <sky-action-button-icon
+          iconType="desktop">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Edit locally
+        </sky-action-button-header>
+        <sky-action-button-details>
+        Learn the Git workflow process when editing a Stache site locally.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/git-workflow/vs-online' }">
+        <sky-action-button-icon
+          iconType="windows">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Edit online
+        </sky-action-button-header>
+        <sky-action-button-details>
+        Learn the Git workflow process when editing a Stache site on Azure DevOps.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/git-workflow/branch-merging' }">
+        <sky-action-button-icon
+          iconType="code-branch">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Basic Git merging
+        </sky-action-button-header>
+        <sky-action-button-details>
+        Learn how to merge the latest changes from another branch into your branch.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/git-workflow/git-commands' }">
+        <sky-action-button-icon
+          iconType="git-square">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Git commands
+        </sky-action-button-header>
+        <sky-action-button-details>
+          New to Git? Use this page to learn some helpful Git commands.
+        </sky-action-button-details>
+      </sky-action-button>
+    </sky-action-button-container>
   </sky-restricted-view>
 
   <sky-restricted-view>

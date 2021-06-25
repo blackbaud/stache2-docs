@@ -1,3 +1,14 @@
-  <stache-action-buttons
-    [routes]="routes">
-  </stache-action-buttons>
+  <sky-action-button-container alignItems="left">
+    <sky-action-button *ngFor="let component of components"
+      routerLink="{{component.path}}">
+      <sky-action-button-icon
+        iconType="{{ component.icon }}">
+      </sky-action-button-icon>
+      <sky-action-button-header>
+        {{component.name}}
+      </sky-action-button-header>
+      <sky-action-button-details>
+        {{component.summary}}
+      </sky-action-button-details>
+    </sky-action-button>
+  </sky-action-button-container>

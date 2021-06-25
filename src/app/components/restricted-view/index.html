@@ -1,19 +1,17 @@
 <stache
-  pageTitle="Restricted View Library"
+  pageTitle="Restricted view library"
   navTitle="Restricted view"
   showTableOfContents="false">
 
   <stache-page-summary>
+    <sky-restricted-content-alert></sky-restricted-content-alert>
     <p>
-      The Restricted View Library is for internal Blackbaud use only. It facilitates a more targeted user experience in Blackbaud documentation by only displaying content that applies to users.
-    </p>
-    <p *skyRestrictedView>
-      The Restricted View Library provides a component and directive that configure content to make it visible to internal Blackbaud users only and to hide it from all other users.
+      The restricted view library is for internal Blackbaud use only. It facilitates a more targeted user experience in documentation by only displaying content that applies to Blackbaud users.
     </p>
     <sky-alert alertType="warning" *skyRestrictedView>
-     The Restricted View Library is designed to effectively target content for Blackbaud and non-Blackbaud audiences. It is not a secure way to hide content and should not be used to hide sensitive information.
+     The restricted view library is designed to effectively target content for Blackbaud and non-Blackbaud audiences. It is not a secure way to hide content and should not be used to hide sensitive information.
     </sky-alert>
-    <sky-restricted-content-alert></sky-restricted-content-alert>
+
   </stache-page-summary>
 
 <sky-restricted-view>
