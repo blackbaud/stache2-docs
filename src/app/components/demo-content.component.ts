@@ -199,6 +199,12 @@ export class StacheComponent implements OnInit {
       path: '/components/restricted-view',
       icon: 'key',
       summary: 'Hides content from non-Blackbaud users. For Blackbaud use only.'
+    },
+    {
+      name: 'Manual routing',
+      path: '/components/manual-routing',
+      icon: 'hand-sparkles',
+      summary: 'Provide custom breadcrumbs and sidebar navigation with manual routing.'
     }
   ];
 
