@@ -20,24 +20,6 @@
       Complete the SKY UX <a href="https://developer.blackbaud.com/skyux/learn/get-started/prereqs/initial-setup">Initial setup instructions <i class="fa fa-external-link" aria-hidden="true"></i></a>.
     </p>
 
-  <sky-restricted-view>
-    <sky-alert alertType="info">
-      Blackbaud RDO staff must also ensure they have <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">access to Visual Studio Team Services (Azure DevOps) <i class="fa fa-external-link" aria-hidden="true"></i></a> and link their Azure DevOps credentials from the <a href="https://host.nxt.blackbaud.com/engsys-hub/scs/list">Self-contained systems <i class="fa fa-external-link" aria-hidden="true"></i></a> page.
-    </sky-alert>
-  </sky-restricted-view>
-
-  <sky-restricted-view>
-    <stache-page-anchor>
-      Set up a Stache SPA for Blackbaud RDO staff
-    </stache-page-anchor>
-    <p>
-      We provided specific documentation for Blackbaud RDO staff, because you have additional features when setting up a new Stache SPA. We provide you a template and set you up with an Azure DevOps Git repo with a build and release pipeline! If you are a Blackbaud staff member but don't have access to the RDO Azure DevOps instance, then follow the <a stacheRouterLink="." fragment="set-up-a-stache-spa">Set up a Stache SPA</a> steps below.
-    </p>
-
-      <stache-action-buttons [routes]="stache.jsonData.bbgetstarted" showSearch="false">
-  </stache-action-buttons>
-  </sky-restricted-view>
-
   <stache-page-anchor>
     Set up a Stache SPA
   </stache-page-anchor>
@@ -45,17 +27,114 @@
   <p>
     Depending on your situation, you can set up a Stache site in one of these ways.
   </p>
+   <sky-restricted-content-alert></sky-restricted-content-alert>
+  <sky-restricted-view>
+    <h3>Blackbaud RDO staff</h3>
+    <p>
+      We provide specific documentation for Blackbaud RDO staff, because you have additional features when setting up a new Stache SPA. We provide a template and set you up with an Azure DevOps Git repo with a build and release pipeline! If you are a Blackbaud staff member but don't have access to the RDO Azure DevOps instance, then follow the <a stacheRouterLink="." fragment="set-up-a-stache-spa">Set up a Stache SPA</a> steps below.
+    </p>
+  </sky-restricted-view>
 
-  <stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
-  </stache-action-buttons>
+    <sky-action-button-container alignItems="left">
+      <sky-restricted-view>
+        <sky-action-button
+          [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/new-bb-stache' }">
+          <sky-action-button-icon
+            iconType="bolt">
+          </sky-action-button-icon>
+          <sky-action-button-header>
+            Create a new RDO Stache SPA
+          </sky-action-button-header>
+          <sky-action-button-details>
+            Blackbaud RDO staff, follow this Blackbaud version for a new Stache SPA.
+          </sky-action-button-details>
+        </sky-action-button>
+      </sky-restricted-view>
+      <sky-action-button
+        [permalink]="{ route: { commands: ['/learn/get-started/new-stache'] } }">
+        <sky-action-button-icon
+          iconType="bolt">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Create a new Stache SPA
+        </sky-action-button-header>
+        <sky-action-button-details>
+          Do you need to set up a brand new Stache SPA?
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ route: { commands: ['/learn/get-started/clone-install'] } }">
+        <sky-action-button-icon
+          iconType="clone">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Clone and set up a Stache SPA locally
+        </sky-action-button-header>
+        <sky-action-button-details>
+          Stache SPA already created? Learn how to clone and install locally.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ route: { commands: ['/learn/get-started/add-stache'] } }">
+        <sky-action-button-icon
+          iconType="plus-circle">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Add Stache to existing SKY UX SPA
+        </sky-action-button-header>
+        <sky-action-button-details>
+          Do you want to add Stache to an existing SKY UX SPA?
+        </sky-action-button-details>
+      </sky-action-button>
+    </sky-action-button-container>
 
 <sky-restricted-view>
  <stache-page-anchor>
     Learn about Git workflow and Azure DevOps
  </stache-page-anchor>
 
-  <stache-action-buttons [routes]="stache.jsonData.gitvsts" showSearch="false">
-  </stache-action-buttons>
+    <sky-action-button-container alignItems="left">
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/git-workflow' }">
+        <sky-action-button-icon
+          iconType="git">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Learn Git workflow
+        </sky-action-button-header>
+        <sky-action-button-details>
+          New to Git? Learn how to use Git process for updating your repo.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/vsts-editor/' }">
+        <sky-action-button-icon
+          iconType="pencil-square-o">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Edit Stache online
+        </sky-action-button-header>
+        <sky-action-button-details>
+          Do you have a small edit? Learn how to use Azure DevOps to make your change without leaving your web browser.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ url: 'https://docs.blackbaud.com/stache-internal/staff/vsts-repo-setup' }">
+        <sky-action-button-icon
+          iconType="shield">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Branch policies & security
+        </sky-action-button-header>
+        <sky-action-button-details>
+          Azure DevOps Git repos are set up with standard policies and security that can be edited when necessary.
+        </sky-action-button-details>
+      </sky-action-button>
+    </sky-action-button-container>
 
 </sky-restricted-view>
 
@@ -79,7 +158,32 @@
     Ready to extend your learning and see what Stache can do?
   </p>
 
-  <stache-action-buttons [routes]="stache.jsonData.startnextsteps" showSearch="false">
-  </stache-action-buttons>
+    <sky-action-button-container alignItems="left">
+      <sky-action-button
+        [permalink]="{ route: { commands: ['/learn/basics'] } }">
+        <sky-action-button-icon
+          iconType="cutlery">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Basics
+        </sky-action-button-header>
+        <sky-action-button-details>
+          Learn how Stache is organized and how to get started creating content for your site.
+        </sky-action-button-details>
+      </sky-action-button>
+
+      <sky-action-button
+        [permalink]="{ route: { commands: ['/components'] } }">
+        <sky-action-button-icon
+          iconType="birthday-cake">
+        </sky-action-button-icon>
+        <sky-action-button-header>
+          Components
+        </sky-action-button-header>
+        <sky-action-button-details>
+          After you learn the basics, review the different elements and components that can style your technical documentation.
+        </sky-action-button-details>
+      </sky-action-button>
+    </sky-action-button-container>
 
 </stache>

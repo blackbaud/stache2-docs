@@ -3,29 +3,188 @@
   showTableOfContents="true">
 
   <stache-page-summary>
-    In Angular, if you require custom breadcrumbs or navigation, you can override the Stache breadcrumbs and SKY UX navigation and provide custom, manual routing for a page or section of your SPA.
+    In Angular, if you require custom breadcrumbs or sidebar navigation, you can override the Stache breadcrumbs and sidebar navigation and provide custom, manual routing for a page or section of your SPA.
   </stache-page-summary>
-
-
-
-  <stache-page-anchor>
-    Demo
-  </stache-page-anchor>
-
   <h3>
     Breadcrumbs
   </h3>
-
+  <p>
+    Custom breadcrumbs can be defined directly on the html page or with a component. If you use a component, you'll want to define which breadcrumb is the active one.
+  </p>
+  <ul>
+    <li><sky-code>isActive: true</sky-code></li>
+    <li><sky-code>isCurrent: true</sky-code></li>
+  </ul>
   <h3>
     Sidebar navigation
   </h3>
+  <p>
+    Custom sidebar navigation can be defined within a component.
+  </p>
 
-    <stache-page-anchor>
+  <stache-page-anchor>
     Code
   </stache-page-anchor>
 
   <div class="stache-demo-code">
     <sky-tabset>
-      <sky-tab tabHeading="sample">
+      <sky-tab tabHeading="breadcrumbs on page">
         <sky-code-block languageType="markup">
+          &lt;stache
+            pageTitle="Add a New Cosmos Database"
+            [breadcrumbsRoutes]="
+            [{ path: '/help', name: 'Hub Help' },
+            { path: '/help/scs', name: 'SCS'},
+            { path: '/help/scs/details', name: 'SCS Details' },
+            { path: '/help/scs/details/add-cosmos', name: 'Add CosmosDb' }
+            ]">
+          &lt;/stache>
+        </sky-code-block>
+        <p>
+          Line breaks are for display purposes only.
+        </p>
+      </sky-tab>
+      <sky-tab tabHeading="breadcrumbs component">
+      <h3>
+        demo.component.html file
+      </h3>
+        <sky-code-block languageType="markup">
+          &lt;stache
+            pageTitle="Demo page"
+            [breadcrumbsRoutes]="breadcrumbs">
+          &lt;/stache>
+        </sky-code-block>
+      <h3>
+        demo.component.ts file
+      </h3>
+        <sky-code-block languageType="typescript">
+import {
+  Component
+} from '@angular/core';
+
+import {
+  StacheNavLink
+} from '@blackbaud/skyux-lib-stache';
+
+@Component({
+  selector: 'demo-sample',
+  templateUrl: './demo.component.html'
+})
+export class DemoComponent {
+
+  public breadcrumbs: StacheNavLink[];
+
+  constructor () {
+    this.breadcrumbs = [
+      {
+        name: 'Home',
+        path: 'https://developer.blackbaud.com/skyapi'
+      },
+      {
+        name: 'Documentation',
+        path: 'https://developer.blackbaud.com/skyapi/docs'
+      },
+      {
+        name: 'Microsoft Power Platform',
+        path: '/microsoft-power-platform'
+      },
+      {
+        name: 'Power Automate',
+        path: '/microsoft-power-platform/power-automate',
+        isActive: true,
+        isCurrent: true
+      }
+    ];
+  }
+}
+        </sky-code-block>
+      </sky-tab>
+      <sky-tab tabHeading="sidebar navigation">
+     <h3>
+        demo.component.html file
+      </h3>
+        <sky-code-block languageType="markup">
+          &lt;stache
+            pageTitle="Demo page"
+            [sidebarRoutes]="sidebarLinks">
+          &lt;/stache>
+        </sky-code-block>
+      <h3>
+        demo.component.ts file
+      </h3>
+        <sky-code-block languageType="typescript">
+import {
+  Component
+} from '@angular/core';
+
+import {
+  StacheNavLink
+} from '@blackbaud/skyux-lib-stache';
+
+@Component({
+  selector: 'demo-sample',
+  templateUrl: './demo.component.html'
+})
+export class DemoComponent {
+
+  public sidebarLinks: StacheNavLink[];
+
+  constructor () {
+    this.sidebarLinks = [
+      {
+        name: 'Documentation',
+        path: 'https://developer.blackbaud.com/skyapi/docs',
+        showInNav: false,
+        children: [
+          {
+            name: 'Getting started',
+            path: 'https://developer.blackbaud.com/skyapi/docs/getting-started'
+          },
+          {
+            name: 'Basics',
+            path: 'https://developer.blackbaud.com/skyapi/docs/basics'
+          },
+          {
+            name: 'In-depth topics',
+            path: 'https://developer.blackbaud.com/skyapi/docs/in-depth-topics'
+          },
+          {
+            name: 'Microsoft Power Platform',
+            path: '/microsoft-power-platform',
+            children: [
+              {
+                name: 'Initial setup',
+                path: '/microsoft-power-platform/initial-setup-tutorial'
+                },
+              {
+              name: 'Power Automate',
+              path: '/microsoft-power-platform/power-automate',
+              children: [
+                  {
+                    name: 'Birthday notification tutorial',
+                    path: '/microsoft-power-platform/power-automate/birthday-notification-tutorial'
+                  },
+                  {
+                    name: 'Gift notification tutorial',
+                    path: '/microsoft-power-platform/power-automate/gift-notification-tutorial'
+                  },
+                  {
+                    name: 'Volunteer sign up tutorial',
+                    path: '/microsoft-power-platform/power-automate/volunteer-signup-tutorial'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: 'Resources',
+            path: 'https://developer.blackbaud.com/skyapi/docs/resources'
+          }
+        ]
+      }
+    ];
+        </sky-code-block>
+      </sky-tab>
+    </sky-tabset>
+  </div>
 </stache>

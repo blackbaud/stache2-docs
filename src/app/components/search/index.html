@@ -225,7 +225,7 @@
   </stache-page-anchor>
 
   <p>
-    When search is enabled, the e2e build phase of the Azure DevOps pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <stache-code>stache-hide-from-search</stache-code> component. To exclude an entire page, wrap all of the markup, including the <stache-code>stache</stache-code> tag, in a <stache-code>stache-hide-from-search</stache-code> component.
+    When search is enabled, the e2e build phase of the Azure DevOps pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <sky-code>stache-hide-from-search</sky-code> component. To exclude an entire page, wrap all of the markup, including the <sky-code>stache</sky-code> tag, in a <sky-code>stache-hide-from-search</sky-code> component.
   </p>
 
   <sky-code-block
@@ -289,16 +289,16 @@
     <a stacheRouterLink="/learn/get-started/add-stache">Add Stache to your SKY UX SPA</a>.
   </li>
   <li>
-    Add the <a stacheRouterLink="/components/wrapper"><stache-code>&lt;stache></stache-code> wrapper</a> to your page. We recommend you set the <stache-code>layout="container"</stache-code> and <stache-code>showBreadcrumbs="false"</stache-code>.
+    Add the <a stacheRouterLink="/components/wrapper"><sky-code>&lt;stache></sky-code> wrapper</a> to your page. We recommend you set the <sky-code>layout="container"</sky-code> and <sky-code>showBreadcrumbs="false"</sky-code>.
   </li>
   <li>
-    If you have tokens or sensitive information on the page, wrap that section in the <stache-code>&lt;stache-hide-from-search></stache-code> component.
+    If you have tokens or sensitive information on the page, wrap that section in the <sky-code>&lt;stache-hide-from-search></sky-code> component.
   </li>
   <li>
     If you have test specs, you may need to adjust them for the search.
   </li>
   <li>
-    Run <stache-code>skyux serve</stache-code> to ensure that the pages still appear correctly.
+    Run <sky-code>skyux serve</sky-code> to ensure that the pages still appear correctly.
   </li>
   <li>
     If everything is working and looking good, add, commit, and push up your branch changes to the repo and create a pull request into the master branch.
