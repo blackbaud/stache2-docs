@@ -4,7 +4,10 @@
 
   <stache-page-summary>
     <p>
-      The video component provides a responsive embed for video.
+      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+    </p>
+    <p>
+      The SKY UX video component provides a responsive embed for video.
     </p>
   </stache-page-summary>
 
@@ -15,28 +18,28 @@
   <ul>
     <li>
       <p>
-        <stache-code>videoSource</stache-code> — The url for the video.
+        <sky-code>videoSource</sky-code> — The url for the video.
       </p>
       <h4>
         YouTube
       </h4>
       <p>
-        To find the <a href="http://www.youtube.com">YouTube <i class="fa fa-external-link" aria-hidden="true"></i></a> URL to use as a video source, grab the source URL from the embed code. From a video's page on Youtube, select <strong>Share</strong> and then the <strong>Embed</strong> tab. Copy the <stache-code>src=""</stache-code> URL to use with the video component.
+        To find the <a href="http://www.youtube.com">YouTube <i class="fa fa-external-link" aria-hidden="true"></i></a> URL to use as a video source, grab the source URL from the embed code. From a video's page on Youtube, select <strong>Share</strong> and then the <strong>Embed</strong> tab. Copy the <sky-code>src=""</sky-code> URL to use with the video component.
       </p>
-      <stache-image
-        class="image-border"
+      <sky-image
+        showBorder="true"
         imageSource="~/assets/youtube-video.png">
-      </stache-image>
+      </sky-image>
       <h4>
         Vimeo
       </h4>
       <p>
-        To find the <a href="http://www.vimeo.com">Vimeo <i class="fa fa-external-link" aria-hidden="true"></i></a> URL to use as the video source, grab the source URL from the embed code. From a video's page on Vimeo, select the share button and then copy the embed code. Vimeo does not enable you to select a portion. Paste the code into a text editor and copy the portion of the URL you need, starting with <stache-code>src=""</stache-code>.
+        To find the <a href="http://www.vimeo.com">Vimeo <i class="fa fa-external-link" aria-hidden="true"></i></a> URL to use as the video source, grab the source URL from the embed code. From a video's page on Vimeo, select the share button and then copy the embed code. Vimeo does not enable you to select a portion. Paste the code into a text editor and copy the portion of the URL you need, starting with <sky-code>src=""</sky-code>.
       </p>
-      <stache-image
-        class="image-border"
+      <sky-image
+        showBorder="true"
         imageSource="~/assets/vimeo-video.png">
-      </stache-image>
+      </sky-image>
       <h4>
         O365
       </h4>
@@ -45,22 +48,73 @@
       <p>
         When you copy the source URL from an O365 video, copy the entire source URL and not just a portion. If you use a portion, you may receive a "This video is private" or "This video isn't available" error on your page. The URL to copy should look similar to this:
       </p>
-      <stache-code-block>
-        <stache-video
+      <sky-code-block>
+        <sky-video
           videoSource="https://blackbaud.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=fedcfc02%2Dd545%2D4155%2D973a%2Dd09a1fa6e003&amp;vId=63c1f86b%2De4d2%2D4c3b%2D862b%2D0f9adafbb0c8&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true">
-        </stache-video>
-      </stache-code-block>
+        </sky-video>
+      </sky-code-block>
+       <h4>
+        Microsoft Stream
+      </h4>
+      <sky-alert alertType="info" *stacheInternal>Blackbaud staff can host videos used on Stache sites by uploading the videos to the <a href="https://web.microsoftstream.com/">Microsoft Stream tool</a>.</sky-alert>
+
+      <p>
+        When you copy the source URL from the Stream video, grab the URL from the embed code. If you use a portion, you may receive an error. The URL to copy should look similar to this:
+      </p>
+      <sky-code-block>
+        <sky-video
+          videoSource="https://web.microsoftstream.com/embed/video/8cc8b8f4-c1c6-4d45-801e-f56d8c29ca67?autoplay=false&amp;showinfo=true">
+        </sky-video>
+      </sky-code-block>
     </li>
   </ul>
+
+    <stache-page-anchor>
+      Installation
+    </stache-page-anchor>
+    <p>
+        SPAs can use this as a standalone module by setting it up as a dependency.
+      </p>
+      <p>
+        <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+      </p>
+    <ol>
+      <li>
+        <p>
+            To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
+          </p>
+        <sky-code-block>
+          npm install @blackbaud/skyux-lib-media --save --save-exact
+        </sky-code-block>
+      </li>
+      <li>
+        <p>
+          Add the module to your <strong>app-extras.module.ts</strong> file.
+        </p>
+        <sky-code-block hideCopyToClipboard="true">
+            import { SkyVideoModule } from '@blackbaud/skyux-lib-media';
+
+            @NgModule({
+              imports: [
+                SkyVideoModule
+              ],
+              exports: [
+                SkyVideoModule
+              ]
+            })
+            export class AppExtrasModule { }
+        </sky-code-block>
+      </li>
+    </ol>
 
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <stache-video
+    <sky-video
       videoSource="https://www.youtube.com/embed/2KQfUntZrt8">
-    </stache-video>
+    </sky-video>
   </div>
 
   <stache-page-anchor>
@@ -71,12 +125,12 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
-          <stache-video
+          <sky-video
             videoSource="https://www.youtube.com/embed/2KQfUntZrt8">
-          </stache-video>
-        </stache-code-block>
+          </sky-video>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

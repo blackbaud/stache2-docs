@@ -16,25 +16,17 @@
     <p>
       To prepare your machine for your new {{ stache.jsonData.global.productNameShort }} documentation site, you need to install SKY UX's prerequisites.
     </p>
-    <ol>
-      <li>
-        <p>
-          To load your local single-page application into SKY UX Host, you must install the skyux-ca.crt root certificate. Follow the <a href="https://developer.blackbaud.com/skyux2/learn/get-started/1.-SSL-certification">SSL certification installation instructions <i class="fa fa-external-link" aria-hidden="true"></i></a> on the SKY UX website.
-        </p>
-      </li>
-      <li>
-        <p>
-          Complete the SKY UX <a href="https://developer.blackbaud.com/skyux/learn/get-started/prereqs/initial-setup">Initial setup instructions <i class="fa fa-external-link" aria-hidden="true"></i></a>.
-        </p>
-      </li>
-    <stache-internal>
-      <sky-alert alertType="info">
-        Blackbaud RDO staff must also ensure they have <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">access to Visual Studio Team Services (Azure DevOps) <i class="fa fa-external-link" aria-hidden="true"></i></a> and link their Azure DevOps credentials from the <a href="https://host.nxt.blackbaud.com/engsys-hub/scs/list">Self-contained systems <i class="fa fa-external-link" aria-hidden="true"></i></a> page.
-      </sky-alert>
-    </stache-internal>
-    </ol>
+    <p>
+      Complete the SKY UX <a href="https://developer.blackbaud.com/skyux/learn/get-started/prereqs/initial-setup">Initial setup instructions <i class="fa fa-external-link" aria-hidden="true"></i></a>.
+    </p>
 
-  <stache-internal>
+  <sky-restricted-view>
+    <sky-alert alertType="info">
+      Blackbaud RDO staff must also ensure they have <a href="https://docs.blackbaud.com/engineering-system-docs/learn/dev-setup-engsys/vsts-access">access to Visual Studio Team Services (Azure DevOps) <i class="fa fa-external-link" aria-hidden="true"></i></a> and link their Azure DevOps credentials from the <a href="https://host.nxt.blackbaud.com/engsys-hub/scs/list">Self-contained systems <i class="fa fa-external-link" aria-hidden="true"></i></a> page.
+    </sky-alert>
+  </sky-restricted-view>
+
+  <sky-restricted-view>
     <stache-page-anchor>
       Set up a Stache SPA for Blackbaud RDO staff
     </stache-page-anchor>
@@ -44,7 +36,7 @@
 
       <stache-action-buttons [routes]="stache.jsonData.bbgetstarted" showSearch="false">
   </stache-action-buttons>
-  </stache-internal>
+  </sky-restricted-view>
 
   <stache-page-anchor>
     Set up a Stache SPA
@@ -57,7 +49,7 @@
   <stache-action-buttons [routes]="stache.jsonData.getstarted" showSearch="false">
   </stache-action-buttons>
 
-<stache-internal>
+<sky-restricted-view>
  <stache-page-anchor>
     Learn about Git workflow and Azure DevOps
  </stache-page-anchor>
@@ -65,7 +57,7 @@
   <stache-action-buttons [routes]="stache.jsonData.gitvsts" showSearch="false">
   </stache-action-buttons>
 
-</stache-internal>
+</sky-restricted-view>
 
   <stache-page-anchor>
     Learn how to update Stache

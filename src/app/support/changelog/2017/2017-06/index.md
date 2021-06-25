@@ -21,7 +21,7 @@
   </stache-page-anchor>
 
   <p>
-    Updated SKY UX to <stache-code>2.0.0-rc.1</stache-code>.
+    Updated SKY UX to <sky-code>2.0.0-rc.1</sky-code>.
   </p>
 
   <stache-page-anchor>
@@ -29,7 +29,7 @@
   </stache-page-anchor>
 
   <p>
-    Moved <stache-code>@blackbaud/skyux</stache-code> to package dependencies.
+    Moved <sky-code>@blackbaud/skyux</sky-code> to package dependencies.
   </p>
 
   <stache-page-anchor>
@@ -37,13 +37,13 @@
   </stache-page-anchor>
 
   <li>
-    Updated SKY UX to <stache-code>2.0.0-rc.0</stache-code>.
+    Updated SKY UX to <sky-code>2.0.0-rc.0</sky-code>.
   </li>
   <li>
-    Updated SKY UX Builder to <stache-code>1.0.0-rc.2</stache-code>.
+    Updated SKY UX Builder to <sky-code>1.0.0-rc.2</sky-code>.
   </li>
   <li>
-    Adjusted components to support Angular <stache-code>4.x</stache-code>. (<a href="https://github.com/blackbaud/stache2/issues/101">#101 <i class="fa fa-external-link" aria-hidden="true"></i></a>)
+    Adjusted components to support Angular <sky-code>4.x</sky-code>. (<a href="https://github.com/blackbaud/stache2/issues/101">#101 <i class="fa fa-external-link" aria-hidden="true"></i></a>)
   </li>
 
   <stache-page-anchor>
@@ -69,7 +69,7 @@
       Fixed StacheAffixTopDirective width bug. (<a href="https://github.com/blackbaud/stache2/issues/221">#221 <i class="fa fa-external-link" aria-hidden="true"></i></a>)
     </li>
     <li>
-      Removed <stache-code>StacheConfigService</stache-code> and <stache-code>SkyAppConfig</stache-code> from <strong>app-extras.module.ts</strong>.
+      Removed <sky-code>StacheConfigService</sky-code> and <sky-code>SkyAppConfig</sky-code> from <strong>app-extras.module.ts</strong>.
     </li>
   </ul>
 
@@ -82,40 +82,40 @@
       100% function code coverage
     </li>
     <li>
-      Implemented new components and directives: <stache-code>StacheTutorialComponent</stache-code>, <stache-code>StacheAffixComponent</stache-code>, <stache-code>StacheGoogleAnalyticsDirective</stache-code>.
+      Implemented new components and directives: <sky-code>StacheTutorialComponent</sky-code>, <sky-code>StacheAffixComponent</sky-code>, <sky-code>StacheGoogleAnalyticsDirective</sky-code>.
     </li>
     <li>
-      Implemented service to convert JSON files into usable JavaScript objects, <stache-code>StacheJsonDataService</stache-code>.
+      Implemented service to convert JSON files into usable JavaScript objects, <sky-code>StacheJsonDataService</sky-code>.
     </li>
     <li>
-      Route names can be changed using the <stache-code>&lt;stache&gt;</stache-code>attributes <stache-code>pageTitle</stache-code> or <stache-code>navTitle</stache-code>.
+      Route names can be changed using the <sky-code>&lt;stache&gt;</sky-code>attributes <sky-code>pageTitle</sky-code> or <sky-code>navTitle</sky-code>.
     </li>
     <li>
       New SKY UX Builder plugins were created for various reasons (check each plugin's README for more information):
       <ul>
         <li>
           <a href="https://github.com/blackbaud/skyux-builder-plugin-auth-email-whitelist">
-            <stache-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</stache-code> <i class="fa fa-external-link" aria-hidden="true"></i>
+            <sky-code>@blackbaud/skyux-builder-plugin-auth-email-whitelist</sky-code> <i class="fa fa-external-link" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://github.com/blackbaud/skyux-builder-plugin-stache-json-data">
-            <stache-code>@blackbaud/skyux-builder-plugin-stache-json-data</stache-code> <i class="fa fa-external-link" aria-hidden="true"></i>
+            <sky-code>@blackbaud/skyux-builder-plugin-stache-json-data</sky-code> <i class="fa fa-external-link" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://github.com/blackbaud/skyux-builder-plugin-stache-template-reference-variable">
-            <stache-code>@blackbaud/skyux-builder-plugin-stache-template-reference-variable</stache-code> <i class="fa fa-external-link" aria-hidden="true"></i>
+            <sky-code>@blackbaud/skyux-builder-plugin-stache-template-reference-variable</sky-code> <i class="fa fa-external-link" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://github.com/blackbaud/skyux-builder-plugin-stache-route-metadata">
-            <stache-code>@blackbaud/skyux-builder-plugin-stache-route-metadata/collector</stache-code> <i class="fa fa-external-link" aria-hidden="true"></i>
+            <sky-code>@blackbaud/skyux-builder-plugin-stache-route-metadata/collector</sky-code> <i class="fa fa-external-link" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://github.com/blackbaud/skyux-builder-plugin-stache-route-metadata">
-            <stache-code>@blackbaud/skyux-builder-plugin-stache-route-metadata/generator</stache-code> <i class="fa fa-external-link" aria-hidden="true"></i>
+            <sky-code>@blackbaud/skyux-builder-plugin-stache-route-metadata/generator</sky-code> <i class="fa fa-external-link" aria-hidden="true"></i>
           </a>
         </li>
       </ul>

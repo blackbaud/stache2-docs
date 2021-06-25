@@ -191,6 +191,12 @@ export class StacheDemoContentService {
       route: '/components/search',
       icon: 'search',
       summary: 'Enables search capabilities for Stache. For Blackbaud use only.'
+    },
+    {
+      name: 'Restricted view',
+      route: '/components/restricted-view',
+      icon: 'key',
+      summary: 'Hides content from non-Blackbaud users. For Blackbaud use only.'
     }
   ];
 

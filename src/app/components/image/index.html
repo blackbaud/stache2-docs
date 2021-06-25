@@ -4,7 +4,10 @@
 
   <stache-page-summary>
     <p>
-      The image component provides a responsive container to display an image. To display images on your {{ stache.jsonData.global.productNameShort }} site, add them to the <stache-code>src/assets</stache-code> directory in the source folder.
+      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+    </p>
+    <p>
+      The SKY UX image component provides a responsive container to display an image. To display images in your SPA, add them to the <sky-code>src/assets</sky-code> directory in the source folder.
     </p>
     <ul>
       <li>
@@ -21,12 +24,14 @@
         </ul>
       </li>
     </ul>
+
     <p>
-      If your Stache site requires a lot of image files, we recommend you organize the images into subfolders by page name.
+      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <sky-code>~/assets/</sky-code> prefix in order for SKY UX to register it as a static asset and render it. Note that file names and extensions are case-sensitive.
     </p>
     <p>
-      After the images are in place, you can reference them in your {{ stache.jsonData.global.productNameShort }} pages. You must reference every image with the <stache-code>~/assets&#x200B;/</stache-code> prefix in order for SKY UX to register it as a static asset and render it.
+      If your site requires a lot of image files, we recommend you organize the images into subfolders by page name.
     </p>
+  </stache-page-summary>
 
     <h3>
       Image properties
@@ -34,28 +39,91 @@
 
     <ul>
       <li>
-        <stache-code>imageSource</stache-code> — The path to the image to render.
+        <sky-code>caption</sky-code> — (<i>Optional</i>) Adds a caption below the image.
       </li>
       <li>
-        <stache-code>imageAlt</stache-code> — The alt tag to describe the image for accessibility.
+        <sky-code>captionType</sky-code> — (<i>Optional</i>) Specifies a style for the caption and divider bar. The valid options are <sky-code>default</sky-code>, <sky-code>success</sky-code>, <sky-code>info</sky-code>, <sky-code>warning</sky-code>, and <sky-code>danger</sky-code>. (Default: default)
       </li>
       <li>
-        <stache-code>caption</stache-code> — (<i>Optional</i>) Adds a caption below the image.
+        <sky-code>imageAlt</sky-code> — The alt tag to describe the image for accessibility. To meet accessibility requirements, this field should be filled in. For more information on image accessibility reference the <a stacheRouterLink="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94">W3 docs</a>.
+    </li>
+      <li>
+        <sky-code>imageSource</sky-code> — The path to the image to render.
+      </li>
+      <li>
+        <sky-code>showBorder</sky-code> — (<i>Optional</i>) Boolean option for displaying a border around the image. (Default: false);
       </li>
     </ul>
 
-  </stache-page-summary>
+
+  <stache-page-anchor>
+    Installation
+  </stache-page-anchor>
+    <p>
+      SPAs can use this as a standalone module by setting it up as a dependency.
+    </p>
+    <p>
+      <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+    </p>
+    <ol>
+      <li>
+        <p>
+          To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
+        </p>
+        <sky-code-block>
+          npm install @blackbaud/skyux-lib-media --save --save-exact
+        </sky-code-block>
+      </li>
+      <li>
+        <p>
+          Add the module to your <strong>app-extras.module.ts</strong> file.
+        </p>
+        <sky-code-block hideCopyToClipboard="true">
+            import { SkyImageModule } from '@blackbaud/skyux-lib-media';
+
+            @NgModule({
+              imports: [
+                SkyImageModule
+              ],
+              exports: [
+                SkyImageModule
+              ]
+            })
+            export class AppExtrasModule { }
+        </sky-code-block>
+      </li>
+    </ol>
 
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <stache-image
+    <sky-image
       caption="Let's hit the open road together!"
       imageAlt="This is an example hero."
       imageSource="~/assets/hero-sample-1.jpg">
-    </stache-image>
+    </sky-image>
+
+    <sky-image
+      caption="Follow the open road!"
+      captionType="success"
+      imageAlt="This is a success output"
+      imageSource="~/assets/hero-sample-1.jpg">
+    </sky-image>
+
+    <sky-image
+      caption="The open road is a very dangerous place."
+      captionType="danger"
+      imageAlt="Do not click on danger buttons"
+      imageSource="~/assets/hero-sample-1.jpg">
+    </sky-image>
+
+    <sky-image
+      showBorder="true"
+      imageAlt="demo border image"
+      imageSource="~/assets/hero-sample-1.jpg">
+    </sky-image>
   </div>
 
   <stache-page-anchor>
@@ -66,14 +134,34 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
-         &lt;stache-image
+          &lt;sky-image
             caption="Let's hit the open road together!"
             imageAlt="This is an example hero."
-            imageSource="&#126;&#47;assets&#47;image-name.jpg"&gt;
-          &lt;&#47;stache-image&gt;
-        </stache-code-block>
+            imageSource="~&#47;assets&#47;hero-sample-1.jpg"&gt;
+          &lt;/sky-image&gt;
+
+          &lt;sky-image
+            caption="Follow the open road!"
+            captionType="success"
+            imageAlt="This is a success output"
+            imageSource="~&#47;assets&#47;hero-sample-1.jpg"&gt;
+          &lt;/sky-image&gt;
+
+          &lt;sky-image
+            caption="The open road is a very dangerous place."
+            captionType="danger"
+            imageAlt="Do not click on danger buttons"
+            imageSource="~&#47;assets&#47;hero-sample-1.jpg"&gt;
+          &lt;/sky-image&gt;
+
+          &lt;sky-image
+            showBorder="true"
+            imageAlt="demo border image"
+            imageSource="~&#47;assets&#47;hero-sample-1.jpg"&gt;
+          &lt;/sky-image&gt;
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

@@ -1,12 +1,17 @@
 {
+  "$schema": "./node_modules/@skyux/config/skyuxconfig-schema.json",
   "name": "stache",
   "mode": "easy",
   "compileMode": "aot",
   "plugins": [
-    "@blackbaud/skyux-builder-plugin-stache"
+    "@blackbaud/skyux-builder-plugin-stache",
+    "@blackbaud/skyux-builder-plugin-code-block"
   ],
   "app": {
-    "title": "Blackbaud Stache Documentation"
+    "title": "Blackbaud Stache Documentation",
+    "styles": [
+      "src/app/app.scss"
+    ]
   },
   "appSettings": {
     "stache": {
@@ -20,12 +25,11 @@
           "stache-internal"
         ]
       },
-      "footer": { }
+      "footer": {}
     }
   },
   "auth": false,
   "omnibar": {
-    "experimental": true,
     "nav": {
       "services": [
         {
@@ -97,7 +101,10 @@
   },
   "redirects": {
     "content": "components"
+  },
+  "host": {
+    "frameOptions": {
+      "none": true
+    }
   }
 }
-
-

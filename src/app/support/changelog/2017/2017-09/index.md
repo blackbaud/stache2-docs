@@ -21,13 +21,13 @@
   </stache-page-anchor>
   <ul>
     <li>
-      Added support for SKY UX Builder <stache-code>^1.0.0</stache-code> and SKY UX <stache-code>^2.0.0</stache-code>. <a href="https://github.com/blackbaud/stache2/pull/324">#324 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Added support for SKY UX Builder <sky-code>^1.0.0</sky-code> and SKY UX <sky-code>^2.0.0</sky-code>. <a href="https://github.com/blackbaud/stache2/pull/324">#324 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Added Swagger UI component. <a href="https://github.com/blackbaud/stache2/pull/306">#306 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      Added <stache-code>alt</stache-code> attribute support for image component. <a href="https://github.com/blackbaud/stache2/pull/288">#288 <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      Added <sky-code>alt</sky-code> attribute support for image component. <a href="https://github.com/blackbaud/stache2/pull/288">#288 <i class="fa fa-external-link" aria-hidden="true"></i></a>
     </li>
     <li>
       Fixed omnibar covering page anchors. <a href="https://github.com/blackbaud/stache2/pull/317">#317 <i class="fa fa-external-link" aria-hidden="true"></i></a>

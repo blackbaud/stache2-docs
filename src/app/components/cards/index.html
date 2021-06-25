@@ -3,14 +3,20 @@
   showTableOfContents="true">
 
 <stache-page-summary>
-    <p><a href="https://developer.blackbaud.com/skyux2/components/card">The SKY UX card component</a> creates a small container to highlight important information. Generally, multiple cards are organized together to display information about a collection of related items, like a matrix of images.</p>
-    <p><a href="https://developer.blackbaud.com/skyux2/components/card"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a></p>
-    <h3>Card properties</h3>
-    <ul>
-      <li><stache-code>size</stache-code> — <em>(Optional)</em> Specifies the size of the card, large or small (default: large).
-        </p></li>
-    </ul>
-  </stache-page-summary>
+  <p>
+    <a href="https://developer.blackbaud.com/skyux/components/card"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
+  </p>
+  <p>
+    The <a href="https://developer.blackbaud.com/skyux/components/card">SKY UX card component</a> creates a small container to highlight important information. Generally, multiple cards are organized together to display information about a collection of related items, like a matrix of images.
+  </p>
+ </stache-page-summary>
+
+  <h3>Card properties</h3>
+  <ul>
+    <li>
+      <sky-code>size</sky-code> — <em>(Optional)</em> Specifies the size of the card. The valid options are <sky-code>large</sky-code> or <sky-code>small</sky-code>. The default is <sky-code>large</sky-code>.
+    </li>
+  </ul>
 
   <stache-page-anchor>
     Demo
@@ -74,27 +80,27 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab tabHeading="large card">
-        <stache-code-block languageType="markup">
+        <sky-code-block languageType="markup">
         <sky-card>
           <sky-card-title>Large card</sky-card-title>
           <sky-card-content>
             Card content
           </sky-card-content>
         </sky-card>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
       <sky-tab tabHeading="small card">
-        <stache-code-block languageType="markup">
+        <sky-code-block languageType="markup">
         <sky-card size="small">
           <sky-card-title>Small card</sky-card-title>
           <sky-card-content>
             Card content
           </sky-card-content>
         </sky-card>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
       <sky-tab tabHeading="action button">
-        <stache-code-block languageType="markup">
+        <sky-code-block languageType="markup">
         <sky-card>
           <sky-card-title>Large card</sky-card-title>
           <sky-card-content>
@@ -104,11 +110,11 @@
           <a routerLink="/components/"><button class="sky-btn sky-btn-default">Click me</button></a>
           </sky-card-actions>
         </sky-card>
-        </stache-code-block>
+        </sky-code-block>
       <p>This card provides an action button at the bottom.</p>
       </sky-tab>
       <sky-tab tabHeading="context menu">
-        <stache-code-block languageType="markup">
+        <sky-code-block languageType="markup">
         <sky-card size="small">
         <sky-card-title>Small card</sky-card-title>
         <sky-card-content>
@@ -136,7 +142,7 @@
             </sky-dropdown>
           </sky-card-actions>
         </sky-card>
-        </stache-code-block>
+        </sky-code-block>
       <p>This card provides a menu at the bottom for multiple actions.</p>
       </sky-tab>
     </sky-tabset>

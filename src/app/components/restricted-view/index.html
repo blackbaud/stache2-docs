@@ -1,0 +1,126 @@
+<stache
+  pageTitle="Restricted View Library"
+  navTitle="Restricted view"
+  showTableOfContents="false">
+
+  <stache-page-summary>
+    <p>
+      The Restricted View Library is for internal Blackbaud use only. It facilitates a more targeted user experience in Blackbaud documentation by only displaying content that applies to users.
+    </p>
+    <p *skyRestrictedView>
+      The Restricted View Library provides a component and directive that configure content to make it visible to internal Blackbaud users only and to hide it from all other users.
+    </p>
+    <sky-alert alertType="warning" *skyRestrictedView>
+     The Restricted View Library is designed to effectively target content for Blackbaud and non-Blackbaud audiences. It is not a secure way to hide content and should not be used to hide sensitive information.
+    </sky-alert>
+    <sky-restricted-content-alert></sky-restricted-content-alert>
+  </stache-page-summary>
+
+<sky-restricted-view>
+<stache-hide-from-search>
+  <h3>
+    Library items
+  </h3>
+
+  <ul>
+    <li>
+      <p>
+        <sky-code>sky-restricted-view</sky-code> — The <sky-code>sky-restricted-view</sky-code> component wraps restricted content. Within the elements that it it wraps, the component hides all content from users unless they are Blackbaud users who logged in with Blackbaud ID.
+      </p>
+    </li>
+    <li>
+      <p>
+        <sky-code>*skyRestrictedView</sky-code> — The <sky-code>*skyRestrictedView</sky-code> directive is placed as an attribute on a restricted element. It hides any content within that element unless users are Blackbaud users who logged in with Blackbaud ID.
+      </p>
+    </li>
+    <li>
+      <p>
+        <sky-code>sky-restricted-content-alert</sky-code> — The <sky-code>sky-restricted-content-alert</sky-code> component displays an <a routerLink="/components/alerts">alert</a> that instructs Blackbaud users to log in to see information that is available only to Blackbaud employees. The alert only appears when Blackbaud users who previously viewed the content return but are no longer logged in with Blackbaud ID.
+      </p>
+    </li>
+  </ul>
+
+  <stache-page-anchor>
+    Installation
+  </stache-page-anchor>
+  <p>
+    To use exports from the Restricted View Library library, you must install <sky-code>SkyRestrictedViewModule</sky-code> as a dependency to your project. In the command prompt, run the following command from your SPA's root directory:
+  </p>
+  <sky-code-block>
+    npm install --save --save-exact @blackbaud/skyux-lib-restricted-view
+  </sky-code-block>
+  <p>
+    After installation, you need to make any exports from <sky-code>SkyRestrictedViewModule</sky-code> available to your SPA by adding the module to the <sky-code>exports</sky-code> section of your SPA's main module. If you are using the SKY UX SDK, add <sky-code>SkyRestrictedViewModule</sky-code> as an export in your <sky-code>app-sky.module.ts</sky-code> file.
+  </p>
+
+  <stache-page-anchor>
+    Demo
+  </stache-page-anchor>
+
+  <div class="stache-demo-page-result">
+    <h4>
+      Component example
+    </h4>
+    <p>
+      This demo visualizes how non-Blackbaud users would view a series of four paragraphs when a restricted view component wraps the second and third paragraphs. The component hides the second and third paragraphs the from users who are not logged in with BBID.
+    </p>
+    <p>
+      This is the fourth paragraph. In the code below, you can see how the <sky-code>sky-restricted-view</sky-code> element wraps the <sky-code>p</sky-code> tags for the second and third paragraphs.
+    </p>
+    <h4>
+      Directive example
+    </h4>
+    <p>
+      This demo visualizes how non-Blackbaud users would view a series of four paragraphs when restricted view attributes are placed on the second and third paragraphs. The directive hides the second and third paragraphs the from users who are not logged in with BBID.
+    </p>
+    <p>
+      This is the fourth paragraph. In the code below, you can see how the <sky-code>*skyRestrictedView</sky-code> attribute is placed on the <sky-code>p</sky-code> tags for the second and third paragraphs.
+    </p>
+  </div>
+
+  <stache-page-anchor>
+    Code
+  </stache-page-anchor>
+
+  <div class="stache-demo-code">
+    <sky-code-block>
+      <h4>
+        Component example
+      </h4>
+      <p>
+        This demo visualizes how non-Blackbaud users would view a series of four paragraphs when a restricted view component wraps the second and third paragraphs. The component hides the second and third paragraphs the from users who are not logged in with BBID.
+      </p>
+      <sky-restricted-view>
+        <p>
+          This is the second paragraph.
+        </p>
+        <p>
+          This is the third paragraph.
+        </p>
+      </sky-restricted-view>
+      <sky-restricted-content-alert></sky-restricted-content-alert>
+      <p>
+        This is the fourth paragraph. In the code below, you can see how the <sky-code>sky-restricted-view</sky-code> component wraps the <sky-code>p</sky-code> tags for the second and third paragraphs.
+      </p>
+      <h4>
+        Directive example
+      </h4>
+      <p>
+        This demo visualizes how non-Blackbaud users would view a series of four paragraphs when restricted view attributes are placed on the second and third paragraphs. The directive hides the second and third paragraphs the from users who are not logged in with BBID.
+      </p>
+      <p *skyRestrictedView>
+        This is the second paragraph.
+      </p>
+      <p *skyRestrictedView>
+        This is the third paragraph.
+      </p>
+      <sky-restricted-content-alert></sky-restricted-content-alert>
+      <p>
+        This is the fourth paragraph. In the code below, you can see how the <sky-code>*skyRestrictedView</sky-code> attribute is placed on the <sky-code>p</sky-code> tags for the second and third paragraphs.
+      </p>
+    </sky-code-block>
+  </div>
+</sky-restricted-view>
+</stache-hide-from-search>
+
+</stache>

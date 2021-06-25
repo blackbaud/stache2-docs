@@ -1,5 +1,5 @@
-@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
-@import url("https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css");
+@import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
+@import url("https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css");
 
 $app-font-size-large: 18px;
 
@@ -55,7 +55,7 @@ $app-font-size-large: 18px;
 }
 
 #hero-over-ride {
-  /deep/
+  ::ng-deep
   .stache-hero {
     @media (min-width: 992px) {
       background-position-y: -150px;
@@ -78,4 +78,8 @@ $app-font-size-large: 18px;
 .secondary-bgd {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.far, .fa {
+  margin-right: 5px;
 }

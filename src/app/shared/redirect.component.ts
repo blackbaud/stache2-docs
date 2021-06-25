@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SkyAppWindowRef } from '@blackbaud/skyux-builder/runtime';
+
+import {
+  SkyAppWindowRef
+} from '@skyux/core';
 
 @Component({
   selector: 'stache-redirect',

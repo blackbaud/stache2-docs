@@ -7,12 +7,13 @@
   <p>
     This component is for Blackbaud staff only.
   </p>
-    <p *stacheInternal>
+    <p *skyRestrictedView>
       The Stache Search Query Service leverages the Blackbaud omnibar's search capabilities to search for content within Blackbaud Stache sites. To search across all search-enabled Stache sites, use <a href="https://docs.blackbaud.com">docs.blackbaud.com</a>.
     </p>
   </stache-page-summary>
+  <sky-restricted-content-alert></sky-restricted-content-alert>
 <stache-hide-from-search>
-<div *stacheInternal>
+<div *skyRestrictedView>
   <stache-page-anchor>
     Set up
   </stache-page-anchor>
@@ -22,57 +23,57 @@
   </h3>
 
   <p>
-    The Stache Search Query Service provides two primary endpoints: <stache-code>suggest</stache-code> and <stache-code>search</stache-code>. The <stache-code>search</stache-code> endpoint enforces a strict word and character match between search text and values on a Stache site. The <stache-code>suggest</stache-code> endpoint is more flexible and returns partial matches. For example, when search text includes multiple words, the search returns matches for each word.
+    The Stache Search Query Service provides two primary endpoints: <sky-code>suggest</sky-code> and <sky-code>search</sky-code>. The <sky-code>search</sky-code> endpoint enforces a strict word and character match between search text and values on a Stache site. The <sky-code>suggest</sky-code> endpoint is more flexible and returns partial matches. For example, when search text includes multiple words, the search returns matches for each word.
   </p>
 
   <p>
     In the example below, each search endpoint returns different results.
   </p>
-  <stache-code-block hideCopyToClipboard="true">
+  <sky-code-block hideCopyToClipboard="true">
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Repudiandae impedit doloremque libero laborum aliquid temporibus,
     laboriosam cum expedita, inventore pariatur tenetur magnam,
     facilis molestias ducimus blanditiis?
     Veritatis a aliquid eveniet!
-  </stache-code-block>
+  </sky-code-block>
 
   <p>
-    If users search for "labor" with the <stache-code>search</stache-code> endpoint, the search does not return results because there is not an exact match.
+    If users search for "labor" with the <sky-code>search</sky-code> endpoint, the search does not return results because there is not an exact match.
   </p>
 
   <p>
-    If users search for "labor" with the <stache-code>suggest</stache-code> endpoint, the search returns two results because the text includes two partial matches: "laborum" and "laboriosam".
+    If users search for "labor" with the <sky-code>suggest</sky-code> endpoint, the search returns two results because the text includes two partial matches: "laborum" and "laboriosam".
   </p>
 
   <p>
-    We recommend you consider which endpoint is best for you when you configure your search settings. It is our recommendation that you use the <stache-code>suggest</stache-code> endpoint, unless you require more strict matching.
+    We recommend you consider which endpoint is best for you when you configure your search settings. It is our recommendation that you use the <sky-code>suggest</sky-code> endpoint, unless you require more strict matching.
   </p>
 
   <h3>Configure your search settings</h3>
   <p>
-    To configure search, open the <stache-code>skyuxconfig.json</stache-code> file and edit the <stache-code>omnibar</stache-code> configuration option's <stache-code>searchUrl</stache-code> setting. The <stache-code>searchUrl</stache-code> setting adds the search field to the omnibar.
+    To configure search, open the <sky-code>skyuxconfig.json</sky-code> file and edit the <sky-code>omnibar</sky-code> configuration option's <sky-code>searchUrl</sky-code> setting. The <sky-code>searchUrl</sky-code> setting adds the search field to the omnibar.
   </p>
 
   <h4>Recommended setting</h4>
   <p>
-    We recommend you use <stache-code>suggest-internal</stache-code> and set <stache-code>searchUrl</stache-code> to <stache-code escapeCharacters="true">"searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest-internal/&lt;Site Name}",</stache-code>.
+    We recommend you use <sky-code>suggest-internal</sky-code> and set <sky-code>searchUrl</sky-code> to <sky-code escapeCharacters="true">"searchUrl": "https://stache-search-query.sky.blackbaud.com/suggest-internal/&lt;Site Name}",</sky-code>.
   </p>
 
   <h4>Alternative setting</h4>
   <p>
-    To use the <stache-code>search</stache-code> endpoint, set <stache-code>searchUrl</stache-code>to <stache-code>https://stache-search-query.sky.blackbaud.com/search-internal/&lt;site-name&gt;</stache-code>.
+    To use the <sky-code>search</sky-code> endpoint, set <sky-code>searchUrl</sky-code>to <sky-code>https://stache-search-query.sky.blackbaud.com/search-internal/&lt;site-name&gt;</sky-code>.
   </p>
 
   <h4>Site name setting</h4>
   <p>
-    Replace <stache-code>&lt;site-name&gt;</stache-code> with the site name that appears after <stache-code>https://docs.blackbaud.com</stache-code> or <stache-code>https://host.nxt.blackbaud.com</stache-code> in your SPA’s URL. You can also find the site name in your build definition in Azure as the <stache-code>SPAId</stache-code> variable.
+    Replace <sky-code>&lt;site-name&gt;</sky-code> with the site name that appears after <sky-code>https://docs.blackbaud.com</sky-code> or <sky-code>https://host.nxt.blackbaud.com</sky-code> in your SPA’s URL. You can also find the site name in your build definition in Azure as the <sky-code>SPAId</sky-code> variable.
   </p>
 
   <h4>
     Non-authenticated sites
   </h4>
   <p>
-    For public-facing sites, remove <stache-code>-internal</stache-code> from your search endpoint.
+    For public-facing sites, remove <sky-code>-internal</sky-code> from your search endpoint.
   </p>
 
   <h3>
@@ -85,12 +86,12 @@
   <stache-page-anchor>Sample setup</stache-page-anchor>
 
   <p>
-    As a reference, here's how a <stache-code>skyuxconfig.json</stache-code> file looks with search enabled for an internal site.
+    As a reference, here's how a <sky-code>skyuxconfig.json</sky-code> file looks with search enabled for an internal site.
   </p>
   <h3>
     Setup with Blackbaud authentication
   </h3>
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "omnibar": {
       "experimental": true,
       "nav": {
@@ -108,12 +109,12 @@
         ]
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <h3>
     Setup without Blackbaud authentication
   </h3>
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "omnibar": {
       "experimental": true,
       "nav": {
@@ -131,21 +132,21 @@
         ]
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor>
     Additional configuration options
   </stache-page-anchor>
 
   <p>
-    To configure variables for the search commands, open the <stache-code>skyuxconfig.json</stache-code> file and add <stache-code>searchConfig</stache-code> beneath <stache-code>stache</stache-code> under <stache-code>appSettings</stache-code>.
+    To configure variables for the search commands, open the <sky-code>skyuxconfig.json</sky-code> file and add <sky-code>searchConfig</sky-code> beneath <sky-code>stache</sky-code> under <sky-code>appSettings</sky-code>.
   </p>
 
   <p>
     The example below displays the default configuration after you enable search for your site. To override a setting, modify the variables defined below.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "appSettings": {
       "stache": {
         "searchConfig": {
@@ -159,30 +160,30 @@
         }
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <h3>
-    <stache-code>allowSiteToBeSearched</stache-code>
+    <sky-code>allowSiteToBeSearched</sky-code>
   </h3>
 
   <p>
-     This setting determines whether a site is searchable. The default value is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the property turns off search for your site and prevents the site from being scraped and publishing results.
+     This setting determines whether a site is searchable. The default value is <sky-code>true</sky-code>. When set to <sky-code>false</sky-code>, the property turns off search for your site and prevents the site from being scraped and publishing results.
   </p>
 
   <h3>
-    <stache-code>is_globally_searchable</stache-code>
+    <sky-code>is_globally_searchable</sky-code>
   </h3>
 
   <p>
-    This setting determines whether the site is included on the global search page. The default is <stache-code>true</stache-code>. When set to <stache-code>false,</stache-code> your site content appears only when searched for by site name and does not appear on the <a href="https://docs.blackbaud.com/">global docs search</a> page.
+    This setting determines whether the site is included on the global search page. The default is <sky-code>true</sky-code>. When set to <sky-code>false,</sky-code> your site content appears only when searched for by site name and does not appear on the <a href="https://docs.blackbaud.com/">global docs search</a> page.
   </p>
 
   <h3>
-    <stache-code>is_internal</stache-code>
+    <sky-code>is_internal</sky-code>
   </h3>
 
   <p>
-    This setting indicates whether a Stache site is internal. The default is <stache-code>true</stache-code>. When set to <stache-code>false</stache-code>, the site's search content displays for non-Blackbaud employees.
+    This setting indicates whether a Stache site is internal. The default is <sky-code>true</sky-code>. When set to <sky-code>false</sky-code>, the site's search content displays for non-Blackbaud employees.
   </p>
 
   <sky-alert alertType="info">
@@ -190,14 +191,14 @@
   </sky-alert>
 
   <h3>
-    <stache-code>site_names</stache-code>
+    <sky-code>site_names</sky-code>
   </h3>
 
   <p>
-    This setting determines the Stache sites to include in the search results. The default setting includes only the site you are viewing. When you add other site names to the array, the content from the additional sites becomes searchable. For example, the Engineering System site includes the <stache-code>engineering-system-docs</stache-code> Stache site and many related Stache sites that are linked to from the Engineering System documentation.
+    This setting determines the Stache sites to include in the search results. The default setting includes only the site you are viewing. When you add other site names to the array, the content from the additional sites becomes searchable. For example, the Engineering System site includes the <sky-code>engineering-system-docs</sky-code> Stache site and many related Stache sites that are linked to from the Engineering System documentation.
   </p>
   <p>
-    To add site names, find the site's URL and use the part the appears after <stache-code>https://docs.blackbaud.com/skyux-spa-</stache-code>.
+    To add site names, find the site's URL and use the part the appears after <sky-code>https://docs.blackbaud.com/skyux-spa-</sky-code>.
   </p>
 
 
@@ -206,10 +207,10 @@
   </stache-page-anchor>
 
   <p>
-    Open the <stache-code>skyuxconfig.json</stache-code> file, remove <stache-code>-internal</stache-code> from your search endpoint, and update the <stache-code>appSettings</stache-code> option to <stache-code>"is_internal": false</stache-code>. If your public site includes internal sites in the <stache-code>site_names</stache-code> setting, the search results only include internal sites when a user is logged in with BBID.
+    Open the <sky-code>skyuxconfig.json</sky-code> file, remove <sky-code>-internal</sky-code> from your search endpoint, and update the <sky-code>appSettings</sky-code> option to <sky-code>"is_internal": false</sky-code>. If your public site includes internal sites in the <sky-code>site_names</sky-code> setting, the search results only include internal sites when a user is logged in with BBID.
   </p>
 
-  <stache-code-block languageType="json">
+  <sky-code-block languageType="json">
     "appSettings": {
       "stache": {
         "searchConfig": {
@@ -217,17 +218,17 @@
         }
       }
     }
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor>
     Hide sections and pages from search
   </stache-page-anchor>
 
   <p>
-    When search is enabled, the e2e build phase of the VSTS pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <stache-code>stache-hide-from-search</stache-code> component. To exclude an entire page, wrap all of the markup, including the <stache-code>stache</stache-code> tag, in a <stache-code>stache-hide-from-search</stache-code> component.
+    When search is enabled, the e2e build phase of the Azure DevOps pipeline scrapes every page for content. To exclude portions of a page from the scraping process, wrap the content to exclude in a <stache-code>stache-hide-from-search</stache-code> component. To exclude an entire page, wrap all of the markup, including the <stache-code>stache</stache-code> tag, in a <stache-code>stache-hide-from-search</stache-code> component.
   </p>
 
-  <stache-code-block
+  <sky-code-block
     languageType="markup">
     <stache-hide-from-search>
       <p>
@@ -238,7 +239,7 @@
     <p>
       This content will appear in the search results.
     </p>
-  </stache-code-block>
+  </sky-code-block>
 
   <stache-page-anchor>
     Analytics
@@ -252,26 +253,26 @@
   </p>
   <ul>
     <li>
-      <stache-code>Action</stache-code> — Indicates the action performed. The <stache-code>search</stache-code> endpoint uses "run," and the <stache-code>suggest</stache-code> endpoint uses "suggest."
+      <sky-code>Action</sky-code> — Indicates the action performed. The <sky-code>search</sky-code> endpoint uses "run," and the <sky-code>suggest</sky-code> endpoint uses "suggest."
     </li>
     <li>
-      <stache-code>InternalRequest</stache-code> — Indicates whether the search request came from a user authenticated with BBID.
+      <sky-code>InternalRequest</sky-code> — Indicates whether the search request came from a user authenticated with BBID.
     </li>
     <li>
-      <stache-code>SearchText</stache-code> — Indicates the text entered in the query.
+      <sky-code>SearchText</sky-code> — Indicates the text entered in the query.
     </li>
     <li>
-      <stache-code>SiteNames</stache-code> — Indicates the array of sites included in the search request.
+      <sky-code>SiteNames</sky-code> — Indicates the array of sites included in the search request.
     </li>
   </ul>
-  <stache-code-block hideCopyToClipboard="true">
+  <sky-code-block hideCopyToClipboard="true">
     "Search Event": {
       "Action": "run",
       "InternalRequest": false,
       "SearchText": "Foo",
       "SiteNames": ["stache", "sky-ux"]
     }
-  </stache-code-block>
+  </sky-code-block>
 </div>
 
 <stache-page-anchor>

@@ -6,11 +6,6 @@
     <p>
       The footer enables you to add useful links and details, like copyright information, to the bottom of your site.
     </p>
-    <sky-alert alertType="warning">
-      <stache-include
-        fileName="localization-required.html">
-      </stache-include>
-    </sky-alert>
   </stache-page-summary>
 
   <h3>
@@ -20,23 +15,23 @@
   <ul>
     <li>
       <p>
-        <stache-code>copyrightLabel</stache-code> — Specifies the text to display in the footer's copyright information. By default, the footer displays a © symbol and the current year followed by "Blackbaud, Inc. All rights reserved." This property enables you to replace the default text that appears after the year with your own copyright text.
+        <sky-code>copyrightLabel</sky-code> — Specifies the text to display in the footer's copyright information. By default, the footer displays a © symbol and the current year followed by "Blackbaud, Inc. All rights reserved." This property enables you to replace the default text that appears after the year with your own copyright text.
       </p>
     </li>
     <li>
       <p>
-        <stache-code>nav</stache-code> — This flag contains an <stache-code>items</stache-code> array, enabling you to include specific links in the footer.
+        <sky-code>nav</sky-code> — This flag contains an <sky-code>items</sky-code> array, enabling you to include specific links in the footer.
       </p>
     </li>
     <li>
       <p>
-        <stache-code>siteName</stache-code> — Value read from the <stache-code>skyux.app.title</stache-code> attribute in your <stache-code>skyuxconfig.json</stache-code> file.
+        <sky-code>siteName</sky-code> — Value read from the <sky-code>skyux.app.title</sky-code> attribute in your <sky-code>skyuxconfig.json</sky-code> file.
       </p>
     </li>
   </ul>
 
   <p>
-    To enable the footer globally across your SPA, add  <stache-code>footer</stache-code> to your <stache-code>skyuxconfig.json</stache-code> file under <stache-code>"appSettings": "stache":</stache-code>. To disable the footer on a specific page, add the <stache-code>showFooter="false"</stache-code> attribute to the <a stacheRouterLink="/components/wrapper">Stache wrapper</a>.
+    To enable the footer globally across your SPA, add  <sky-code>footer</sky-code> to your <sky-code>skyuxconfig.json</sky-code> file under <sky-code>"appSettings": "stache":</sky-code>. To disable the footer on a specific page, add the <sky-code>showFooter="false"</sky-code> attribute to the <a stacheRouterLink="/components/wrapper">Stache wrapper</a>.
   </p>
 
   <stache-page-anchor>
@@ -54,7 +49,7 @@
   <div class="stache-demo-code">
     <sky-tabset>
       <sky-tab tabHeading="appSettings">
-        <stache-code-block languageType="json">
+        <sky-code-block languageType="json">
           "app": {
             "title": "Blackbaud Stache Documentation"
           },
@@ -77,13 +72,13 @@
               }
             }
           }
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
       <sky-tab tabHeading="Stache wrapper">
-        <stache-code-block>
+        <sky-code-block>
         &lt;stache showFooter="false">
         &lt;/stache>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>

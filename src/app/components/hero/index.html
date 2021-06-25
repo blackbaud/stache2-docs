@@ -4,13 +4,17 @@
 
   <stache-page-summary>
     <p>
-      The hero component adds a hero with a background image, title, and subheading information to your {{ stache.jsonData.global.productNameShort }} page.
+      <a href="https://github.com/blackbaud/skyux-media"><img src="https://img.shields.io/badge/SKY%20UX-component-brightgreen.svg"></a>
     </p>
-
-    <sky-alert
-      alertType="info">
-      You need to use this component <b>outside</b> of the <stache-code>stache</stache-code> tag.
+    <p>
+      The SKY UX hero component adds a hero with a background image, title, and subheading information to your {{ stache.jsonData.global.productNameShort }} page. Typically, heros are added to your home page.
+    </p>
+    <sky-alert alertType="info">
+      Use this component <b>outside</b> of the <sky-code>stache</sky-code> tag.
     </sky-alert>
+  </stache-page-summary>
+
+
 
     <h3>
       Hero properties
@@ -18,48 +22,108 @@
 
     <ul>
       <li>
-        <stache-code>overlayOpacity</stache-code>  —
-        Decimal value for how much your image should be darkened. The default is <stache-code>0.4</stache-code>, acceptable values are any decimal between <stache-code>0</stache-code> and <stache-code>1</stache-code>.
+        <sky-code>overlayOpacity</sky-code>  —
+        Decimal value for how much your image should be darkened. The default is <sky-code>0.4</sky-code>, acceptable values are any decimal between <sky-code>0</sky-code> and <sky-code>1</sky-code>.
       </li>
       <li>
-        <stache-code>backgroundImageUrl</stache-code>  —
+        <sky-code>backgroundImageUrl</sky-code>  —
         Set this to the name of your image, prepended with
-        <stache-code>~/assets&#x200B;/</stache-code>, e.g.: <stache-code>~/assets&#x200B;/foo.jpg</stache-code>.  All images and other static assets should be stored in the <stache-code>src/assets</stache-code> directory.
+        <sky-code>~/assets&#x200B;/</sky-code>, e.g.: <sky-code>~/assets&#x200B;/foo.jpg</sky-code>.  All images and other static assets should be stored in the <sky-code>src/assets</sky-code> directory. Note that file names and extensions are case-sensitive.
       </li>
-          <ul>
-    <li>
-      <i class="fa fa-folder"></i> src
       <ul>
         <li>
-          <i class="fa fa-folder"></i> assets
+          <i class="fa fa-folder"></i> src
           <ul>
             <li>
-              <i class="fa fa-file-image-o"></i> hero.jpg
+              <i class="fa fa-folder"></i> assets
+              <ul>
+                <li>
+                  <i class="fa fa-file-image-o"></i> hero.jpg
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
       </ul>
-    </li>
-  </ul>
     </ul>
 
-  </stache-page-summary>
+    <h3>
+      Hero heading properties
+    </h3>
+
+    <ul>
+      <li>
+        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero heading. This property accepts <sky-code>string</sky-code> values. (Default: <sky-code>#fff</sky-code>)
+      </li>
+    </ul>
+
+    <h3>
+      Hero subheading properties
+    </h3>
+
+    <ul>
+      <li>
+        <sky-code>heroTextColor</sky-code> — (<i>Optional</i>) Specifies a hex color code for the hero subheading. This property accepts <sky-code>string</sky-code> values. (Default: <sky-code>#fff</sky-code>)
+      </li>
+    </ul>
+
+
+
+    <stache-page-anchor>
+      Installation
+    </stache-page-anchor>
+      <p>
+        SPAs can use this as a standalone module by setting it up as a dependency.
+      </p>
+      <p>
+        <b class="sky-text-info">Note:</b> Most Stache SPAs already have this module installed for you. To confirm, make sure <sky-code>@blackbaud/skyux-lib-media</sky-code> is listed in the <sky-code>package.json</sky-code> file.
+      </p>
+      <ol>
+        <li>
+          <p>
+            To install the package and plugin as part of your SPA's dependencies run the following command from your SPA's root directory.
+          </p>
+          <sky-code-block>
+            npm install @blackbaud/skyux-lib-media --save --save-exact
+          </sky-code-block>
+        </li>
+        <li>
+          <p>
+            Add the module to your <strong>app-extras.module.ts</strong> file.
+          </p>
+          <sky-code-block hideCopyToClipboard="true">
+              import { SkyHeroModule } from '@blackbaud/skyux-lib-media';
+
+              @NgModule({
+                imports: [
+                  SkyHeroModule
+                ],
+                exports: [
+                  SkyHeroModule
+                ]
+              })
+              export class AppExtrasModule { }
+          </sky-code-block>
+        </li>
+      </ol>
 
   <stache-page-anchor>
     Demo
   </stache-page-anchor>
 
   <div class="stache-demo-page-result">
-    <stache-hero
+    <sky-hero
       overlayOpacity="0.4"
       backgroundImageUrl="~/assets/hero-sample-1.jpg">
-      <stache-hero-heading>
+      <sky-hero-heading
+        heroTextColor="#efefef">
         Demo Hero
-      </stache-hero-heading>
-      <stache-hero-subheading>
+      </sky-hero-heading>
+      <sky-hero-subheading
+        heroTextColor="#efefef">
         Hero demo subheading information.
-      </stache-hero-subheading>
-    </stache-hero>
+      </sky-hero-subheading>
+    </sky-hero>
   </div>
 
   <stache-page-anchor>
@@ -69,19 +133,21 @@
   <sky-tabset>
     <sky-tab
       tabHeading="sample">
-      <stache-code-block
+      <sky-code-block
         languageType="markup">
-        <stache-hero
+        <sky-hero
           overlayOpacity="0.4"
           backgroundImageUrl="~/assets&#x200B;/image-name.jpg">
-          <stache-hero-heading>
+          <sky-hero-heading
+            heroTextColor="#efefef">
             Demo Hero
-          </stache-hero-heading>
-          <stache-hero-subheading>
+          </sky-hero-heading>
+          <sky-hero-subheading
+            heroTextColor="#efefef">
             Hero demo subheading information.
-          </stache-hero-subheading>
-        </stache-hero>
-      </stache-code-block>
+          </sky-hero-subheading>
+        </sky-hero>
+      </sky-code-block>
     </sky-tab>
   </sky-tabset>
 </stache>

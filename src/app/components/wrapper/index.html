@@ -4,7 +4,7 @@
 
   <stache-page-summary>
     <p>
-      The wrapper component is the primary component for {{ stache.jsonData.global.productNameShort }}. It handles configuration, layouts, and routing for every {{ stache.jsonData.global.productNameShort }} page. View this component's <a routerLink="/api/components/wrapper">technical reference</a> for more details.
+      The wrapper component is the primary component for {{ stache.jsonData.global.productNameShort }}. It handles configuration, layouts, and routing for every {{ stache.jsonData.global.productNameShort }} page.
     </p>
 
     <h3>
@@ -13,47 +13,47 @@
 
     <ul>
       <li>
-        <stache-code>pageTitle</stache-code> — Sets the heading for the page.
+        <sky-code>pageTitle</sky-code> — Sets the heading for the page.
       </li>
       <li>
-        <stache-code>layout</stache-code> — <i>(Optional)</i> You can specify a specific type of layout for each {{ stache.jsonData.global.productNameShort }} page. The default is <stache-code>sidebar</stache-code>.
+        <sky-code>layout</sky-code> — <i>(Optional)</i> You can specify a specific type of layout for each {{ stache.jsonData.global.productNameShort }} page. The default is <sky-code>sidebar</sky-code>.
         <ul>
           <li>
-            <stache-code>sidebar</stache-code> — Displays a sidebar navigation on the page for each child directory.
+            <sky-code>sidebar</sky-code> — Displays a sidebar navigation on the page for each child directory.
           </li>
           <li>
-            <stache-code>container</stache-code> — Displays content in a responsive container with margins on either side.
+            <sky-code>container</sky-code> — Displays content in a responsive container with margins on either side.
           </li>
           <li>
-            <stache-code>blank</stache-code> — Displays content with no container.
+            <sky-code>blank</sky-code> — Displays content with no container.
           </li>
         </ul>
       </li>
       <li>
-        <stache-code>showBackToTop</stache-code> — Indicates whether to display the back to top button on the page when the user scrolls past a 200px offset from the top. The default is <stache-code>true</stache-code>.
+        <sky-code>showBackToTop</sky-code> — Indicates whether to display the back to top button on the page when the user scrolls past a 200px offset from the top. The default is <sky-code>true</sky-code>.
       </li>
       <li>
-        <stache-code>showBreadcrumbs</stache-code> — Indicates whether to display the breadcrumb navigation on the page. The default is <stache-code>true</stache-code>.
+        <sky-code>showBreadcrumbs</sky-code> — Indicates whether to display the breadcrumb navigation on the page. The default is <sky-code>true</sky-code>.
       </li>
       <li>
-        <stache-code>showEditButton</stache-code> — Indicates whether to display the edit button on the page. By default, the edit button appears on all pages when you add an editButton URL to your skyuxconfig.json. To hide the edit button
-        on a particular page, set <stache-code>showEditButton</stache-code> to <stache-code>false</stache-code>.
+        <sky-code>showEditButton</sky-code> — Indicates whether to display the edit button on the page. By default, the edit button appears on all pages when you add an editButton URL to your skyuxconfig.json. To hide the edit button
+        on a particular page, set <sky-code>showEditButton</sky-code> to <sky-code>false</sky-code>.
       </li>
       <li>
-        <stache-code>showTableOfContents</stache-code> — Indicates whether to display the table of contents on the page. The default is <stache-code>false</stache-code>.
+        <sky-code>showTableOfContents</sky-code> — Indicates whether to display the table of contents on the page. The default is <sky-code>false</sky-code>.
       </li>
       <li>
-        <stache-code>navOrder</stache-code> — This number dictates the order in which your routes will render in the sidebar next to their sibling routes.
+        <sky-code>navOrder</sky-code> — This number dictates the order in which your routes will render in the sidebar next to their sibling routes.
       </li>
       <li>
-        <stache-code>navTitle</stache-code> — Sets the route's title in the sidebar and breadcrumb navigations.
+        <sky-code>navTitle</sky-code> — Sets the route's title in the sidebar and breadcrumb navigations.
       </li>
       <li>
-        <stache-code>showFooter</stache-code> — Indicates whether to display the footer on the page. By default, the footer appears on all pages when you add the footer config to your skyuxconfig.json. To hide the footer
-        on a particular page, set <stache-code>showFooter</stache-code> to <stache-code>false</stache-code>.
+        <sky-code>showFooter</sky-code> — Indicates whether to display the footer on the page. By default, the footer appears on all pages when you add the footer config to your skyuxconfig.json. To hide the footer
+        on a particular page, set <sky-code>showFooter</sky-code> to <sky-code>false</sky-code>.
       </li>
       <li>
-        <stache-code>showInNav</stache-code> — Indicates whether to include the page in the sidebar. The default is <stache-code>true</stache-code>.
+        <sky-code>showInNav</sky-code> — Indicates whether to include the page in the sidebar. The default is <sky-code>true</sky-code>.
       </li>
     </ul>
   </stache-page-summary>
@@ -87,7 +87,7 @@
     <sky-tabset>
       <sky-tab
         tabHeading="sample">
-        <stache-code-block
+        <sky-code-block
           languageType="markup">
           <stache
             pageTitle="Wrapper"
@@ -103,7 +103,7 @@
               Sub heading
             </stache-page-anchor>
           </stache>
-        </stache-code-block>
+        </sky-code-block>
       </sky-tab>
     </sky-tabset>
   </div>
